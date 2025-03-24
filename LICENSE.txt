@@ -1,0 +1,10 @@
+Ultiplay - Copyright (c) March Corbin 2025. All rights reserved.
+
+This software uses libvlc from the VLC media player, licensed under the GNU Lesser General Public License (LGPL) version 2.1 or later.
+
+- libvlc Source Code: Available at https://github.com/videolan/vlc
+- License Terms: https://www.gnu.org/licenses/lgpl-2.1.html
+
+To update or replace libvlc:
+1. Download VLC from https://www.videolan.org/vlc/
+2. Copy `libvlc.dll`, `libvlccore.dll`, and the `plugins` folder from VLC’s install directory (e.g., C:\Program Files\VideoLAN\VLC) into the `vlc/` folder of this app, overwriting the existing files.
