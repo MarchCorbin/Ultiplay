@@ -1,0 +1,2 @@
+('C:\\Users\\march\\OneDrive\\Desktop\\Ultiplay\\build\\ultiplay\\PYZ-00.pyz',
+ [])

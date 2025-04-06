@@ -1,0 +1,167 @@
+2025-04-06 11:39:22,483 - DEBUG - Starting Ultiplay application
+2025-04-06 11:39:22,483 - DEBUG - Launching main application
+2025-04-06 11:39:22,651 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
+2025-04-06 11:39:22,651 - DEBUG - Initializing VideoPlayerApp
+2025-04-06 11:39:22,651 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
+2025-04-06 11:39:22,681 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-06 11:39:22,681 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-06 11:39:22,711 - DEBUG - Resized background to 1200x800
+2025-04-06 11:39:22,756 - DEBUG - Refreshed all keyboard bindings
+2025-04-06 11:39:25,770 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-06 11:39:25,786 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-06 11:39:28,044 - DEBUG - Forced focus back to app
+2025-04-06 11:39:28,044 - DEBUG - Refreshed all keyboard bindings
+2025-04-06 11:39:28,044 - DEBUG - Window regained focus, bindings refreshed
+2025-04-06 11:39:28,044 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-06 11:39:28,044 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-06 11:39:30,189 - DEBUG - Initializing player widget at x=509, y=283, player count=0
+2025-04-06 11:39:30,317 - DEBUG - VLC initialized successfully for frame_id: 2216059486608
+2025-04-06 11:39:30,321 - DEBUG - Attached player to canvas with frame_id: 5
+2025-04-06 11:39:30,365 - DEBUG - Video frame HWND for Player 1: 5754662
+2025-04-06 11:39:30,480 - DEBUG - Initialized Player 1 volume to 100
+2025-04-06 11:39:30,480 - DEBUG - Loading video: C:/Users/march/Downloads/ap13588-1080p.mp4
+2025-04-06 11:39:30,480 - DEBUG - Initializing player widget at x=44, y=17, player count=1
+2025-04-06 11:39:30,480 - DEBUG - VLC initialized successfully for frame_id: 2216059494336
+2025-04-06 11:39:30,485 - DEBUG - Attached player to canvas with frame_id: 7
+2025-04-06 11:39:30,533 - DEBUG - Video frame HWND for Player 2: 3187864
+2025-04-06 11:39:30,533 - DEBUG - Initialized Player 2 volume to 100
+2025-04-06 11:39:30,533 - DEBUG - Loading video: C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4
+2025-04-06 11:39:30,533 - DEBUG - Initializing player widget at x=594, y=12, player count=2
+2025-04-06 11:39:30,537 - DEBUG - VLC initialized successfully for frame_id: 2216059500480
+2025-04-06 11:39:30,537 - DEBUG - Attached player to canvas with frame_id: 9
+2025-04-06 11:39:30,544 - DEBUG - Video frame HWND for Player 3: 4528466
+2025-04-06 11:39:30,546 - DEBUG - Initialized Player 3 volume to 100
+2025-04-06 11:39:30,546 - DEBUG - Loading video: C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4
+2025-04-06 11:39:30,547 - DEBUG - Initializing player widget at x=800, y=500, player count=3
+2025-04-06 11:39:30,550 - DEBUG - VLC initialized successfully for frame_id: 2216059621088
+2025-04-06 11:39:30,550 - DEBUG - Attached player to canvas with frame_id: 10
+2025-04-06 11:39:30,557 - DEBUG - Video frame HWND for Player 4: 3017532
+2025-04-06 11:39:30,558 - DEBUG - Initialized Player 4 volume to 100
+2025-04-06 11:39:30,559 - DEBUG - Loading video: C:/Users/march/Downloads/dainty wilder - bad bunny.mp4
+2025-04-06 11:39:30,559 - DEBUG - Initializing player widget at x=112, y=500, player count=4
+2025-04-06 11:39:30,561 - DEBUG - VLC initialized successfully for frame_id: 2216059626944
+2025-04-06 11:39:30,561 - DEBUG - Attached player to canvas with frame_id: 11
+2025-04-06 11:39:30,573 - DEBUG - Video frame HWND for Player 5: 1769534
+2025-04-06 11:39:30,574 - DEBUG - Initialized Player 5 volume to 100
+2025-04-06 11:39:30,574 - DEBUG - Loading video: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4
+2025-04-06 11:39:30,575 - DEBUG - Loaded layout with 5 players from C:/Users/march/Downloads/layoutest.ultilayout
+2025-04-06 11:39:30,576 - DEBUG - Drop target registered for Player 1
+2025-04-06 11:39:30,640 - WARNING - Volume mismatch for Player 1: expected 100, got -1. Correcting.
+2025-04-06 11:39:30,640 - DEBUG - Drop target registered for Player 2
+2025-04-06 11:39:30,645 - WARNING - Volume mismatch for Player 2: expected 100, got -1. Correcting.
+2025-04-06 11:39:30,645 - DEBUG - Drop target registered for Player 3
+2025-04-06 11:39:30,645 - WARNING - Volume mismatch for Player 3: expected 100, got -1. Correcting.
+2025-04-06 11:39:30,645 - DEBUG - Attempting to set volume to 100 for Player 1
+2025-04-06 11:39:30,657 - DEBUG - Drop target registered for Player 4
+2025-04-06 11:39:30,657 - WARNING - Volume mismatch for Player 4: expected 100, got -1. Correcting.
+2025-04-06 11:39:30,674 - DEBUG - Drop target registered for Player 5
+2025-04-06 11:39:30,674 - WARNING - Volume mismatch for Player 5: expected 100, got -1. Correcting.
+2025-04-06 11:39:30,681 - DEBUG - VLC refreshed for frame_id: 5
+2025-04-06 11:39:30,681 - DEBUG - Attempting to set volume to 0 for Player 1
+2025-04-06 11:39:30,684 - DEBUG - Attempting to set volume to 100 for Player 1
+2025-04-06 11:39:30,695 - DEBUG - VLC refreshed for frame_id: 5
+2025-04-06 11:39:30,695 - DEBUG - Attempting to set volume to 0 for Player 1
+2025-04-06 11:39:30,737 - DEBUG - VLC refreshed for frame_id: 7
+2025-04-06 11:39:30,747 - WARNING - Volume mismatch for Player 1: expected 0, got 100. Correcting.
+2025-04-06 11:39:30,748 - WARNING - Volume mismatch for Player 2: expected 100, got -1. Correcting.
+2025-04-06 11:39:30,748 - WARNING - Volume mismatch for Player 3: expected 100, got -1. Correcting.
+2025-04-06 11:39:30,748 - DEBUG - VLC refreshed for frame_id: 9
+2025-04-06 11:39:30,749 - DEBUG - Volume verified for Player 1: 0
+2025-04-06 11:39:30,762 - WARNING - Volume mismatch for Player 4: expected 100, got -1. Correcting.
+2025-04-06 11:39:30,762 - DEBUG - VLC refreshed for frame_id: 10
+2025-04-06 11:39:30,775 - DEBUG - VLC refreshed for frame_id: 11
+2025-04-06 11:39:30,775 - WARNING - Volume mismatch for Player 5: expected 100, got -1. Correcting.
+2025-04-06 11:39:30,782 - DEBUG - Volume verified for Player 1: 0
+2025-04-06 11:39:30,783 - DEBUG - Volume verified for Player 1: 0
+2025-04-06 11:39:30,787 - DEBUG - Loaded and playing: C:/Users/march/Downloads/ap13588-1080p.mp4 with duration 3137069 ms
+2025-04-06 11:39:30,796 - DEBUG - Volume verified for Player 1: 0
+2025-04-06 11:39:30,848 - DEBUG - Volume verified for Player 1: 0
+2025-04-06 11:39:30,853 - WARNING - Volume mismatch for Player 2: expected 100, got 0. Correcting.
+2025-04-06 11:39:30,854 - WARNING - Volume mismatch for Player 3: expected 100, got 0. Correcting.
+2025-04-06 11:39:30,859 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4 with duration 4032430 ms
+2025-04-06 11:39:30,871 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 with duration 4436374 ms
+2025-04-06 11:39:30,878 - WARNING - Volume mismatch for Player 4: expected 100, got 0. Correcting.
+2025-04-06 11:39:30,883 - WARNING - Volume mismatch for Player 5: expected 100, got 0. Correcting.
+2025-04-06 11:39:30,888 - DEBUG - Loaded and playing: C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 with duration 1395352 ms
+2025-04-06 11:39:30,892 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 with duration 1768149 ms
+2025-04-06 11:39:30,955 - DEBUG - Volume verified for Player 2: 100
+2025-04-06 11:39:30,955 - DEBUG - Volume verified for Player 3: 100
+2025-04-06 11:39:30,982 - DEBUG - Volume verified for Player 4: 100
+2025-04-06 11:39:31,079 - DEBUG - Volume verified for Player 5: 100
+2025-04-06 11:39:31,079 - DEBUG - VLC refreshed for frame_id: 5
+2025-04-06 11:39:31,079 - DEBUG - VLC refreshed for frame_id: 7
+2025-04-06 11:39:31,082 - DEBUG - VLC refreshed for frame_id: 9
+2025-04-06 11:39:31,082 - DEBUG - VLC refreshed for frame_id: 10
+2025-04-06 11:39:31,091 - DEBUG - VLC refreshed for frame_id: 11
+2025-04-06 11:39:32,705 - DEBUG - Set DJ Dashboard icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
+2025-04-06 11:39:32,706 - DEBUG - Building DJD controls for 5 players
+2025-04-06 11:39:32,743 - DEBUG - Player 1: Next index set to 10 for file C:/Users/march/Downloads/teamskeetxsweetiefox_fox002_full_hi_1080hd.mp4
+2025-04-06 11:39:32,745 - DEBUG - Player 2: Next index set to 4 for file C:/Users/march/Downloads/anal4k-\u0430naled- \u0432londe-1080.mp4
+2025-04-06 11:39:32,756 - DEBUG - Set PanedWindow sash to middle at 450 pixels
+2025-04-06 11:39:32,978 - DEBUG - DJD controls built successfully for 5 players
+2025-04-06 11:39:32,978 - DEBUG - DJD initialized, update loop scheduled
+2025-04-06 11:39:32,978 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:32,983 - DEBUG - Opened DJ Dashboard
+2025-04-06 11:39:32,983 - DEBUG - Video C:/Users/march/Downloads/ap13588-1080p.mp4 started successfully
+2025-04-06 11:39:32,983 - DEBUG - DJD volume verified for Player 1: 100
+2025-04-06 11:39:32,983 - DEBUG - DJD volume verified for Player 2: 100
+2025-04-06 11:39:32,987 - DEBUG - DJD volume verified for Player 3: 100
+2025-04-06 11:39:32,987 - DEBUG - DJD volume verified for Player 4: 100
+2025-04-06 11:39:32,987 - DEBUG - DJD volume verified for Player 5: 100
+2025-04-06 11:39:32,988 - DEBUG - Video C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4 started successfully
+2025-04-06 11:39:32,988 - DEBUG - Video C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 started successfully
+2025-04-06 11:39:32,989 - DEBUG - Video C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 started successfully
+2025-04-06 11:39:32,989 - DEBUG - Video C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 started successfully
+2025-04-06 11:39:32,993 - DEBUG - DJD set volume to 100 for Player 5
+2025-04-06 11:39:32,998 - DEBUG - DJD set volume to 100 for Player 4
+2025-04-06 11:39:33,006 - DEBUG - DJD set volume to 100 for Player 2
+2025-04-06 11:39:33,012 - DEBUG - DJD set volume to 100 for Player 1
+2025-04-06 11:39:33,013 - DEBUG - Attempting to set volume to 100 for Player 1
+2025-04-06 11:39:33,185 - DEBUG - Adjusted DJD to 900x790 for 5 players (two columns: 3 left, 2 right)
+2025-04-06 11:39:33,218 - DEBUG - Adjusted DJD to 900x790 for 5 players (two columns: 3 left, 2 right)
+2025-04-06 11:39:33,219 - DEBUG - DJD volume verified for Player 5: 100
+2025-04-06 11:39:33,219 - DEBUG - DJD volume verified for Player 4: 100
+2025-04-06 11:39:33,220 - DEBUG - DJD volume verified for Player 2: 100
+2025-04-06 11:39:33,220 - DEBUG - DJD volume verified for Player 1: 100
+2025-04-06 11:39:33,220 - DEBUG - Volume verified for Player 1: 100
+2025-04-06 11:39:33,449 - DEBUG - DJD set volume to 100 for Player 3
+2025-04-06 11:39:33,552 - DEBUG - DJD volume verified for Player 3: 100
+2025-04-06 11:39:33,985 - DEBUG - Starting DJD update loop
+2025-04-06 11:39:33,985 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:33,990 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:34,993 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:34,993 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:36,001 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:36,001 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:36,316 - DEBUG - VLC refreshed for frame_id: 5
+2025-04-06 11:39:37,007 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:37,019 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:38,082 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:38,352 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:39,355 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:39,360 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:40,361 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:40,365 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:41,370 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:41,370 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:42,375 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:42,380 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:43,382 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:43,382 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:44,387 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:44,397 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:45,388 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:45,402 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:46,400 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:46,410 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:47,402 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:47,412 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:48,415 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:48,420 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:49,142 - DEBUG - Attempting to set volume to 100 for Player 3
+2025-04-06 11:39:49,184 - DEBUG - VLC refreshed for frame_id: 9
+2025-04-06 11:39:49,242 - DEBUG - Volume verified for Player 3: 100
+2025-04-06 11:39:49,422 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:49,422 - DEBUG - Running update_dashboard for 5 players
+2025-04-06 11:39:49,989 - DEBUG - Refreshed all keyboard bindings
+2025-04-06 11:39:49,989 - DEBUG - Window regained focus, bindings refreshed

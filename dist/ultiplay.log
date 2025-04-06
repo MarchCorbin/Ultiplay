@@ -1,0 +1,91 @@
+2025-03-27 21:55:31,154 - DEBUG - Starting Ultiplay application
+2025-03-27 21:55:31,155 - DEBUG - Launching main application
+2025-03-27 21:55:31,340 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
+2025-03-27 21:55:31,340 - DEBUG - Initializing VideoPlayerApp
+2025-03-27 21:55:31,345 - DEBUG - Set window icon to C:\Users\march\AppData\Local\Temp\_MEI236562\appicon.ico
+2025-03-27 21:55:31,358 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-27 21:55:31,359 - DEBUG - STREAM b'IDAT' 41 1216
+2025-03-27 21:55:38,989 - DEBUG - Created default background at C:\Users\march\AppData\Local\Temp\_MEI236562\default_background.png
+2025-03-27 21:55:38,990 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-27 21:55:38,991 - DEBUG - STREAM b'IDAT' 41 2978
+2025-03-27 21:55:39,048 - DEBUG - Resized background to 1200x800
+2025-03-27 21:55:41,457 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-27 21:55:41,457 - DEBUG - STREAM b'IDAT' 41 2978
+2025-03-27 21:55:44,946 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-27 21:55:44,946 - DEBUG - STREAM b'IDAT' 41 2978
+2025-03-27 21:55:45,400 - DEBUG - Initializing player widget at x=509, y=283, player count=0
+2025-03-27 21:55:45,400 - DEBUG - Using bundled VLC path: C:\Users\march\AppData\Local\Temp\_MEI236562\vlc
+2025-03-27 21:55:45,525 - DEBUG - VLC initialized successfully for frame_id: 1332597421056
+2025-03-27 21:55:45,525 - DEBUG - Attached player to canvas with frame_id: 5
+2025-03-27 21:55:45,568 - DEBUG - Video frame HWND for Player 1: 402488
+2025-03-27 21:55:45,571 - DEBUG - Initialized Player 1 volume to 100
+2025-03-27 21:55:45,571 - DEBUG - Loading video: C:/Users/march/Downloads/ap13588-1080p.mp4
+2025-03-27 21:55:45,572 - DEBUG - Initializing player widget at x=44, y=17, player count=1
+2025-03-27 21:55:45,572 - DEBUG - Using bundled VLC path: C:\Users\march\AppData\Local\Temp\_MEI236562\vlc
+2025-03-27 21:55:45,574 - DEBUG - VLC initialized successfully for frame_id: 1332597723568
+2025-03-27 21:55:45,574 - DEBUG - Attached player to canvas with frame_id: 7
+2025-03-27 21:55:45,579 - DEBUG - Video frame HWND for Player 2: 1188964
+2025-03-27 21:55:45,580 - DEBUG - Initialized Player 2 volume to 100
+2025-03-27 21:55:45,581 - DEBUG - Loading video: C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4
+2025-03-27 21:55:45,582 - DEBUG - Initializing player widget at x=594, y=12, player count=2
+2025-03-27 21:55:45,582 - DEBUG - Using bundled VLC path: C:\Users\march\AppData\Local\Temp\_MEI236562\vlc
+2025-03-27 21:55:45,584 - DEBUG - VLC initialized successfully for frame_id: 1332597729520
+2025-03-27 21:55:45,584 - DEBUG - Attached player to canvas with frame_id: 8
+2025-03-27 21:55:45,588 - DEBUG - Video frame HWND for Player 3: 402524
+2025-03-27 21:55:45,590 - DEBUG - Initialized Player 3 volume to 100
+2025-03-27 21:55:45,591 - DEBUG - Loading video: C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4
+2025-03-27 21:55:45,592 - DEBUG - Initializing player widget at x=800, y=500, player count=3
+2025-03-27 21:55:45,592 - DEBUG - Using bundled VLC path: C:\Users\march\AppData\Local\Temp\_MEI236562\vlc
+2025-03-27 21:55:45,594 - DEBUG - VLC initialized successfully for frame_id: 1332597735280
+2025-03-27 21:55:45,595 - DEBUG - Attached player to canvas with frame_id: 9
+2025-03-27 21:55:45,597 - DEBUG - Video frame HWND for Player 4: 206244
+2025-03-27 21:55:45,598 - DEBUG - Initialized Player 4 volume to 100
+2025-03-27 21:55:45,599 - DEBUG - Loading video: C:/Users/march/Downloads/dainty wilder - bad bunny.mp4
+2025-03-27 21:55:45,599 - DEBUG - Initializing player widget at x=112, y=500, player count=4
+2025-03-27 21:55:45,599 - DEBUG - Using bundled VLC path: C:\Users\march\AppData\Local\Temp\_MEI236562\vlc
+2025-03-27 21:55:45,602 - DEBUG - VLC initialized successfully for frame_id: 1332623644160
+2025-03-27 21:55:45,602 - DEBUG - Attached player to canvas with frame_id: 10
+2025-03-27 21:55:45,605 - DEBUG - Video frame HWND for Player 5: 206250
+2025-03-27 21:55:45,607 - DEBUG - Initialized Player 5 volume to 100
+2025-03-27 21:55:45,607 - DEBUG - Loading video: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4
+2025-03-27 21:55:45,608 - DEBUG - Loaded layout with 5 players from C:/Users/march/Downloads/layoutest.ultilayout
+2025-03-27 21:55:45,634 - DEBUG - Attempting to set volume to 100 for Player 1
+2025-03-27 21:55:45,669 - DEBUG - Drop target registered for Player 1
+2025-03-27 21:55:45,671 - WARNING - Volume mismatch for Player 1: expected 100, got -1. Correcting.
+2025-03-27 21:55:45,679 - DEBUG - VLC refreshed for frame_id: 5
+2025-03-27 21:55:45,679 - DEBUG - Attempting to set volume to 0 for Player 1
+2025-03-27 21:55:45,680 - DEBUG - Drop target registered for Player 2
+2025-03-27 21:55:45,681 - WARNING - Volume mismatch for Player 2: expected 100, got -1. Correcting.
+2025-03-27 21:55:45,688 - DEBUG - Drop target registered for Player 3
+2025-03-27 21:55:45,690 - WARNING - Volume mismatch for Player 3: expected 100, got -1. Correcting.
+2025-03-27 21:55:45,698 - DEBUG - Drop target registered for Player 4
+2025-03-27 21:55:45,698 - WARNING - Volume mismatch for Player 4: expected 100, got -1. Correcting.
+2025-03-27 21:55:45,706 - DEBUG - Drop target registered for Player 5
+2025-03-27 21:55:45,707 - WARNING - Volume mismatch for Player 5: expected 100, got -1. Correcting.
+2025-03-27 21:55:45,735 - WARNING - Volume mismatch for Player 1: expected 0, got -1. Correcting.
+2025-03-27 21:55:45,772 - DEBUG - VLC refreshed for frame_id: 5
+2025-03-27 21:55:45,779 - WARNING - Volume mismatch for Player 1: expected 0, got -1. Correcting.
+2025-03-27 21:55:45,781 - DEBUG - VLC refreshed for frame_id: 7
+2025-03-27 21:55:45,790 - DEBUG - VLC refreshed for frame_id: 8
+2025-03-27 21:55:45,799 - DEBUG - VLC refreshed for frame_id: 9
+2025-03-27 21:55:45,807 - DEBUG - VLC refreshed for frame_id: 10
+2025-03-27 21:55:45,901 - DEBUG - Loaded and playing: C:\Users\march\Downloads\dainty wilder - bad bunny.mp4 with duration 1395352 ms
+2025-03-27 21:55:45,909 - DEBUG - Loaded and playing: C:\Users\march\Downloads\Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 with duration 1768149 ms
+2025-03-27 21:55:45,997 - DEBUG - Loaded and playing: C:\Users\march\Downloads\ap13588-1080p.mp4 with duration 3137069 ms
+2025-03-27 21:55:46,084 - DEBUG - Loaded and playing: C:\Users\march\Downloads\Luana Honey LTP176 09.02.2023 720p.mp4 with duration 4032430 ms
+2025-03-27 21:55:46,095 - DEBUG - Loaded and playing: C:\Users\march\Downloads\Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 with duration 4436374 ms
+2025-03-27 21:55:46,101 - DEBUG - VLC refreshed for frame_id: 9
+2025-03-27 21:55:46,109 - DEBUG - VLC refreshed for frame_id: 10
+2025-03-27 21:55:46,191 - DEBUG - VLC refreshed for frame_id: 5
+2025-03-27 21:55:46,192 - DEBUG - Attempting to set volume to 100 for Player 1
+2025-03-27 21:55:46,285 - DEBUG - VLC refreshed for frame_id: 7
+2025-03-27 21:55:46,292 - DEBUG - Volume verified for Player 1: 100
+2025-03-27 21:55:46,295 - DEBUG - VLC refreshed for frame_id: 8
+2025-03-27 21:55:47,901 - DEBUG - Video C:\Users\march\Downloads\dainty wilder - bad bunny.mp4 started successfully
+2025-03-27 21:55:47,909 - DEBUG - Video C:\Users\march\Downloads\Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 started successfully
+2025-03-27 21:55:47,995 - DEBUG - Video C:\Users\march\Downloads\ap13588-1080p.mp4 started successfully
+2025-03-27 21:55:48,085 - DEBUG - Video C:\Users\march\Downloads\Luana Honey LTP176 09.02.2023 720p.mp4 started successfully
+2025-03-27 21:55:48,095 - DEBUG - Video C:\Users\march\Downloads\Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 started successfully
+2025-03-27 21:55:49,538 - DEBUG - Attempting to set volume to 100 for Player 3
+2025-03-27 21:55:49,566 - DEBUG - VLC refreshed for frame_id: 8
+2025-03-27 21:55:49,639 - DEBUG - Volume verified for Player 3: 100
