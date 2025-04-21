@@ -1,7 +1,7 @@
 import os
 import sys
 import tkinter as tk
-from tkinter import filedialog, colorchooser
+from tkinter import ttk, filedialog, messagebox
 from tkinterdnd2 import *
 import vlc
 from PIL import Image, ImageTk, ImageDraw, ImageFont
@@ -14,6 +14,8 @@ import time
 import threading
 from tkinter import ttk
 from collections import deque
+import win32gui
+import win32con
 
 # Configure logging
 if getattr(sys, 'frozen', False):
@@ -39,6 +41,7 @@ if getattr(sys, 'frozen', False):
     tkdnd_path = os.path.join(os.path.dirname(os.path.abspath(sys.executable)), 'tkinterdnd2', 'tkdnd')
     os.environ['TKDND_LIBRARY'] = tkdnd_path
 
+
 class PlayerWidget:
     def __init__(self, parent, app, canvas, x, y, width=400, height=300, playlist=None):
         logging.debug("Initializing player widget at x=%d, y=%d, player count=%d", x, y, len(app.players))
@@ -47,6 +50,8 @@ class PlayerWidget:
         self.canvas = canvas
         self.is_swapping = False
         self.index = len(app.players)
+        self.layer = self.index  # Initialize layer as the creation order (0-based index)
+        logging.debug("Initialized Player %d with layer %d", self.index + 1, self.layer)
         self.is_fullscreen = False  # Track fullscreen state
         self.pre_fullscreen_coords = None  # Store pre-fullscreen position and size
         self.was_in_smm = False
@@ -86,9 +91,9 @@ class PlayerWidget:
 
         # Ensure widget is fully realized before registering drop target and setting HWND
         self.frame.update_idletasks()
-        hwnd = self.video_frame.winfo_id()
-        logging.debug("Video frame HWND for Player %d: %d", self.index + 1, hwnd)
-        self.player.set_hwnd(hwnd)  # Set VLC output to video_frame
+        self.hwnd = self.video_frame.winfo_id()  # Store HWND for VLC
+        logging.debug("Video frame HWND for Player %d: %d", self.index + 1, self.hwnd)
+        self.player.set_hwnd(self.hwnd)  # Set VLC output to video_frame
 
         # Delay drop target registration to avoid invalid handle
         def register_drop_target():
@@ -120,7 +125,6 @@ class PlayerWidget:
 
         self.time_label = tk.Label(self.slider_frame, text="0:00 / 0:00", bg="gray", fg="white")
         
-        # Replace the existing volume_bar setup:
         self.volume_bar = tk.Scale(self.slider_frame, from_=0, to=100, orient=tk.HORIZONTAL,
                            command=self.set_volume, showvalue=0, length=int((width * 0.75) * 0.25),
                            sliderlength=8, highlightbackground="blue", troughcolor="darkblue")
@@ -175,13 +179,170 @@ class PlayerWidget:
         self.next_mode = "random_repo" if not playlist else "playlist"
         self.playlist = playlist if playlist is not None else []
         self.current_playlist_index = -1
-        self.next_playlist_index = None  # For random_playlist mode
-        self.force_next_file = None  # New attribute to force next video regardless of mode
-
         self.update_mode_button_text()
 
         # Verify VLC attachment after initialization
         self.parent.after(200, self.refresh_vlc)
+        self.next_playlist_index = None  # For random_playlist mode
+        self.force_next_file = None  # New attribute to force next video regardless of mode
+
+   
+    def set_layer(self, layer):
+        """Set the player's layer and redraw all players in layer order, preserving seek positions and visibility."""
+        self.layer = layer
+        try:
+            player_states = []
+            for player in self.app.players:
+                try:
+                    x, y = self.app.canvas.coords(player.frame_id)
+                except tk.TclError:
+                    logging.warning("Invalid frame_id for Player %d, using default coords (0, 0)", player.index + 1)
+                    x, y = 0, 0
+                width = player.frame.winfo_width()
+                height = player.frame.winfo_height()
+                current_time = player.player.get_time() if player.current_file else 0
+                was_playing = player.player.is_playing() if player.current_file else False
+                current_file = player.current_file
+                player_states.append({
+                    'player': player,
+                    'x': x,
+                    'y': y,
+                    'width': width,
+                    'height': height,
+                    'current_time': current_time,
+                    'was_playing': was_playing,
+                    'layer': player.layer,
+                    'current_file': current_file
+                })
+                if player.current_file:
+                    player.player.stop()
+                    player.player.set_hwnd(0)
+                self.app.canvas.delete(player.frame_id)
+                player.frame.destroy()
+
+            sorted_states = sorted(player_states, key=lambda s: s['layer'])
+
+            for state in sorted_states:
+                player = state['player']
+                player.frame = tk.Frame(self.app.canvas, bg="black", borderwidth=2, relief="raised")
+                player.frame_id = self.app.canvas.create_window(
+                    state['x'], state['y'], window=player.frame,
+                    width=state['width'], height=state['height'], anchor="nw"
+                )
+                logging.debug("Recreated frame for Player %d at layer %d, frame_id: %d",
+                            player.index + 1, player.layer, player.frame_id)
+
+                player.video_frame = tk.Frame(player.frame, bg="black")
+                player.video_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+                player.frame.update_idletasks()
+                player.hwnd = player.video_frame.winfo_id()
+                logging.debug("Recreated video frame HWND for Player %d: %d", player.index + 1, player.hwnd)
+
+                player.controls_frame = tk.Frame(player.frame, bg="gray")
+                player.slider_frame = tk.Frame(player.controls_frame, bg="gray")
+                player.slider_frame.pack(side=tk.TOP, fill=tk.X)
+                player.seek_bar = tk.Scale(
+                    player.slider_frame, from_=0, to=100, orient=tk.HORIZONTAL,
+                    command=player.seek, showvalue=0, length=int(state['width'] * 0.75) - 100,
+                    sliderlength=8, highlightbackground="green", troughcolor="darkgreen"
+                )
+                player.seek_bar.in_use = False
+                player.seek_bar.bind("<Button-1>", lambda e: setattr(player.seek_bar, 'in_use', True))
+                player.seek_bar.bind("<ButtonRelease-1>", lambda e: setattr(player.seek_bar, 'in_use', False))
+                player.seek_bar.bind("<Button-1>", player.seek_to_position)
+                player.time_label = tk.Label(player.slider_frame, text="0:00 / 0:00", bg="gray", fg="white")
+                player.volume_bar = tk.Scale(
+                    player.slider_frame, from_=0, to=100, orient=tk.HORIZONTAL,
+                    command=player.set_volume, showvalue=0, length=int((state['width'] * 0.75) * 0.25),
+                    sliderlength=8, highlightbackground="blue", troughcolor="darkblue"
+                )
+                player.volume_bar.in_use = False
+                player.volume_bar.bind("<Button-1>", player.jump_to_volume_position)
+                player.volume_bar.bind("<B1-Motion>", lambda e: setattr(player.volume_bar, 'in_use', True))
+                player.volume_bar.bind("<ButtonRelease-1>", lambda e: setattr(player.volume_bar, 'in_use', False))
+                player.volume_bar.set(player.intended_volume if player.intended_volume is not None else 100)
+                player.button_frame = tk.Frame(player.controls_frame, bg="gray")
+                player.button_frame.pack(side=tk.BOTTOM, fill=tk.X)
+                player.drag_handle = tk.Label(player.button_frame, text="Move", bg="gray", fg="white", cursor="fleur")
+                player.toggle_button = tk.Button(player.button_frame, text="▶", command=player.toggle_play_pause, width=3)
+                player.toggle_button.bind("<Control-Button-1>", player.universal_toggle)
+                player.prev_button = tk.Button(player.button_frame, text="<<", command=player.play_previous_video, width=3)
+                player.prev_button.bind("<Control-Button-1>", player.universal_prev)
+                player.next_button = tk.Button(player.button_frame, text=">>", command=player.play_next_video, width=3)
+                player.next_button.bind("<Control-Button-1>", player.universal_next)
+                player.mode_button = tk.Button(player.button_frame, text="Shuf", command=player.toggle_next_mode, width=4)
+                player.playlist_button = tk.Button(player.button_frame, text="Play", command=player.edit_playlist, width=4)
+                player.fullscreen_button = tk.Button(player.button_frame, text="⛶", command=player.toggle_fullscreen, width=3)
+                player.close_button = tk.Button(player.button_frame, text="X", command=player.close, width=3)
+                player.resize_handle = tk.Label(player.button_frame, text="↘", bg="gray", fg="white", cursor="sizing")
+                player.title_label = tk.Label(
+                    player.button_frame, text=os.path.basename(player.current_file) if player.current_file else "No video loaded",
+                    bg="gray", fg="white"
+                )
+                player.pack_controls()
+
+                player.frame.bind("<Enter>", player.show_controls)
+                player.frame.bind("<Leave>", player.schedule_hide_controls)
+                player.frame.bind("<Motion>", player.show_controls)
+                player.drag_handle.bind("<Button-1>", player.start_drag)
+                player.drag_handle.bind("<B1-Motion>", player.drag)
+                player.drag_handle.bind("<ButtonRelease-1>", player.stop_drag)
+                player.resize_handle.bind("<Button-1>", player.start_resize)
+                player.resize_handle.bind("<B1-Motion>", player.resize)
+
+                try:
+                    player.video_frame.drop_target_register(DND_FILES)
+                    player.video_frame.dnd_bind('<<Drop>>', player.drop_video)
+                    logging.debug("Re-registered drop target for Player %d", player.index + 1)
+                except tk.TclError as e:
+                    logging.error("Failed to re-register drop target for Player %d: %s", player.index + 1, e)
+
+            for i, state in enumerate(sorted_states):
+                player = state['player']
+                if state['current_file']:
+                    def restore_state(p=player, s=state):
+                        try:
+                            if p.player.get_state() not in (vlc.State.Error, vlc.State.Ended):
+                                p.player.set_hwnd(p.hwnd)
+                                media = p.instance.media_new(s['current_file'])
+                                p.player.set_media(media)
+                                p.player.play()
+                                p.player.set_time(s['current_time'])
+                                if not s['was_playing']:
+                                    p.player.pause()
+                                    p.toggle_button.config(text="▶")
+                                else:
+                                    p.toggle_button.config(text="||")
+                                p.update_title_label()
+                                p.refresh_vlc()
+                                logging.debug("Restored Player %d to %d ms, playing=%s",
+                                            p.index + 1, s['current_time'], s['was_playing'])
+                        except Exception as e:
+                            logging.error("Failed to restore state for Player %d: %s", p.index + 1, e)
+                            p.current_file = None
+                            p.update_title_label()
+                    self.parent.after(200 + i * 100, restore_state)
+
+            self.app.canvas.update_idletasks()
+            if self.app.dj_dashboard and self.app.dj_dashboard.winfo_exists():
+                self.app.dj_dashboard.update_dashboard()
+            logging.debug("Set Player %d to layer %d, redrew all players", self.index + 1, self.layer)
+
+        except Exception as e:
+            logging.error("Failed to set layer for Player %d: %s", self.index + 1, e)
+            sorted_players = sorted(self.app.players, key=lambda p: p.layer)
+            for i, player in enumerate(sorted_players):
+                try:
+                    if i == 0:
+                        self.app.canvas.tag_lower(player.frame_id)
+                    else:
+                        self.app.canvas.tag_raise(player.frame_id, sorted_players[i-1].frame_id)
+                    logging.debug("Fallback: Set z-order for layer %d: Player %d, frame_id: %d",
+                                player.layer, player.index + 1, player.frame_id)
+                except tk.TclError:
+                    logging.warning("Failed to adjust z-order for Player %d in fallback", player.index + 1)
+            self.app.canvas.update_idletasks()
+            logging.debug("Set Player %d to layer %d, fell back to Tkinter canvas stack", self.index + 1, self.layer)
 
     def pack_controls(self):
         """Dynamically pack controls based on SMM state and player index."""
@@ -332,10 +493,12 @@ class PlayerWidget:
 
     def refresh_vlc(self):
         try:
-            if self.player.is_playing():
-                self.player.pause()
-                self.parent.after(10, lambda: self.player.play())
+            was_playing = self.player.is_playing()
             self.player.set_hwnd(self.video_frame.winfo_id())
+            if was_playing:
+                self.player.play()
+            else:
+                self.player.pause()
             self.volume_bar.set(self.player.audio_get_volume())
             logging.debug("VLC refreshed for frame_id: %d", self.frame_id)
         except Exception as e:
@@ -408,17 +571,31 @@ class PlayerWidget:
         # Verify and correct volume after a short delay
         self.parent.after(100, self._verify_volume)
 
-    def _verify_volume(self, retries=5):
-        actual_volume = self.player.audio_get_volume()
-        if actual_volume != self.intended_volume and self.intended_volume is not None:
-            logging.warning("Volume mismatch for Player %d: expected %d, got %d. Correcting.", 
-                            self.index + 1, self.intended_volume, actual_volume)
-            self.player.audio_set_volume(self.intended_volume)
-            self.volume_bar.set(self.intended_volume)
-            if retries > 0:
-                self.parent.after(100, lambda: self._verify_volume(retries - 1))
-        else:
-            logging.debug("Volume verified for Player %d: %d", self.index + 1, actual_volume)
+    def _verify_volume(self):
+        """Verify and correct the volume to match the intended volume (100% for new videos)."""
+        if self.intended_volume is None:
+            self.intended_volume = 100
+        try:
+            current_volume = self.player.audio_get_volume()
+            if current_volume != self.intended_volume:
+                logging.warning("Volume mismatch for Player %d: expected %d, got %d. Correcting.",
+                            self.index + 1, self.intended_volume, current_volume)
+                self.player.audio_set_volume(self.intended_volume)
+                self.volume_bar.set(self.intended_volume)
+                # Double-check volume after setting
+                current_volume = self.player.audio_get_volume()
+                if current_volume == self.intended_volume:
+                    logging.debug("Volume verified for Player %d: %d", self.index + 1, self.intended_volume)
+                else:
+                    logging.error("Failed to verify volume for Player %d: expected %d, got %d",
+                                self.index + 1, self.intended_volume, current_volume)
+                    # Force another attempt
+                    self.player.audio_set_volume(self.intended_volume)
+                    self.volume_bar.set(self.intended_volume)
+            else:
+                logging.debug("Volume verified for Player %d: %d", self.index + 1, self.intended_volume)
+        except Exception as e:
+            logging.error("Failed to verify volume for Player %d: %s", self.index + 1, e)
 
 
     def jump_to_volume_position(self, event):
@@ -476,9 +653,11 @@ class PlayerWidget:
         self.parent.after(500, self.update_seek_bar)
 
     def toggle_fullscreen(self):
-        """Toggle fullscreen mode for this specific player, making the app window fullscreen."""
+        """Toggle fullscreen mode for this specific player, allowing other players to be raised above."""
         if not self.is_fullscreen:
             # Store current state before entering fullscreen
+            was_playing = self.player.is_playing()
+            logging.debug("Player %d was_playing=%s before fullscreen", self.index + 1, was_playing)
             x, y = self.canvas.coords(self.frame_id)
             width = self.frame.winfo_width()
             height = self.frame.winfo_height()
@@ -488,7 +667,7 @@ class PlayerWidget:
                 'geometry': self.app.root.winfo_geometry(),
                 'is_maximized': self.app.is_maximized,
                 'is_fullscreen': self.app.is_fullscreen,
-                'pre_smm_positions': self.app.pre_smm_positions[:]  # Preserve SMM state
+                'pre_smm_positions': self.app.pre_smm_positions[:]
             }
             logging.debug("Player %d entering fullscreen, stored pre-fullscreen: %s", self.index + 1, self.pre_fullscreen_coords)
 
@@ -501,25 +680,56 @@ class PlayerWidget:
             self.set_size_and_position(screen_width, screen_height, 0, 0)
             self.canvas.tag_raise(self.frame_id)
 
-            # Hide other players
+            # Store pre-fullscreen positions and lower other players below this one
             for player in self.app.players:
                 if player != self:
-                    player.canvas.coords(player.frame_id, -player.frame.winfo_width(), -player.frame.winfo_height())
+                    player.pre_fullscreen_coords = {
+                        'x': self.canvas.coords(player.frame_id)[0],
+                        'y': self.canvas.coords(player.frame_id)[1],
+                        'width': player.frame.winfo_width(),
+                        'height': player.frame.winfo_height()
+                    }
+                    self.canvas.tag_lower(player.frame_id, self.frame_id)
+                    logging.debug("Lowered Player %d below fullscreened Player %d", 
+                                 player.index + 1, self.index + 1)
+
+            # Schedule state restoration to ensure VLC has stabilized
+            def restore_state():
+                if self.player.get_media():
+                    for _ in range(3):
+                        if not was_playing:
+                            self.player.pause()
+                            self.toggle_button.config(text="▶")
+                            logging.debug("Player %d restored to paused state after fullscreen, VLC state: %s", 
+                                         self.index + 1, self.player.get_state())
+                        else:
+                            self.player.play()
+                            self.toggle_button.config(text="||")
+                            logging.debug("Player %d restored to playing state after fullscreen, VLC state: %s", 
+                                         self.index + 1, self.player.get_state())
+                        time.sleep(0.1)
+                        if self.player.get_state() == (vlc.State.Paused if not was_playing else vlc.State.Playing):
+                            break
+                    else:
+                        logging.warning("Failed to set Player %d state to %s after retries", 
+                                       self.index + 1, "paused" if not was_playing else "playing")
+
+            self.parent.after(100, restore_state)
 
             self.is_fullscreen = True
             self.fullscreen_button.config(text="⤬")
             self.app.is_fullscreen = True
-            self.app.is_maximized = False  # Temporarily disable SMM flag
+            self.app.is_maximized = False
             self.app.canvas.update_idletasks()
 
         else:
             # Exit fullscreen via app-level handler
             self.app.handle_escape(None)
 
-        # Refresh VLC and dashboard
-        self.parent.after(50, self.refresh_vlc)
+        # Update DJ dashboard
         if self.app.dj_dashboard and self.app.dj_dashboard.winfo_exists():
             self.app.dj_dashboard.update_dashboard()
+        logging.debug("Player %d fullscreen state: %s", self.index + 1, self.is_fullscreen)
 
 
     def drop_video(self, event):
@@ -531,15 +741,11 @@ class PlayerWidget:
 
     def show_controls(self, event=None):
         if not self.controls_visible:
-            self.controls_frame.pack(side=tk.BOTTOM, fill=tk.X)
-            self.pack_controls()
             self.controls_visible = True
+            self.controls_frame.pack(side=tk.BOTTOM, fill=tk.X)
             self.video_frame.lift()
-            self.frame.update_idletasks()
-            self.parent.after(50, self.refresh_vlc)
-        if self.hide_timeout:
-            self.parent.after_cancel(self.hide_timeout)
-            self.hide_timeout = None
+            self.canvas.update_idletasks()
+            logging.debug("Showed controls for Player %d", self.index + 1)
 
     def schedule_hide_controls(self, event=None):
         if self.controls_visible and not self.hide_timeout:
@@ -551,7 +757,7 @@ class PlayerWidget:
             self.controls_visible = False
             self.video_frame.lift()
             self.frame.update_idletasks()
-            self.parent.after(50, self.refresh_vlc)
+            logging.debug("Hid controls for Player %d", self.index + 1)
         self.hide_timeout = None
 
     def start_drag(self, event):
@@ -607,23 +813,23 @@ class PlayerWidget:
             self.volume_bar.config(length=min(100, int(slider_length * 0.25)))
 
     def set_size_and_position(self, width, height, x, y):
-        """Programmatically set the size and position of the player."""
         logging.debug("Setting Player %d size to %dx%d at (%d, %d)", self.index + 1, width, height, x, y)
-        self.canvas.itemconfig(self.frame_id, width=width, height=height)
-        self.canvas.coords(self.frame_id, x, y)
-        slider_length = int(width * 0.75)
-        self.seek_bar.config(length=max(100, slider_length - 100))
-        self.volume_bar.config(length=min(100, int(slider_length * 0.25)))
-        self.frame.lift()
-        self.pack_controls()  # Adjust control layout
-        if self.controls_visible:
-            self.controls_frame.pack(side=tk.BOTTOM, fill=tk.X)
-            self.video_frame.lift()
-            self.parent.after(50, self.refresh_vlc)
-        self.frame.update_idletasks()
+        try:
+            self.canvas.itemconfig(self.frame_id, width=width, height=height)
+            self.canvas.coords(self.frame_id, x, y)
+            slider_length = int(width * 0.75)
+            self.seek_bar.config(length=max(100, slider_length - 100))
+            self.volume_bar.config(length=min(100, int(slider_length * 0.25)))
+            self.frame.lift()
+            self.pack_controls()
+            if self.controls_visible:
+                self.controls_frame.pack(side=tk.BOTTOM, fill=tk.X)
+                self.video_frame.lift()
+            self.frame.update_idletasks()
+        except tk.TclError as e:
+            logging.error("Failed to set size and position for Player %d: %s", self.index + 1, e)
 
     def configure_for_width(self, width):
-        """Configure slider lengths based on player width."""
         slider_length = int(width * 0.75)
         self.seek_bar.config(length=max(100, slider_length - 100))
         self.volume_bar.config(length=min(100, int(slider_length * 0.25)))
@@ -631,7 +837,6 @@ class PlayerWidget:
         if self.controls_visible:
             self.controls_frame.pack(side=tk.BOTTOM, fill=tk.X)
             self.video_frame.lift()
-            self.parent.after(50, self.refresh_vlc)
         self.frame.update_idletasks()
 
     def close(self):
@@ -912,6 +1117,34 @@ class PlayerWidget:
             self.player.stop()
             self.toggle_button.config(text="▶")
 
+    def resize_video_window(self, width, height):
+        """Resize the VLC video window to the specified dimensions."""
+        try:
+            # Update video_frame size
+            self.video_frame.configure(width=width, height=height)
+            # Only reassign HWND if the window ID has changed
+            current_hwnd = self.video_frame.winfo_id()
+            if current_hwnd != getattr(self, 'hwnd', None):
+                self.hwnd = current_hwnd
+                self.player.set_hwnd(self.hwnd)
+                logging.debug("Reassigned HWND for Player %d: %d", self.index + 1, self.hwnd)
+            # Reset VLC scaling to fit the new window size
+            self.player.video_set_scale(0)
+            # Update control sliders to match new width
+            slider_length = int(width * 0.75)
+            self.seek_bar.configure(length=max(100, slider_length - 100))
+            self.volume_bar.configure(length=min(100, int(slider_length * 0.25)))
+            self.pack_controls()
+            if self.controls_visible:
+                self.controls_frame.pack(side=tk.BOTTOM, fill=tk.X)
+                self.video_frame.lift()
+            self.frame.update_idletasks()
+            logging.debug("Resized VLC video window for Player %d to %dx%d, VLC state: %s", 
+                         self.index + 1, width, height, self.player.get_state())
+        except Exception as e:
+            logging.error("Failed to resize VLC video window for Player %d: %s", self.index + 1, str(e))
+
+
 class DJDashboard(tk.Toplevel):
     def __init__(self, parent, app):
         super().__init__(parent)
@@ -946,6 +1179,7 @@ class DJDashboard(tk.Toplevel):
         self.mode_vars = {}
         self.playlist_boxes = {}
         self.swap_vars = {}
+        self.layer_vars = {}
         self.now_playing_labels = {}
         self.toggle_buttons = {}
         self.skip_5s_buttons = {}
@@ -1097,6 +1331,15 @@ class DJDashboard(tk.Toplevel):
         swap_menu.pack(side=tk.LEFT, padx=1)
         self.swap_vars[i] = swap_var
 
+        # Functional Layer dropdown
+        layer_var = tk.StringVar(value=f"Layer {player.layer}")  # Reflect initial layer
+        layer_options = [f"Layer {j}" for j in range(len(self.app.players))]
+        layer_menu = tk.OptionMenu(btn_frame, layer_var, *layer_options,
+                                   command=lambda val, p=player: self.set_layer(p, int(val.split()[1])))
+        layer_menu.config(width=6)
+        layer_menu.pack(side=tk.LEFT, padx=1)
+        self.layer_vars[i] = layer_var  # Store the variable
+
         playlist_box = tk.Listbox(frame, height=6, selectmode="single")
         playlist_box.pack(fill=tk.X, pady=2)
         playlist_box.drop_target_register(DND_FILES)
@@ -1112,6 +1355,13 @@ class DJDashboard(tk.Toplevel):
         tk.Button(playlist_btn_frame, text="Remove", command=lambda p=player, lb=playlist_box: self.remove_from_playlist(p, lb)).pack(side=tk.LEFT, padx=2)
         tk.Button(playlist_btn_frame, text="Play Next", command=lambda p=player, lb=playlist_box: self.play_next(p, lb)).pack(side=tk.LEFT, padx=2)
 
+    def set_layer(self, player, layer):
+        """Set the player's layer and update the canvas stacking order."""
+        player.set_layer(layer)
+        for i, p in enumerate(self.app.players):
+            self.layer_vars[i].set(f"Layer {p.layer}")
+        logging.debug("Layer set for Player %d to %d", player.index + 1, layer)
+
     def on_listbox_select(self, event, player, listbox):
         selection = listbox.curselection()
         if selection:
@@ -1120,6 +1370,7 @@ class DJDashboard(tk.Toplevel):
             logging.debug("Player %d: Selected index %d via click", player.index + 1, index)
 
     def update_dashboard(self):
+        """Update the DJ Dashboard for all players, displaying full now playing text and syncing volume sliders."""
         if not self.winfo_exists():
             logging.debug("DJD window closed, stopping update loop")
             return
@@ -1144,8 +1395,10 @@ class DJDashboard(tk.Toplevel):
                 return
 
             current_file = player.current_file or 'None'
+            # Always update now playing with full title
+            display_text = f"Now Playing: {os.path.basename(current_file)}"
+            self.now_playing_labels[i].config(text=display_text)
             if current_file != self.last_playing.get(i):
-                self.now_playing_labels[i].config(text=f"Now Playing: {os.path.basename(current_file)}")
                 self.last_playing[i] = current_file
                 self.update_playlist(player, self.playlist_boxes[i])
                 logging.debug("Updated Player %d 'Now Playing' to: %s and refreshed playlist", i + 1, current_file)
@@ -1178,11 +1431,27 @@ class DJDashboard(tk.Toplevel):
                 self.time_labels[i].config(text="0:00 / 0:00")
                 self.toggle_buttons[i].config(text="▶")
 
+            # Sync volume bar
             current_volume = player.player.audio_get_volume()
-            if player.intended_volume is None or abs(current_volume - player.intended_volume) > 5:
-                self.volume_bars[i].set(current_volume)
-                player.volume_bar.set(current_volume)
-                logging.debug("Synced volume bar for Player %d to %d", i + 1, current_volume)
+            intended_volume = player.intended_volume if player.intended_volume is not None else 100
+            if current_volume >= 0:
+                if abs(current_volume - intended_volume) > 5:
+                    logging.warning("DJD volume mismatch for Player %d: expected %d, got %d. Correcting.",
+                                i + 1, intended_volume, current_volume)
+                    self.volume_bars[i].set(intended_volume)
+                    player.volume_bar.set(intended_volume)
+                else:
+                    self.volume_bars[i].set(current_volume)
+                    player.volume_bar.set(current_volume)
+                logging.debug("Synced volume bar for Player %d to %d", i + 1, self.volume_bars[i].get())
+            else:
+                self.volume_bars[i].set(intended_volume)
+                player.volume_bar.set(intended_volume)
+                logging.debug("Set volume bar for Player %d to intended %d (VLC reported %d)", 
+                            i + 1, intended_volume, current_volume)
+
+            # Sync layer dropdown
+            self.layer_vars[i].set(f"Layer {player.layer}")
 
         self.update_idletasks()
         self.process_transition_queue()
@@ -1466,87 +1735,167 @@ class DJDashboard(tk.Toplevel):
     
 class VideoPlayerApp:
     def __init__(self, root):
-        logging.debug("Initializing VideoPlayerApp")
-        self.root = root
-        self.root.title("Ultiplay")
-        self.root.geometry("1200x800")
-        self.pre_smm_geometry = "1200x800+100+100"
-        self.dj_dashboard = None
-        self.all_paused = False
-        self.pre_fullscreen_state = None
-        self.pre_smm_positions = []
-        self.smm_mode = False
+            logging.debug("Initializing VideoPlayerApp")
+            self.root = root
+            self.root.title("Ultiplay")
+            self.root.geometry("1200x800")
+            self.pre_smm_geometry = "1200x800+100+100"
+            self.dj_dashboard = None
+            self.all_paused = False
+            self.pre_fullscreen_state = None
+            self.pre_smm_positions = []
+            self.smm_mode = False
+            self.canvas = tk.Canvas(self.root, width=1200, height=800)
+            self.players = []
+            self.player_positions = []
+            self.dj_dashboard = None
+            self.setup_context_menu()
 
-        # Set window icon
-        self.icon_path = os.path.join(sys._MEIPASS, 'appicon.ico') if getattr(sys, 'frozen', False) else r"C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico"
-        if os.path.exists(self.icon_path):
-            try:
-                self.root.iconbitmap(self.icon_path)
-                logging.debug("Set window icon to %s", self.icon_path)
-            except Exception as e:
-                logging.warning("Failed to set window icon: %s", str(e))
+            # Set window icon
+            self.icon_path = os.path.join(sys._MEIPASS, 'appicon.ico') if getattr(sys, 'frozen', False) else r"C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico"
+            if os.path.exists(self.icon_path):
+                try:
+                    self.root.iconbitmap(self.icon_path)
+                    logging.debug("Set window icon to %s", self.icon_path)
+                except Exception as e:
+                    logging.warning("Failed to set window icon: %s", str(e))
+            else:
+                logging.warning("Icon file not found at %s", self.icon_path)
+
+            self.is_fullscreen = False
+            self.is_maximized = False
+            self.pre_fullscreen_positions = []
+            self.swap_first = None
+            self.swap_history = []
+            self.last_resize_time = 0
+            self.last_selected_player = None
+            self.previous_geometry = "1200x800"
+
+            # Create canvas
+            self.canvas.pack(fill=tk.BOTH, expand=True)
+            self.background_image = None
+            self.background_photo = None
+
+            # Enable drag-and-drop on background
+            self.canvas.drop_target_register(DND_FILES)
+            self.canvas.dnd_bind('<<Drop>>', self.handle_background_drop)
+
+            # Set default background and force initial display
+            self.bg_file_path = self.create_default_background()
+            self.resize_background(1200, 800)
+            self.canvas.update_idletasks()
+            self.canvas.update()
+
+            # Context menu
+            self.context_menu = tk.Menu(self.root, tearoff=0)
+            self.context_menu.add_command(label="Add Player", command=lambda: self.add_player_with_event())
+            self.context_menu.add_command(label="Set Background", command=self.set_background)
+            self.context_menu.add_command(label="Save Layout", command=self.save_layout)
+            self.context_menu.add_command(label="Load Layout", command=self.load_layout)
+            self.context_menu.add_command(label="Open DJD", command=self.toggle_dj_dashboard)
+            self.context_menu.add_command(label="Reset Key Bindings", command=self.refresh_bindings)
+            self.context_menu.add_command(label="Recover All Players", command=self.recover_all_players)
+            self.canvas.bind("<Button-3>", self.show_context_menu)
+            self.root.bind_all("<Control-s>", self.save_layout)
+
+            # Initial bindings and focus
+            self.refresh_bindings()
+            self.root.focus_force()
+            self.root.bind("<FocusIn>", lambda e: self.on_focus_in())
+            self.root.after(5000, self.check_focus)
+
+            # Global bindings with bind_all
+            self.root.bind_all("<space>", self.toggle_play_pause)
+            self.root.bind("<Configure>", self.handle_resize)
+            self.root.bind("<F11>", self.toggle_fullscreen)
+            self.root.bind("f", self.toggle_maximize_screen)
+            self.root.bind("b", self.raise_screen_5)
+            self.root.bind("<Escape>", self.handle_escape)
+
+            for i in range(1, 10):
+                self.root.bind_all(f"{i}", lambda e, idx=i-1: self.select_for_swap(idx))
+            self.root.bind_all("n", self.handle_next)
+            self.root.bind_all(".", self.handle_skip)
+
+    def toggle_fullscreen(self):
+        """Toggle fullscreen mode for this specific player, making it a background layer."""
+        if not self.is_fullscreen:
+            # Store current state before entering fullscreen
+            was_playing = self.player.is_playing()
+            logging.debug("Player %d was_playing=%s before fullscreen", self.index + 1, was_playing)
+            x, y = self.canvas.coords(self.frame_id)
+            width = self.frame.winfo_width()
+            height = self.frame.winfo_height()
+            self.pre_fullscreen_coords = {'x': x, 'y': y, 'width': width, 'height': height}
+            self.app.pre_fullscreen_state = {
+                'players': [(p.canvas.coords(p.frame_id), p.frame.winfo_width(), p.frame.winfo_height()) for p in self.app.players],
+                'geometry': self.app.root.winfo_geometry(),
+                'is_maximized': self.app.is_maximized,
+                'is_fullscreen': self.app.is_fullscreen,
+                'pre_smm_positions': self.app.pre_smm_positions[:]
+            }
+            logging.debug("Player %d entering fullscreen, stored pre-fullscreen: %s", self.index + 1, self.pre_fullscreen_coords)
+
+            # Set app window to fullscreen
+            self.app.root.attributes('-fullscreen', True)
+            screen_width = self.app.root.winfo_screenwidth()
+            screen_height = self.app.root.winfo_screenheight()
+
+            # Resize this player to fill the screen and set as background layer
+            self.set_size_and_position(screen_width, screen_height, 0, 0)
+            self.set_layer(0)  # Set fullscreened player to lowest layer
+            self.canvas.tag_raise(self.frame_id)  # Ensure it’s above background image
+            self.canvas.lower(self.frame_id, "bg")  # Keep below other players
+
+            # Store pre-fullscreen positions for other players and lower their layers
+            for player in self.app.players:
+                if player != self:
+                    player.pre_fullscreen_coords = {
+                        'x': self.canvas.coords(player.frame_id)[0],
+                        'y': self.canvas.coords(player.frame_id)[1],
+                        'width': player.frame.winfo_width(),
+                        'height': player.frame.winfo_height()
+                    }
+                    player.set_layer(player.layer if player.layer > 0 else 1)  # Ensure above fullscreened player
+                    self.canvas.tag_raise(player.frame_id, self.frame_id)
+
+            # Schedule state restoration to ensure VLC has stabilized
+            def restore_state():
+                if self.player.get_media():
+                    for _ in range(3):
+                        if not was_playing:
+                            self.player.pause()
+                            self.toggle_button.config(text="▶")
+                            logging.debug("Player %d restored to paused state after fullscreen, VLC state: %s", 
+                                         self.index + 1, self.player.get_state())
+                        else:
+                            self.player.play()
+                            self.toggle_button.config(text="||")
+                            logging.debug("Player %d restored to playing state after fullscreen, VLC state: %s", 
+                                         self.index + 1, self.player.get_state())
+                        time.sleep(0.1)
+                        if self.player.get_state() == (vlc.State.Paused if not was_playing else vlc.State.Playing):
+                            break
+                    else:
+                        logging.warning("Failed to set Player %d state to %s after retries", 
+                                       self.index + 1, "paused" if not was_playing else "playing")
+
+            self.parent.after(100, restore_state)
+
+            self.is_fullscreen = True
+            self.fullscreen_button.config(text="⤬")
+            self.app.is_fullscreen = True
+            self.app.is_maximized = False
+            self.app.canvas.update_idletasks()
+
         else:
-            logging.warning("Icon file not found at %s", self.icon_path)
+            # Exit fullscreen via app-level handler
+            self.app.handle_escape(None)
 
-        self.players = []
-        self.is_fullscreen = False
-        self.is_maximized = False
-        self.player_positions = []
-        self.pre_smm_positions = []
-        self.pre_fullscreen_positions = []
-        self.swap_first = None
-        self.swap_history = []
-        self.last_resize_time = 0
-        self.last_selected_player = None
-        self.previous_geometry = "1200x800"
-
-        # Create canvas
-        self.canvas = tk.Canvas(self.root, bg='black', highlightthickness=0)
-        self.canvas.pack(fill=tk.BOTH, expand=True)
-        self.background_image = None
-        self.background_photo = None
-
-        # Enable drag-and-drop on background
-        self.canvas.drop_target_register(DND_FILES)
-        self.canvas.dnd_bind('<<Drop>>', self.handle_background_drop)
-
-        # Set default background and force initial display
-        self.bg_file_path = self.create_default_background()
-        self.resize_background(1200, 800)
-        self.canvas.update_idletasks()
-        self.canvas.update()
-
-        # Context menu
-        self.context_menu = tk.Menu(self.root, tearoff=0)
-        self.context_menu.add_command(label="Add Player", command=self.add_player)
-        self.context_menu.add_command(label="Set Background", command=self.set_background)
-        self.context_menu.add_command(label="Save Layout", command=self.save_layout)
-        self.context_menu.add_command(label="Load Layout", command=self.load_layout)
-        self.context_menu.add_command(label="Open DJD", command=self.toggle_dj_dashboard)  # Added below
-        self.context_menu.add_command(label="Reset Key Bindings", command=self.refresh_bindings)
-        self.canvas.bind("<Button-3>", self.show_context_menu)
-        self.root.bind_all("<Control-s>", self.save_layout)
-
-        # Initial bindings and focus
-        self.refresh_bindings()
-        self.root.focus_force()  # Ensure app has focus on startup
-        self.root.bind("<FocusIn>", lambda e: self.on_focus_in())  # Refresh on focus gain
-
-        # Periodic focus check (every 5 seconds)
-        self.root.after(5000, self.check_focus)
-
-        # Global bindings with bind_all
-        self.root.bind_all("<space>", self.toggle_play_pause)
-        self.root.bind("<Configure>", self.handle_resize)
-        self.root.bind("<F11>", self.toggle_fullscreen)
-        self.root.bind("f", self.toggle_maximize_screen)
-        self.root.bind("b", self.raise_screen_5)
-        self.root.bind("<Escape>", self.handle_escape)
-
-        for i in range(1, 10):
-            self.root.bind_all(f"{i}", lambda e, idx=i-1: self.select_for_swap(idx))
-        self.root.bind_all("n", self.handle_next)
-        self.root.bind_all(".", self.handle_skip)
+        # Update DJ dashboard
+        if self.app.dj_dashboard and self.app.dj_dashboard.winfo_exists():
+            self.app.dj_dashboard.update_dashboard()
+        logging.debug("Player %d fullscreen state: %s", self.index + 1, self.is_fullscreen)
 
     def select_for_swap(self, index):
         if not (0 <= index < len(self.players)):
@@ -1618,12 +1967,14 @@ class VideoPlayerApp:
         p1_playlist, p2_playlist = player1.playlist[:], player2.playlist[:]
         p1_index, p2_index = player1.current_playlist_index, player2.current_playlist_index
         p1_mode, p2_mode = player1.next_mode, player2.next_mode
+        p1_layer, p2_layer = player1.layer, player2.layer
 
         # Perform the swap of player attributes
         player1.current_file, player2.current_file = p2_file, p1_file
         player1.playlist, player2.playlist = p2_playlist, p1_playlist
         player1.current_playlist_index, player2.current_playlist_index = p2_index, p1_index
         player1.next_mode, player2.next_mode = p2_mode, p1_mode
+        player1.layer, player2.layer = p2_layer, p1_layer
         player1.update_mode_button_text()
         player2.update_mode_button_text()
 
@@ -1631,9 +1982,16 @@ class VideoPlayerApp:
         self._reload_player(player1, p2_file, p2_pos, p2_playing)
         self._reload_player(player2, p1_file, p1_pos, p1_playing)
 
+        # Reapply layer order after swap
+        sorted_players = sorted(self.players, key=lambda p: p.layer)
+        for player in sorted_players:
+            self.canvas.tag_raise(player.frame_id)
+
         # Update player UI titles
         player1.update_title_label()
         player2.update_title_label()
+        player1.set_layer(p1_layer)  # Reapply layers post-swap
+        player2.set_layer(p2_layer)
 
         # Adjust layout if in Screen Maximize Mode (SMM)
         if self.is_maximized:
@@ -1874,63 +2232,82 @@ class VideoPlayerApp:
             self.last_selected_player = None
 
     def raise_screen_5(self, event=None):
+        """Raise Player 5 to the top layer, restoring its position if in fullscreen mode."""
         if len(self.players) < 5:
             return
         screen_5 = self.players[4]
-        for player in self.players[:4]:
-            self.canvas.tag_lower(player.frame_id)
-            player.video_frame.lower()
+        max_layer = max(p.layer for p in self.players) + 1
+        screen_5.set_layer(max_layer)
+        # Restore pre-fullscreen position if in fullscreen mode
+        fullscreen_player = next((p for p in self.players if p.is_fullscreen), None)
+        if fullscreen_player and screen_5 != fullscreen_player and hasattr(screen_5, 'pre_fullscreen_coords'):
+            x, y = screen_5.pre_fullscreen_coords['x'], screen_5.pre_fullscreen_coords['y']
+            width, height = screen_5.pre_fullscreen_coords['width'], screen_5.pre_fullscreen_coords['height']
+            screen_5.set_size_and_position(width, height, x, y)
+            logging.debug("Restored Player 5 to pre-fullscreen position: x=%d, y=%d, size=%dx%d", 
+                         x, y, width, height)
         self.canvas.tag_raise(screen_5.frame_id)
-        screen_5.frame.lift()
-        screen_5.video_frame.tkraise()
-        screen_5.pack_controls()
+        if self.dj_dashboard and self.dj_dashboard.winfo_exists():
+            self.dj_dashboard.update_dashboard()
         self.canvas.update_idletasks()
+        logging.debug("Raised Player 5 to layer %d", max_layer)
 
-    def _finalize_render(self):
-        screen_width = self.root.winfo_screenwidth()
-        screen_height = self.root.winfo_screenheight()
+    def _finalize_render(self, screen_width, screen_height):
+        num_players = len(self.players)
         half_width = screen_width // 2
         half_height = screen_height // 2
-        layouts = [
-            (0, 0, half_width, half_height),
-            (half_width, 0, half_width, half_height),
-            (0, half_height, half_width, half_height),
-            (half_width, half_height, half_width, half_height)
-        ]
-        for i, player in enumerate(self.players[:4]):
-            x, y, width, height = layouts[i]
-            player.set_size_and_position(width, height, x, y)
-            self.player_positions[i] = {'x': x, 'y': y, 'width': width, 'height': height}
-            player.configure_for_width(width)
-        if len(self.players) >= 5:
-            screen_5 = self.players[4]
-            center_width = half_width // 3
-            center_height = half_height // 3
-            center_x = (screen_width - center_width) // 2
-            center_y = (screen_height - center_height) // 2
-            screen_5.set_size_and_position(center_width, center_height, center_x, center_y)
-            self.player_positions[4] = {'x': center_x, 'y': center_y, 'width': center_width, 'height': center_height}
-            self.raise_screen_5()
-        for player in self.players[5:]:
-            player.set_size_and_position(1, 1, -100, -100)
-            self.player_positions[player.index] = {'x': -100, 'y': -100, 'width': 1, 'height': 1}
-        self.canvas.update_idletasks()
+        if num_players == 6:
+            third_height = screen_height // 3
+            layouts = [
+                (0, 0, half_width, third_height),
+                (half_width, 0, half_width, third_height),
+                (0, third_height, half_width, third_height),
+                (half_width, third_height, half_width, third_height),
+                (0, 2 * third_height, half_width, third_height),
+                (half_width, 2 * third_height, half_width, third_height)
+            ]
+            for i, player in enumerate(self.players):
+                x, y, width, height = layouts[i]
+                player.set_size_and_position(width, height, x, y)
+                self.player_positions[i] = {'x': x, 'y': y, 'width': width, 'height': height}
+                player.configure_for_width(width)
+        else:
+            rows = math.ceil(math.sqrt(num_players))
+            cols = math.ceil(num_players / rows)
+            cell_width = screen_width // cols
+            cell_height = screen_height // rows
+            for i, player in enumerate(self.players):
+                row = i // cols
+                col = i % cols
+                x = col * cell_width
+                y = row * cell_height
+                player.set_size_and_position(cell_width, cell_height, x, y)
+                self.player_positions[i] = {'x': x, 'y': y, 'width': cell_width, 'height': cell_height}
+                player.configure_for_width(cell_width)
 
     def toggle_maximize_screen(self, event=None):
         logging.debug("Toggling maximize screen: current maximized=%s", self.is_maximized)
         if not self.is_maximized:
-            # Store pre-SMM state
             self.pre_smm_geometry = self.root.winfo_geometry()
             self.pre_smm_positions = []
+            self.all_paused = all(not player.player.is_playing() for player in self.players if player.current_file)
+            logging.debug("All players paused before SMM: %s", self.all_paused)
+
             for player in self.players:
-                x, y = self.canvas.coords(player.frame_id)
+                try:
+                    x, y = self.canvas.coords(player.frame_id)
+                except tk.TclError:
+                    x, y = 0, 0
                 width = player.frame.winfo_width()
                 height = player.frame.winfo_height()
                 self.pre_smm_positions.append({'x': x, 'y': y, 'width': width, 'height': height})
-                logging.debug("Stored pre-SMM position for Player %d: %dx%d at (%d, %d)", 
+                logging.debug("Stored pre-SMM state for Player %d: %dx%d at (%d, %d)",
                             player.index + 1, width, height, x, y)
+                if self.all_paused and player.current_file:
+                    player.player.pause()
+                    player.toggle_button.config(text="▶")
+                    logging.debug("Ensured pause for Player %d before SMM resizing", player.index + 1)
 
-            # Enter SMM
             self.root.attributes('-fullscreen', True)
             screen_width = self.root.winfo_screenwidth()
             screen_height = self.root.winfo_screenheight()
@@ -1981,33 +2358,41 @@ class VideoPlayerApp:
                     self.player_positions[i] = {'x': x, 'y': y, 'width': width, 'height': height}
                     player.configure_for_width(width)
             elif num_players == 5:
-                self._finalize_render()
-            elif num_players == 6:
                 half_width = screen_width // 2
-                third_height = screen_height // 3
+                half_height = screen_height // 2
+                small_width = half_width // 3
+                small_height = half_height // 3
+                center_x = (screen_width - small_width) // 2
+                center_y = (screen_height - small_height) // 2
                 layouts = [
-                    (0, 0, half_width, third_height),
-                    (half_width, 0, half_width, third_height),
-                    (0, third_height, half_width, third_height),
-                    (half_width, third_height, half_width, third_height),
-                    (0, 2 * third_height, half_width, third_height),
-                    (half_width, 2 * third_height, half_width, third_height)
+                    (0, 0, half_width, half_height),
+                    (half_width, 0, half_width, half_height),
+                    (0, half_height, half_width, half_height),
+                    (half_width, half_height, half_width, half_height),
+                    (center_x, center_y, small_width, small_height)
                 ]
                 for i, player in enumerate(self.players):
                     x, y, width, height = layouts[i]
                     player.set_size_and_position(width, height, x, y)
                     self.player_positions[i] = {'x': x, 'y': y, 'width': width, 'height': height}
                     player.configure_for_width(width)
-            elif num_players > 6:
-                self._finalize_render()
+            elif num_players >= 6:
+                self._finalize_render(screen_width, screen_height)
+
+            if self.all_paused:
+                for player in self.players:
+                    if player.current_file and player.player.is_playing():
+                        player.player.pause()
+                        player.toggle_button.config(text="▶")
+                        logging.debug("Re-enforced pause for Player %d after SMM resizing", player.index + 1)
 
             self.is_maximized = True
             self.is_fullscreen = True
             self.canvas.update_idletasks()
             self._bind_number_keys()
-            logging.debug("Entered SMM with %d players", num_players)
+            logging.debug("Entered SMM with %d players, all_paused=%s", num_players, self.all_paused)
         else:
-            self.handle_escape(None)  # Delegate to escape handler to exit SMM
+            self.handle_escape(None)
 
     def _resume_updates(self):
         """Resume player playback and allow UI updates after a swap."""
@@ -2024,45 +2409,62 @@ class VideoPlayerApp:
             self.players[self.last_selected_player].play_next_video()
             self.last_selected_player = None
 
-    def add_player(self):
-        x = getattr(self, 'last_click_x', 50)
-        y = getattr(self, 'last_click_y', 50)
-        x = max(0, min(x, self.canvas.winfo_width() - 400))
-        y = max(0, min(y, self.canvas.winfo_height() - 300))
-        player = PlayerWidget(self.root, self, self.canvas, x, y, width=400, height=300)
-        self.players.append(player)
-        self.player_positions.append({'x': x, 'y': y, 'width': 400, 'height': 300})
-        self._bind_number_keys()
-        if self.dj_dashboard and self.dj_dashboard.winfo_exists():
-            logging.debug("Rebuilding DJD for new player (count=%d)", len(self.players))
-            self.dj_dashboard.build_player_controls()
-            self.dj_dashboard.adjust_height()  # Ensure height adjusts
-            self.dj_dashboard.update_dashboard()
-        self.arrange_players()
-
-    def toggle_fullscreen(self, event=None):
-        """Toggle global fullscreen mode for the entire application (via F11)."""
-        if not self.is_fullscreen:
-            self.pre_fullscreen_positions = []
-            for player in self.players:
-                x, y = self.canvas.coords(player.frame_id)
-                width = player.frame.winfo_width()
-                height = player.frame.winfo_height()
-                self.pre_fullscreen_positions.append({'x': x, 'y': y, 'width': width, 'height': height})
-            self.root.attributes('-fullscreen', True)
-            self.is_fullscreen = True
-            self.arrange_players()
-            logging.debug("Entered global fullscreen mode")
+    def add_player(self, event=None):
+        """Add a new player widget at the specified or event coordinates."""
+        if event:
+            x = self.canvas.canvasx(event.x)
+            y = self.canvas.canvasy(event.y)
+            logging.debug("Right-click event at canvas x=%d, y=%d (screen x=%d, y=%d)", 
+                         x, y, event.x_root, event.y_root)
         else:
-            self.root.attributes('-fullscreen', False)
-            self.is_fullscreen = False
-            for i, player in enumerate(self.players):
-                if i < len(self.pre_fullscreen_positions):
-                    pos = self.pre_fullscreen_positions[i]
-                    player.set_size_and_position(pos['width'], pos['height'], pos['x'], pos['y'])
-            self.arrange_players()
-            logging.debug("Exited global fullscreen mode")
-        self.canvas.update_idletasks()
+            x, y = 100, 100
+            logging.debug("No event provided, using default coordinates x=%d, y=%d", x, y)
+        logging.debug("Adding player at x=%d, y=%d", x, y)
+        player = PlayerWidget(self.root, self, self.canvas, x, y)
+        self.players.append(player)
+        # Set new player’s layer above all others
+        fullscreen_player = next((p for p in self.players if p.is_fullscreen), None)
+        if fullscreen_player:
+            max_layer = max(p.layer for p in self.players if p != player) + 1
+            player.set_layer(max_layer)
+            self.canvas.tag_raise(player.frame_id, fullscreen_player.frame_id)
+            logging.debug("Set new Player %d to layer %d above fullscreened Player %d", 
+                         player.index + 1, max_layer, fullscreen_player.index + 1)
+        else:
+            player.set_layer(len(self.players))
+            self.canvas.tag_raise(player.frame_id)
+        self.player_positions.append({'x': x, 'y': y, 'width': 400, 'height': 300})
+        logging.debug("Added Player %d, total players: %d", player.index + 1, len(self.players))
+        if self.dj_dashboard and self.dj_dashboard.winfo_exists():
+            self.dj_dashboard.rebuild_controls()
+
+    def setup_context_menu(self):
+        """Set up the right-click context menu for the canvas."""
+        self.context_menu = tk.Menu(self.root, tearoff=0)
+        self.context_menu.add_command(label="Add Player", command=lambda: self.add_player_with_event())
+        # Add other menu options as needed
+        self.canvas.bind("<Button-3>", self.show_context_menu)
+        logging.debug("Context menu set up for canvas")
+    
+    def show_context_menu(self, event):
+            """Display the context menu at the right-click location and store event coordinates."""
+            self.last_event = event
+            try:
+                self.context_menu.post(event.x_root, event.y_root)
+                logging.debug("Context menu shown at screen x=%d, y=%d, canvas x=%d, y=%d", 
+                             event.x_root, event.y_root, event.x, event.y)
+            finally:
+                self.context_menu.grab_release()
+
+    def add_player_with_event(self):
+        """Wrapper to pass the stored event to add_player."""
+        event = getattr(self, 'last_event', None)
+        if event:
+            logging.debug("Using stored event for add_player: screen x=%d, y=%d", 
+                         event.x_root, event.y_root)
+        else:
+            logging.warning("No stored event available for add_player")
+        self.add_player(event)
 
     def refresh_bindings(self):
         """Refresh all keyboard bindings to ensure they are active."""
@@ -2112,76 +2514,92 @@ class VideoPlayerApp:
             logging.error(f"Failed to resize background: {e}")
 
     def handle_escape(self, event=None):
-        """Handle the Escape key to revert to the previous state progressively."""
         if not self.is_fullscreen:
-            return  # Nothing to do if not fullscreen
+            return
 
-        # Find the fullscreen player (if any)
         fullscreen_player = next((p for p in self.players if p.is_fullscreen), None)
 
         if fullscreen_player and self.pre_fullscreen_state:
-            # Exiting per-player fullscreen
             fullscreen_player.is_fullscreen = False
             fullscreen_player.fullscreen_button.config(text="⛶")
             
-            # Restore player-specific pre-fullscreen size
             if fullscreen_player.pre_fullscreen_coords:
-                fullscreen_player.set_size_and_position(
-                    fullscreen_player.pre_fullscreen_coords['width'],
-                    fullscreen_player.pre_fullscreen_coords['height'],
-                    fullscreen_player.pre_fullscreen_coords['x'],
-                    fullscreen_player.pre_fullscreen_coords['y']
-                )
+                try:
+                    fullscreen_player.set_size_and_position(
+                        fullscreen_player.pre_fullscreen_coords['width'],
+                        fullscreen_player.pre_fullscreen_coords['height'],
+                        fullscreen_player.pre_fullscreen_coords['x'],
+                        fullscreen_player.pre_fullscreen_coords['y']
+                    )
+                except tk.TclError as e:
+                    logging.error("Failed to restore fullscreen player size: %s", e)
                 fullscreen_player.pre_fullscreen_coords = None
 
-            # Check if previous state was SMM
             if self.pre_fullscreen_state['is_maximized']:
-                # Restore SMM in fullscreen mode
-                self.root.attributes('-fullscreen', True)  # Keep fullscreen for SMM
+                self.root.attributes('-fullscreen', True)
                 self.is_maximized = True
                 self.is_fullscreen = True
                 for i, player in enumerate(self.players):
                     if i < len(self.pre_fullscreen_state['players']):
-                        (x, y), width, height = self.pre_fullscreen_state['players'][i]
-                        player.set_size_and_position(width, height, x, y)
-                        player.configure_for_width(width)
+                        try:
+                            (x, y), width, height = self.pre_fullscreen_state['players'][i]
+                            player.set_size_and_position(width, height, x, y)
+                            player.configure_for_width(width)
+                        except tk.TclError as e:
+                            logging.error("Failed to restore player %d in SMM: %s", i + 1, e)
                 self.pre_fullscreen_state = None
                 logging.debug("Exited per-player fullscreen, restored to fullscreen SMM mode")
             else:
-                # Restore Normal Mode
                 self.root.attributes('-fullscreen', False)
                 self.is_maximized = False
                 self.is_fullscreen = False
                 for i, player in enumerate(self.players):
                     if i < len(self.pre_fullscreen_state['players']):
-                        (x, y), width, height = self.pre_fullscreen_state['players'][i]
-                        player.set_size_and_position(width, height, x, y)
-                self.root.geometry(self.pre_fullscreen_state['geometry'])
+                        try:
+                            (x, y), width, height = self.pre_fullscreen_state['players'][i]
+                            player.set_size_and_position(width, height, x, y)
+                        except tk.TclError as e:
+                            logging.error("Failed to restore player %d in normal mode: %s", i + 1, e)
+                try:
+                    self.root.geometry(self.pre_fullscreen_state['geometry'])
+                except tk.TclError as e:
+                    logging.error("Failed to restore geometry: %s, using default", e)
+                    self.root.geometry("1200x800")
                 self.arrange_players()
                 self.pre_fullscreen_state = None
                 logging.debug("Exited per-player fullscreen, restored to Normal mode")
 
         elif self.is_fullscreen and not fullscreen_player:
-            # Exiting SMM or global fullscreen
             self.root.attributes('-fullscreen', False)
             self.is_fullscreen = False
             
             if self.is_maximized and self.pre_smm_positions:
-                # Exit SMM, restore Normal Mode
                 self.is_maximized = False
-                self.root.geometry(self.pre_smm_geometry)
+                try:
+                    self.root.geometry(self.pre_smm_geometry or "1200x800")
+                except tk.TclError as e:
+                    logging.error("Failed to restore SMM geometry: %s, using default", e)
+                    self.root.geometry("1200x800")
                 for i, player in enumerate(self.players):
-                    if i < len(self.pre_smm_positions):
-                        pos = self.pre_smm_positions[i]
+                    pos = self.pre_smm_positions[i] if i < len(self.pre_smm_positions) else {'x': 50, 'y': 50, 'width': 400, 'height': 300}
+                    try:
                         player.set_size_and_position(pos['width'], pos['height'], pos['x'], pos['y'])
+                        player.configure_for_width(pos['width'])
+                    except tk.TclError as e:
+                        logging.error("Failed to restore player %d position: %s, using default", i + 1, e)
+                        player.set_size_and_position(400, 300, 50 + (i * 20), 50 + (i * 20))
                 self.arrange_players()
+                self.pre_smm_positions = []
                 logging.debug("Exited SMM, restored to Normal mode")
             else:
-                # Exit global fullscreen (F11)
                 for i, player in enumerate(self.players):
-                    if i < len(self.pre_fullscreen_positions):
-                        pos = self.pre_fullscreen_positions[i]
+                    pos = self.pre_fullscreen_positions[i] if i < len(self.pre_fullscreen_positions) else {'x': 50, 'y': 50, 'width': 400, 'height': 300}
+                    try:
                         player.set_size_and_position(pos['width'], pos['height'], pos['x'], pos['y'])
+                        player.configure_for_width(pos['width'])
+                    except tk.TclError as e:
+                        logging.error("Failed to restore player %d position: %s, using default", i + 1, e)
+                        player.set_size_and_position(400, 300, 50 + (i * 20), 50 + (i * 20))
                 self.arrange_players()
                 logging.debug("Exited global fullscreen, restored to Normal mode")
 
@@ -2190,19 +2608,21 @@ class VideoPlayerApp:
             self.dj_dashboard.update_dashboard()
 
     def toggle_play_pause(self, event=None):
-        self.all_paused = not self.all_paused
-        for player in self.players:
-            if self.all_paused and player.player.is_playing():
-                player.player.pause()
-                player.toggle_button.config(text="▶")
-            elif not self.all_paused and not player.player.is_playing():
-                if not player.current_file and player.playlist:
-                    player.load_first_video()
-                else:
+        logging.debug("Toggling play/pause, is_maximized=%s", self.is_maximized)
+        all_paused = all(not player.player.is_playing() for player in self.players if player.current_file)
+        if all_paused:
+            for player in self.players:
+                if player.current_file:
                     player.player.play()
                     player.toggle_button.config(text="||")
-        if self.is_maximized and len(self.players) >= 5:
-            self.root.after(100, self.raise_screen_5)
+                    logging.debug("Playing Player %d", player.index + 1)
+        else:
+            for player in self.players:
+                if player.current_file and player.player.is_playing():
+                    player.player.pause()
+                    player.toggle_button.config(text="▶")
+                    logging.debug("Paused Player %d", player.index + 1)
+        self.all_paused = all_paused
         self.canvas.update_idletasks()
 
     def update_background(self, event=None):
@@ -2227,11 +2647,6 @@ class VideoPlayerApp:
             except Exception as e:
                 logging.error("Failed to update background: %s", e)
 
-    def show_context_menu(self, event):
-        self.last_click_x = event.x
-        self.last_click_y = event.y
-        self.context_menu.post(event.x_root, event.y_root)
-
     def set_background(self):
         file_path = filedialog.askopenfilename(filetypes=[("Image Files", "*.png *.jpg *.jpeg *.gif")])
         if file_path:
@@ -2239,7 +2654,8 @@ class VideoPlayerApp:
             self.update_background(None)
 
     def save_layout(self, event=None):
-        file_path = filedialog.asksaveasfilename(defaultextension=".ultilayout", 
+        """Save the current layout, including smm_mode and all player attributes."""
+        file_path = filedialog.asksaveasfilename(defaultextension=".ultilayout",
                                                 filetypes=[("Ultiplay Layout", "*.ultilayout"), ("Legacy Playlist", "*.json")])
         if not file_path:
             return
@@ -2250,7 +2666,8 @@ class VideoPlayerApp:
                 "width": self.canvas.winfo_width(),
                 "height": self.canvas.winfo_height(),
                 "is_maximized": self.is_maximized,
-                "is_fullscreen": self.is_fullscreen
+                "is_fullscreen": self.is_fullscreen,
+                "smm_mode": self.smm_mode
             },
             "players": []
         }
@@ -2270,14 +2687,18 @@ class VideoPlayerApp:
                 "volume": player.intended_volume if player.intended_volume is not None else player.player.audio_get_volume(),
                 "seek_position": player.player.get_time() if player.player.get_media() else 0,
                 "is_playing": player.player.is_playing(),
-                "is_fullscreen": player.is_fullscreen  # Add fullscreen state
+                "is_fullscreen": player.is_fullscreen
             }
             layout_data["players"].append(player_data)
-        with open(file_path, "w") as f:
-            json.dump(layout_data, f, indent=4)
-        logging.debug("Saved layout with %d players to %s", len(self.players), file_path)
+        try:
+            with open(file_path, "w") as f:
+                json.dump(layout_data, f, indent=4)
+            logging.debug("Saved layout with %d players to %s, smm_mode=%s", len(self.players), file_path, self.smm_mode)
+        except Exception as e:
+            logging.error("Failed to save layout to %s: %s", file_path, e)
 
     def load_layout(self):
+        """Load a layout, entering SMM if saved in smm_mode, preserving all player attributes."""
         file_path = filedialog.askopenfilename(filetypes=[("Ultiplay Layout", "*.ultilayout"), ("Legacy Playlist", "*.json")])
         if not file_path:
             return
@@ -2298,11 +2719,18 @@ class VideoPlayerApp:
                     self.bg_file_path = data["background"]
                     self.update_background(None)
                 canvas_data = data.get("canvas", {})
+                smm_mode = canvas_data.get("smm_mode", False)
                 self.is_maximized = canvas_data.get("is_maximized", False)
                 self.is_fullscreen = canvas_data.get("is_fullscreen", False)
-                if self.is_fullscreen:
+                # Handle SMM state first
+                if smm_mode and not self.smm_mode:
+                    self.enter_fullscreen()
+                elif not smm_mode and self.smm_mode:
+                    self.exit_fullscreen()
+                # Handle maximized/fullscreen states
+                if self.is_fullscreen and not smm_mode:
                     self.root.attributes('-fullscreen', True)
-                elif self.is_maximized:
+                elif self.is_maximized and not smm_mode:
                     self.toggle_maximize_screen()
                 else:
                     self.root.geometry(f"{canvas_data.get('width', 1200)}x{canvas_data.get('height', 800)}")
@@ -2338,7 +2766,7 @@ class VideoPlayerApp:
                             else:
                                 player.player.pause()
                                 player.toggle_button.config(text="▶")
-                    if p_data.get("is_fullscreen", False):  # Restore fullscreen state
+                    if p_data.get("is_fullscreen", False):
                         player.toggle_fullscreen()
 
             else:  # Old .json playlist format
@@ -2346,7 +2774,8 @@ class VideoPlayerApp:
                 if data.get("background") and os.path.isfile(data["background"]):
                     self.bg_file_path = data["background"]
                     self.update_background(None)
-                # Default canvas state (no maximization/fullscreen data in old format)
+                # Default canvas state (no SMM/maximized/fullscreen data in old format)
+                self.smm_mode = False
                 self.is_maximized = False
                 self.is_fullscreen = False
                 self.root.geometry("1200x800")
@@ -2375,12 +2804,70 @@ class VideoPlayerApp:
             if self.dj_dashboard and self.dj_dashboard.winfo_exists():
                 self.dj_dashboard.build_player_controls()
                 self.dj_dashboard.update_dashboard()
-            logging.debug("Loaded %s with %d players from %s", 
-                        "layout" if "version" in data else "legacy playlist", 
-                        len(self.players), file_path)
+            logging.debug("Loaded %s with %d players from %s, smm_mode=%s",
+                        "layout" if "version" in data else "legacy playlist",
+                        len(self.players), file_path, self.smm_mode)
         except Exception as e:
             logging.error("Failed to load file: %s", str(e))
-            tk.messagebox.showerror("Error", f"Failed to load file: {str(e)}")
+            messagebox.showerror("Error", f"Failed to load file: {str(e)}")
+
+    def recover_all_players(self):
+        """Respawn all players at the last right-click position with default size."""
+        if not hasattr(self, 'last_click_pos'):
+            self.last_click_pos = (100, 100)
+        base_x, base_y = self.last_click_pos
+        offset = 20
+        default_width = 400
+        default_height = 300
+        for i, player in enumerate(self.players):
+            x = base_x + (i % 3) * offset
+            y = base_y + (i // 3) * offset
+            x = min(max(x, 0), 1200 - default_width)
+            y = min(max(y, 0), 800 - default_height)
+            player.set_size_and_position(default_width, default_height, x, y)
+            logging.debug("Recovered Player %d to x=%d, y=%d, size=%dx%d", i + 1, x, y, default_width, default_height)
+        self.canvas.update_idletasks()
+
+    def handle_right_click(self, event):
+        """Store the right-click position for recovery and show context menu."""
+        self.last_click_pos = (event.x, event.y)
+        self.context_menu.post(event.x_root, event.y_root)
+
+    def enter_fullscreen(self):
+        """Enter Screen Maximize Mode, resizing players to fit monitors."""
+        if self.smm_mode:
+            return
+        self.smm_mode = True
+        self.pre_smm_state = {
+            'window_geometry': self.root.geometry(),
+            'players': [(p.frame_id, self.canvas.coords(p.frame_id), p.frame.winfo_width(), p.frame.winfo_height())
+                        for p in self.players]
+        }
+        self.root.attributes('-fullscreen', True)
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
+        for i, player in enumerate(self.players):
+            x = (i % 2) * (screen_width // 2)
+            y = (i // 2) * (screen_height // 2)
+            width = screen_width // 2
+            height = screen_height // 2
+            player.set_size_and_position(width, height, x, y)
+            logging.debug("Player %d resized to %dx%d at x=%d, y=%d in SMM", i + 1, width, height, x, y)
+        logging.debug("Entered SMM")
+
+    def exit_fullscreen(self):
+        """Exit Screen Maximize Mode, restoring pre-SMM state."""
+        if not self.smm_mode:
+            return
+        self.smm_mode = False
+        self.root.attributes('-fullscreen', False)
+        self.root.geometry(self.pre_smm_state['window_geometry'])
+        for frame_id, (x, y), width, height in self.pre_smm_state['players']:
+            for player in self.players:
+                if player.frame_id == frame_id:
+                    player.set_size_and_position(width, height, x, y)
+                    logging.debug("Restored player at x=%d, y=%d, size=%dx%d", x, y, width, height)
+        logging.debug("Exited SMM")
 
 if __name__ == "__main__":
     logging.debug("Launching main application")
