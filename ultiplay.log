@@ -1,913 +1,351 @@
-2025-04-26 10:36:58,554 - DEBUG - Starting Ultiplay application
-2025-04-26 10:36:58,554 - DEBUG - Launching main application
-2025-04-26 10:36:58,787 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
-2025-04-26 10:36:58,787 - DEBUG - Initializing VideoPlayerApp
-2025-04-26 10:36:58,815 - DEBUG - Context menu set up for canvas
-2025-04-26 10:36:58,817 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
-2025-04-26 10:36:58,841 - DEBUG - STREAM b'IHDR' 16 13
-2025-04-26 10:36:58,841 - DEBUG - STREAM b'IDAT' 41 54495
-2025-04-26 10:36:58,903 - DEBUG - Resized background to 1200x800
-2025-04-26 10:36:59,158 - DEBUG - Refreshed all keyboard bindings
-2025-04-26 10:37:00,715 - DEBUG - Context menu shown at screen x=1087, y=640, canvas x=793, y=323
-2025-04-26 10:37:01,148 - DEBUG - STREAM b'IHDR' 16 13
-2025-04-26 10:37:01,149 - DEBUG - STREAM b'IDAT' 41 54495
-2025-04-26 10:37:04,352 - DEBUG - Forced focus back to app
-2025-04-26 10:37:04,353 - DEBUG - Refreshed all keyboard bindings
-2025-04-26 10:37:04,353 - DEBUG - Window regained focus, bindings refreshed
-2025-04-26 10:37:04,353 - DEBUG - STREAM b'IHDR' 16 13
-2025-04-26 10:37:04,353 - DEBUG - STREAM b'IDAT' 41 54495
-2025-04-26 10:37:07,767 - DEBUG - Initializing player widget at x=509, y=283, player count=0
-2025-04-26 10:37:07,767 - DEBUG - Initialized Player 1 with layer 0
-2025-04-26 10:37:08,622 - DEBUG - VLC initialized successfully for frame_id: 2434095781328
-2025-04-26 10:37:08,623 - DEBUG - Attached player to canvas with frame_id: 5
-2025-04-26 10:37:08,674 - DEBUG - Video frame HWND for Player 1: 835656
-2025-04-26 10:37:08,719 - DEBUG - Initialized Player 1 volume to 100
-2025-04-26 10:37:08,720 - DEBUG - Player 1 mode button updated to playlist
-2025-04-26 10:37:08,720 - DEBUG - Player 1 mode button updated to playlist
-2025-04-26 10:37:08,720 - DEBUG - Loading video: C:/Users/march/Downloads/ap13588-1080p.mp4
-2025-04-26 10:37:08,721 - DEBUG - Initializing player widget at x=44, y=17, player count=1
-2025-04-26 10:37:08,722 - DEBUG - Initialized Player 2 with layer 1
-2025-04-26 10:37:08,724 - DEBUG - VLC initialized successfully for frame_id: 2434095789104
-2025-04-26 10:37:08,724 - DEBUG - Attached player to canvas with frame_id: 7
-2025-04-26 10:37:08,832 - DEBUG - Video frame HWND for Player 2: 1686668
-2025-04-26 10:37:08,834 - DEBUG - Initialized Player 2 volume to 100
-2025-04-26 10:37:08,834 - DEBUG - Player 2 mode button updated to playlist
-2025-04-26 10:37:08,834 - DEBUG - Player 2 mode button updated to random_repo
-2025-04-26 10:37:08,835 - DEBUG - Loading video: C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4
-2025-04-26 10:37:08,836 - DEBUG - Initializing player widget at x=594, y=12, player count=2
-2025-04-26 10:37:08,836 - DEBUG - Initialized Player 3 with layer 2
-2025-04-26 10:37:08,839 - DEBUG - VLC initialized successfully for frame_id: 2434095909904
-2025-04-26 10:37:08,839 - DEBUG - Attached player to canvas with frame_id: 9
-2025-04-26 10:37:08,887 - DEBUG - Video frame HWND for Player 3: 1294302
-2025-04-26 10:37:08,889 - DEBUG - Initialized Player 3 volume to 100
-2025-04-26 10:37:08,889 - DEBUG - Player 3 mode button updated to random_repo
-2025-04-26 10:37:08,890 - DEBUG - Player 3 mode button updated to random_repo
-2025-04-26 10:37:08,890 - DEBUG - Loading video: C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4
-2025-04-26 10:37:08,891 - DEBUG - Initializing player widget at x=800, y=500, player count=3
-2025-04-26 10:37:08,891 - DEBUG - Initialized Player 4 with layer 3
-2025-04-26 10:37:08,894 - DEBUG - VLC initialized successfully for frame_id: 2434095915808
-2025-04-26 10:37:08,894 - DEBUG - Attached player to canvas with frame_id: 11
-2025-04-26 10:37:08,906 - DEBUG - Video frame HWND for Player 4: 573246
-2025-04-26 10:37:08,908 - DEBUG - Initialized Player 4 volume to 100
-2025-04-26 10:37:08,908 - DEBUG - Player 4 mode button updated to random_repo
-2025-04-26 10:37:08,909 - DEBUG - Player 4 mode button updated to random_repo
-2025-04-26 10:37:08,909 - DEBUG - Loading video: C:/Users/march/Downloads/dainty wilder - bad bunny.mp4
-2025-04-26 10:37:08,910 - DEBUG - Initializing player widget at x=112, y=500, player count=4
-2025-04-26 10:37:08,910 - DEBUG - Initialized Player 5 with layer 4
-2025-04-26 10:37:08,913 - DEBUG - VLC initialized successfully for frame_id: 2434095921664
-2025-04-26 10:37:08,913 - DEBUG - Attached player to canvas with frame_id: 12
-2025-04-26 10:37:08,921 - DEBUG - Video frame HWND for Player 5: 311456
-2025-04-26 10:37:08,923 - DEBUG - Initialized Player 5 volume to 100
-2025-04-26 10:37:08,923 - DEBUG - Player 5 mode button updated to random_repo
-2025-04-26 10:37:08,923 - DEBUG - Player 5 mode button updated to random_repo
-2025-04-26 10:37:08,924 - DEBUG - Loading video: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4
-2025-04-26 10:37:08,941 - DEBUG - Loaded layout with 5 players from C:/Users/march/Downloads/layoutest.ultilayout, smm_mode=False
-2025-04-26 10:37:08,944 - DEBUG - Drop target registered for Player 1
-2025-04-26 10:37:08,945 - WARNING - Volume mismatch for Player 1: expected 100, got -1. Correcting.
-2025-04-26 10:37:08,945 - ERROR - Failed to verify volume for Player 1: expected 100, got -1
-2025-04-26 10:37:08,945 - DEBUG - VLC refreshed for frame_id: 5
-2025-04-26 10:37:08,946 - DEBUG - Drop target registered for Player 2
-2025-04-26 10:37:08,947 - WARNING - Volume mismatch for Player 2: expected 100, got -1. Correcting.
-2025-04-26 10:37:08,947 - ERROR - Failed to verify volume for Player 2: expected 100, got -1
-2025-04-26 10:37:09,228 - DEBUG - Showed controls for Player 4
-2025-04-26 10:37:09,230 - DEBUG - Drop target registered for Player 3
-2025-04-26 10:37:09,230 - WARNING - Volume mismatch for Player 3: expected 100, got -1. Correcting.
-2025-04-26 10:37:09,230 - ERROR - Failed to verify volume for Player 3: expected 100, got -1
-2025-04-26 10:37:09,232 - DEBUG - Drop target registered for Player 4
-2025-04-26 10:37:09,232 - WARNING - Volume mismatch for Player 4: expected 100, got -1. Correcting.
-2025-04-26 10:37:09,232 - ERROR - Failed to verify volume for Player 4: expected 100, got -1
-2025-04-26 10:37:09,234 - DEBUG - Drop target registered for Player 5
-2025-04-26 10:37:09,235 - WARNING - Volume mismatch for Player 5: expected 100, got -1. Correcting.
-2025-04-26 10:37:09,235 - ERROR - Failed to verify volume for Player 5: expected 100, got -1
-2025-04-26 10:37:09,235 - DEBUG - VLC refreshed for frame_id: 7
-2025-04-26 10:37:09,235 - DEBUG - VLC refreshed for frame_id: 9
-2025-04-26 10:37:09,236 - DEBUG - VLC refreshed for frame_id: 11
-2025-04-26 10:37:09,236 - DEBUG - VLC refreshed for frame_id: 12
-2025-04-26 10:37:09,237 - DEBUG - Attempting to set volume to 100 for Player 4
-2025-04-26 10:37:09,237 - DEBUG - Loaded and playing: C:/Users/march/Downloads/ap13588-1080p.mp4 with duration 3137069 ms
-2025-04-26 10:37:09,374 - DEBUG - Volume verified for Player 4: 100
-2025-04-26 10:37:09,458 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 with duration 4436374 ms
-2025-04-26 10:37:09,459 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4 with duration 4032430 ms
-2025-04-26 10:37:09,460 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 with duration 1768149 ms
-2025-04-26 10:37:09,463 - DEBUG - VLC refreshed for frame_id: 5
-2025-04-26 10:37:09,464 - DEBUG - Loaded and playing: C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 with duration 1395352 ms
-2025-04-26 10:37:09,613 - DEBUG - VLC refreshed for frame_id: 9
-2025-04-26 10:37:09,614 - DEBUG - VLC refreshed for frame_id: 12
-2025-04-26 10:37:09,614 - DEBUG - VLC refreshed for frame_id: 7
-2025-04-26 10:37:09,614 - DEBUG - VLC refreshed for frame_id: 11
-2025-04-26 10:37:11,074 - DEBUG - Set DJ Dashboard icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
-2025-04-26 10:37:11,075 - DEBUG - Building DJD controls for 5 players
-2025-04-26 10:37:11,134 - DEBUG - Player 1: Next index set to 10 for file C:/Users/march/Downloads/teamskeetxsweetiefox_fox002_full_hi_1080hd.mp4
-2025-04-26 10:37:11,146 - DEBUG - Player 2: Next index set to 4 for file C:/Users/march/Downloads/anal4k-\u0430naled- \u0432londe-1080.mp4
-2025-04-26 10:37:11,180 - DEBUG - Added Add Player button below Player 5 controls (right column)
-2025-04-26 10:37:11,181 - DEBUG - Set PanedWindow sash to middle at 450 pixels
-2025-04-26 10:37:11,613 - DEBUG - DJD controls built successfully for 5 players
-2025-04-26 10:37:11,613 - DEBUG - DJD initialized, update loop scheduled
-2025-04-26 10:37:11,613 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:11,614 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:11,614 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:11,615 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:11,615 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:11,616 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:11,624 - DEBUG - Opened DJ Dashboard
-2025-04-26 10:37:11,626 - DEBUG - DJD volume verified for Player 1: 100
-2025-04-26 10:37:11,626 - DEBUG - Video C:/Users/march/Downloads/ap13588-1080p.mp4 started successfully
-2025-04-26 10:37:11,626 - DEBUG - DJD volume verified for Player 2: 100
-2025-04-26 10:37:11,627 - DEBUG - DJD volume verified for Player 3: 100
-2025-04-26 10:37:11,627 - DEBUG - DJD volume verified for Player 4: 100
-2025-04-26 10:37:11,627 - DEBUG - DJD volume verified for Player 5: 100
-2025-04-26 10:37:11,628 - DEBUG - Video C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 started successfully
-2025-04-26 10:37:11,628 - DEBUG - Video C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4 started successfully
-2025-04-26 10:37:11,629 - DEBUG - Video C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 started successfully
-2025-04-26 10:37:11,629 - DEBUG - Video C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 started successfully
-2025-04-26 10:37:11,649 - DEBUG - DJD set volume to 100 for Player 5
-2025-04-26 10:37:11,665 - DEBUG - DJD set volume to 100 for Player 4
-2025-04-26 10:37:11,682 - DEBUG - DJD set volume to 100 for Player 2
-2025-04-26 10:37:11,723 - DEBUG - DJD set volume to 100 for Player 1
-2025-04-26 10:37:11,987 - DEBUG - Adjusted DJD to 900x812 for 5 players (two columns: 3 left, 2 right, button=included)
-2025-04-26 10:37:12,042 - DEBUG - Adjusted DJD to 900x812 for 5 players (two columns: 3 left, 2 right, button=included)
-2025-04-26 10:37:12,043 - DEBUG - DJD volume verified for Player 5: 100
-2025-04-26 10:37:12,043 - DEBUG - DJD volume verified for Player 4: 100
-2025-04-26 10:37:12,043 - DEBUG - DJD volume verified for Player 2: 100
-2025-04-26 10:37:12,043 - DEBUG - DJD volume verified for Player 1: 100
-2025-04-26 10:37:12,454 - DEBUG - DJD set volume to 100 for Player 3
-2025-04-26 10:37:12,582 - DEBUG - Hid controls for Player 4
-2025-04-26 10:37:12,584 - DEBUG - DJD volume verified for Player 3: 100
-2025-04-26 10:37:12,613 - DEBUG - Starting DJD update loop
-2025-04-26 10:37:12,614 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:12,614 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:12,615 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:12,615 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:12,616 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:12,616 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:12,625 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:12,625 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:12,626 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:12,626 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:12,627 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:12,627 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:13,624 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:13,625 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:13,625 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:13,626 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:13,626 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:13,626 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:13,638 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:13,638 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:13,639 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:13,639 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:13,640 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:13,640 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:14,640 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:14,641 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:14,641 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:14,642 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:14,642 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:14,643 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:14,662 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:14,662 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:14,663 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:14,663 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:14,664 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:14,664 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:15,666 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:15,666 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:15,667 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:15,667 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:15,668 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:15,668 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:15,694 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:15,695 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:15,696 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:15,696 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:15,697 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:15,697 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:16,707 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:16,708 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:16,708 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:16,708 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:16,709 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:16,709 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:16,717 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:16,718 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:16,718 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:16,719 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:16,719 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:16,719 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:17,465 - DEBUG - Player 5 mode button updated to repeat
-2025-04-26 10:37:17,465 - DEBUG - Set Player 5 mode to Repeat
-2025-04-26 10:37:17,717 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:17,718 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:17,718 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:17,719 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:17,719 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:17,720 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:17,746 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:17,747 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:17,748 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:17,748 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:17,749 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:17,749 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:18,771 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:18,772 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:18,772 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:18,773 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:18,773 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:18,775 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:18,816 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:18,817 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:18,817 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:18,818 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:18,818 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:18,818 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:19,816 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:19,817 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:19,818 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:19,818 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:19,819 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:19,819 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:19,837 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:19,837 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:19,838 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:19,838 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:19,838 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:19,839 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:20,837 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:20,838 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:20,838 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:20,839 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:20,840 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:20,840 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:20,860 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:20,861 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:20,861 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:20,862 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:20,862 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:20,863 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:21,850 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:21,850 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:21,851 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:21,851 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:21,852 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:21,852 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:21,876 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:21,877 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:21,877 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:21,878 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:21,878 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:21,878 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:22,864 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:22,864 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:22,865 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:22,865 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:22,866 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:22,866 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:22,889 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:22,891 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:22,891 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:22,892 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:22,892 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:22,893 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:23,880 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:23,882 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:23,883 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:23,884 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:23,884 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:23,885 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:23,911 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:23,912 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:23,912 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:23,926 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:23,927 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:23,927 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:24,897 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:24,897 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:24,898 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:24,898 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:24,899 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:24,899 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:24,944 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:24,944 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:24,945 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:24,945 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:24,946 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:24,946 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:25,709 - DEBUG - Player 5 in Repeat mode, replaying current video: Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4
-2025-04-26 10:37:25,710 - DEBUG - Loading video: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4
-2025-04-26 10:37:25,711 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:25,711 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:25,712 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:25,712 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:25,713 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:25,871 - DEBUG - Set volume bar for Player 5 to intended 100 (VLC reported -1)
-2025-04-26 10:37:25,919 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:25,919 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:25,930 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:25,930 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:25,931 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:25,931 - DEBUG - Set volume bar for Player 5 to intended 100 (VLC reported -1)
-2025-04-26 10:37:25,960 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:25,961 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:25,961 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:25,962 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:25,962 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:25,962 - DEBUG - Set volume bar for Player 5 to intended 100 (VLC reported -1)
-2025-04-26 10:37:26,180 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 with duration 1768149 ms
-2025-04-26 10:37:26,181 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:26,221 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:26,227 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:26,240 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:26,257 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:26,260 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:26,381 - DEBUG - VLC refreshed for frame_id: 12
-2025-04-26 10:37:26,884 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:26,885 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:26,885 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:26,886 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:26,886 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:26,886 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:26,946 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:26,946 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:26,947 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:26,947 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:26,948 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:26,948 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:26,971 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:26,972 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:26,972 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:26,973 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:26,973 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:26,977 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:27,267 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:27,267 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:27,268 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:27,268 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:27,269 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:27,269 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:27,895 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:27,896 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:27,897 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:27,897 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:27,898 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:27,898 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:27,957 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:27,958 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:27,958 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:27,959 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:27,959 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:27,959 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:27,988 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:27,988 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:27,989 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:27,989 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:27,990 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:27,990 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:28,181 - DEBUG - Video C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 started successfully
-2025-04-26 10:37:28,280 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:28,281 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:28,281 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:28,281 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:28,282 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:28,282 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:28,910 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:28,910 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:28,911 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:28,911 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:28,912 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:28,912 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:28,979 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:28,979 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:28,980 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:28,980 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:28,981 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:28,981 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:29,004 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:29,004 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:29,013 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:29,014 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:29,014 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:29,014 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:29,306 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:29,307 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:29,308 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:29,308 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:29,308 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:29,309 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:29,940 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:29,941 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:29,941 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:29,942 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:29,943 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:29,943 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:29,992 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:29,993 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:29,993 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:29,994 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:29,994 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:29,995 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:30,033 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:30,034 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:30,034 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:30,035 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:30,035 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:30,036 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:30,321 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:30,321 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:30,322 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:30,322 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:30,322 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:30,323 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:30,965 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:30,966 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:30,966 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:30,968 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:30,968 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:30,970 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:31,072 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:31,072 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:31,073 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:31,075 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:31,076 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:31,078 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:31,192 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:31,192 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:31,193 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:31,194 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:31,194 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:31,195 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:31,332 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:31,332 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:31,333 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:31,333 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:31,334 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:31,334 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:32,073 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:32,074 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:32,074 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:32,075 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:32,075 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:32,075 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:32,192 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:32,192 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:32,193 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:32,193 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:32,194 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:32,194 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:32,228 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:32,235 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:32,235 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:32,236 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:32,236 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:32,237 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:32,343 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:32,344 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:32,344 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:32,345 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:32,345 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:32,346 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:32,656 - DEBUG - Player 5 in Repeat mode, replaying current video: Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4
-2025-04-26 10:37:32,657 - DEBUG - Loading video: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4
-2025-04-26 10:37:32,657 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:32,658 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:32,658 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:32,659 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:32,659 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:32,830 - DEBUG - Set volume bar for Player 5 to intended 100 (VLC reported -1)
-2025-04-26 10:37:33,085 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:33,087 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:33,090 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:33,091 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:33,091 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:33,092 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:33,134 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 with duration 1768149 ms
-2025-04-26 10:37:33,135 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:33,137 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:33,145 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:33,149 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:33,152 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:33,156 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:33,205 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:33,210 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:33,211 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:33,211 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:33,212 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:33,212 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:33,260 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:33,261 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:33,261 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:33,262 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:33,262 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:33,262 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:33,338 - DEBUG - VLC refreshed for frame_id: 12
-2025-04-26 10:37:33,360 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:33,360 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:33,360 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:33,361 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:33,361 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:33,361 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:33,862 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:33,863 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:33,864 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:33,864 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:33,865 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:33,865 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:34,107 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:34,107 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:34,108 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:34,108 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:34,109 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:34,109 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:34,181 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:34,182 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:34,182 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:34,183 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:34,183 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:34,184 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:34,228 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:34,233 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:34,234 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:34,234 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:34,235 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:34,235 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:34,277 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:34,279 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:34,279 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:34,279 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:34,280 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:34,280 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:34,370 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:34,371 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:34,372 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:34,372 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:34,373 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:34,373 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:34,895 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:34,896 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:34,896 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:34,897 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:34,897 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:34,898 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:35,144 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:35,145 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:35,145 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:35,146 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:35,146 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:35,147 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:35,159 - DEBUG - Video C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 started successfully
-2025-04-26 10:37:35,214 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:35,215 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:35,215 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:35,215 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:35,216 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:35,216 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:35,274 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:35,274 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:35,275 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:35,275 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:35,277 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:35,278 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:35,315 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:35,316 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:35,317 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:35,317 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:35,318 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:35,318 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:35,388 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:35,388 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:35,389 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:35,389 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:35,390 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:35,390 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:35,923 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:35,923 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:35,924 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:35,924 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:35,925 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:35,925 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:36,028 - DEBUG - Player 5 mode button updated to random_repo
-2025-04-26 10:37:36,028 - DEBUG - Set Player 5 mode to Shuffle
-2025-04-26 10:37:36,159 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:36,162 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:36,162 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:36,162 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:36,163 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:36,163 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:36,227 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:36,227 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:36,228 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:36,228 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:36,229 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:36,229 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:36,290 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:36,290 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:36,291 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:36,291 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:36,292 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:36,292 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:36,333 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:36,336 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:36,336 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:36,336 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:36,337 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:36,337 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:36,399 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:36,400 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:36,400 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:36,400 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:36,401 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:36,401 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:36,946 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:36,947 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:36,947 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:36,948 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:36,948 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:36,952 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:37,173 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:37,173 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:37,174 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:37,174 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:37,175 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:37,175 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:37,250 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:37,250 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:37,251 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:37,251 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:37,252 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:37,252 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:37,320 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:37,329 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:37,330 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:37,330 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:37,331 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:37,331 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:37,350 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:37,351 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:37,351 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:37,352 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:37,352 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:37,363 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:37,419 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:37,419 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:37,420 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:37,420 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:37,421 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:37,421 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:37,567 - DEBUG - Loading video: C:/Users/march/Downloads\Alicia Williams - Anal Fitness Casting.mp4
-2025-04-26 10:37:37,962 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:37,962 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:37,963 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:37,963 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:37,964 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:37,964 - DEBUG - Updated Player 5 'Now Playing' to: C:/Users/march/Downloads\Alicia Williams - Anal Fitness Casting.mp4 and refreshed playlist
-2025-04-26 10:37:37,964 - DEBUG - Set volume bar for Player 5 to intended 100 (VLC reported -1)
-2025-04-26 10:37:38,036 - DEBUG - Loaded and playing: C:/Users/march/Downloads\Alicia Williams - Anal Fitness Casting.mp4 with duration 2339364 ms
-2025-04-26 10:37:38,037 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:38,039 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:38,041 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:38,044 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:38,046 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:38,051 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:38,196 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:38,198 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:38,198 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:38,199 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:38,199 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:38,200 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:38,237 - DEBUG - VLC refreshed for frame_id: 12
-2025-04-26 10:37:38,273 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:38,273 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:38,274 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:38,274 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:38,275 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:38,275 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:38,350 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:38,351 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:38,351 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:38,352 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:38,352 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:38,352 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:38,374 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:38,375 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:38,375 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:38,375 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:38,376 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:38,376 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:38,430 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:38,431 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:38,432 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:38,432 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:38,432 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:38,433 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:39,030 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:39,030 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:39,031 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:39,031 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:39,032 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:39,032 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:39,052 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:39,053 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:39,054 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:39,054 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:39,054 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:39,055 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:39,215 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:39,216 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:39,216 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:39,217 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:39,217 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:39,217 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:39,302 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:39,303 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:39,303 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:39,304 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:39,304 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:39,306 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:39,374 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:39,375 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:39,376 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:39,376 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:39,377 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:39,377 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:39,393 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:39,394 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:39,394 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:39,395 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:39,395 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:39,396 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:39,463 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:39,463 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:39,464 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:39,464 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:39,464 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:39,465 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:40,035 - DEBUG - Video C:/Users/march/Downloads\Alicia Williams - Anal Fitness Casting.mp4 started successfully
-2025-04-26 10:37:40,049 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:40,049 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:40,050 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:40,050 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:40,051 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:40,051 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:40,070 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:40,070 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:40,071 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:40,071 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:40,072 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:40,072 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:40,226 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:40,227 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:40,227 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:40,228 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:40,228 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:40,229 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:40,318 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:40,319 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:40,319 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:40,320 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:40,320 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:40,321 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:40,392 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:40,393 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:40,393 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:40,394 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:40,394 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:40,395 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:40,410 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:40,410 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:40,411 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:40,411 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:40,412 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:40,413 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:40,483 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:40,484 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:40,484 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:40,485 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:40,485 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:40,486 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:41,062 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:41,062 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:41,063 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:41,063 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:41,064 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:41,064 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:41,084 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:41,084 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:41,085 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:41,091 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:41,092 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:41,092 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:41,247 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:41,248 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:41,248 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:41,249 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:41,249 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:41,249 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:41,354 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:41,355 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:41,355 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:41,356 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:41,356 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:41,357 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:41,408 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:41,410 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:41,412 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:41,412 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:41,413 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:41,413 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:41,424 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:41,430 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:41,431 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:41,431 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:41,432 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:41,432 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:41,495 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:41,496 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:41,496 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:41,497 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:41,497 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:41,498 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:42,081 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:42,082 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:42,082 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:42,083 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:42,083 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:42,084 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:42,111 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:42,112 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:42,112 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:42,113 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:42,113 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:42,113 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:42,259 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:42,260 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:42,260 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:42,261 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:42,261 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:42,262 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:42,370 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:42,370 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:42,371 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:42,371 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:42,377 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:42,379 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:42,423 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:42,424 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:42,424 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:42,425 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:42,425 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:42,425 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:42,446 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:42,447 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:42,447 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:42,448 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:42,448 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:42,453 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:42,507 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:42,507 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:42,508 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:42,508 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:42,509 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:42,509 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:43,093 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:43,093 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:43,094 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:43,094 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:43,095 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:43,095 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:43,123 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:43,123 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:43,124 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:43,124 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:43,124 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:43,125 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:43,273 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:43,274 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:43,274 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:43,274 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:43,275 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:43,276 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:43,394 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:43,400 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:43,401 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:43,401 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:43,402 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:43,402 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:43,438 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:43,439 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:43,449 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:43,449 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:43,450 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:43,450 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:43,463 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:43,463 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:43,464 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:43,464 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:43,465 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:43,465 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:43,519 - DEBUG - Running update_dashboard for 5 players
-2025-04-26 10:37:43,520 - DEBUG - Synced volume bar for Player 1 to 100
-2025-04-26 10:37:43,520 - DEBUG - Synced volume bar for Player 2 to 100
-2025-04-26 10:37:43,521 - DEBUG - Synced volume bar for Player 3 to 100
-2025-04-26 10:37:43,521 - DEBUG - Synced volume bar for Player 4 to 100
-2025-04-26 10:37:43,522 - DEBUG - Synced volume bar for Player 5 to 100
-2025-04-26 10:37:43,696 - DEBUG - Refreshed all keyboard bindings
-2025-04-26 10:37:43,697 - DEBUG - Window regained focus, bindings refreshed
+2025-04-28 12:55:29,615 - DEBUG - Starting Ultiplay application
+2025-04-28 12:55:29,615 - DEBUG - Launching main application
+2025-04-28 12:55:29,895 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
+2025-04-28 12:55:29,895 - DEBUG - Initializing VideoPlayerApp
+2025-04-28 12:55:29,917 - DEBUG - Context menu set up for canvas
+2025-04-28 12:55:29,922 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
+2025-04-28 12:55:29,945 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:55:29,946 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:55:30,006 - DEBUG - Resized background to 1200x800
+2025-04-28 12:55:30,073 - DEBUG - Refreshed all keyboard bindings
+2025-04-28 12:55:42,425 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:55:42,425 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:55:42,540 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:55:42,540 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:55:42,655 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:55:42,656 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:55:43,626 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:55:43,626 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:55:43,737 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:55:43,737 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:55:50,114 - DEBUG - Forced focus back to app
+2025-04-28 12:55:50,115 - DEBUG - Refreshed all keyboard bindings
+2025-04-28 12:55:50,115 - DEBUG - Window regained focus, bindings refreshed
+2025-04-28 12:55:50,116 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:55:50,117 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:55:50,409 - DEBUG - Background drop: {C:/Users/march/Downloads/Kenzie Reeves & Vina Sky(Commission)720.mp4}
+2025-04-28 12:55:50,410 - DEBUG - Initializing player widget at x=640, y=277, player count=0
+2025-04-28 12:55:50,410 - DEBUG - Initialized Player 1 with layer 0
+2025-04-28 12:55:51,297 - DEBUG - VLC initialized successfully for frame_id: 2372759311680
+2025-04-28 12:55:51,298 - DEBUG - Attached player to canvas with frame_id: 8
+2025-04-28 12:55:51,299 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:55:51,300 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:55:51,329 - DEBUG - Video frame HWND for Player 1: 718168
+2025-04-28 12:55:51,455 - DEBUG - Initialized Player 1 volume to 100
+2025-04-28 12:55:51,456 - DEBUG - Player 1 mode button updated to random_repo
+2025-04-28 12:55:51,456 - DEBUG - Loading video: C:/Users/march/Downloads/Kenzie Reeves & Vina Sky(Commission)720.mp4
+2025-04-28 12:55:51,460 - DEBUG - Drop target registered for Player 1
+2025-04-28 12:55:51,556 - WARNING - Volume mismatch for Player 1: expected 100, got -1. Correcting.
+2025-04-28 12:55:51,556 - ERROR - Failed to verify volume for Player 1: expected 100, got -1
+2025-04-28 12:55:51,657 - DEBUG - VLC refreshed for frame_id: 8
+2025-04-28 12:55:52,060 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Kenzie Reeves & Vina Sky(Commission)720.mp4 with duration 3711957 ms
+2025-04-28 12:55:52,061 - DEBUG - Player 1 transition completed, is_transitioning set to False
+2025-04-28 12:55:52,260 - DEBUG - VLC refreshed for frame_id: 8
+2025-04-28 12:55:54,061 - DEBUG - Video C:/Users/march/Downloads/Kenzie Reeves & Vina Sky(Commission)720.mp4 started successfully
+2025-04-28 12:55:56,581 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:55:56,582 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:55:56,697 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:55:56,697 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:55:56,807 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:55:56,807 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:55:56,834 - DEBUG - Showed controls for Player 1
+2025-04-28 12:55:56,841 - DEBUG - Attempting to set volume to 100 for Player 1
+2025-04-28 12:55:56,941 - DEBUG - Volume verified for Player 1: 100
+2025-04-28 12:55:58,844 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:55:58,845 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:55:58,864 - DEBUG - Hid controls for Player 1
+2025-04-28 12:56:02,432 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:02,432 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:02,469 - DEBUG - Showed controls for Player 1
+2025-04-28 12:56:04,473 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:04,473 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:04,496 - DEBUG - Hid controls for Player 1
+2025-04-28 12:56:06,116 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:06,116 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:06,185 - DEBUG - Showed controls for Player 1
+2025-04-28 12:56:08,197 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:08,197 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:08,215 - DEBUG - Hid controls for Player 1
+2025-04-28 12:56:09,404 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:09,405 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:09,484 - DEBUG - Showed controls for Player 1
+2025-04-28 12:56:13,028 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:13,028 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:13,049 - DEBUG - Hid controls for Player 1
+2025-04-28 12:56:18,789 - DEBUG - Toggling play/pause, is_maximized=False
+2025-04-28 12:56:18,790 - DEBUG - Paused Player 1
+2025-04-28 12:56:20,227 - DEBUG - Toggling play/pause, is_maximized=False
+2025-04-28 12:56:20,227 - DEBUG - Playing Player 1
+2025-04-28 12:56:21,550 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:21,550 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:21,612 - DEBUG - Showed controls for Player 1
+2025-04-28 12:56:23,621 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:23,622 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:23,649 - DEBUG - Hid controls for Player 1
+2025-04-28 12:56:26,020 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:26,021 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:26,078 - DEBUG - Showed controls for Player 1
+2025-04-28 12:56:27,018 - DEBUG - Started resizing Player 1 from left corner
+2025-04-28 12:56:27,246 - DEBUG - Resized Player 1 to 400x301 at x=640, y=277
+2025-04-28 12:56:27,287 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:27,288 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:27,318 - DEBUG - Resized Player 1 to 403x302 at x=637, y=277
+2025-04-28 12:56:27,359 - DEBUG - Resized Player 1 to 404x302 at x=636, y=277
+2025-04-28 12:56:27,418 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:27,418 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:27,457 - DEBUG - Resized Player 1 to 409x303 at x=631, y=277
+2025-04-28 12:56:27,492 - DEBUG - Resized Player 1 to 426x305 at x=614, y=277
+2025-04-28 12:56:27,559 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:27,559 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:27,607 - DEBUG - Resized Player 1 to 434x305 at x=606, y=277
+2025-04-28 12:56:27,683 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:27,683 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:27,718 - DEBUG - Resized Player 1 to 464x303 at x=576, y=277
+2025-04-28 12:56:27,883 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:27,883 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:27,912 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:27,912 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:27,946 - DEBUG - Resized Player 1 to 497x301 at x=543, y=277
+2025-04-28 12:56:27,999 - DEBUG - Resized Player 1 to 555x290 at x=485, y=277
+2025-04-28 12:56:28,107 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:28,107 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:28,184 - DEBUG - Resized Player 1 to 563x287 at x=477, y=277
+2025-04-28 12:56:28,282 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:28,282 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:28,346 - DEBUG - Resized Player 1 to 567x285 at x=473, y=277
+2025-04-28 12:56:28,408 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:28,409 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:29,363 - DEBUG - Resized Player 1 to 566x285 at x=474, y=277
+2025-04-28 12:56:29,412 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:29,412 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:29,447 - DEBUG - Resized Player 1 to 565x285 at x=475, y=277
+2025-04-28 12:56:29,479 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:29,479 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:29,525 - DEBUG - Resized Player 1 to 562x285 at x=478, y=277
+2025-04-28 12:56:29,571 - DEBUG - Resized Player 1 to 561x285 at x=479, y=277
+2025-04-28 12:56:29,648 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:29,648 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:29,730 - DEBUG - Resized Player 1 to 553x293 at x=487, y=277
+2025-04-28 12:56:29,877 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:29,878 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:29,897 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:29,897 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:29,937 - DEBUG - Resized Player 1 to 549x298 at x=491, y=277
+2025-04-28 12:56:29,968 - DEBUG - Resized Player 1 to 539x313 at x=501, y=277
+2025-04-28 12:56:30,031 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:30,031 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:30,066 - DEBUG - Resized Player 1 to 537x314 at x=503, y=277
+2025-04-28 12:56:30,098 - DEBUG - Resized Player 1 to 536x315 at x=504, y=277
+2025-04-28 12:56:30,178 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:30,178 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:31,971 - DEBUG - Toggling maximize screen: current maximized=False
+2025-04-28 12:56:31,971 - DEBUG - All players paused before SMM: False
+2025-04-28 12:56:31,971 - DEBUG - Stored pre-SMM state for Player 1: 536x315 at (504, 277)
+2025-04-28 12:56:32,160 - DEBUG - Setting Player 1 size to 1920x1200 at (0, 0)
+2025-04-28 12:56:32,450 - DEBUG - Entered SMM with 1 players, all_paused=False
+2025-04-28 12:56:33,454 - DEBUG - Hid controls for Player 1
+2025-04-28 12:56:35,939 - DEBUG - Showed controls for Player 1
+2025-04-28 12:56:38,298 - DEBUG - Hid controls for Player 1
+2025-04-28 12:56:40,548 - DEBUG - Setting Player 1 size to 357x210 at (336, 184)
+2025-04-28 12:56:40,686 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:40,686 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:40,797 - DEBUG - Restored Player 1 to 357x210 at (336, 184)
+2025-04-28 12:56:40,797 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:40,798 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:40,938 - DEBUG - Exited SMM or fullscreen, restored to normal mode
+2025-04-28 12:56:40,998 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:40,998 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:42,420 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:42,420 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:42,486 - DEBUG - Showed controls for Player 1
+2025-04-28 12:56:44,492 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:44,492 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:44,518 - DEBUG - Hid controls for Player 1
+2025-04-28 12:56:46,900 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:46,900 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:46,957 - DEBUG - Showed controls for Player 1
+2025-04-28 12:56:48,965 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:48,965 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:48,990 - DEBUG - Hid controls for Player 1
+2025-04-28 12:56:49,863 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:49,863 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:49,947 - DEBUG - Showed controls for Player 1
+2025-04-28 12:56:52,597 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:56:52,598 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:56:52,631 - DEBUG - Hid controls for Player 1
+2025-04-28 12:57:04,620 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:04,621 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:04,698 - DEBUG - Showed controls for Player 1
+2025-04-28 12:57:06,703 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:06,704 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:06,759 - DEBUG - Hid controls for Player 1
+2025-04-28 12:57:08,522 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:08,523 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:08,583 - DEBUG - Showed controls for Player 1
+2025-04-28 12:57:11,770 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:11,770 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:11,838 - DEBUG - Hid controls for Player 1
+2025-04-28 12:57:14,141 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:14,141 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:14,203 - DEBUG - Showed controls for Player 1
+2025-04-28 12:57:16,760 - DEBUG - Started dragging Player 1 from Label
+2025-04-28 12:57:16,883 - DEBUG - Dragging Player 1 to x=336, y=185
+2025-04-28 12:57:16,886 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:16,886 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:16,930 - DEBUG - Dragging Player 1 to x=338, y=200
+2025-04-28 12:57:16,933 - DEBUG - Dragging Player 1 to x=338, y=201
+2025-04-28 12:57:16,946 - DEBUG - Dragging Player 1 to x=339, y=203
+2025-04-28 12:57:16,950 - DEBUG - Dragging Player 1 to x=339, y=204
+2025-04-28 12:57:16,959 - DEBUG - Dragging Player 1 to x=339, y=205
+2025-04-28 12:57:16,964 - DEBUG - Dragging Player 1 to x=339, y=206
+2025-04-28 12:57:16,969 - DEBUG - Dragging Player 1 to x=339, y=207
+2025-04-28 12:57:16,971 - DEBUG - Dragging Player 1 to x=339, y=208
+2025-04-28 12:57:16,983 - DEBUG - Dragging Player 1 to x=339, y=209
+2025-04-28 12:57:16,989 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:16,990 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:17,020 - DEBUG - Dragging Player 1 to x=339, y=212
+2025-04-28 12:57:17,024 - DEBUG - Dragging Player 1 to x=339, y=213
+2025-04-28 12:57:17,039 - DEBUG - Dragging Player 1 to x=339, y=214
+2025-04-28 12:57:17,042 - DEBUG - Dragging Player 1 to x=340, y=214
+2025-04-28 12:57:17,055 - DEBUG - Dragging Player 1 to x=340, y=217
+2025-04-28 12:57:17,065 - DEBUG - Dragging Player 1 to x=340, y=219
+2025-04-28 12:57:17,069 - DEBUG - Dragging Player 1 to x=340, y=220
+2025-04-28 12:57:17,071 - DEBUG - Dragging Player 1 to x=340, y=221
+2025-04-28 12:57:17,089 - DEBUG - Dragging Player 1 to x=340, y=222
+2025-04-28 12:57:17,108 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:17,109 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:17,144 - DEBUG - Dragging Player 1 to x=340, y=233
+2025-04-28 12:57:17,148 - DEBUG - Dragging Player 1 to x=340, y=234
+2025-04-28 12:57:17,159 - DEBUG - Dragging Player 1 to x=340, y=235
+2025-04-28 12:57:17,164 - DEBUG - Dragging Player 1 to x=340, y=236
+2025-04-28 12:57:17,194 - DEBUG - Dragging Player 1 to x=340, y=237
+2025-04-28 12:57:17,202 - DEBUG - Dragging Player 1 to x=340, y=241
+2025-04-28 12:57:17,204 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:17,205 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:17,241 - DEBUG - Dragging Player 1 to x=340, y=242
+2025-04-28 12:57:17,253 - DEBUG - Dragging Player 1 to x=338, y=249
+2025-04-28 12:57:17,258 - DEBUG - Dragging Player 1 to x=337, y=250
+2025-04-28 12:57:17,265 - DEBUG - Dragging Player 1 to x=337, y=251
+2025-04-28 12:57:17,268 - DEBUG - Dragging Player 1 to x=336, y=251
+2025-04-28 12:57:17,472 - DEBUG - Stopped dragging Player 1
+2025-04-28 12:57:17,936 - DEBUG - Started dragging Player 1 from Label
+2025-04-28 12:57:18,043 - DEBUG - Dragging Player 1 to x=336, y=252
+2025-04-28 12:57:18,046 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:18,046 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:18,077 - DEBUG - Dragging Player 1 to x=336, y=260
+2025-04-28 12:57:18,083 - DEBUG - Dragging Player 1 to x=336, y=262
+2025-04-28 12:57:18,086 - DEBUG - Dragging Player 1 to x=336, y=263
+2025-04-28 12:57:18,090 - DEBUG - Dragging Player 1 to x=336, y=264
+2025-04-28 12:57:18,095 - DEBUG - Dragging Player 1 to x=336, y=265
+2025-04-28 12:57:18,099 - DEBUG - Dragging Player 1 to x=336, y=266
+2025-04-28 12:57:18,103 - DEBUG - Dragging Player 1 to x=336, y=268
+2025-04-28 12:57:18,105 - DEBUG - Dragging Player 1 to x=336, y=269
+2025-04-28 12:57:18,107 - DEBUG - Dragging Player 1 to x=335, y=269
+2025-04-28 12:57:18,119 - DEBUG - Dragging Player 1 to x=335, y=270
+2025-04-28 12:57:18,122 - DEBUG - Dragging Player 1 to x=334, y=273
+2025-04-28 12:57:18,151 - DEBUG - Dragging Player 1 to x=334, y=274
+2025-04-28 12:57:18,164 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:18,164 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:18,198 - DEBUG - Dragging Player 1 to x=332, y=280
+2025-04-28 12:57:18,208 - DEBUG - Dragging Player 1 to x=328, y=288
+2025-04-28 12:57:18,213 - DEBUG - Dragging Player 1 to x=328, y=289
+2025-04-28 12:57:18,238 - DEBUG - Dragging Player 1 to x=327, y=292
+2025-04-28 12:57:18,241 - DEBUG - Dragging Player 1 to x=325, y=293
+2025-04-28 12:57:18,248 - DEBUG - Dragging Player 1 to x=325, y=294
+2025-04-28 12:57:18,252 - DEBUG - Dragging Player 1 to x=324, y=294
+2025-04-28 12:57:18,259 - DEBUG - Dragging Player 1 to x=324, y=295
+2025-04-28 12:57:18,263 - DEBUG - Dragging Player 1 to x=323, y=295
+2025-04-28 12:57:18,272 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:18,272 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:18,300 - DEBUG - Dragging Player 1 to x=321, y=297
+2025-04-28 12:57:18,310 - DEBUG - Dragging Player 1 to x=321, y=298
+2025-04-28 12:57:18,320 - DEBUG - Dragging Player 1 to x=320, y=298
+2025-04-28 12:57:18,387 - DEBUG - Dragging Player 1 to x=319, y=298
+2025-04-28 12:57:18,390 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:18,390 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:18,417 - DEBUG - Dragging Player 1 to x=316, y=297
+2025-04-28 12:57:18,430 - DEBUG - Dragging Player 1 to x=315, y=297
+2025-04-28 12:57:18,435 - DEBUG - Dragging Player 1 to x=312, y=294
+2025-04-28 12:57:18,462 - DEBUG - Dragging Player 1 to x=308, y=290
+2025-04-28 12:57:18,467 - DEBUG - Dragging Player 1 to x=301, y=285
+2025-04-28 12:57:18,476 - DEBUG - Dragging Player 1 to x=299, y=282
+2025-04-28 12:57:18,480 - DEBUG - Dragging Player 1 to x=291, y=276
+2025-04-28 12:57:18,494 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:18,494 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:18,554 - DEBUG - Dragging Player 1 to x=287, y=271
+2025-04-28 12:57:18,558 - DEBUG - Dragging Player 1 to x=212, y=204
+2025-04-28 12:57:18,560 - DEBUG - Dragging Player 1 to x=209, y=202
+2025-04-28 12:57:18,568 - DEBUG - Dragging Player 1 to x=208, y=200
+2025-04-28 12:57:18,570 - DEBUG - Dragging Player 1 to x=205, y=198
+2025-04-28 12:57:18,573 - DEBUG - Dragging Player 1 to x=205, y=197
+2025-04-28 12:57:18,575 - DEBUG - Dragging Player 1 to x=205, y=196
+2025-04-28 12:57:18,577 - DEBUG - Dragging Player 1 to x=204, y=195
+2025-04-28 12:57:18,602 - DEBUG - Dragging Player 1 to x=202, y=192
+2025-04-28 12:57:18,604 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:18,604 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:18,663 - DEBUG - Dragging Player 1 to x=197, y=182
+2025-04-28 12:57:18,666 - DEBUG - Dragging Player 1 to x=197, y=181
+2025-04-28 12:57:18,668 - DEBUG - Dragging Player 1 to x=197, y=180
+2025-04-28 12:57:18,694 - DEBUG - Dragging Player 1 to x=196, y=179
+2025-04-28 12:57:18,705 - DEBUG - Dragging Player 1 to x=196, y=178
+2025-04-28 12:57:18,712 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:18,712 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:18,768 - DEBUG - Dragging Player 1 to x=195, y=176
+2025-04-28 12:57:19,040 - DEBUG - Stopped dragging Player 1
+2025-04-28 12:57:19,716 - DEBUG - Started dragging Player 1 from Frame
+2025-04-28 12:57:19,882 - DEBUG - Dragging Player 1 to x=195, y=177
+2025-04-28 12:57:19,885 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:19,885 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:19,915 - DEBUG - Dragging Player 1 to x=195, y=184
+2025-04-28 12:57:19,919 - DEBUG - Dragging Player 1 to x=195, y=185
+2025-04-28 12:57:19,931 - DEBUG - Dragging Player 1 to x=196, y=189
+2025-04-28 12:57:19,933 - DEBUG - Dragging Player 1 to x=196, y=190
+2025-04-28 12:57:19,944 - DEBUG - Dragging Player 1 to x=197, y=191
+2025-04-28 12:57:19,950 - DEBUG - Dragging Player 1 to x=198, y=196
+2025-04-28 12:57:19,955 - DEBUG - Dragging Player 1 to x=199, y=199
+2025-04-28 12:57:19,958 - DEBUG - Dragging Player 1 to x=199, y=200
+2025-04-28 12:57:19,960 - DEBUG - Dragging Player 1 to x=199, y=201
+2025-04-28 12:57:19,962 - DEBUG - Dragging Player 1 to x=200, y=202
+2025-04-28 12:57:19,967 - DEBUG - Dragging Player 1 to x=200, y=203
+2025-04-28 12:57:19,989 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:19,990 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:20,014 - DEBUG - Dragging Player 1 to x=200, y=205
+2025-04-28 12:57:20,026 - DEBUG - Dragging Player 1 to x=208, y=222
+2025-04-28 12:57:20,029 - DEBUG - Dragging Player 1 to x=208, y=223
+2025-04-28 12:57:20,039 - DEBUG - Dragging Player 1 to x=209, y=224
+2025-04-28 12:57:20,041 - DEBUG - Dragging Player 1 to x=210, y=226
+2025-04-28 12:57:20,044 - DEBUG - Dragging Player 1 to x=211, y=227
+2025-04-28 12:57:20,055 - DEBUG - Dragging Player 1 to x=211, y=228
+2025-04-28 12:57:20,061 - DEBUG - Dragging Player 1 to x=212, y=230
+2025-04-28 12:57:20,065 - DEBUG - Dragging Player 1 to x=212, y=231
+2025-04-28 12:57:20,068 - DEBUG - Dragging Player 1 to x=213, y=232
+2025-04-28 12:57:20,076 - DEBUG - Dragging Player 1 to x=213, y=233
+2025-04-28 12:57:20,087 - DEBUG - Dragging Player 1 to x=214, y=233
+2025-04-28 12:57:20,095 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:20,095 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:20,121 - DEBUG - Dragging Player 1 to x=214, y=234
+2025-04-28 12:57:20,129 - DEBUG - Dragging Player 1 to x=217, y=238
+2025-04-28 12:57:20,136 - DEBUG - Dragging Player 1 to x=217, y=240
+2025-04-28 12:57:20,150 - DEBUG - Dragging Player 1 to x=218, y=240
+2025-04-28 12:57:20,153 - DEBUG - Dragging Player 1 to x=218, y=241
+2025-04-28 12:57:20,358 - DEBUG - Dragging Player 1 to x=218, y=240
+2025-04-28 12:57:20,360 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:20,361 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:20,398 - DEBUG - Dragging Player 1 to x=217, y=227
+2025-04-28 12:57:20,401 - DEBUG - Dragging Player 1 to x=217, y=226
+2025-04-28 12:57:20,412 - DEBUG - Dragging Player 1 to x=217, y=224
+2025-04-28 12:57:20,416 - DEBUG - Dragging Player 1 to x=216, y=217
+2025-04-28 12:57:20,427 - DEBUG - Dragging Player 1 to x=216, y=215
+2025-04-28 12:57:20,438 - DEBUG - Dragging Player 1 to x=215, y=208
+2025-04-28 12:57:20,443 - DEBUG - Dragging Player 1 to x=215, y=204
+2025-04-28 12:57:20,447 - DEBUG - Dragging Player 1 to x=215, y=203
+2025-04-28 12:57:20,463 - DEBUG - Dragging Player 1 to x=215, y=202
+2025-04-28 12:57:20,474 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:20,474 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:20,507 - DEBUG - Dragging Player 1 to x=214, y=197
+2025-04-28 12:57:20,514 - DEBUG - Dragging Player 1 to x=212, y=184
+2025-04-28 12:57:20,520 - DEBUG - Dragging Player 1 to x=212, y=183
+2025-04-28 12:57:20,740 - DEBUG - Stopped dragging Player 1
+2025-04-28 12:57:23,974 - DEBUG - STREAM b'IHDR' 16 13
+2025-04-28 12:57:23,975 - DEBUG - STREAM b'IDAT' 41 54495
+2025-04-28 12:57:24,018 - DEBUG - Hid controls for Player 1
