@@ -1,400 +1,318 @@
-2025-05-11 21:07:23,416 - DEBUG - Starting Ultiplay application
-2025-05-11 21:07:23,417 - DEBUG - Launching main application
-2025-05-11 21:07:23,681 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
-2025-05-11 21:07:23,682 - DEBUG - Initializing VideoPlayerApp
-2025-05-11 21:07:23,720 - DEBUG - Context menu set up for canvas
-2025-05-11 21:07:23,729 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
-2025-05-11 21:07:23,754 - DEBUG - STREAM b'IHDR' 16 13
-2025-05-11 21:07:23,754 - DEBUG - STREAM b'IDAT' 41 54495
-2025-05-11 21:07:23,804 - DEBUG - Resized background to 1200x800
-2025-05-11 21:07:23,893 - DEBUG - Refreshed all keyboard bindings
-2025-05-11 21:07:25,838 - DEBUG - Context menu shown at screen x=794, y=379, canvas x=734, y=296
-2025-05-11 21:07:26,027 - DEBUG - STREAM b'IHDR' 16 13
-2025-05-11 21:07:26,028 - DEBUG - STREAM b'IDAT' 41 54495
-2025-05-11 21:07:28,964 - DEBUG - Forced focus back to app
-2025-05-11 21:07:28,964 - DEBUG - Refreshed all keyboard bindings
-2025-05-11 21:07:28,964 - DEBUG - Window regained focus, bindings refreshed
-2025-05-11 21:07:28,965 - DEBUG - STREAM b'IHDR' 16 13
-2025-05-11 21:07:28,965 - DEBUG - STREAM b'IDAT' 41 54495
-2025-05-11 21:07:31,673 - DEBUG - Initializing player widget at x=509, y=283, player count=0
-2025-05-11 21:07:31,673 - DEBUG - Initialized Player 1 with layer 0
-2025-05-11 21:07:31,801 - DEBUG - VLC initialized successfully for frame_id: 1127326518240
-2025-05-11 21:07:31,801 - DEBUG - Attached player to canvas with frame_id: 5
-2025-05-11 21:07:31,849 - DEBUG - Video frame HWND for Player 1: 623912
-2025-05-11 21:07:31,962 - DEBUG - Initialized Player 1 volume to 100
-2025-05-11 21:07:31,962 - DEBUG - Player 1 mode button updated to playlist
-2025-05-11 21:07:31,963 - DEBUG - Player 1 mode button updated to playlist
-2025-05-11 21:07:31,963 - DEBUG - Loading video: C:/Users/march/Downloads/ap13588-1080p.mp4
-2025-05-11 21:07:31,964 - DEBUG - Initializing player widget at x=44, y=17, player count=1
-2025-05-11 21:07:31,964 - DEBUG - Initialized Player 2 with layer 1
-2025-05-11 21:07:31,967 - DEBUG - VLC initialized successfully for frame_id: 1127326526448
-2025-05-11 21:07:31,967 - DEBUG - Attached player to canvas with frame_id: 7
-2025-05-11 21:07:32,014 - DEBUG - Video frame HWND for Player 2: 478002
-2025-05-11 21:07:32,015 - DEBUG - Initialized Player 2 volume to 100
-2025-05-11 21:07:32,016 - DEBUG - Player 2 mode button updated to playlist
-2025-05-11 21:07:32,016 - DEBUG - Player 2 mode button updated to random_repo
-2025-05-11 21:07:32,017 - DEBUG - Loading video: C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4
-2025-05-11 21:07:32,018 - DEBUG - Initializing player widget at x=594, y=12, player count=2
-2025-05-11 21:07:32,019 - DEBUG - Initialized Player 3 with layer 2
-2025-05-11 21:07:32,021 - DEBUG - VLC initialized successfully for frame_id: 1127326663872
-2025-05-11 21:07:32,023 - DEBUG - Attached player to canvas with frame_id: 9
-2025-05-11 21:07:32,030 - DEBUG - Video frame HWND for Player 3: 346356
-2025-05-11 21:07:32,031 - DEBUG - Initialized Player 3 volume to 100
-2025-05-11 21:07:32,031 - DEBUG - Player 3 mode button updated to random_repo
-2025-05-11 21:07:32,031 - DEBUG - Player 3 mode button updated to random_repo
-2025-05-11 21:07:32,032 - DEBUG - Loading video: C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4
-2025-05-11 21:07:32,032 - DEBUG - Initializing player widget at x=800, y=500, player count=3
-2025-05-11 21:07:32,033 - DEBUG - Initialized Player 4 with layer 3
-2025-05-11 21:07:32,036 - DEBUG - VLC initialized successfully for frame_id: 1127326670112
-2025-05-11 21:07:32,037 - DEBUG - Attached player to canvas with frame_id: 10
-2025-05-11 21:07:32,044 - DEBUG - Video frame HWND for Player 4: 484916
-2025-05-11 21:07:32,045 - DEBUG - Initialized Player 4 volume to 100
-2025-05-11 21:07:32,045 - DEBUG - Player 4 mode button updated to random_repo
-2025-05-11 21:07:32,045 - DEBUG - Player 4 mode button updated to random_repo
-2025-05-11 21:07:32,046 - DEBUG - Loading video: C:/Users/march/Downloads/dainty wilder - bad bunny.mp4
-2025-05-11 21:07:32,047 - DEBUG - Initializing player widget at x=112, y=500, player count=4
-2025-05-11 21:07:32,047 - DEBUG - Initialized Player 5 with layer 4
-2025-05-11 21:07:32,049 - DEBUG - VLC initialized successfully for frame_id: 1127326676352
-2025-05-11 21:07:32,050 - DEBUG - Attached player to canvas with frame_id: 11
-2025-05-11 21:07:32,057 - DEBUG - Video frame HWND for Player 5: 480788
-2025-05-11 21:07:32,058 - DEBUG - Initialized Player 5 volume to 100
-2025-05-11 21:07:32,059 - DEBUG - Player 5 mode button updated to random_repo
-2025-05-11 21:07:32,059 - DEBUG - Player 5 mode button updated to random_repo
-2025-05-11 21:07:32,059 - DEBUG - Loading video: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4
-2025-05-11 21:07:32,071 - DEBUG - Bound number keys for player selection
-2025-05-11 21:07:32,071 - DEBUG - Loaded layout with 5 players from C:/Users/march/Downloads/layoutest.ultilayout, smm_mode=False
-2025-05-11 21:07:32,117 - DEBUG - Drop target registered for Player 1
-2025-05-11 21:07:32,117 - WARNING - Volume mismatch for Player 1: expected 100, got -1. Correcting.
-2025-05-11 21:07:32,118 - ERROR - Failed to verify volume for Player 1: expected 100, got -1
-2025-05-11 21:07:32,119 - DEBUG - Drop target registered for Player 2
-2025-05-11 21:07:32,120 - WARNING - Volume mismatch for Player 2: expected 100, got -1. Correcting.
-2025-05-11 21:07:32,120 - ERROR - Failed to verify volume for Player 2: expected 100, got -1
-2025-05-11 21:07:32,326 - DEBUG - Showed controls for Player 1
-2025-05-11 21:07:32,328 - DEBUG - Drop target registered for Player 3
-2025-05-11 21:07:32,328 - WARNING - Volume mismatch for Player 3: expected 100, got -1. Correcting.
-2025-05-11 21:07:32,328 - ERROR - Failed to verify volume for Player 3: expected 100, got -1
-2025-05-11 21:07:32,333 - DEBUG - Drop target registered for Player 4
-2025-05-11 21:07:32,334 - WARNING - Volume mismatch for Player 4: expected 100, got -1. Correcting.
-2025-05-11 21:07:32,334 - ERROR - Failed to verify volume for Player 4: expected 100, got -1
-2025-05-11 21:07:32,336 - DEBUG - Drop target registered for Player 5
-2025-05-11 21:07:32,336 - WARNING - Volume mismatch for Player 5: expected 100, got -1. Correcting.
-2025-05-11 21:07:32,336 - ERROR - Failed to verify volume for Player 5: expected 100, got -1
-2025-05-11 21:07:32,337 - DEBUG - VLC refreshed for frame_id: 5
-2025-05-11 21:07:32,337 - DEBUG - VLC refreshed for frame_id: 7
-2025-05-11 21:07:32,337 - DEBUG - VLC refreshed for frame_id: 9
-2025-05-11 21:07:32,337 - DEBUG - VLC refreshed for frame_id: 10
-2025-05-11 21:07:32,337 - DEBUG - VLC refreshed for frame_id: 11
-2025-05-11 21:07:32,338 - DEBUG - Attempting to set volume to 0 for Player 1
-2025-05-11 21:07:32,443 - WARNING - Volume mismatch for Player 1: expected 0, got -1. Correcting.
-2025-05-11 21:07:32,444 - ERROR - Failed to verify volume for Player 1: expected 0, got -1
-2025-05-11 21:07:32,465 - DEBUG - Attempting to set volume to 100 for Player 1
-2025-05-11 21:07:32,608 - DEBUG - Volume verified for Player 1: 100
-2025-05-11 21:07:32,616 - DEBUG - Loaded and playing: C:/Users/march/Downloads/ap13588-1080p.mp4 with duration 3137069 ms
-2025-05-11 21:07:32,619 - DEBUG - Player 1 transition completed, is_transitioning set to False
-2025-05-11 21:07:32,809 - DEBUG - VLC refreshed for frame_id: 5
-2025-05-11 21:07:32,810 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 with duration 1768149 ms
-2025-05-11 21:07:32,810 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 with duration 4436374 ms
-2025-05-11 21:07:32,810 - DEBUG - Loaded and playing: C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 with duration 1395352 ms
-2025-05-11 21:07:32,810 - DEBUG - Player 3 transition completed, is_transitioning set to False
-2025-05-11 21:07:32,810 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4 with duration 4032430 ms
-2025-05-11 21:07:32,811 - DEBUG - Player 5 transition completed, is_transitioning set to False
-2025-05-11 21:07:32,811 - DEBUG - Player 4 transition completed, is_transitioning set to False
-2025-05-11 21:07:32,812 - DEBUG - Player 2 transition completed, is_transitioning set to False
-2025-05-11 21:07:33,063 - DEBUG - VLC refreshed for frame_id: 11
-2025-05-11 21:07:33,064 - DEBUG - VLC refreshed for frame_id: 9
-2025-05-11 21:07:33,064 - DEBUG - VLC refreshed for frame_id: 10
-2025-05-11 21:07:33,064 - DEBUG - VLC refreshed for frame_id: 7
-2025-05-11 21:07:34,534 - DEBUG - Showed controls for Player 3
-2025-05-11 21:07:34,549 - DEBUG - Attempting to set volume to 100 for Player 3
-2025-05-11 21:07:34,624 - DEBUG - Video C:/Users/march/Downloads/ap13588-1080p.mp4 started successfully
-2025-05-11 21:07:34,651 - DEBUG - Volume verified for Player 3: 100
-2025-05-11 21:07:34,811 - DEBUG - Video C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 started successfully
-2025-05-11 21:07:34,811 - DEBUG - Video C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 started successfully
-2025-05-11 21:07:34,811 - DEBUG - Video C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 started successfully
-2025-05-11 21:07:34,812 - DEBUG - Video C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4 started successfully
-2025-05-11 21:07:36,083 - DEBUG - Hid controls for Player 1
-2025-05-11 21:07:37,342 - DEBUG - Hid controls for Player 3
-2025-05-11 21:07:40,626 - DEBUG - Toggling play/pause, is_maximized=False
-2025-05-11 21:07:40,626 - DEBUG - Paused Player 1
-2025-05-11 21:07:40,627 - DEBUG - Paused Player 2
-2025-05-11 21:07:40,627 - DEBUG - Paused Player 3
-2025-05-11 21:07:40,628 - DEBUG - Paused Player 4
-2025-05-11 21:07:40,628 - DEBUG - Paused Player 5
-2025-05-11 21:09:24,616 - DEBUG - Showed controls for Player 4
-2025-05-11 21:09:24,629 - DEBUG - Attempting to set volume to 100 for Player 4
-2025-05-11 21:09:24,730 - DEBUG - Volume verified for Player 4: 100
-2025-05-11 21:09:25,981 - DEBUG - Toggling SMM: is_maximized=False
-2025-05-11 21:09:25,981 - DEBUG - Stored pre-SMM state: geometry=1200x800+2257+234
-2025-05-11 21:09:25,981 - DEBUG - Window center at (2857, 634), size 1200x800
-2025-05-11 21:09:25,984 - DEBUG - Monitor 0: 1920x1200+0+0
-2025-05-11 21:09:25,984 - DEBUG - Monitor 1: 1920x1080+1920+121
-2025-05-11 21:09:25,984 - DEBUG - Selected monitor 1920x1080+1920+121
-2025-05-11 21:09:25,984 - DEBUG - SMM on monitor: 1920x1080+1920+121
-2025-05-11 21:09:26,133 - DEBUG - Set window to 1920x1080+1912+90, actual position: 1920x1080+1920+121
-2025-05-11 21:09:26,133 - WARNING - Window position mismatch: requested 1912,90, got 1920,121
-2025-05-11 21:09:26,134 - DEBUG - After topmost adjustment, actual position: 1920x1080+1920+121
-2025-05-11 21:09:26,134 - DEBUG - Stored window styles: style=56000000, ex_style=4
-2025-05-11 21:09:26,187 - DEBUG - Set fullscreen properties for HWND 402836
-2025-05-11 21:09:26,187 - DEBUG - After fullscreen properties, position: 1920x1080+1920+121
-2025-05-11 21:09:26,187 - DEBUG - Arranging 5 players in SMM with screen size 1920x1080
-2025-05-11 21:09:26,187 - DEBUG - 5-player SMM layout: Players 1-4: 960x600 (scaled to 960x540), Player 5: 320x200 at (800, 500) (scaled to 320x180 at (800, 450))
-2025-05-11 21:09:26,188 - DEBUG - Setting Player 1 size to 960x540 at (0, 0)
-2025-05-11 21:09:26,295 - DEBUG - Positioned Player 1: 960x540 at (0, 0)
-2025-05-11 21:09:26,295 - DEBUG - Setting Player 2 size to 960x540 at (960, 0)
-2025-05-11 21:09:26,356 - DEBUG - Positioned Player 2: 960x540 at (960, 0)
-2025-05-11 21:09:26,357 - DEBUG - Setting Player 3 size to 960x540 at (0, 540)
-2025-05-11 21:09:26,441 - DEBUG - Positioned Player 3: 960x540 at (0, 540)
-2025-05-11 21:09:26,441 - DEBUG - Setting Player 4 size to 960x540 at (960, 540)
-2025-05-11 21:09:26,765 - DEBUG - Positioned Player 4: 960x540 at (960, 540)
-2025-05-11 21:09:26,765 - DEBUG - Setting Player 5 size to 320x180 at (800, 450)
-2025-05-11 21:09:26,777 - DEBUG - Positioned Player 5: 320x180 at (800, 450)
-2025-05-11 21:09:26,778 - DEBUG - Entered SMM on monitor 1920x1080+1920+121 with 5 players
-2025-05-11 21:09:26,778 - DEBUG - Bound number keys for player selection
-2025-05-11 21:09:26,779 - DEBUG - Refreshed all keyboard bindings
-2025-05-11 21:09:26,791 - DEBUG - Hid controls for Player 4
-2025-05-11 21:09:35,232 - DEBUG - Toggling play/pause, is_maximized=True
-2025-05-11 21:09:35,232 - DEBUG - Paused Player 1
-2025-05-11 21:09:35,232 - DEBUG - Paused Player 2
-2025-05-11 21:09:35,233 - DEBUG - Paused Player 3
-2025-05-11 21:09:35,233 - DEBUG - Paused Player 4
-2025-05-11 21:09:35,233 - DEBUG - Paused Player 5
-2025-05-11 21:09:36,019 - DEBUG - Toggling play/pause, is_maximized=True
-2025-05-11 21:09:36,020 - DEBUG - Playing Player 1
-2025-05-11 21:09:36,020 - DEBUG - Playing Player 2
-2025-05-11 21:09:36,020 - DEBUG - Playing Player 3
-2025-05-11 21:09:36,020 - DEBUG - Playing Player 4
-2025-05-11 21:09:36,021 - DEBUG - Playing Player 5
-2025-05-11 21:09:37,216 - DEBUG - Handling Escape: is_fullscreen=True, is_maximized=True
-2025-05-11 21:09:37,216 - DEBUG - Restored window styles: style=56000000, ex_style=4
-2025-05-11 21:09:37,686 - DEBUG - Restored window manipulability for HWND 402836
-2025-05-11 21:09:37,689 - DEBUG - Setting Player 1 size to 266x200 at (339, 188)
-2025-05-11 21:09:37,851 - DEBUG - Restored Player 1: 266x200 at (339, 188)
-2025-05-11 21:09:37,851 - DEBUG - Setting Player 2 size to 338x266 at (29, 11)
-2025-05-11 21:09:37,963 - DEBUG - Restored Player 2: 338x266 at (29, 11)
-2025-05-11 21:09:37,964 - DEBUG - Setting Player 3 size to 328x249 at (396, 8)
-2025-05-11 21:09:38,106 - DEBUG - Restored Player 3: 328x249 at (396, 8)
-2025-05-11 21:09:38,107 - DEBUG - Setting Player 4 size to 266x200 at (533, 333)
-2025-05-11 21:09:38,218 - DEBUG - Restored Player 4: 266x200 at (533, 333)
-2025-05-11 21:09:38,218 - DEBUG - Setting Player 5 size to 266x200 at (74, 333)
-2025-05-11 21:09:38,318 - DEBUG - Restored Player 5: 266x200 at (74, 333)
-2025-05-11 21:09:38,409 - DEBUG - Exited SMM/fullscreen
-2025-05-11 21:09:38,419 - DEBUG - Refreshed all keyboard bindings
-2025-05-11 21:09:38,905 - DEBUG - Showed controls for Player 4
-2025-05-11 21:09:40,983 - DEBUG - Hid controls for Player 4
-2025-05-11 21:09:43,651 - DEBUG - Toggling fullscreen: is_fullscreen=False, is_maximized=False
-2025-05-11 21:09:43,652 - DEBUG - Stored pre-fullscreen state: geometry=1168x800+2257+234
-2025-05-11 21:09:43,652 - DEBUG - Window center at (2841, 634), size 1168x800
-2025-05-11 21:09:43,653 - DEBUG - Monitor 0: 1920x1200+0+0
-2025-05-11 21:09:43,653 - DEBUG - Monitor 1: 1920x1080+1920+121
-2025-05-11 21:09:43,653 - DEBUG - Selected monitor 1920x1080+1920+121
-2025-05-11 21:09:43,653 - DEBUG - Fullscreen on monitor: 1920x1080+1920+121
-2025-05-11 21:09:43,823 - DEBUG - Set window to 1920x1080+1912+90, actual position: 1920x1080+1920+121
-2025-05-11 21:09:43,823 - WARNING - Window position mismatch: requested 1912,90, got 1920,121
-2025-05-11 21:09:43,824 - DEBUG - After topmost adjustment, actual position: 1920x1080+1920+121
-2025-05-11 21:09:43,824 - DEBUG - Stored window styles: style=56000000, ex_style=4
-2025-05-11 21:09:43,894 - DEBUG - Set fullscreen properties for HWND 402836
-2025-05-11 21:09:43,895 - DEBUG - After fullscreen properties, position: 1920x1080+1920+121
-2025-05-11 21:09:43,895 - DEBUG - Setting Player 1 size to 425x270 at (542, 254)
-2025-05-11 21:09:43,924 - DEBUG - Positioned Player 1: 425x270 at (542, 254)
-2025-05-11 21:09:43,924 - DEBUG - Setting Player 2 size to 540x359 at (46, 15)
-2025-05-11 21:09:43,973 - DEBUG - Positioned Player 2: 540x359 at (46, 15)
-2025-05-11 21:09:43,974 - DEBUG - Setting Player 3 size to 524x336 at (633, 10)
-2025-05-11 21:09:44,034 - DEBUG - Positioned Player 3: 524x336 at (633, 10)
-2025-05-11 21:09:44,034 - DEBUG - Setting Player 4 size to 425x270 at (853, 450)
-2025-05-11 21:09:44,128 - DEBUG - Positioned Player 4: 425x270 at (853, 450)
-2025-05-11 21:09:44,128 - DEBUG - Setting Player 5 size to 425x270 at (119, 450)
-2025-05-11 21:09:44,185 - DEBUG - Positioned Player 5: 425x270 at (119, 450)
-2025-05-11 21:09:44,249 - DEBUG - Entered fullscreen on monitor 1920x1080+1920+121
-2025-05-11 21:09:44,250 - DEBUG - Bound number keys for player selection
-2025-05-11 21:09:44,250 - DEBUG - Refreshed all keyboard bindings
-2025-05-11 21:09:45,639 - DEBUG - Showed controls for Player 4
-2025-05-11 21:09:46,471 - DEBUG - Started dragging Player 4 from Label
-2025-05-11 21:09:46,585 - DEBUG - Dragging Player 4 to x=853, y=451
-2025-05-11 21:09:46,601 - DEBUG - Dragging Player 4 to x=853, y=452
-2025-05-11 21:09:46,606 - DEBUG - Dragging Player 4 to x=853, y=453
-2025-05-11 21:09:46,624 - DEBUG - Dragging Player 4 to x=853, y=454
-2025-05-11 21:09:46,631 - DEBUG - Dragging Player 4 to x=853, y=455
-2025-05-11 21:09:46,636 - DEBUG - Dragging Player 4 to x=853, y=456
-2025-05-11 21:09:46,651 - DEBUG - Dragging Player 4 to x=853, y=457
-2025-05-11 21:09:46,655 - DEBUG - Dragging Player 4 to x=853, y=458
-2025-05-11 21:09:46,670 - DEBUG - Dragging Player 4 to x=853, y=460
-2025-05-11 21:09:46,681 - DEBUG - Dragging Player 4 to x=853, y=461
-2025-05-11 21:09:46,688 - DEBUG - Dragging Player 4 to x=853, y=464
-2025-05-11 21:09:46,717 - DEBUG - Dragging Player 4 to x=853, y=465
-2025-05-11 21:09:46,732 - DEBUG - Dragging Player 4 to x=853, y=472
-2025-05-11 21:09:46,745 - DEBUG - Dragging Player 4 to x=853, y=475
-2025-05-11 21:09:46,757 - DEBUG - Dragging Player 4 to x=853, y=477
-2025-05-11 21:09:46,767 - DEBUG - Dragging Player 4 to x=853, y=479
-2025-05-11 21:09:46,796 - DEBUG - Dragging Player 4 to x=853, y=482
-2025-05-11 21:09:46,810 - DEBUG - Dragging Player 4 to x=853, y=483
-2025-05-11 21:09:46,999 - DEBUG - Stopped dragging Player 4
-2025-05-11 21:09:47,706 - DEBUG - Started resizing Player 4 from right corner
-2025-05-11 21:09:47,865 - DEBUG - Resized Player 4 to 425x271 at x=853, y=483
-2025-05-11 21:09:47,920 - DEBUG - Resized Player 4 to 427x274 at x=853, y=483
-2025-05-11 21:09:47,968 - DEBUG - Resized Player 4 to 446x294 at x=853, y=483
-2025-05-11 21:09:48,018 - DEBUG - Resized Player 4 to 456x300 at x=853, y=483
-2025-05-11 21:09:48,108 - DEBUG - Resized Player 4 to 458x300 at x=853, y=483
-2025-05-11 21:09:48,171 - DEBUG - Resized Player 4 to 477x313 at x=853, y=483
-2025-05-11 21:09:48,245 - DEBUG - Resized Player 4 to 483x317 at x=853, y=483
-2025-05-11 21:09:48,310 - DEBUG - Resized Player 4 to 492x325 at x=853, y=483
-2025-05-11 21:09:50,371 - DEBUG - Started resizing Player 4 from left corner
-2025-05-11 21:09:50,533 - DEBUG - Resized Player 4 to 493x325 at x=852, y=483
-2025-05-11 21:09:50,604 - DEBUG - Resized Player 4 to 495x323 at x=850, y=483
-2025-05-11 21:09:50,686 - DEBUG - Resized Player 4 to 509x319 at x=836, y=483
-2025-05-11 21:09:50,773 - DEBUG - Resized Player 4 to 514x318 at x=831, y=483
-2025-05-11 21:09:50,848 - DEBUG - Resized Player 4 to 519x317 at x=826, y=483
-2025-05-11 21:09:50,912 - DEBUG - Resized Player 4 to 537x314 at x=808, y=483
-2025-05-11 21:09:50,975 - DEBUG - Resized Player 4 to 543x312 at x=802, y=483
-2025-05-11 21:09:51,119 - DEBUG - Resized Player 4 to 556x296 at x=789, y=483
-2025-05-11 21:09:51,126 - DEBUG - Resized Player 4 to 547x310 at x=798, y=483
-2025-05-11 21:09:51,212 - DEBUG - Resized Player 4 to 559x289 at x=786, y=483
-2025-05-11 21:09:51,402 - DEBUG - Resized Player 4 to 567x320 at x=778, y=483
-2025-05-11 21:09:51,473 - DEBUG - Resized Player 4 to 567x326 at x=778, y=483
-2025-05-11 21:09:51,585 - DEBUG - Resized Player 4 to 569x339 at x=776, y=483
-2025-05-11 21:09:51,670 - DEBUG - Resized Player 4 to 572x350 at x=773, y=483
-2025-05-11 21:09:51,749 - DEBUG - Resized Player 4 to 574x359 at x=771, y=483
-2025-05-11 21:09:51,823 - DEBUG - Resized Player 4 to 575x367 at x=770, y=483
-2025-05-11 21:09:51,942 - DEBUG - Resized Player 4 to 575x375 at x=770, y=483
-2025-05-11 21:09:55,958 - DEBUG - Hid controls for Player 4
-2025-05-11 21:09:57,916 - DEBUG - Handling Escape: is_fullscreen=True, is_maximized=False
-2025-05-11 21:09:57,917 - DEBUG - Restored window styles: style=56000000, ex_style=4
-2025-05-11 21:09:58,065 - DEBUG - Restored window manipulability for HWND 402836
-2025-05-11 21:09:58,067 - DEBUG - Setting Player 1 size to 200x150 at (226, 125)
-2025-05-11 21:09:58,260 - DEBUG - Restored Player 1: 177x133 at (226, 125)
-2025-05-11 21:09:58,260 - DEBUG - Setting Player 2 size to 225x177 at (19, 7)
-2025-05-11 21:09:58,358 - DEBUG - Restored Player 2: 225x177 at (19, 7)
-2025-05-11 21:09:58,358 - DEBUG - Setting Player 3 size to 218x166 at (264, 5)
-2025-05-11 21:09:58,471 - DEBUG - Restored Player 3: 218x166 at (264, 5)
-2025-05-11 21:09:58,472 - DEBUG - Setting Player 4 size to 200x150 at (355, 222)
-2025-05-11 21:09:58,572 - DEBUG - Restored Player 4: 177x133 at (355, 222)
-2025-05-11 21:09:58,572 - DEBUG - Setting Player 5 size to 200x150 at (49, 222)
-2025-05-11 21:09:58,672 - DEBUG - Restored Player 5: 177x133 at (49, 222)
-2025-05-11 21:09:58,760 - DEBUG - Exited SMM/fullscreen
-2025-05-11 21:09:58,789 - DEBUG - Refreshed all keyboard bindings
-2025-05-11 21:10:00,708 - DEBUG - Toggling SMM: is_maximized=False
-2025-05-11 21:10:00,709 - DEBUG - Stored pre-SMM state: geometry=1168x800+2257+234
-2025-05-11 21:10:00,709 - DEBUG - Window center at (2841, 634), size 1168x800
-2025-05-11 21:10:00,709 - DEBUG - Monitor 0: 1920x1200+0+0
-2025-05-11 21:10:00,709 - DEBUG - Monitor 1: 1920x1080+1920+121
-2025-05-11 21:10:00,710 - DEBUG - Selected monitor 1920x1080+1920+121
-2025-05-11 21:10:00,710 - DEBUG - SMM on monitor: 1920x1080+1920+121
-2025-05-11 21:10:00,899 - DEBUG - Set window to 1920x1080+1912+90, actual position: 1920x1080+1920+121
-2025-05-11 21:10:00,899 - WARNING - Window position mismatch: requested 1912,90, got 1920,121
-2025-05-11 21:10:00,901 - DEBUG - After topmost adjustment, actual position: 1920x1080+1920+121
-2025-05-11 21:10:00,901 - DEBUG - Stored window styles: style=56000000, ex_style=4
-2025-05-11 21:10:00,987 - DEBUG - Set fullscreen properties for HWND 402836
-2025-05-11 21:10:00,987 - DEBUG - After fullscreen properties, position: 1920x1080+1920+121
-2025-05-11 21:10:00,988 - DEBUG - Arranging 5 players in SMM with screen size 1920x1080
-2025-05-11 21:10:00,988 - DEBUG - 5-player SMM layout: Players 1-4: 960x600 (scaled to 960x540), Player 5: 320x200 at (800, 500) (scaled to 320x180 at (800, 450))
-2025-05-11 21:10:00,988 - DEBUG - Setting Player 1 size to 960x540 at (0, 0)
-2025-05-11 21:10:01,004 - DEBUG - Positioned Player 1: 960x540 at (0, 0)
-2025-05-11 21:10:01,005 - DEBUG - Setting Player 2 size to 960x540 at (960, 0)
-2025-05-11 21:10:01,020 - DEBUG - Positioned Player 2: 960x540 at (960, 0)
-2025-05-11 21:10:01,020 - DEBUG - Setting Player 3 size to 960x540 at (0, 540)
-2025-05-11 21:10:01,055 - DEBUG - Positioned Player 3: 960x540 at (0, 540)
-2025-05-11 21:10:01,056 - DEBUG - Setting Player 4 size to 960x540 at (960, 540)
-2025-05-11 21:10:01,211 - DEBUG - Positioned Player 4: 960x540 at (960, 540)
-2025-05-11 21:10:01,212 - DEBUG - Setting Player 5 size to 320x180 at (800, 450)
-2025-05-11 21:10:01,287 - DEBUG - Positioned Player 5: 320x180 at (800, 450)
-2025-05-11 21:10:01,288 - DEBUG - Entered SMM on monitor 1920x1080+1920+121 with 5 players
-2025-05-11 21:10:01,288 - DEBUG - Bound number keys for player selection
-2025-05-11 21:10:01,288 - DEBUG - Refreshed all keyboard bindings
-2025-05-11 21:10:03,934 - INFO - Selected Player 1 in SMM. Press 's' to shuffle, '.' to skip 25%, 'n' for next, or another number to swap
-2025-05-11 21:10:03,934 - INFO - Cannot swap Player 1 with itself, please select a different player
-2025-05-11 21:10:04,501 - INFO - Swapping Player 1 with Player 3 in SMM
-2025-05-11 21:10:04,502 - DEBUG - Swapping Player 1 with Player 3
-2025-05-11 21:10:04,502 - DEBUG - Player 1 prepared for swap, was_playing=True, position=44901
-2025-05-11 21:10:04,502 - DEBUG - Player 3 prepared for swap, was_playing=True, position=44650
-2025-05-11 21:10:04,503 - DEBUG - Player 1 mode button updated to random_repo
-2025-05-11 21:10:04,503 - DEBUG - Player 3 mode button updated to playlist
-2025-05-11 21:10:04,555 - DEBUG - Reloaded Player 1 with file C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 at position 44650
-2025-05-11 21:10:05,582 - DEBUG - Reloaded Player 3 with file C:/Users/march/Downloads/ap13588-1080p.mp4 at position 44901
-2025-05-11 21:10:05,582 - DEBUG - Player 1 HWND re-attached after swap: 623912
-2025-05-11 21:10:05,784 - DEBUG - Player 3 HWND re-attached after swap: 346356
-2025-05-11 21:10:05,988 - DEBUG - Raised Player 2 to layer 1 (frame_id: 7)
-2025-05-11 21:10:05,988 - DEBUG - Raised Player 1 to layer 2 (frame_id: 5)
-2025-05-11 21:10:05,989 - DEBUG - Raised Player 3 to layer 2 (frame_id: 9)
-2025-05-11 21:10:05,989 - DEBUG - Raised Player 4 to layer 3 (frame_id: 10)
-2025-05-11 21:10:05,989 - DEBUG - Raised Player 5 to layer 4 (frame_id: 11)
-2025-05-11 21:10:05,989 - DEBUG - Arranging 5 players in SMM with screen size 1920x1080
-2025-05-11 21:10:05,990 - DEBUG - 5-player SMM layout: Players 1-4: 960x600 (scaled to 960x540), Player 5: 320x200 at (800, 500) (scaled to 320x180 at (800, 450))
-2025-05-11 21:10:05,990 - DEBUG - Setting Player 1 size to 960x540 at (0, 0)
-2025-05-11 21:10:06,010 - DEBUG - Positioned Player 1: 960x540 at (0, 0)
-2025-05-11 21:10:06,011 - DEBUG - Setting Player 2 size to 960x540 at (960, 0)
-2025-05-11 21:10:06,019 - DEBUG - Positioned Player 2: 960x540 at (960, 0)
-2025-05-11 21:10:06,019 - DEBUG - Setting Player 3 size to 960x540 at (0, 540)
-2025-05-11 21:10:06,023 - DEBUG - Positioned Player 3: 960x540 at (0, 540)
-2025-05-11 21:10:06,024 - DEBUG - Setting Player 4 size to 960x540 at (960, 540)
-2025-05-11 21:10:06,027 - DEBUG - Positioned Player 4: 960x540 at (960, 540)
-2025-05-11 21:10:06,028 - DEBUG - Setting Player 5 size to 320x180 at (800, 450)
-2025-05-11 21:10:06,043 - DEBUG - Positioned Player 5: 320x180 at (800, 450)
-2025-05-11 21:10:06,044 - DEBUG - Reapplied SMM layout after swapping Player 1 with Player 3
-2025-05-11 21:10:06,046 - DEBUG - Restored Player 1 to playing state after swap at position 44901
-2025-05-11 21:10:06,051 - DEBUG - Restored Player 2 to playing state
-2025-05-11 21:10:06,051 - DEBUG - Restored Player 4 to playing state
-2025-05-11 21:10:06,052 - DEBUG - Restored Player 5 to playing state
-2025-05-11 21:10:06,052 - DEBUG - Swap completed: Player 1 <-> Player 3
-2025-05-11 21:10:06,087 - DEBUG - Restored Player 3 to playing state after swap at position 44650
-2025-05-11 21:10:09,908 - DEBUG - Toggling play/pause, is_maximized=True
-2025-05-11 21:10:09,909 - DEBUG - Paused Player 1
-2025-05-11 21:10:09,909 - DEBUG - Paused Player 2
-2025-05-11 21:10:09,909 - DEBUG - Paused Player 3
-2025-05-11 21:10:09,910 - DEBUG - Paused Player 4
-2025-05-11 21:10:09,910 - DEBUG - Paused Player 5
-2025-05-11 21:10:12,179 - INFO - Selected Player 1 in SMM. Press 's' to shuffle, '.' to skip 25%, 'n' for next, or another number to swap
-2025-05-11 21:10:12,180 - INFO - Cannot swap Player 1 with itself, please select a different player
-2025-05-11 21:10:12,779 - INFO - Swapping Player 1 with Player 4 in SMM
-2025-05-11 21:10:12,779 - DEBUG - Swapping Player 1 with Player 4
-2025-05-11 21:10:12,779 - DEBUG - Player 1 prepared for swap, was_playing=False, position=48211
-2025-05-11 21:10:12,780 - DEBUG - Player 4 prepared for swap, was_playing=False, position=69718
-2025-05-11 21:10:12,780 - DEBUG - Player 1 mode button updated to random_repo
-2025-05-11 21:10:12,780 - DEBUG - Player 4 mode button updated to random_repo
-2025-05-11 21:10:12,896 - DEBUG - Reloaded Player 1 with file C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 at position 69718
-2025-05-11 21:10:12,995 - DEBUG - Reloaded Player 4 with file C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 at position 48211
-2025-05-11 21:10:12,995 - DEBUG - Player 1 HWND re-attached after swap: 623912
-2025-05-11 21:10:13,197 - DEBUG - Player 4 HWND re-attached after swap: 484916
-2025-05-11 21:10:13,398 - DEBUG - Raised Player 2 to layer 1 (frame_id: 7)
-2025-05-11 21:10:13,398 - DEBUG - Raised Player 3 to layer 2 (frame_id: 9)
-2025-05-11 21:10:13,399 - DEBUG - Raised Player 1 to layer 3 (frame_id: 5)
-2025-05-11 21:10:13,399 - DEBUG - Raised Player 4 to layer 3 (frame_id: 10)
-2025-05-11 21:10:13,399 - DEBUG - Raised Player 5 to layer 4 (frame_id: 11)
-2025-05-11 21:10:13,399 - DEBUG - Arranging 5 players in SMM with screen size 1920x1080
-2025-05-11 21:10:13,400 - DEBUG - 5-player SMM layout: Players 1-4: 960x600 (scaled to 960x540), Player 5: 320x200 at (800, 500) (scaled to 320x180 at (800, 450))
-2025-05-11 21:10:13,400 - DEBUG - Setting Player 1 size to 960x540 at (0, 0)
-2025-05-11 21:10:13,443 - DEBUG - Positioned Player 1: 960x540 at (0, 0)
-2025-05-11 21:10:13,443 - DEBUG - Setting Player 2 size to 960x540 at (960, 0)
-2025-05-11 21:10:13,499 - DEBUG - Positioned Player 2: 960x540 at (960, 0)
-2025-05-11 21:10:13,500 - DEBUG - Setting Player 3 size to 960x540 at (0, 540)
-2025-05-11 21:10:13,504 - DEBUG - Positioned Player 3: 960x540 at (0, 540)
-2025-05-11 21:10:13,504 - DEBUG - Setting Player 4 size to 960x540 at (960, 540)
-2025-05-11 21:10:13,507 - DEBUG - Positioned Player 4: 960x540 at (960, 540)
-2025-05-11 21:10:13,508 - DEBUG - Setting Player 5 size to 320x180 at (800, 450)
-2025-05-11 21:10:13,517 - DEBUG - Positioned Player 5: 320x180 at (800, 450)
-2025-05-11 21:10:13,517 - DEBUG - Reapplied SMM layout after swapping Player 1 with Player 4
-2025-05-11 21:10:13,518 - DEBUG - Restored Player 1 to paused state after swap at position 48211
-2025-05-11 21:10:13,518 - DEBUG - Restored Player 4 to paused state after swap at position 69718
-2025-05-11 21:10:13,531 - DEBUG - Restored Player 2 to paused state
-2025-05-11 21:10:13,532 - DEBUG - Restored Player 3 to paused state
-2025-05-11 21:10:13,532 - DEBUG - Restored Player 5 to paused state
-2025-05-11 21:10:13,532 - DEBUG - Swap completed: Player 1 <-> Player 4
-2025-05-11 21:10:16,291 - DEBUG - Toggling play/pause, is_maximized=True
-2025-05-11 21:10:16,291 - DEBUG - Playing Player 1
-2025-05-11 21:10:16,292 - DEBUG - Playing Player 2
-2025-05-11 21:10:16,292 - DEBUG - Playing Player 3
-2025-05-11 21:10:16,292 - DEBUG - Playing Player 4
-2025-05-11 21:10:16,293 - DEBUG - Playing Player 5
-2025-05-11 21:10:25,951 - DEBUG - Handling Escape: is_fullscreen=True, is_maximized=True
-2025-05-11 21:10:25,951 - DEBUG - Restored window styles: style=56000000, ex_style=4
-2025-05-11 21:10:26,353 - DEBUG - Restored window manipulability for HWND 402836
-2025-05-11 21:10:26,357 - DEBUG - Setting Player 1 size to 200x150 at (150, 83)
-2025-05-11 21:10:26,492 - DEBUG - Restored Player 1: 133x100 at (150, 83)
-2025-05-11 21:10:26,493 - DEBUG - Setting Player 2 size to 200x150 at (13, 5)
-2025-05-11 21:10:26,618 - DEBUG - Restored Player 2: 150x118 at (13, 5)
-2025-05-11 21:10:26,619 - DEBUG - Setting Player 3 size to 200x150 at (176, 3)
-2025-05-11 21:10:26,777 - DEBUG - Restored Player 3: 145x110 at (176, 3)
-2025-05-11 21:10:26,778 - DEBUG - Setting Player 4 size to 200x150 at (237, 148)
-2025-05-11 21:10:26,887 - DEBUG - Restored Player 4: 133x100 at (237, 148)
-2025-05-11 21:10:26,887 - DEBUG - Setting Player 5 size to 200x150 at (33, 148)
-2025-05-11 21:10:26,994 - DEBUG - Restored Player 5: 133x100 at (33, 148)
-2025-05-11 21:10:27,089 - DEBUG - Exited SMM/fullscreen
-2025-05-11 21:10:27,099 - DEBUG - Refreshed all keyboard bindings
+2025-05-12 11:10:34,962 - DEBUG - Starting Ultiplay application
+2025-05-12 11:10:34,962 - DEBUG - Launching main application
+2025-05-12 11:10:35,072 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
+2025-05-12 11:10:35,073 - DEBUG - Initializing VideoPlayerApp
+2025-05-12 11:10:35,079 - DEBUG - Context menu set up for canvas
+2025-05-12 11:10:35,083 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
+2025-05-12 11:10:35,101 - DEBUG - STREAM b'IHDR' 16 13
+2025-05-12 11:10:35,101 - DEBUG - STREAM b'IDAT' 41 54495
+2025-05-12 11:10:35,124 - DEBUG - Resized background to 1200x800
+2025-05-12 11:10:35,141 - DEBUG - Refreshed all keyboard bindings
+2025-05-12 11:10:38,067 - DEBUG - Context menu shown at screen x=811, y=499, canvas x=673, y=338
+2025-05-12 11:10:38,118 - DEBUG - STREAM b'IHDR' 16 13
+2025-05-12 11:10:38,119 - DEBUG - STREAM b'IDAT' 41 54495
+2025-05-12 11:10:40,164 - DEBUG - Forced focus back to app
+2025-05-12 11:10:40,165 - DEBUG - Refreshed all keyboard bindings
+2025-05-12 11:10:40,165 - DEBUG - Window regained focus, bindings refreshed
+2025-05-12 11:10:40,165 - DEBUG - STREAM b'IHDR' 16 13
+2025-05-12 11:10:40,165 - DEBUG - STREAM b'IDAT' 41 54495
+2025-05-12 11:10:43,876 - DEBUG - Initializing player widget at x=509, y=283, player count=0
+2025-05-12 11:10:43,877 - DEBUG - Initialized Player 1 with layer 0
+2025-05-12 11:10:43,999 - DEBUG - VLC initialized successfully for frame_id: 2380582383824
+2025-05-12 11:10:44,000 - DEBUG - Attached player to canvas with frame_id: 5
+2025-05-12 11:10:44,038 - DEBUG - Video frame HWND for Player 1: 591822
+2025-05-12 11:10:44,144 - DEBUG - Initialized Player 1 volume to 100
+2025-05-12 11:10:44,144 - DEBUG - Player 1 mode button updated to playlist
+2025-05-12 11:10:44,144 - DEBUG - Player 1 mode button updated to playlist
+2025-05-12 11:10:44,145 - DEBUG - Loading video: C:/Users/march/Downloads/ap13588-1080p.mp4
+2025-05-12 11:10:44,146 - DEBUG - Initializing player widget at x=44, y=17, player count=1
+2025-05-12 11:10:44,146 - DEBUG - Initialized Player 2 with layer 1
+2025-05-12 11:10:44,149 - DEBUG - VLC initialized successfully for frame_id: 2380582588560
+2025-05-12 11:10:44,149 - DEBUG - Attached player to canvas with frame_id: 7
+2025-05-12 11:10:44,188 - DEBUG - Video frame HWND for Player 2: 370284
+2025-05-12 11:10:44,189 - DEBUG - Initialized Player 2 volume to 100
+2025-05-12 11:10:44,190 - DEBUG - Player 2 mode button updated to playlist
+2025-05-12 11:10:44,190 - DEBUG - Player 2 mode button updated to random_repo
+2025-05-12 11:10:44,190 - DEBUG - Loading video: C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4
+2025-05-12 11:10:44,191 - DEBUG - Initializing player widget at x=594, y=12, player count=2
+2025-05-12 11:10:44,191 - DEBUG - Initialized Player 3 with layer 2
+2025-05-12 11:10:44,194 - DEBUG - VLC initialized successfully for frame_id: 2380582594848
+2025-05-12 11:10:44,194 - DEBUG - Attached player to canvas with frame_id: 9
+2025-05-12 11:10:44,198 - DEBUG - Video frame HWND for Player 3: 349902
+2025-05-12 11:10:44,199 - DEBUG - Initialized Player 3 volume to 100
+2025-05-12 11:10:44,200 - DEBUG - Player 3 mode button updated to random_repo
+2025-05-12 11:10:44,200 - DEBUG - Player 3 mode button updated to random_repo
+2025-05-12 11:10:44,200 - DEBUG - Loading video: C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4
+2025-05-12 11:10:44,201 - DEBUG - Initializing player widget at x=800, y=500, player count=3
+2025-05-12 11:10:44,201 - DEBUG - Initialized Player 4 with layer 3
+2025-05-12 11:10:44,204 - DEBUG - VLC initialized successfully for frame_id: 2380582715840
+2025-05-12 11:10:44,204 - DEBUG - Attached player to canvas with frame_id: 10
+2025-05-12 11:10:44,207 - DEBUG - Video frame HWND for Player 4: 374774
+2025-05-12 11:10:44,208 - DEBUG - Initialized Player 4 volume to 100
+2025-05-12 11:10:44,208 - DEBUG - Player 4 mode button updated to random_repo
+2025-05-12 11:10:44,209 - DEBUG - Player 4 mode button updated to random_repo
+2025-05-12 11:10:44,209 - DEBUG - Loading video: C:/Users/march/Downloads/dainty wilder - bad bunny.mp4
+2025-05-12 11:10:44,210 - DEBUG - Initializing player widget at x=112, y=500, player count=4
+2025-05-12 11:10:44,210 - DEBUG - Initialized Player 5 with layer 4
+2025-05-12 11:10:44,212 - DEBUG - VLC initialized successfully for frame_id: 2380582722080
+2025-05-12 11:10:44,213 - DEBUG - Attached player to canvas with frame_id: 11
+2025-05-12 11:10:44,215 - DEBUG - Video frame HWND for Player 5: 376030
+2025-05-12 11:10:44,216 - DEBUG - Initialized Player 5 volume to 100
+2025-05-12 11:10:44,217 - DEBUG - Player 5 mode button updated to random_repo
+2025-05-12 11:10:44,217 - DEBUG - Player 5 mode button updated to random_repo
+2025-05-12 11:10:44,217 - DEBUG - Loading video: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4
+2025-05-12 11:10:44,221 - DEBUG - Bound number keys for player selection
+2025-05-12 11:10:44,221 - DEBUG - Loaded layout with 5 players from C:/Users/march/Downloads/layoutest.ultilayout, smm_mode=False
+2025-05-12 11:10:44,222 - DEBUG - Drop target registered for Player 1
+2025-05-12 11:10:44,239 - DEBUG - Showed controls for Player 1
+2025-05-12 11:10:44,244 - WARNING - Volume mismatch for Player 1: expected 100, got -1. Correcting.
+2025-05-12 11:10:44,245 - ERROR - Failed to verify volume for Player 1: expected 100, got -1
+2025-05-12 11:10:44,246 - DEBUG - Attempting to set volume to 100 for Player 1
+2025-05-12 11:10:44,289 - DEBUG - Drop target registered for Player 2
+2025-05-12 11:10:44,289 - WARNING - Volume mismatch for Player 2: expected 100, got -1. Correcting.
+2025-05-12 11:10:44,289 - ERROR - Failed to verify volume for Player 2: expected 100, got -1
+2025-05-12 11:10:44,299 - DEBUG - Drop target registered for Player 3
+2025-05-12 11:10:44,300 - WARNING - Volume mismatch for Player 3: expected 100, got -1. Correcting.
+2025-05-12 11:10:44,300 - ERROR - Failed to verify volume for Player 3: expected 100, got -1
+2025-05-12 11:10:44,308 - DEBUG - Drop target registered for Player 4
+2025-05-12 11:10:44,309 - WARNING - Volume mismatch for Player 4: expected 100, got -1. Correcting.
+2025-05-12 11:10:44,309 - ERROR - Failed to verify volume for Player 4: expected 100, got -1
+2025-05-12 11:10:44,317 - DEBUG - Drop target registered for Player 5
+2025-05-12 11:10:44,317 - WARNING - Volume mismatch for Player 5: expected 100, got -1. Correcting.
+2025-05-12 11:10:44,318 - ERROR - Failed to verify volume for Player 5: expected 100, got -1
+2025-05-12 11:10:44,345 - DEBUG - VLC refreshed for frame_id: 5
+2025-05-12 11:10:44,345 - DEBUG - Attempting to set volume to 0 for Player 1
+2025-05-12 11:10:44,347 - WARNING - Volume mismatch for Player 1: expected 0, got -1. Correcting.
+2025-05-12 11:10:44,348 - ERROR - Failed to verify volume for Player 1: expected 0, got -1
+2025-05-12 11:10:44,391 - DEBUG - VLC refreshed for frame_id: 7
+2025-05-12 11:10:44,400 - DEBUG - VLC refreshed for frame_id: 9
+2025-05-12 11:10:44,409 - DEBUG - VLC refreshed for frame_id: 10
+2025-05-12 11:10:44,417 - DEBUG - VLC refreshed for frame_id: 11
+2025-05-12 11:10:44,446 - WARNING - Volume mismatch for Player 1: expected 0, got -1. Correcting.
+2025-05-12 11:10:44,446 - ERROR - Failed to verify volume for Player 1: expected 0, got -1
+2025-05-12 11:10:44,648 - DEBUG - Attempting to set volume to 100 for Player 1
+2025-05-12 11:10:44,749 - DEBUG - Volume verified for Player 1: 100
+2025-05-12 11:10:44,751 - DEBUG - Loaded and playing: C:/Users/march/Downloads/ap13588-1080p.mp4 with duration 3137069 ms
+2025-05-12 11:10:44,752 - DEBUG - Player 1 transition completed, is_transitioning set to False
+2025-05-12 11:10:44,828 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 with duration 4436374 ms
+2025-05-12 11:10:44,828 - DEBUG - Loaded and playing: C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 with duration 1395352 ms
+2025-05-12 11:10:44,828 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 with duration 1768149 ms
+2025-05-12 11:10:44,830 - DEBUG - Player 3 transition completed, is_transitioning set to False
+2025-05-12 11:10:44,830 - DEBUG - Player 5 transition completed, is_transitioning set to False
+2025-05-12 11:10:44,830 - DEBUG - Player 4 transition completed, is_transitioning set to False
+2025-05-12 11:10:44,895 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4 with duration 4032430 ms
+2025-05-12 11:10:44,895 - DEBUG - Player 2 transition completed, is_transitioning set to False
+2025-05-12 11:10:44,952 - DEBUG - VLC refreshed for frame_id: 5
+2025-05-12 11:10:45,029 - DEBUG - VLC refreshed for frame_id: 9
+2025-05-12 11:10:45,030 - DEBUG - VLC refreshed for frame_id: 11
+2025-05-12 11:10:45,030 - DEBUG - VLC refreshed for frame_id: 10
+2025-05-12 11:10:45,095 - DEBUG - VLC refreshed for frame_id: 7
+2025-05-12 11:10:46,688 - DEBUG - Hid controls for Player 1
+2025-05-12 11:10:46,751 - DEBUG - Video C:/Users/march/Downloads/ap13588-1080p.mp4 started successfully
+2025-05-12 11:10:46,827 - DEBUG - Video C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 started successfully
+2025-05-12 11:10:46,828 - DEBUG - Video C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 started successfully
+2025-05-12 11:10:46,828 - DEBUG - Video C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 started successfully
+2025-05-12 11:10:46,896 - DEBUG - Video C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4 started successfully
+2025-05-12 11:21:10,612 - DEBUG - Showed controls for Player 2
+2025-05-12 11:21:10,619 - DEBUG - Attempting to set volume to 100 for Player 2
+2025-05-12 11:21:10,721 - DEBUG - Volume verified for Player 2: 100
+2025-05-12 11:21:11,031 - DEBUG - Showed controls for Player 3
+2025-05-12 11:21:11,042 - DEBUG - Attempting to set volume to 100 for Player 3
+2025-05-12 11:21:11,143 - DEBUG - Volume verified for Player 3: 100
+2025-05-12 11:21:11,213 - DEBUG - Showed controls for Player 1
+2025-05-12 11:21:13,009 - DEBUG - Hid controls for Player 2
+2025-05-12 11:21:13,274 - DEBUG - Hid controls for Player 1
+2025-05-12 11:21:14,812 - DEBUG - Hid controls for Player 3
+2025-05-12 11:21:16,387 - DEBUG - Showed controls for Player 3
+2025-05-12 11:21:17,000 - DEBUG - Toggling SMM: is_maximized=False
+2025-05-12 11:21:17,001 - DEBUG - Stored pre-SMM state: geometry=1200x800+386+92
+2025-05-12 11:21:17,001 - DEBUG - Window center at (986, 492), size 1200x800
+2025-05-12 11:21:17,006 - DEBUG - Monitor 0: 1920x1200+0+0
+2025-05-12 11:21:17,006 - DEBUG - Monitor 1: 1920x1080+1920+121
+2025-05-12 11:21:17,007 - DEBUG - Selected monitor 1920x1200+0+0
+2025-05-12 11:21:17,007 - DEBUG - SMM on monitor: 1920x1200+0+0
+2025-05-12 11:21:17,058 - DEBUG - Set window to 1920x1200+-8+-31, actual position: 1920x1182+0+0
+2025-05-12 11:21:17,058 - WARNING - Window position mismatch: requested -8,-31, got 0,0
+2025-05-12 11:21:17,072 - DEBUG - Retry position: 1920x1200+-8+-31
+2025-05-12 11:21:17,090 - DEBUG - Adjusted position: 1920x1200+8+31
+2025-05-12 11:21:17,091 - DEBUG - After topmost adjustment, actual position: 1920x1200+8+31
+2025-05-12 11:21:17,091 - DEBUG - Stored window styles: style=56000000, ex_style=4
+2025-05-12 11:21:17,098 - DEBUG - Window center at (952, 560), size 1920x1182
+2025-05-12 11:21:17,099 - DEBUG - Monitor 0: 1920x1200+0+0
+2025-05-12 11:21:17,099 - DEBUG - Monitor 1: 1920x1080+1920+121
+2025-05-12 11:21:17,099 - DEBUG - Selected monitor 1920x1200+0+0
+2025-05-12 11:21:17,099 - DEBUG - Set fullscreen properties for HWND 548294 at 1920x1200+-8+-31
+2025-05-12 11:21:17,100 - DEBUG - After fullscreen properties, position: 1920x1200+8+31, style=-2a000000, ex_style=4
+2025-05-12 11:21:17,100 - DEBUG - Arranging 5 players in SMM with screen size 1920x1200
+2025-05-12 11:21:17,100 - DEBUG - 5-player SMM layout: Players 1-4: 960x600 (scaled to 960x600), Player 5: 320x200 at (800, 500) (scaled to 320x200 at (800, 500))
+2025-05-12 11:21:17,101 - DEBUG - Setting Player 1 size to 960x600 at (0, 0)
+2025-05-12 11:21:17,123 - DEBUG - Positioned Player 1: 960x600 at (0, 0)
+2025-05-12 11:21:17,123 - DEBUG - Setting Player 2 size to 960x600 at (960, 0)
+2025-05-12 11:21:17,139 - DEBUG - Positioned Player 2: 960x600 at (960, 0)
+2025-05-12 11:21:17,140 - DEBUG - Setting Player 3 size to 960x600 at (0, 600)
+2025-05-12 11:21:17,193 - DEBUG - Positioned Player 3: 960x600 at (0, 600)
+2025-05-12 11:21:17,193 - DEBUG - Setting Player 4 size to 960x600 at (960, 600)
+2025-05-12 11:21:17,200 - DEBUG - Positioned Player 4: 960x600 at (960, 600)
+2025-05-12 11:21:17,200 - DEBUG - Setting Player 5 size to 320x200 at (800, 500)
+2025-05-12 11:21:17,210 - DEBUG - Positioned Player 5: 320x200 at (800, 500)
+2025-05-12 11:21:17,210 - DEBUG - Refreshed VLC for Player 1, frame_id: 1315882
+2025-05-12 11:21:17,211 - DEBUG - Refreshed VLC for Player 2, frame_id: 535940
+2025-05-12 11:21:17,211 - DEBUG - Refreshed VLC for Player 3, frame_id: 922766
+2025-05-12 11:21:17,211 - DEBUG - Refreshed VLC for Player 4, frame_id: 945758
+2025-05-12 11:21:17,211 - DEBUG - Refreshed VLC for Player 5, frame_id: 1180482
+2025-05-12 11:21:17,211 - DEBUG - Entered SMM on monitor 1920x1200+0+0 with 5 players
+2025-05-12 11:21:17,212 - DEBUG - Bound number keys for player selection
+2025-05-12 11:21:17,212 - DEBUG - Refreshed all keyboard bindings
+2025-05-12 11:21:18,400 - DEBUG - Handling Escape: is_fullscreen=True, is_maximized=True
+2025-05-12 11:21:18,401 - DEBUG - Restored window styles: style=56000000, ex_style=4
+2025-05-12 11:21:18,510 - DEBUG - Restored window manipulability for HWND 548294
+2025-05-12 11:21:18,513 - DEBUG - Set Tkinter icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
+2025-05-12 11:21:18,515 - DEBUG - Set win32gui icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico for HWND 548294
+2025-05-12 11:21:18,516 - DEBUG - Setting Player 1 size to 400x300 at (509, 283)
+2025-05-12 11:21:18,623 - DEBUG - Restored Player 1: 400x300 at (509, 283)
+2025-05-12 11:21:18,624 - DEBUG - Setting Player 2 size to 508x400 at (44, 17)
+2025-05-12 11:21:18,833 - DEBUG - Restored Player 2: 508x400 at (44, 17)
+2025-05-12 11:21:18,834 - DEBUG - Setting Player 3 size to 492x374 at (594, 12)
+2025-05-12 11:21:18,991 - DEBUG - Restored Player 3: 492x374 at (594, 12)
+2025-05-12 11:21:18,991 - DEBUG - Setting Player 4 size to 400x300 at (800, 500)
+2025-05-12 11:21:19,076 - DEBUG - Restored Player 4: 400x300 at (800, 500)
+2025-05-12 11:21:19,076 - DEBUG - Setting Player 5 size to 400x300 at (112, 500)
+2025-05-12 11:21:19,086 - DEBUG - Restored Player 5: 400x300 at (112, 500)
+2025-05-12 11:21:19,087 - DEBUG - Refreshed VLC for Player 1, frame_id: 1315882
+2025-05-12 11:21:19,087 - DEBUG - Refreshed VLC for Player 2, frame_id: 535940
+2025-05-12 11:21:19,087 - DEBUG - Refreshed VLC for Player 3, frame_id: 922766
+2025-05-12 11:21:19,087 - DEBUG - Refreshed VLC for Player 4, frame_id: 945758
+2025-05-12 11:21:19,088 - DEBUG - Refreshed VLC for Player 5, frame_id: 1180482
+2025-05-12 11:21:19,164 - DEBUG - Exited SMM/fullscreen
+2025-05-12 11:21:19,169 - DEBUG - Refreshed all keyboard bindings
+2025-05-12 11:21:19,224 - DEBUG - Hid controls for Player 3
+2025-05-12 11:21:20,500 - DEBUG - Showed controls for Player 3
+2025-05-12 11:21:20,994 - DEBUG - Showed controls for Player 2
+2025-05-12 11:21:22,745 - DEBUG - Hid controls for Player 3
+2025-05-12 11:21:23,032 - DEBUG - Hid controls for Player 2
+2025-05-12 11:21:23,257 - DEBUG - Toggling SMM: is_maximized=False
+2025-05-12 11:21:23,258 - DEBUG - Stored pre-SMM state: geometry=1200x800+2325+244
+2025-05-12 11:21:23,258 - DEBUG - Window center at (2925, 644), size 1200x800
+2025-05-12 11:21:23,258 - DEBUG - Monitor 0: 1920x1200+0+0
+2025-05-12 11:21:23,259 - DEBUG - Monitor 1: 1920x1080+1920+121
+2025-05-12 11:21:23,259 - DEBUG - Selected monitor 1920x1080+1920+121
+2025-05-12 11:21:23,259 - DEBUG - SMM on monitor: 1920x1080+1920+121
+2025-05-12 11:21:23,294 - DEBUG - Set window to 1920x1080+1912+90, actual position: 1920x1080+1920+121
+2025-05-12 11:21:23,294 - WARNING - Window position mismatch: requested 1912,90, got 1920,121
+2025-05-12 11:21:23,298 - DEBUG - Retry position: 1920x1080+3832+211
+2025-05-12 11:21:23,313 - DEBUG - Adjusted position: 1920x1080+1928+152
+2025-05-12 11:21:23,323 - DEBUG - Retry position: 1920x1080+1928+152
+2025-05-12 11:21:23,325 - DEBUG - Adjusted position: 1920x1080+3832+211
+2025-05-12 11:21:23,328 - DEBUG - Retry position: 1920x1080+3832+211
+2025-05-12 11:21:23,337 - DEBUG - Adjusted position: 1920x1080+1928+152
+2025-05-12 11:21:23,337 - DEBUG - After topmost adjustment, actual position: 1920x1080+1928+152
+2025-05-12 11:21:23,337 - DEBUG - Stored window styles: style=56000000, ex_style=4
+2025-05-12 11:21:23,355 - DEBUG - Window center at (2872, 630), size 1920x1080
+2025-05-12 11:21:23,355 - DEBUG - Monitor 0: 1920x1200+0+0
+2025-05-12 11:21:23,355 - DEBUG - Monitor 1: 1920x1080+1920+121
+2025-05-12 11:21:23,356 - DEBUG - Selected monitor 1920x1080+1920+121
+2025-05-12 11:21:23,356 - DEBUG - Set fullscreen properties for HWND 548294 at 1920x1080+1912+90
+2025-05-12 11:21:23,356 - DEBUG - After fullscreen properties, position: 1920x1080+1928+152, style=-2a000000, ex_style=4
+2025-05-12 11:21:23,356 - DEBUG - Arranging 5 players in SMM with screen size 1920x1080
+2025-05-12 11:21:23,356 - DEBUG - 5-player SMM layout: Players 1-4: 960x600 (scaled to 960x540), Player 5: 320x200 at (800, 500) (scaled to 320x180 at (800, 450))
+2025-05-12 11:21:23,357 - DEBUG - Setting Player 1 size to 960x540 at (0, 0)
+2025-05-12 11:21:23,377 - DEBUG - Positioned Player 1: 960x540 at (0, 0)
+2025-05-12 11:21:23,377 - DEBUG - Setting Player 2 size to 960x540 at (960, 0)
+2025-05-12 11:21:23,400 - DEBUG - Positioned Player 2: 960x540 at (960, 0)
+2025-05-12 11:21:23,400 - DEBUG - Setting Player 3 size to 960x540 at (0, 540)
+2025-05-12 11:21:23,411 - DEBUG - Positioned Player 3: 960x540 at (0, 540)
+2025-05-12 11:21:23,411 - DEBUG - Setting Player 4 size to 960x540 at (960, 540)
+2025-05-12 11:21:23,425 - DEBUG - Positioned Player 4: 960x540 at (960, 540)
+2025-05-12 11:21:23,425 - DEBUG - Setting Player 5 size to 320x180 at (800, 450)
+2025-05-12 11:21:23,448 - DEBUG - Positioned Player 5: 320x180 at (800, 450)
+2025-05-12 11:21:23,448 - DEBUG - Refreshed VLC for Player 1, frame_id: 1315882
+2025-05-12 11:21:23,448 - DEBUG - Refreshed VLC for Player 2, frame_id: 535940
+2025-05-12 11:21:23,449 - DEBUG - Refreshed VLC for Player 3, frame_id: 922766
+2025-05-12 11:21:23,449 - DEBUG - Refreshed VLC for Player 4, frame_id: 945758
+2025-05-12 11:21:23,449 - DEBUG - Refreshed VLC for Player 5, frame_id: 1180482
+2025-05-12 11:21:23,449 - DEBUG - Entered SMM on monitor 1920x1080+1920+121 with 5 players
+2025-05-12 11:21:23,450 - DEBUG - Bound number keys for player selection
+2025-05-12 11:21:23,450 - DEBUG - Refreshed all keyboard bindings
+2025-05-12 11:21:25,601 - DEBUG - Handling Escape: is_fullscreen=True, is_maximized=True
+2025-05-12 11:21:25,602 - DEBUG - Restored window styles: style=56000000, ex_style=4
+2025-05-12 11:21:25,735 - DEBUG - Restored window manipulability for HWND 548294
+2025-05-12 11:21:25,740 - DEBUG - Set Tkinter icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
+2025-05-12 11:21:25,741 - DEBUG - Set win32gui icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico for HWND 548294
+2025-05-12 11:21:25,742 - DEBUG - Setting Player 1 size to 400x300 at (509, 283)
+2025-05-12 11:21:25,837 - DEBUG - Restored Player 1: 400x300 at (509, 283)
+2025-05-12 11:21:25,838 - DEBUG - Setting Player 2 size to 508x400 at (44, 17)
+2025-05-12 11:21:25,849 - DEBUG - Restored Player 2: 508x400 at (44, 17)
+2025-05-12 11:21:25,849 - DEBUG - Setting Player 3 size to 492x374 at (594, 12)
+2025-05-12 11:21:25,947 - DEBUG - Restored Player 3: 492x374 at (594, 12)
+2025-05-12 11:21:25,947 - DEBUG - Setting Player 4 size to 400x300 at (800, 500)
+2025-05-12 11:21:26,068 - DEBUG - Restored Player 4: 400x300 at (800, 500)
+2025-05-12 11:21:26,069 - DEBUG - Setting Player 5 size to 400x300 at (112, 500)
+2025-05-12 11:21:26,157 - DEBUG - Restored Player 5: 400x300 at (112, 500)
+2025-05-12 11:21:26,158 - DEBUG - Refreshed VLC for Player 1, frame_id: 1315882
+2025-05-12 11:21:26,158 - DEBUG - Refreshed VLC for Player 2, frame_id: 535940
+2025-05-12 11:21:26,158 - DEBUG - Refreshed VLC for Player 3, frame_id: 922766
+2025-05-12 11:21:26,158 - DEBUG - Refreshed VLC for Player 4, frame_id: 945758
+2025-05-12 11:21:26,159 - DEBUG - Refreshed VLC for Player 5, frame_id: 1180482
+2025-05-12 11:21:26,240 - DEBUG - Exited SMM/fullscreen
+2025-05-12 11:21:26,246 - DEBUG - Refreshed all keyboard bindings
+2025-05-12 11:21:27,184 - DEBUG - Toggling fullscreen: is_fullscreen=False, is_maximized=False
+2025-05-12 11:21:27,185 - DEBUG - Stored pre-fullscreen state: geometry=1200x800+2325+244
+2025-05-12 11:21:27,185 - DEBUG - Window center at (2925, 644), size 1200x800
+2025-05-12 11:21:27,185 - DEBUG - Monitor 0: 1920x1200+0+0
+2025-05-12 11:21:27,186 - DEBUG - Monitor 1: 1920x1080+1920+121
+2025-05-12 11:21:27,186 - DEBUG - Selected monitor 1920x1080+1920+121
+2025-05-12 11:21:27,186 - DEBUG - Fullscreen on monitor: 1920x1080+1920+121
+2025-05-12 11:21:27,210 - DEBUG - Set window to 1920x1080+1912+90, actual position: 1920x1080+1920+121
+2025-05-12 11:21:27,210 - WARNING - Window position mismatch: requested 1912,90, got 1920,121
+2025-05-12 11:21:27,213 - DEBUG - Retry position: 1920x1080+3832+211
+2025-05-12 11:21:27,232 - DEBUG - Adjusted position: 1920x1080+1928+152
+2025-05-12 11:21:27,240 - DEBUG - Retry position: 1920x1080+1928+152
+2025-05-12 11:21:27,243 - DEBUG - Adjusted position: 1920x1080+3832+211
+2025-05-12 11:21:27,245 - DEBUG - Retry position: 1920x1080+3832+211
+2025-05-12 11:21:27,255 - DEBUG - Adjusted position: 1920x1080+1928+152
+2025-05-12 11:21:27,255 - DEBUG - After topmost adjustment, actual position: 1920x1080+1928+152
+2025-05-12 11:21:27,255 - DEBUG - Stored window styles: style=56000000, ex_style=4
+2025-05-12 11:21:27,261 - DEBUG - Window center at (2872, 630), size 1920x1080
+2025-05-12 11:21:27,261 - DEBUG - Monitor 0: 1920x1200+0+0
+2025-05-12 11:21:27,261 - DEBUG - Monitor 1: 1920x1080+1920+121
+2025-05-12 11:21:27,262 - DEBUG - Selected monitor 1920x1080+1920+121
+2025-05-12 11:21:27,262 - DEBUG - Set fullscreen properties for HWND 548294 at 1920x1080+1912+90
+2025-05-12 11:21:27,262 - DEBUG - After fullscreen properties, position: 1920x1080+1928+152, style=-2a000000, ex_style=4
+2025-05-12 11:21:27,263 - DEBUG - Setting Player 1 size to 640x405 at (814, 382)
+2025-05-12 11:21:27,273 - DEBUG - Positioned Player 1: 640x405 at (814, 382)
+2025-05-12 11:21:27,273 - DEBUG - Setting Player 2 size to 812x540 at (70, 22)
+2025-05-12 11:21:27,285 - DEBUG - Positioned Player 2: 812x540 at (70, 22)
+2025-05-12 11:21:27,286 - DEBUG - Setting Player 3 size to 787x504 at (950, 16)
+2025-05-12 11:21:27,293 - DEBUG - Positioned Player 3: 787x504 at (950, 16)
+2025-05-12 11:21:27,293 - DEBUG - Setting Player 4 size to 640x405 at (1280, 675)
+2025-05-12 11:21:27,299 - DEBUG - Positioned Player 4: 640x405 at (1280, 675)
+2025-05-12 11:21:27,300 - DEBUG - Setting Player 5 size to 640x405 at (179, 675)
+2025-05-12 11:21:27,310 - DEBUG - Positioned Player 5: 640x405 at (179, 675)
+2025-05-12 11:21:27,351 - DEBUG - Entered fullscreen on monitor 1920x1080+1920+121
+2025-05-12 11:21:27,351 - DEBUG - Bound number keys for player selection
+2025-05-12 11:21:27,352 - DEBUG - Refreshed all keyboard bindings
+2025-05-12 11:21:31,393 - DEBUG - Handling Escape: is_fullscreen=True, is_maximized=False
+2025-05-12 11:21:31,393 - DEBUG - Restored window styles: style=56000000, ex_style=4
+2025-05-12 11:21:31,519 - DEBUG - Restored window manipulability for HWND 548294
+2025-05-12 11:21:31,523 - DEBUG - Set Tkinter icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
+2025-05-12 11:21:31,525 - DEBUG - Set win32gui icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico for HWND 548294
+2025-05-12 11:21:31,525 - DEBUG - Setting Player 1 size to 400x300 at (509, 283)
+2025-05-12 11:21:31,636 - DEBUG - Restored Player 1: 400x300 at (509, 283)
+2025-05-12 11:21:31,636 - DEBUG - Setting Player 2 size to 508x400 at (44, 17)
+2025-05-12 11:21:31,729 - DEBUG - Restored Player 2: 508x400 at (44, 17)
+2025-05-12 11:21:31,729 - DEBUG - Setting Player 3 size to 492x374 at (594, 12)
+2025-05-12 11:21:31,735 - DEBUG - Restored Player 3: 492x374 at (594, 12)
+2025-05-12 11:21:31,735 - DEBUG - Setting Player 4 size to 400x300 at (800, 500)
+2025-05-12 11:21:31,741 - DEBUG - Restored Player 4: 400x300 at (800, 500)
+2025-05-12 11:21:31,741 - DEBUG - Setting Player 5 size to 400x300 at (112, 500)
+2025-05-12 11:21:31,824 - DEBUG - Restored Player 5: 400x300 at (112, 500)
+2025-05-12 11:21:31,824 - DEBUG - Refreshed VLC for Player 1, frame_id: 1315882
+2025-05-12 11:21:31,824 - DEBUG - Refreshed VLC for Player 2, frame_id: 535940
+2025-05-12 11:21:31,824 - DEBUG - Refreshed VLC for Player 3, frame_id: 922766
+2025-05-12 11:21:31,825 - DEBUG - Refreshed VLC for Player 4, frame_id: 945758
+2025-05-12 11:21:31,825 - DEBUG - Refreshed VLC for Player 5, frame_id: 1180482
+2025-05-12 11:21:31,903 - DEBUG - Exited SMM/fullscreen
+2025-05-12 11:21:31,908 - DEBUG - Refreshed all keyboard bindings
+2025-05-12 11:21:34,728 - DEBUG - Showed controls for Player 2
+2025-05-12 11:21:36,710 - DEBUG - Showed controls for Player 3
+2025-05-12 11:21:36,967 - DEBUG - Hid controls for Player 2

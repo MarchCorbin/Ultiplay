@@ -2754,6 +2754,7 @@ class VideoPlayerApp:
             self.canvas.config(width=screen_width, height=screen_height)
 
             self._arrange_players_in_smm(screen_width, screen_height)
+            self.refresh_vlc_players()
             self.canvas.update_idletasks()
             logging.debug("Entered SMM on monitor %dx%d+%d+%d with %d players", 
                          screen_width, screen_height, screen_x, screen_y, len(self.players))
@@ -2764,6 +2765,18 @@ class VideoPlayerApp:
         self.refresh_bindings()
         if self.dj_dashboard and self.dj_dashboard.winfo_exists():
             self.dj_dashboard.update_dashboard()
+
+    def refresh_vlc_players(self):
+        """Force refresh of all VLC players to prevent rendering artifacts."""
+        for player in self.players:
+            try:
+                if player.player.get_media():
+                    player.player.video_set_scale(0)  # Reset scaling
+                    player.player.set_hwnd(player.frame.winfo_id())  # Reattach HWND
+                    logging.debug("Refreshed VLC for Player %d, frame_id: %d",
+                                 player.index + 1, player.frame.winfo_id())
+            except Exception as e:
+                logging.error("Failed to refresh VLC for Player %d: %s", player.index + 1, e)
 
     def add_player(self, event=None):
         """Add a new player widget at the specified or event coordinates."""
@@ -2931,10 +2944,7 @@ class VideoPlayerApp:
                 self.is_fullscreen = False
                 self.root.geometry(self.pre_fullscreen_state.get('geometry', "800x600+0+0"))
                 self.restore_window_properties()
-                try:
-                    self.root.iconbitmap(self.icon_path)
-                except tk.TclError as e:
-                    logging.error("Failed to reapply icon: %s", e)
+                self.set_window_icon()
                 self.restore_players_from_positions(self.pre_fullscreen_positions)
                 self.pre_fullscreen_state = None
                 self.pre_fullscreen_positions = []
@@ -2950,10 +2960,7 @@ class VideoPlayerApp:
                        if self.pre_fullscreen_state else "800x600+0+0")
             self.root.geometry(geometry)
             self.restore_window_properties()
-            try:
-                self.root.iconbitmap(self.icon_path)
-            except tk.TclError as e:
-                logging.error("Failed to reapply icon: %s", e)
+            self.set_window_icon()
             positions = self.pre_smm_positions or self.pre_fullscreen_positions
             self.restore_players_from_positions(positions)
             self.pre_smm_positions = []
@@ -2971,36 +2978,55 @@ class VideoPlayerApp:
         self.root.focus_force()
         self.refresh_bindings()
 
+    def set_window_icon(self):
+        """Set the window icon using both Tkinter and win32gui for reliability."""
+        hwnd = self.root.winfo_id()
+        try:
+            if os.path.exists(self.icon_path):
+                self.root.iconbitmap(self.icon_path)
+                logging.debug("Set Tkinter icon to %s", self.icon_path)
+
+                hicon = win32gui.LoadImage(0, self.icon_path, win32con.IMAGE_ICON,
+                                          0, 0, win32con.LR_LOADFROMFILE | win32con.LR_DEFAULTSIZE)
+                win32gui.SendMessage(hwnd, win32con.WM_SETICON, win32con.ICON_SMALL, hicon)
+                win32gui.SendMessage(hwnd, win32con.WM_SETICON, win32con.ICON_BIG, hicon)
+                logging.debug("Set win32gui icon to %s for HWND %d", self.icon_path, hwnd)
+            else:
+                logging.warning("Icon file not found at %s", self.icon_path)
+        except Exception as e:
+            logging.error("Failed to set window icon: %s", e)
+
     def restore_players_from_positions(self, positions):
-        """Restore player positions and sizes from stored positions."""
+        """Restore player positions and sizes from stored positions without scaling."""
         if not positions:
             self.arrange_players()
             return
-        canvas_width, canvas_height = 800, 600
-        scale = min(canvas_width / 1200, canvas_height / 800)
+        # Use actual window size for canvas dimensions
+        canvas_width = self.root.winfo_width()
+        canvas_height = self.root.winfo_height()
         for i, player in enumerate(self.players):
             if i < len(positions):
                 x, y, width, height = positions[i]
-                new_width = int(width * scale)
-                new_height = int(height * scale)
-                new_x = max(0, min(x * scale, canvas_width - new_width))
-                new_y = max(0, min(y * scale, canvas_height - new_height))
+                # Ensure positions are within canvas bounds
+                new_x = max(0, min(float(x), canvas_width - width))
+                new_y = max(0, min(float(y), canvas_height - height))
                 try:
-                    player.set_size_and_position(new_width, new_height, new_x, new_y)
-                    player.configure_for_width(new_width)
+                    player.set_size_and_position(int(width), int(height), int(new_x), int(new_y))
+                    player.configure_for_width(int(width))
                     self.player_positions[i] = {
-                        'x': new_x, 'y': new_y, 'width': new_width, 'height': new_height, 'customized': False
+                        'x': new_x, 'y': new_y, 'width': width, 'height': height, 'customized': False
                     }
                     if player.player.get_media():
                         player.player.video_set_scale(0)
                     logging.debug("Restored Player %d: %dx%d at (%d, %d)", 
-                                 player.index + 1, new_width, new_height, new_x, new_y)
+                                 player.index + 1, int(width), int(height), int(new_x), int(new_y))
                 except tk.TclError as e:
                     logging.error("Failed to restore Player %d: %s", player.index + 1, e)
                     player.set_size_and_position(400, 300, 50 + (i * 20), 50 + (i * 20))
                     self.player_positions[i] = {
                         'x': 50 + (i * 20), 'y': 50 + (i * 20), 'width': 400, 'height': 300, 'customized': False
                     }
+        self.refresh_vlc_players()
 
     def toggle_play_pause(self, event=None):
         logging.debug("Toggling play/pause, is_maximized=%s", self.is_maximized)
@@ -3302,7 +3328,7 @@ class VideoPlayerApp:
         """Explicitly position the window on the target monitor with fullscreen properties."""
         hwnd = self.root.winfo_id()
         try:
-            # Adjust for observed offset (1928,152 vs 1920,121)
+            # Apply offset to correct for observed mismatch (1928,152 vs 1920,121)
             offset_x, offset_y = x - 8, y - 31
             self.root.update_idletasks()
 
@@ -3323,7 +3349,31 @@ class VideoPlayerApp:
                 logging.warning("Window position mismatch: requested %d,%d, got %d,%d",
                                offset_x, offset_y, actual_x, actual_y)
 
-            # Force window to target monitor
+            # Retry position to ensure accuracy
+            for _ in range(3):
+                rect = win32gui.GetWindowRect(hwnd)
+                actual_x, actual_y = rect[0], rect[1]
+                if actual_x == offset_x and actual_y == offset_y:
+                    break
+                win32gui.SetWindowPos(hwnd, win32con.HWND_TOP, offset_x, offset_y, width, height,
+                                     win32con.SWP_FRAMECHANGED | win32con.SWP_NOACTIVATE)
+                self.root.update_idletasks()
+                rect = win32gui.GetWindowRect(hwnd)
+                actual_x, actual_y = rect[0], rect[1]
+                logging.debug("Retry position: %dx%d+%d+%d",
+                             rect[2] - rect[0], rect[3] - rect[1], actual_x, actual_y)
+                if actual_x == x and actual_y == y:
+                    break
+                # Adjust offset if mismatch persists
+                offset_x = x - (actual_x - x)
+                offset_y = y - (actual_y - y)
+                win32gui.SetWindowPos(hwnd, win32con.HWND_TOP, offset_x, offset_y, width, height,
+                                     win32con.SWP_FRAMECHANGED | win32con.SWP_NOACTIVATE)
+                rect = win32gui.GetWindowRect(hwnd)
+                logging.debug("Adjusted position: %dx%d+%d+%d",
+                             rect[2] - rect[0], rect[3] - rect[1], rect[0], rect[1])
+
+            # Ensure window stays on target monitor
             win32gui.SetWindowPos(hwnd, win32con.HWND_TOPMOST, offset_x, offset_y, width, height,
                                  win32con.SWP_FRAMECHANGED | win32con.SWP_NOACTIVATE)
             win32gui.SetWindowPos(hwnd, win32con.HWND_NOTOPMOST, offset_x, offset_y, width, height,
@@ -3364,16 +3414,22 @@ class VideoPlayerApp:
             win32gui.RedrawWindow(hwnd, None, None,
                                  win32con.RDW_INVALIDATE | win32con.RDW_UPDATENOW | win32con.RDW_ALLCHILDREN)
 
-            # Set topmost to cover taskbar
-            win32gui.SetWindowPos(hwnd, win32con.HWND_TOPMOST, 0, 0, 0, 0,
-                                 win32con.SWP_NOMOVE | win32con.SWP_NOSIZE |
-                                 win32con.SWP_NOACTIVATE | win32con.SWP_FRAMECHANGED)
-            logging.debug("Set fullscreen properties for HWND %d", hwnd)
+            # Ensure window covers taskbar
+            monitor = self.get_monitor_for_window()
+            x, y, width, height = monitor
+            offset_x, offset_y = x - 8, y - 31
+            win32gui.SetWindowPos(hwnd, win32con.HWND_TOPMOST, offset_x, offset_y, width, height,
+                                 win32con.SWP_FRAMECHANGED | win32con.SWP_NOACTIVATE)
+            logging.debug("Set fullscreen properties for HWND %d at %dx%d+%d+%d",
+                         hwnd, width, height, offset_x, offset_y)
 
-            # Verify final position
+            # Verify final position and styles
             rect = win32gui.GetWindowRect(hwnd)
-            logging.debug("After fullscreen properties, position: %dx%d+%d+%d",
-                         rect[2] - rect[0], rect[3] - rect[1], rect[0], rect[1])
+            final_style = win32gui.GetWindowLong(hwnd, win32con.GWL_STYLE)
+            final_ex_style = win32gui.GetWindowLong(hwnd, win32con.GWL_EXSTYLE)
+            logging.debug("After fullscreen properties, position: %dx%d+%d+%d, style=%x, ex_style=%x",
+                         rect[2] - rect[0], rect[3] - rect[1], rect[0], rect[1],
+                         final_style, final_ex_style)
 
         except Exception as e:
             logging.error("Failed to set fullscreen properties: %s", e)
@@ -3389,7 +3445,6 @@ class VideoPlayerApp:
                 logging.debug("Restored window styles: style=%x, ex_style=%x",
                              self.pre_window_styles['style'], self.pre_window_styles['ex_style'])
                 self.pre_window_styles = None
-
             else:
                 # Fallback to standard window styles
                 style = (win32con.WS_OVERLAPPED | win32con.WS_CAPTION | win32con.WS_SYSMENU |

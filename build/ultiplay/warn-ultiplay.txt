@@ -55,6 +55,7 @@ missing module named readline - imported by site (delayed, optional), rlcomplete
 missing module named asyncio.DefaultEventLoopPolicy - imported by asyncio (delayed, conditional), asyncio.events (delayed, conditional)
 missing module named trove_classifiers - imported by setuptools.config._validate_pyproject.formats (optional)
 missing module named tomllib - imported by setuptools.compat.py310 (conditional)
+missing module named AppKit - imported by screeninfo.enumerators.osx (delayed)
 missing module named 'win32com.gen_py' - imported by win32com (conditional, optional)
 missing module named PIL._imagingagg - imported by PIL (delayed, conditional, optional), PIL.ImageDraw (delayed, conditional, optional)
 missing module named olefile - imported by PIL.FpxImagePlugin (top-level), PIL.MicImagePlugin (top-level)
