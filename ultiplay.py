@@ -19,6 +19,7 @@ import win32con
 import win32api
 import win32com.client
 import ctypes
+from screeninfo import get_monitors
 
 # Configure logging
 if getattr(sys, 'frozen', False):
@@ -1041,6 +1042,13 @@ class PlayerWidget:
         y = self.parent.winfo_pointery()
         playlist_window = tk.Toplevel(self.parent)
         playlist_window.title(f"Playlist - Player {self.index + 1}")
+        # Set the Ultiplay icon for the playlist window
+        icon_path = r"C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico"
+        try:
+            playlist_window.iconbitmap(icon_path)
+            logging.debug("Set playlist window icon to %s for Player %d", icon_path, self.index + 1)
+        except tk.TclError as e:
+            logging.error("Failed to set playlist window icon for Player %d: %s", self.index + 1, e)
         window_width, window_height = 400, 300
         screen_width, screen_height = self.parent.winfo_screenwidth(), self.parent.winfo_screenheight()
         x = max(0, min(x, screen_width - window_width))
@@ -1985,6 +1993,7 @@ class VideoPlayerApp:
         self.players = []
         self.player_positions = []
         self.action_just_completed = False
+        self.icon_path = r"C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico"
         self.setup_context_menu()
 
         # Set window icon
@@ -2282,12 +2291,18 @@ class VideoPlayerApp:
         num_players = len(self.players)
         logging.debug("Arranging %d players in SMM with screen size %dx%d", num_players, screen_width, screen_height)
 
+        # Define reference resolution for scaling (based on original layout design)
+        ref_width, ref_height = 1920, 1200
+        scale_x = screen_width / ref_width
+        scale_y = screen_height / ref_height
+
         # Ensure player_positions matches the number of players
         while len(self.player_positions) < num_players:
             self.player_positions.append({'x': 0, 'y': 0, 'width': 400, 'height': 300, 'customized': False})
         while len(self.player_positions) > num_players:
             self.player_positions.pop()
 
+        # Check for customized positions
         all_customized = all(pos.get('customized', False) for pos in self.player_positions[:num_players])
         if all_customized and len(self.player_positions) == num_players:
             logging.debug("Using customized SMM positions for %d players", num_players)
@@ -2296,10 +2311,15 @@ class VideoPlayerApp:
                 try:
                     current_pos = player.player.get_time() if player.player.get_media() else 0
                     current_playing = player.player.is_playing()
+                    # Scale the customized positions
+                    scaled_x = int(pos['x'] * scale_x)
+                    scaled_y = int(pos['y'] * scale_y)
+                    scaled_width = int(pos['width'] * scale_x)
+                    scaled_height = int(pos['height'] * scale_y)
                     logging.debug("Setting Player %d size to %dx%d at (%d, %d)", 
-                                 player.index + 1, pos['width'], pos['height'], pos['x'], pos['y'])
-                    player.set_size_and_position(pos['width'], pos['height'], pos['x'], pos['y'])
-                    player.configure_for_width(pos['width'])
+                                 player.index + 1, scaled_width, scaled_height, scaled_x, scaled_y)
+                    player.set_size_and_position(scaled_width, scaled_height, scaled_x, scaled_y)
+                    player.configure_for_width(scaled_width)
                     if hasattr(player, 'player') and player.player.get_media():
                         actual_pos = player.player.get_time()
                         if abs(actual_pos - current_pos) > 1000:
@@ -2311,44 +2331,46 @@ class VideoPlayerApp:
                         else:
                             player.player.pause()
                     logging.debug("Applied custom position for Player %d: %dx%d at (%d, %d)", 
-                                 player.index + 1, pos['width'], pos['height'], pos['x'], pos['y'])
+                                 player.index + 1, scaled_width, scaled_height, scaled_x, scaled_y)
                 except tk.TclError as e:
                     logging.error("Failed to apply custom position for Player %d: %s", player.index + 1, e)
             self.canvas.update_idletasks()
             return
 
+        # Define layouts based on reference resolution and scale them
         layouts = []
         if num_players == 1:
-            layouts = [(0, 0, screen_width, screen_height)]
+            layouts = [(0, 0, ref_width, ref_height)]
         elif num_players == 2:
-            half_height = screen_height // 2
-            layouts = [(0, 0, screen_width, half_height), (0, half_height, screen_width, half_height)]
+            half_height = ref_height // 2
+            layouts = [(0, 0, ref_width, half_height), (0, half_height, ref_width, half_height)]
         elif num_players == 3:
-            top_height = int(screen_height * 0.6)
-            bottom_height = screen_height - top_height
-            half_width = screen_width // 2
+            top_height = int(ref_height * 0.6)
+            bottom_height = ref_height - top_height
+            half_width = ref_width // 2
             layouts = [
-                (0, 0, screen_width, top_height),
+                (0, 0, ref_width, top_height),
                 (0, top_height, half_width, bottom_height),
                 (half_width, top_height, half_width, bottom_height)
             ]
         elif num_players == 4:
-            half_width = screen_width // 2
-            half_height = screen_height // 2
+            half_width = ref_width // 2
+            half_height = ref_height // 2
             layouts = [
                 (0, 0, half_width, half_height),
                 (half_width, 0, half_width, half_height),
                 (0, half_height, half_width, half_height),
                 (half_width, half_height, half_width, half_height)
             ]
-            logging.debug("4-player SMM layout: Players: %dx%d", half_width, half_height)
+            logging.debug("4-player SMM layout: Players: %dx%d (scaled to %dx%d)", 
+                         half_width, half_height, int(half_width * scale_x), int(half_height * scale_y))
         elif num_players == 5:
-            half_width = screen_width // 2
-            half_height = screen_height // 2
-            small_width = screen_width // 6
-            small_height = screen_height // 6
-            center_x = (screen_width - small_width) // 2
-            center_y = (screen_height - small_height) // 2
+            half_width = ref_width // 2
+            half_height = ref_height // 2
+            small_width = ref_width // 6
+            small_height = ref_height // 6
+            center_x = (ref_width - small_width) // 2
+            center_y = (ref_height - small_height) // 2
             layouts = [
                 (0, 0, half_width, half_height),
                 (half_width, 0, half_width, half_height),
@@ -2356,43 +2378,47 @@ class VideoPlayerApp:
                 (half_width, half_height, half_width, half_height),
                 (center_x, center_y, small_width, small_height)
             ]
-            logging.debug("5-player SMM layout: Players 1-4: %dx%d, Player 5: %dx%d at (%d, %d)", 
-                         half_width, half_height, small_width, small_height, center_x, center_y)
+            logging.debug("5-player SMM layout: Players 1-4: %dx%d (scaled to %dx%d), Player 5: %dx%d at (%d, %d) (scaled to %dx%d at (%d, %d))", 
+                         half_width, half_height, int(half_width * scale_x), int(half_height * scale_y),
+                         small_width, small_height, center_x, center_y, 
+                         int(small_width * scale_x), int(small_height * scale_y), int(center_x * scale_x), int(center_y * scale_y))
         elif num_players == 6:
-            player1_width = (screen_width * 3) // 4
+            player1_width = (ref_width * 3) // 4
             player1_height = int(player1_width / (16/9))
-            bottom_height = screen_height - player1_height
-            right_width = screen_width - player1_width
+            bottom_height = ref_height - player1_height
+            right_width = ref_width - player1_width
             right_half_height = player1_height // 2
             layouts = [
                 (0, 0, player1_width, player1_height),
-                (0, player1_height, screen_width // 3, bottom_height),
-                (screen_width // 3, player1_height, screen_width // 3, bottom_height),
-                (2 * (screen_width // 3), player1_height, screen_width // 3, bottom_height),
+                (0, player1_height, ref_width // 3, bottom_height),
+                (ref_width // 3, player1_height, ref_width // 3, bottom_height),
+                (2 * (ref_width // 3), player1_height, ref_width // 3, bottom_height),
                 (player1_width, 0, right_width, right_half_height),
                 (player1_width, right_half_height, right_width, right_half_height)
             ]
         elif num_players == 7:
-            half_width = screen_width // 2
-            half_height = screen_height // 2
+            half_width = ref_width // 2
+            half_height = ref_height // 2
             overlap_width = half_width // 2
             overlap_height = int(overlap_width / (16/9))
-            center_x = (screen_width - overlap_width) // 2
-            center_y = (screen_height - overlap_height) // 2
+            center_x = (ref_width - overlap_width) // 2
+            center_y = (ref_height - overlap_height) // 2
             layouts = [
                 (0, 0, half_width, half_height),
                 (half_width, 0, half_width, half_height),
                 (0, half_height, half_width, half_height),
                 (half_width, half_height, half_width, half_height),
                 (center_x, 0, overlap_width, overlap_height),
-                (center_x, screen_height - overlap_height, overlap_width, overlap_height),
+                (center_x, ref_height - overlap_height, overlap_width, overlap_height),
                 (center_x, center_y, overlap_width, overlap_height)
             ]
-            logging.debug("7-player SMM layout: Corner players: %dx%d, Overlap players: %dx%d, Center at (%d, %d)", 
-                         half_width, half_height, overlap_width, overlap_height, center_x, center_y)
+            logging.debug("7-player SMM layout: Corner players: %dx%d (scaled to %dx%d), Overlap players: %dx%d (scaled to %dx%d), Center at (%d, %d) (scaled to (%d, %d))", 
+                         half_width, half_height, int(half_width * scale_x), int(half_height * scale_y),
+                         overlap_width, overlap_height, int(overlap_width * scale_x), int(overlap_height * scale_y),
+                         center_x, center_y, int(center_x * scale_x), int(center_y * scale_y))
         elif num_players == 8:
-            third_width = screen_width // 3
-            third_height = screen_height // 3
+            third_width = ref_width // 3
+            third_height = ref_height // 3
             layouts = [
                 (0, 0, third_width, third_height),
                 (third_width, 0, third_width, third_height),
@@ -2404,8 +2430,8 @@ class VideoPlayerApp:
                 (third_width, 2 * third_height, third_width, third_height)
             ]
         elif num_players == 9:
-            third_width = screen_width // 3
-            third_height = screen_height // 3
+            third_width = ref_width // 3
+            third_height = ref_height // 3
             layouts = [
                 (0, 0, third_width, third_height),
                 (third_width, 0, third_width, third_height),
@@ -2418,8 +2444,8 @@ class VideoPlayerApp:
                 (2 * third_width, 2 * third_height, third_width, third_height)
             ]
         elif num_players == 10:
-            half_width = screen_width // 2
-            fifth_height = screen_height // 5
+            half_width = ref_width // 2
+            fifth_height = ref_height // 5
             layouts = [
                 (0, 0, half_width, fifth_height),
                 (half_width, 0, half_width, fifth_height),
@@ -2435,24 +2461,29 @@ class VideoPlayerApp:
         else:  # 11+ players
             rows = math.ceil(math.sqrt(num_players))
             cols = math.ceil(num_players / rows)
-            cell_width = screen_width // cols
-            cell_height = screen_height // rows
+            cell_width = ref_width // cols
+            cell_height = ref_height // rows
             layouts = []
             for i in range(num_players):
                 row = i // cols
                 col = i % cols
                 layouts.append((col * cell_width, row * cell_height, cell_width, cell_height))
 
-        # Apply layouts
+        # Apply layouts with scaling
         for i, player in enumerate(self.players):
             if i < len(layouts):
                 x, y, width, height = layouts[i]
+                # Scale the layout dimensions
+                scaled_x = int(x * scale_x)
+                scaled_y = int(y * scale_y)
+                scaled_width = int(width * scale_x)
+                scaled_height = int(height * scale_y)
                 try:
                     current_pos = player.player.get_time() if player.player.get_media() else 0
                     current_playing = player.player.is_playing()
-                    player.set_size_and_position(width, height, x, y)
-                    player.configure_for_width(width)
-                    self.player_positions[i] = {'x': x, 'y': y, 'width': width, 'height': height, 'customized': False}
+                    player.set_size_and_position(scaled_width, scaled_height, scaled_x, scaled_y)
+                    player.configure_for_width(scaled_width)
+                    self.player_positions[i] = {'x': scaled_x, 'y': scaled_y, 'width': scaled_width, 'height': scaled_height, 'customized': False}
                     if hasattr(player, 'player') and player.player.get_media():
                         actual_pos = player.player.get_time()
                         if abs(actual_pos - current_pos) > 1000:
@@ -2464,14 +2495,22 @@ class VideoPlayerApp:
                         else:
                             player.player.pause()
                     logging.debug("Positioned Player %d: %dx%d at (%d, %d)", 
-                                 player.index + 1, width, height, x, y)
+                                 player.index + 1, scaled_width, scaled_height, scaled_x, scaled_y)
                 except tk.TclError as e:
                     logging.error("Failed to position Player %d: %s", player.index + 1, e)
-                    player.set_size_and_position(400, 300, 50 + (i * 20), 50 + (i * 20))
-                    self.player_positions[i] = {'x': 50 + (i * 20), 'y': 50 + (i * 20), 'width': 400, 'height': 300, 'customized': False}
+                    scaled_x = int((50 + (i * 20)) * scale_x)
+                    scaled_y = int((50 + (i * 20)) * scale_y)
+                    scaled_width = int(400 * scale_x)
+                    scaled_height = int(300 * scale_y)
+                    player.set_size_and_position(scaled_width, scaled_height, scaled_x, scaled_y)
+                    self.player_positions[i] = {'x': scaled_x, 'y': scaled_y, 'width': scaled_width, 'height': scaled_height, 'customized': False}
             else:
-                player.set_size_and_position(400, 300, 50 + (i * 20), 50 + (i * 20))
-                self.player_positions[i] = {'x': 50 + (i * 20), 'y': 50 + (i * 20), 'width': 400, 'height': 300, 'customized': False}
+                scaled_x = int((50 + (i * 20)) * scale_x)
+                scaled_y = int((50 + (i * 20)) * scale_y)
+                scaled_width = int(400 * scale_x)
+                scaled_height = int(300 * scale_y)
+                player.set_size_and_position(scaled_width, scaled_height, scaled_x, scaled_y)
+                self.player_positions[i] = {'x': scaled_x, 'y': scaled_y, 'width': scaled_width, 'height': scaled_height, 'customized': False}
                 logging.warning("No layout for Player %d, using default position", player.index + 1)
         self.canvas.update_idletasks()
 
@@ -2687,97 +2726,44 @@ class VideoPlayerApp:
             self.canvas.update_idletasks()
 
     def toggle_maximize_screen(self, event=None):
-        """Toggle Screen Maximize Mode (SMM) on the monitor where the window is located."""
-        logging.debug("Toggling maximize screen: current maximized=%s", self.is_maximized)
-        self.is_maximized = not self.is_maximized
-        self.smm_mode = self.is_maximized
-        if self.is_maximized:
-            self.pre_smm_geometry = self.root.winfo_geometry()
-            self.pre_smm_positions = []
-            self.all_paused = all(not player.player.is_playing() for player in self.players if player.current_file)
-            window_x = self.root.winfo_x()
-            window_y = self.root.winfo_y()
-            window_width = self.root.winfo_width()
-            window_height = self.root.winfo_height()
-            self.pre_smm_state = {
-                'players': [(self.canvas.coords(p.frame_id), p.frame.winfo_width(), p.frame.winfo_height()) for p in self.players],
-                'geometry': self.pre_smm_geometry,
-                'window_x': window_x,
-                'window_y': window_y,
-                'window_width': window_width,
-                'window_height': window_height,
-                'is_maximized': False,
-                'is_fullscreen': self.is_fullscreen,
-                'pre_smm_positions': self.pre_smm_positions[:]
-            }
-            logging.debug("Stored pre-SMM state: geometry=%s, all_paused=%s", self.pre_smm_geometry, self.all_paused)
+        """Toggle SMM on the current monitor."""
+        logging.debug("Toggling SMM: is_maximized=%s", self.is_maximized)
 
-            for player in self.players:
-                try:
-                    x, y = self.canvas.coords(player.frame_id)
-                except tk.TclError:
-                    x, y = 0, 0
-                width = player.frame.winfo_width()
-                height = player.frame.winfo_height()
-                self.pre_smm_positions.append({'x': x, 'y': y, 'width': width, 'height': height})
-                if self.all_paused and player.current_file:
-                    player.player.pause()
-                    player.toggle_button.config(text="▶")
-                    logging.debug("Ensured pause for Player %d before SMM", player.index + 1)
+        if not self.is_maximized:
+            self.pre_smm_state = {
+                'geometry': self.root.winfo_geometry(),
+                'is_fullscreen': self.is_fullscreen,
+                'all_paused': all(not p.player.is_playing() for p in self.players)
+            }
+            self.pre_smm_positions = [
+                (self.canvas.coords(p.frame_id)[0], self.canvas.coords(p.frame_id)[1], 
+                 p.frame.winfo_width(), p.frame.winfo_height())
+                for p in self.players
+            ]
+            logging.debug("Stored pre-SMM state: geometry=%s", self.pre_smm_state['geometry'])
 
             monitor = self.get_monitor_for_window()
             screen_x, screen_y, screen_width, screen_height = monitor
-            logging.debug("Target monitor for SMM: %dx%d+%d+%d", screen_width, screen_height, screen_x, screen_y)
+            logging.debug("SMM on monitor: %dx%d+%d+%d", screen_width, screen_height, screen_x, screen_y)
 
-            try:
-                self.root.overrideredirect(True)
-                self.root.geometry(f"{screen_width}x{screen_height}+{screen_x}+{screen_y}")
-                hwnd = self.root.winfo_id()
-                win32gui.SetWindowPos(hwnd, win32con.HWND_TOPMOST, screen_x, screen_y, screen_width, screen_height, win32con.SWP_SHOWWINDOW)
-                self.root.withdraw()
-                self.root.deiconify()
-                dpi = self.root.winfo_fpixels('1i')
-                scaling_factor = dpi / 96.0
-                adjusted_width = int(screen_width / scaling_factor)
-                adjusted_height = int(screen_height / scaling_factor)
-                self.canvas.config(width=adjusted_width, height=adjusted_height)
-                self.canvas.place(x=0, y=0)
-                self.root.update_idletasks()
-                rect = win32gui.GetClientRect(hwnd)
-                actual_width, actual_height = rect[2] - rect[0], rect[3] - rect[1]
-                logging.debug("Actual client area: %dx%d", actual_width, actual_height)
-                self.canvas.config(width=actual_width, height=actual_height)
-                self.root.update_idletasks()
-                logging.debug("Set window to %dx%d+%d+%d, canvas size %dx%d", 
-                             screen_width, screen_height, screen_x, screen_y, screen_width, screen_height)
-                logging.debug("Root geometry after setting: %s", self.root.winfo_geometry())
-            except tk.TclError as e:
-                logging.error("Failed to set SMM geometry: %s", e)
-                screen_x, screen_y, screen_width, screen_height = 1920, 121, 1920, 1080
-                self.root.geometry(f"{screen_width}x{screen_height}+{screen_x}+{screen_y}")
-
+            self.set_window_to_monitor(screen_x, screen_y, screen_width, screen_height)
+            self.set_fullscreen_properties()
             self.is_fullscreen = True
-            self._arrange_players_in_smm(screen_width, screen_height)
-            self.resize_background(screen_width, screen_height)
-            if self.all_paused:
-                for player in self.players:
-                    if player.current_file and player.player.is_playing():
-                        player.player.pause()
-                        player.toggle_button.config(text="▶")
-                        logging.debug("Re-enforced pause for Player %d after SMM", player.index + 1)
+            self.is_maximized = True
+            self.smm_mode = True
+            self.canvas.config(width=screen_width, height=screen_height)
 
+            self._arrange_players_in_smm(screen_width, screen_height)
             self.canvas.update_idletasks()
-            logging.debug("Canvas size after SMM: %dx%d", self.canvas.winfo_width(), self.canvas.winfo_height())
-            logging.debug("Canvas geometry: x=%d, y=%d, width=%d, height=%d", 
-                         self.canvas.winfo_x(), self.canvas.winfo_y(), 
-                         self.canvas.winfo_width(), self.canvas.winfo_height())
-            for i, player in enumerate(self.players):
-                logging.debug("Player %d bounds: %s", i+1, self.canvas.bbox(player.frame_id))
-                logging.debug("Player %d VLC scale: %s", i+1, player.player.video_get_scale())
-            self._bind_number_keys()
-            logging.debug("Entered SMM with %d players", len(self.players))
+            logging.debug("Entered SMM on monitor %dx%d+%d+%d with %d players", 
+                         screen_width, screen_height, screen_x, screen_y, len(self.players))
         else:
             self.handle_escape(None)
+
+        self._bind_number_keys()
+        self.refresh_bindings()
+        if self.dj_dashboard and self.dj_dashboard.winfo_exists():
+            self.dj_dashboard.update_dashboard()
 
     def add_player(self, event=None):
         """Add a new player widget at the specified or event coordinates."""
@@ -2902,7 +2888,8 @@ class VideoPlayerApp:
 
     def handle_escape(self, event=None):
         """Handle Escape key to exit fullscreen or SMM modes, restoring positions."""
-        logging.debug("Handling Escape key: is_fullscreen=%s, is_maximized=%s", self.is_fullscreen, self.is_maximized)
+        logging.debug("Handling Escape: is_fullscreen=%s, is_maximized=%s", 
+                     self.is_fullscreen, self.is_maximized)
         if not (self.is_fullscreen or self.is_maximized):
             return
 
@@ -2925,105 +2912,95 @@ class VideoPlayerApp:
                 fullscreen_player.pre_fullscreen_coords = None
 
             if self.pre_fullscreen_state['is_maximized']:
-                self.root.attributes('-fullscreen', True)
+                monitor = self.get_monitor_for_window()
+                screen_x, screen_y, screen_width, screen_height = monitor
+                self.set_window_to_monitor(screen_x, screen_y, screen_width, screen_height)
+                self.set_fullscreen_properties()
                 self.is_maximized = True
                 self.is_fullscreen = True
+                self.canvas.config(width=screen_width, height=screen_height)
                 for i, player in enumerate(self.players):
                     if i < len(self.pre_fullscreen_state['players']):
-                        try:
-                            (x, y), width, height = self.pre_fullscreen_state['players'][i]
-                            player.set_size_and_position(width, height, x, y)
-                            player.configure_for_width(width)
-                        except tk.TclError as e:
-                            logging.error("Failed to restore player %d in SMM: %s", i + 1, e)
+                        x, y, width, height = self.pre_fullscreen_state['players'][i]
+                        player.set_size_and_position(width, height, x, y)
+                        player.configure_for_width(width)
                 self.pre_fullscreen_state = None
-                logging.debug("Exited per-player fullscreen, restored to fullscreen SMM mode")
+                logging.debug("Restored to SMM mode")
             else:
-                self.root.attributes('-fullscreen', False)
-                self.root.overrideredirect(False)
                 self.is_maximized = False
                 self.is_fullscreen = False
-                self.root.geometry("800x600")
-                if self.pre_fullscreen_positions:
-                    canvas_width = 800
-                    canvas_height = 600
-                    scale = min(canvas_width / 1200, canvas_height / 800)
-                    for i, player in enumerate(self.players):
-                        if i < len(self.pre_fullscreen_positions):
-                            pos = self.pre_fullscreen_positions[i]
-                            new_width = int(pos['width'] * scale)
-                            new_height = int(pos['height'] * scale)
-                            new_x = min(pos['x'] * scale, canvas_width - new_width)
-                            new_y = min(pos['y'] * scale, canvas_height - new_height)
-                            new_x = max(0, new_x)
-                            new_y = max(0, new_y)
-                            try:
-                                player.set_size_and_position(new_width, new_height, new_x, new_y)
-                                player.configure_for_width(new_width)
-                                self.player_positions[i] = {'x': new_x, 'y': new_y, 'width': new_width, 'height': new_height, 'customized': False}
-                                if hasattr(player, 'player') and player.player.get_media():
-                                    player.player.video_set_scale(0)
-                                logging.debug("Restored Player %d to %dx%d at (%d, %d)", 
-                                             player.index + 1, new_width, new_height, new_x, new_y)
-                            except tk.TclError as e:
-                                logging.error("Failed to restore Player %d: %s", player.index + 1, e)
-                                player.set_size_and_position(400, 300, 50 + (i * 20), 50 + (i * 20))
-                                self.player_positions[i] = {'x': 50 + (i * 20), 'y': 50 + (i * 20), 'width': 400, 'height': 300, 'customized': False}
-                else:
-                    self.arrange_players()
+                self.root.geometry(self.pre_fullscreen_state.get('geometry', "800x600+0+0"))
+                self.restore_window_properties()
+                try:
+                    self.root.iconbitmap(self.icon_path)
+                except tk.TclError as e:
+                    logging.error("Failed to reapply icon: %s", e)
+                self.restore_players_from_positions(self.pre_fullscreen_positions)
                 self.pre_fullscreen_state = None
                 self.pre_fullscreen_positions = []
                 self.update_background()
-                logging.debug("Exited per-player fullscreen, restored to small window mode")
+                logging.debug("Exited per-player fullscreen")
 
         elif self.is_maximized or self.is_fullscreen:
-            self.root.attributes('-fullscreen', False)
-            self.root.overrideredirect(False)
             self.is_fullscreen = False
             self.is_maximized = False
             self.smm_mode = False
-            self.root.geometry("800x600")
-            positions = self.pre_smm_positions if self.pre_smm_positions else self.pre_fullscreen_positions
-            if positions:
-                canvas_width = 800
-                canvas_height = 600
-                scale = min(canvas_width / 1200, canvas_height / 800)
-                for i, player in enumerate(self.players):
-                    if i < len(positions):
-                        pos = positions[i]
-                        new_width = int(pos['width'] * scale)
-                        new_height = int(pos['height'] * scale)
-                        new_x = min(pos['x'] * scale, canvas_width - new_width)
-                        new_y = min(pos['y'] * scale, canvas_height - new_height)
-                        new_x = max(0, new_x)
-                        new_y = max(0, new_y)
-                        try:
-                            player.set_size_and_position(new_width, new_height, new_x, new_y)
-                            player.configure_for_width(new_width)
-                            self.player_positions[i] = {'x': new_x, 'y': new_y, 'width': new_width, 'height': new_height, 'customized': False}
-                            if hasattr(player, 'player') and player.player.get_media():
-                                player.player.video_set_scale(0)
-                            logging.debug("Restored Player %d to %dx%d at (%d, %d)", 
-                                         player.index + 1, new_width, new_height, new_x, new_y)
-                        except tk.TclError as e:
-                            logging.error("Failed to restore Player %d: %s", player.index + 1, e)
-                            player.set_size_and_position(400, 300, 50 + (i * 20), 50 + (i * 20))
-                            self.player_positions[i] = {'x': 50 + (i * 20), 'y': 50 + (i * 20), 'width': 400, 'height': 300, 'customized': False}
-            else:
-                self.arrange_players()
+            geometry = (self.pre_smm_state.get('geometry') if self.pre_smm_state else 
+                       self.pre_fullscreen_state.get('geometry', "800x600+0+0") 
+                       if self.pre_fullscreen_state else "800x600+0+0")
+            self.root.geometry(geometry)
+            self.restore_window_properties()
+            try:
+                self.root.iconbitmap(self.icon_path)
+            except tk.TclError as e:
+                logging.error("Failed to reapply icon: %s", e)
+            positions = self.pre_smm_positions or self.pre_fullscreen_positions
+            self.restore_players_from_positions(positions)
             self.pre_smm_positions = []
             self.pre_fullscreen_positions = []
+            self.pre_smm_state = None
+            self.pre_fullscreen_state = None
             self.update_background()
-            logging.debug("Exited global fullscreen or SMM, restored to small window mode")
+            logging.debug("Exited SMM/fullscreen")
 
         self.swap_first = None
-        self.last_selected_player = None  # Reset selections on mode exit
+        self.last_selected_player = None
         self.canvas.update_idletasks()
         if self.dj_dashboard and self.dj_dashboard.winfo_exists():
             self.dj_dashboard.update_dashboard()
         self.root.focus_force()
         self.refresh_bindings()
-        logging.debug("Escape handling completed")
+
+    def restore_players_from_positions(self, positions):
+        """Restore player positions and sizes from stored positions."""
+        if not positions:
+            self.arrange_players()
+            return
+        canvas_width, canvas_height = 800, 600
+        scale = min(canvas_width / 1200, canvas_height / 800)
+        for i, player in enumerate(self.players):
+            if i < len(positions):
+                x, y, width, height = positions[i]
+                new_width = int(width * scale)
+                new_height = int(height * scale)
+                new_x = max(0, min(x * scale, canvas_width - new_width))
+                new_y = max(0, min(y * scale, canvas_height - new_height))
+                try:
+                    player.set_size_and_position(new_width, new_height, new_x, new_y)
+                    player.configure_for_width(new_width)
+                    self.player_positions[i] = {
+                        'x': new_x, 'y': new_y, 'width': new_width, 'height': new_height, 'customized': False
+                    }
+                    if player.player.get_media():
+                        player.player.video_set_scale(0)
+                    logging.debug("Restored Player %d: %dx%d at (%d, %d)", 
+                                 player.index + 1, new_width, new_height, new_x, new_y)
+                except tk.TclError as e:
+                    logging.error("Failed to restore Player %d: %s", player.index + 1, e)
+                    player.set_size_and_position(400, 300, 50 + (i * 20), 50 + (i * 20))
+                    self.player_positions[i] = {
+                        'x': 50 + (i * 20), 'y': 50 + (i * 20), 'width': 400, 'height': 300, 'customized': False
+                    }
 
     def toggle_play_pause(self, event=None):
         logging.debug("Toggling play/pause, is_maximized=%s", self.is_maximized)
@@ -3293,29 +3270,152 @@ class VideoPlayerApp:
         logging.debug("Exited SMM")
 
     def get_monitor_for_window(self):
-        """Determine the monitor containing the center of the app window."""
+        """Get the monitor that the window is currently on based on its center."""
         try:
-            window_x = self.root.winfo_x()
-            window_y = self.root.winfo_y()
-            window_width = self.root.winfo_width()
-            window_height = self.root.winfo_height()
-            window_center_x = window_x + window_width // 2
-            window_center_y = window_y + window_height // 2
-            logging.debug("Window center at (%d, %d), size %dx%d", window_center_x, window_center_y, window_width, window_height)
+            self.root.update_idletasks()
+            window_x = self.root.winfo_x() + self.root.winfo_width() // 2
+            window_y = self.root.winfo_y() + self.root.winfo_height() // 2
+            logging.debug("Window center at (%d, %d), size %dx%d", 
+                         window_x, window_y, self.root.winfo_width(), self.root.winfo_height())
 
-            hmonitor = win32api.MonitorFromPoint((window_center_x, window_center_y), win32con.MONITOR_DEFAULTTONEAREST)
-            monitor_info = win32api.GetMonitorInfo(hmonitor)
-            work_area = monitor_info['Work']
-            left, top, right, bottom = work_area
-            screen_x, screen_y = left, top
-            screen_width, screen_height = right - left, bottom - top
-            logging.debug("Found monitor at %dx%d+%d+%d", screen_width, screen_height, screen_x, screen_y)
-            return (screen_x, screen_y, screen_width, screen_height)
+            monitors = get_monitors()
+            for i, monitor in enumerate(monitors):
+                logging.debug("Monitor %d: %dx%d+%d+%d", 
+                             i, monitor.width, monitor.height, monitor.x, monitor.y)
+
+            for monitor in monitors:
+                x, y, w, h = monitor.x, monitor.y, monitor.width, monitor.height
+                if (x <= window_x < x + w) and (y <= window_y < y + h):
+                    logging.debug("Selected monitor %dx%d+%d+%d", w, h, x, y)
+                    return (x, y, w, h)
+
+            primary = monitors[0] if monitors else (0, 0, 1920, 1200)
+            logging.warning("No monitor contains window center, using primary monitor: %dx%d+%d+%d", 
+                           primary[2], primary[3], primary[0], primary[1])
+            return (primary.x, primary.y, primary.width, primary.height)
+
         except Exception as e:
-            logging.error("Failed to detect monitor: %s", e)
-            logging.warning("Using hardcoded Monitor 2: 1920x1080+1920+121")
-            return (1920, 121, 1920, 1080)
+            logging.error("Failed to get monitor: %s", e)
+            return (0, 0, 1920, 1200)
+        
+    def set_window_to_monitor(self, x, y, width, height):
+        """Explicitly position the window on the target monitor with fullscreen properties."""
+        hwnd = self.root.winfo_id()
+        try:
+            # Adjust for observed offset (1928,152 vs 1920,121)
+            offset_x, offset_y = x - 8, y - 31
+            self.root.update_idletasks()
 
+            # Set window position and size
+            win32gui.SetWindowPos(hwnd, win32con.HWND_TOP, offset_x, offset_y, width, height,
+                                 win32con.SWP_FRAMECHANGED | win32con.SWP_NOACTIVATE | win32con.SWP_SHOWWINDOW)
+            self.root.geometry(f"{width}x{height}+{offset_x}+{offset_y}")
+            self.root.update_idletasks()
+
+            # Verify actual position
+            rect = win32gui.GetWindowRect(hwnd)
+            actual_x, actual_y, actual_right, actual_bottom = rect
+            actual_width = actual_right - actual_x
+            actual_height = actual_bottom - actual_y
+            logging.debug("Set window to %dx%d+%d+%d, actual position: %dx%d+%d+%d",
+                         width, height, offset_x, offset_y, actual_width, actual_height, actual_x, actual_y)
+            if actual_x != offset_x or actual_y != offset_y:
+                logging.warning("Window position mismatch: requested %d,%d, got %d,%d",
+                               offset_x, offset_y, actual_x, actual_y)
+
+            # Force window to target monitor
+            win32gui.SetWindowPos(hwnd, win32con.HWND_TOPMOST, offset_x, offset_y, width, height,
+                                 win32con.SWP_FRAMECHANGED | win32con.SWP_NOACTIVATE)
+            win32gui.SetWindowPos(hwnd, win32con.HWND_NOTOPMOST, offset_x, offset_y, width, height,
+                                 win32con.SWP_FRAMECHANGED | win32con.SWP_NOACTIVATE)
+            rect = win32gui.GetWindowRect(hwnd)
+            logging.debug("After topmost adjustment, actual position: %dx%d+%d+%d",
+                         rect[2] - rect[0], rect[3] - rect[1], rect[0], rect[1])
+
+        except Exception as e:
+            logging.error("Failed to set window position: %s", e)
+        
+    def set_fullscreen_properties(self):
+        """Set window properties for true fullscreen, hiding the taskbar and title bar."""
+        hwnd = self.root.winfo_id()
+        try:
+            # Store current styles for restoration
+            self.pre_window_styles = {
+                'style': win32gui.GetWindowLong(hwnd, win32con.GWL_STYLE),
+                'ex_style': win32gui.GetWindowLong(hwnd, win32con.GWL_EXSTYLE)
+            }
+            logging.debug("Stored window styles: style=%x, ex_style=%x",
+                         self.pre_window_styles['style'], self.pre_window_styles['ex_style'])
+
+            # Remove all title bar and border styles
+            style = win32gui.GetWindowLong(hwnd, win32con.GWL_STYLE)
+            style &= ~(win32con.WS_CAPTION | win32con.WS_THICKFRAME | win32con.WS_SYSMENU |
+                      win32con.WS_OVERLAPPED | win32con.WS_BORDER)
+            style |= win32con.WS_POPUP
+            win32gui.SetWindowLong(hwnd, win32con.GWL_STYLE, style)
+
+            # Remove extended styles that may cause borders
+            ex_style = win32gui.GetWindowLong(hwnd, win32con.GWL_EXSTYLE)
+            ex_style &= ~(win32con.WS_EX_WINDOWEDGE | win32con.WS_EX_CLIENTEDGE |
+                         win32con.WS_EX_DLGMODALFRAME | win32con.WS_EX_STATICEDGE)
+            win32gui.SetWindowLong(hwnd, win32con.GWL_EXSTYLE, ex_style)
+
+            # Force redraw
+            win32gui.RedrawWindow(hwnd, None, None,
+                                 win32con.RDW_INVALIDATE | win32con.RDW_UPDATENOW | win32con.RDW_ALLCHILDREN)
+
+            # Set topmost to cover taskbar
+            win32gui.SetWindowPos(hwnd, win32con.HWND_TOPMOST, 0, 0, 0, 0,
+                                 win32con.SWP_NOMOVE | win32con.SWP_NOSIZE |
+                                 win32con.SWP_NOACTIVATE | win32con.SWP_FRAMECHANGED)
+            logging.debug("Set fullscreen properties for HWND %d", hwnd)
+
+            # Verify final position
+            rect = win32gui.GetWindowRect(hwnd)
+            logging.debug("After fullscreen properties, position: %dx%d+%d+%d",
+                         rect[2] - rect[0], rect[3] - rect[1], rect[0], rect[1])
+
+        except Exception as e:
+            logging.error("Failed to set fullscreen properties: %s", e)
+
+    def restore_window_properties(self):
+        """Restore window styles to pre-fullscreen state."""
+        hwnd = self.root.winfo_id()
+        try:
+            if self.pre_window_styles:
+                # Restore original styles
+                win32gui.SetWindowLong(hwnd, win32con.GWL_STYLE, self.pre_window_styles['style'])
+                win32gui.SetWindowLong(hwnd, win32con.GWL_EXSTYLE, self.pre_window_styles['ex_style'])
+                logging.debug("Restored window styles: style=%x, ex_style=%x",
+                             self.pre_window_styles['style'], self.pre_window_styles['ex_style'])
+                self.pre_window_styles = None
+
+            else:
+                # Fallback to standard window styles
+                style = (win32con.WS_OVERLAPPED | win32con.WS_CAPTION | win32con.WS_SYSMENU |
+                         win32con.WS_THICKFRAME | win32con.WS_MINIMIZEBOX | win32con.WS_MAXIMIZEBOX)
+                ex_style = win32con.WS_EX_APPWINDOW | win32con.WS_EX_WINDOWEDGE
+                win32gui.SetWindowLong(hwnd, win32con.GWL_STYLE, style)
+                win32gui.SetWindowLong(hwnd, win32con.GWL_EXSTYLE, ex_style)
+                logging.debug("Applied fallback window styles: style=%x, ex_style=%x", style, ex_style)
+
+            # Force redraw
+            win32gui.RedrawWindow(hwnd, None, None,
+                                 win32con.RDW_INVALIDATE | win32con.RDW_UPDATENOW | win32con.RDW_ALLCHILDREN)
+
+            # Ensure window is not topmost
+            win32gui.SetWindowPos(hwnd, win32con.HWND_NOTOPMOST, 0, 0, 0, 0,
+                                 win32con.SWP_NOMOVE | win32con.SWP_NOSIZE |
+                                 win32con.SWP_NOACTIVATE | win32con.SWP_FRAMECHANGED)
+
+            # Ensure Tkinter window is resizable
+            self.root.resizable(True, True)
+            self.root.update_idletasks()
+            logging.debug("Restored window manipulability for HWND %d", hwnd)
+
+        except Exception as e:
+            logging.error("Failed to restore window properties: %s", e)
+    
     def toggle_dj_dashboard(self, event=None):
         """Toggle the DJ Dashboard open or closed with a single key press."""
         if self.dj_dashboard and self.dj_dashboard.winfo_exists():
@@ -3329,77 +3429,70 @@ class VideoPlayerApp:
             logging.debug("Opened DJ Dashboard")
 
     def toggle_fullscreen(self, event=None):
-        """Toggle fullscreen for the entire app window, preserving player sizes and positions."""
-        if self.players and not any(p.is_fullscreen for p in self.players):
+        """Toggle F11 fullscreen mode on the current monitor without SMM layout."""
+        logging.debug("Toggling fullscreen: is_fullscreen=%s, is_maximized=%s", 
+                     self.is_fullscreen, self.is_maximized)
+
+        if self.is_maximized:
+            self.handle_escape(None)
+            return
+
+        if not self.is_fullscreen:
             self.pre_fullscreen_state = {
-                'is_maximized': self.is_maximized,
                 'geometry': self.root.winfo_geometry(),
-                'players': [(self.canvas.coords(p.frame_id), p.frame.winfo_width(), p.frame.winfo_height()) for p in self.players]
+                'is_maximized': self.is_maximized,
+                'is_fullscreen': self.is_fullscreen
             }
-            logging.debug("Stored pre-fullscreen state: geometry=%s", self.pre_fullscreen_state['geometry'])
+            self.pre_fullscreen_positions = [
+                (self.canvas.coords(p.frame_id)[0], self.canvas.coords(p.frame_id)[1], 
+                 p.frame.winfo_width(), p.frame.winfo_height())
+                for p in self.players
+            ]
+            logging.debug("Stored pre-fullscreen state: geometry=%s", 
+                         self.pre_fullscreen_state['geometry'])
 
             monitor = self.get_monitor_for_window()
             screen_x, screen_y, screen_width, screen_height = monitor
-            logging.debug("Fullscreen target monitor: %dx%d+%d+%d", screen_width, screen_height, screen_x, screen_y)
+            logging.debug("Fullscreen on monitor: %dx%d+%d+%d", 
+                         screen_width, screen_height, screen_x, screen_y)
 
-            orig_canvas_width = self.canvas.winfo_width()
-            orig_canvas_height = self.canvas.winfo_height()
-
-            try:
-                self.root.overrideredirect(True)
-                self.root.geometry(f"{screen_width}x{screen_height}+{screen_x}+{screen_y}")
-                hwnd = self.root.winfo_id()
-                win32gui.SetWindowPos(hwnd, win32con.HWND_TOPMOST, screen_x, screen_y, screen_width, screen_height, win32con.SWP_SHOWWINDOW)
-                self.root.withdraw()
-                self.root.deiconify()
-                dpi = self.root.winfo_fpixels('1i')
-                scaling_factor = dpi / 96.0
-                adjusted_width = int(screen_width / scaling_factor)
-                adjusted_height = int(screen_height / scaling_factor)
-                self.canvas.config(width=adjusted_width, height=adjusted_height)
-                self.canvas.place(x=0, y=0)
-                self.root.update_idletasks()
-                rect = win32gui.GetClientRect(hwnd)
-                actual_width, actual_height = rect[2] - rect[0], rect[3] - rect[1]
-                logging.debug("Actual client area: %dx%d", actual_width, actual_height)
-                self.canvas.config(width=actual_width, height=actual_height)
-                self.root.update_idletasks()
-                logging.debug("Set fullscreen window to %dx%d+%d+%d", screen_width, screen_height, screen_x, screen_y)
-                logging.debug("Root geometry after setting: %s", self.root.winfo_geometry())
-            except tk.TclError as e:
-                logging.error("Failed to set fullscreen geometry: %s", e)
-                screen_x, screen_y, screen_width, screen_height = 1920, 121, 1920, 1080
-                self.root.geometry(f"{screen_width}x{screen_height}+{screen_x}+{screen_y}")
-
+            # Set window to monitor and apply fullscreen properties
+            self.set_window_to_monitor(screen_x, screen_y, screen_width, screen_height)
+            self.set_fullscreen_properties()
             self.is_fullscreen = True
+            self.canvas.config(width=screen_width, height=screen_height)
 
-            width_ratio = actual_width / orig_canvas_width
-            height_ratio = actual_height / orig_canvas_height
-            for player, (coords, orig_width, orig_height) in zip(self.players, self.pre_fullscreen_state['players']):
-                x, y = coords
-                new_x = x * width_ratio
-                new_y = y * height_ratio
-                self.canvas.coords(player.frame_id, new_x, new_y)
-                player.frame.config(width=orig_width, height=orig_height)
-                player.player.video_set_scale(0)
-                player.fullscreen_button.config(state='normal')
-                logging.debug("Positioned Player %d: %dx%d at (%.1f, %.1f)", 
-                             player.index + 1, orig_width, orig_height, new_x, new_y)
-
-            self.root.update_idletasks()
-            time.sleep(0.1)
-            self.resize_background(actual_width, actual_height)
-            logging.debug("Entered fullscreen on monitor at %dx%d+%d+%d with %d players", 
-                         screen_width, screen_height, screen_x, screen_y, len(self.players))
-            logging.debug("Canvas geometry: x=%d, y=%d, width=%d, height=%d", 
-                         self.canvas.winfo_x(), self.canvas.winfo_y(), 
-                         self.canvas.winfo_width(), self.canvas.winfo_height())
+            orig_width, orig_height = 1200, 800
+            scale_x = screen_width / orig_width
+            scale_y = screen_height / orig_height
             for i, player in enumerate(self.players):
-                logging.debug("Player %d bounds: %s", i+1, self.canvas.bbox(player.frame_id))
-                logging.debug("Player %d VLC scale: %s", i+1, player.player.video_get_scale())
+                if i < len(self.pre_fullscreen_positions):
+                    x, y, width, height = self.pre_fullscreen_positions[i]
+                    new_x = x * scale_x
+                    new_y = y * scale_y
+                    new_width = width * scale_x
+                    new_height = height * scale_y
+                    try:
+                        player.set_size_and_position(int(new_width), int(new_height), int(new_x), int(new_y))
+                        player.configure_for_width(int(new_width))
+                        if player.player.get_media():
+                            player.player.video_set_scale(0)
+                        logging.debug("Positioned Player %d: %dx%d at (%d, %d)", 
+                                     player.index + 1, int(new_width), int(new_height), int(new_x), int(new_y))
+                    except tk.TclError as e:
+                        logging.error("Failed to position Player %d: %s", player.index + 1, e)
+
+            self.update_background()
+            self.canvas.update_idletasks()
+            logging.debug("Entered fullscreen on monitor %dx%d+%d+%d", 
+                         screen_width, screen_height, screen_x, screen_y)
         else:
             self.handle_escape(None)
+
         self._bind_number_keys()
+        self.refresh_bindings()
+        if self.dj_dashboard and self.dj_dashboard.winfo_exists():
+            self.dj_dashboard.update_dashboard()
 
     def resize_players_to_fit(self, window_width, window_height):
         """Resize all players to fit within the specified window dimensions."""

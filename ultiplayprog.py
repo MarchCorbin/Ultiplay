@@ -725,30 +725,56 @@ class PlayerWidget:
             logging.debug("Playing Player %d", self.index + 1)
 
     def prepare_for_swap(self):
-        """Prepare the player for a screen swap by storing its state."""
-        self.is_playing = self.player.is_playing()
-        logging.debug("Player %d prepared for swap, is_playing=%s", self.index + 1, self.is_playing)
-        # Pause the player to prevent issues during swap
-        if self.is_playing:
+        """Prepare the player for swapping by capturing its state and pausing it."""
+        state = {
+            'was_playing': self.player.get_state() == vlc.State.Playing,
+            'position': self.player.get_time() if self.player.get_media() else 0
+        }
+        if self.player.get_media():
             self.player.pause()
+        logging.debug("Player %d prepared for swap, was_playing=%s, position=%d", self.index + 1, state['was_playing'], state['position'])
+        return state
 
-    def restore_after_swap(self):
-        """Restore the player state after a screen swap."""
-        # Re-attach the HWND to ensure VLC continues rendering
-        self.frame.update_idletasks()
-        self.hwnd = self.video_frame.winfo_id()
-        self.player.set_hwnd(self.hwnd)
-        logging.debug("Player %d HWND re-attached after swap: %d", self.index + 1, self.hwnd)
-
-        # Restore play/pause state
-        if self.is_playing:
+    def restore_after_swap(self, was_playing=True, position=0, root=None):
+        """Restore the player after swapping, reattaching HWND and setting play/pause state."""
+        hwnd = self.video_frame.winfo_id()  # Get the HWND of the video frame
+        if hwnd:
+            self.player.set_hwnd(hwnd)
+            logging.debug("Player %d HWND re-attached after swap: %d", self.index + 1, hwnd)
+        
+        # Ensure the media is loaded before setting the state
+        if self.player.get_media():
+            # Set the position
+            self.player.set_time(position)
+            # Wait for VLC to stabilize
+            if root:
+                root.after(200)  # Delay to ensure media and position are set
+            # Briefly play to update the frame, then restore the original state
             self.player.play()
-            self.toggle_button.config(text="⏸")
-            logging.debug("Resumed Player %d after swap", self.index + 1)
+            if root:
+                def restore_state():
+                    if was_playing:
+                        self.player.play()
+                        self.toggle_button.config(text="||")
+                        logging.debug("Restored Player %d to playing state after swap at position %d", self.index + 1, position)
+                    else:
+                        self.player.pause()
+                        self.toggle_button.config(text="▶")
+                        logging.debug("Restored Player %d to paused state after swap at position %d", self.index + 1, position)
+                root.after(100, restore_state)
+            else:
+                # Fallback if root is not provided
+                if was_playing:
+                    self.player.play()
+                    self.toggle_button.config(text="||")
+                    logging.debug("Restored Player %d to playing state after swap at position %d", self.index + 1, position)
+                else:
+                    self.player.pause()
+                    self.toggle_button.config(text="▶")
+                    logging.debug("Restored Player %d to paused state after swap at position %d", self.index + 1, position)
+            self.player.video_set_scale(0)
         else:
-            self.player.pause()
-            self.toggle_button.config(text="▶")
-            logging.debug("Kept Player %d paused after swap", self.index + 1)
+            logging.warning("No media loaded for Player %d after swap", self.index + 1)
 
     def cycle_mode(self):
         modes = ["random_repo", "playlist", "next_repo", "random_playlist", "repeat"]
@@ -1015,6 +1041,13 @@ class PlayerWidget:
         y = self.parent.winfo_pointery()
         playlist_window = tk.Toplevel(self.parent)
         playlist_window.title(f"Playlist - Player {self.index + 1}")
+        # Set the Ultiplay icon for the playlist window
+        icon_path = r"C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico"
+        try:
+            playlist_window.iconbitmap(icon_path)
+            logging.debug("Set playlist window icon to %s for Player %d", icon_path, self.index + 1)
+        except tk.TclError as e:
+            logging.error("Failed to set playlist window icon for Player %d: %s", self.index + 1, e)
         window_width, window_height = 400, 300
         screen_width, screen_height = self.parent.winfo_screenwidth(), self.parent.winfo_screenheight()
         x = max(0, min(x, screen_width - window_width))
@@ -2074,13 +2107,22 @@ class VideoPlayerApp:
         player1, player2 = self.players[idx1], self.players[idx2]
         logging.debug("Swapping Player %d with Player %d", idx1 + 1, idx2 + 1)
 
-        # Prepare players for swap
-        player1.prepare_for_swap()
-        player2.prepare_for_swap()
+        # Capture the state of all players to preserve non-swapped players' states
+        player_states = []
+        for p in self.players:
+            state = {
+                'was_playing': p.player.get_state() == vlc.State.Playing,
+                'position': p.player.get_time() if p.player.get_media() else 0
+            }
+            player_states.append(state)
+
+        # Prepare players for swap and capture their play/pause states and positions
+        p1_state = player1.prepare_for_swap()
+        p2_state = player2.prepare_for_swap()
 
         # Capture current state for both players
-        p1_pos = player1.player.get_time() if player1.player.get_media() else 0
-        p2_pos = player2.player.get_time() if player2.player.get_media() else 0
+        p1_pos = p1_state['position']
+        p2_pos = p2_state['position']
         p1_file, p2_file = player1.current_file, player2.current_file
         p1_playlist, p2_playlist = player1.playlist[:], player2.playlist[:]
         p1_index, p2_index = player1.current_playlist_index, player2.current_playlist_index
@@ -2096,13 +2138,13 @@ class VideoPlayerApp:
         player1.update_mode_button_text()
         player2.update_mode_button_text()
 
-        # Reload players with swapped content
-        self._reload_player(player1, p2_file, p2_pos)
-        self._reload_player(player2, p1_file, p1_pos)
+        # Reload players with swapped content, passing the root reference
+        self._reload_player(player1, p2_file, p2_pos, self.root)
+        self._reload_player(player2, p1_file, p1_pos, self.root)
 
-        # Restore player states after swap
-        player1.restore_after_swap()
-        player2.restore_after_swap()
+        # Restore player states after swap, preserving their original play/pause states
+        player1.restore_after_swap(was_playing=p1_state['was_playing'], position=p1_state['position'], root=self.root)
+        player2.restore_after_swap(was_playing=p2_state['was_playing'], position=p2_state['position'], root=self.root)
 
         # Reapply layer order without recreating frames
         sorted_players = sorted(self.players, key=lambda p: p.layer)
@@ -2123,6 +2165,25 @@ class VideoPlayerApp:
             self.arrange_players()
             logging.debug("Reapplied normal layout after swapping Player %d with Player %d", idx1 + 1, idx2 + 1)
 
+        # Force a visual refresh for all players to ensure the swap is visible
+        for player in [player1, player2]:
+            player.video_frame.update()
+
+        # Restore the state of non-swapped players
+        for i, player in enumerate(self.players):
+            if i not in [idx1, idx2]:  # Skip the swapped players
+                if player_states[i]['was_playing']:
+                    player.player.play()
+                    player.toggle_button.config(text="||")
+                    logging.debug("Restored Player %d to playing state", i + 1)
+                else:
+                    player.player.pause()
+                    player.toggle_button.config(text="▶")
+                    logging.debug("Restored Player %d to paused state", i + 1)
+                # Ensure the position is correct
+                if player.player.get_media():
+                    player.player.set_time(player_states[i]['position'])
+
         # Refresh DJ Dashboard
         if self.dj_dashboard and self.dj_dashboard.winfo_exists():
             self.dj_dashboard.update_dashboard()
@@ -2133,46 +2194,26 @@ class VideoPlayerApp:
         # Reset selection state fully
         self.swap_first = None
         self.last_selected_player = None
-        self.action_just_completed = True  # Set flag after action
+        self.action_just_completed = True
         logging.debug("Swap completed: Player %d <-> Player %d", idx1 + 1, idx2 + 1)
 
-    def _reload_player(self, player, file, position):
-        """Reload a player with the given file and seek position."""
-        if file and os.path.isfile(file):
-            try:
-                # Stop current playback
-                player.player.stop()
-                player.current_file = file
-                # Set the new media using set_mrl
-                player.player.set_mrl(file)
-                # Play and immediately pause to allow VLC to parse the media
-                player.player.play()
-                self.root.after(100)  # Short delay to let VLC parse the media
-                player.player.pause()
-                # Wait for media to be ready
-                max_attempts = 50  # 5 seconds at 100ms intervals
-                attempts = 0
-                while attempts < max_attempts:
-                    state = player.player.get_state()
-                    if state in (vlc.State.Playing, vlc.State.Paused, vlc.State.Ended):
-                        break
-                    self.root.after(100)
-                    attempts += 1
-                if attempts >= max_attempts:
-                    logging.warning("Player %d: Media not ready after %d attempts", player.index + 1, max_attempts)
-                # Set seek position
+    def _reload_player(self, player, file_path, position, root):
+        """Reload the player with the given file and seek to the specified position."""
+        if file_path and os.path.exists(file_path):
+            media = player.instance.media_new(file_path)
+            player.player.set_media(media)
+            # Wait for VLC to load the media and set the position
+            def set_position():
                 player.player.set_time(position)
-                # Verify seek position
-                actual_pos = player.player.get_time()
-                if abs(actual_pos - position) > 1000:  # Allow 1-second discrepancy
-                    logging.warning("Player %d: Seek position mismatch, expected %d, got %d", 
-                                   player.index + 1, position, actual_pos)
-                logging.debug("Reloaded Player %d with file %s at position %d", 
-                             player.index + 1, file, position)
-            except Exception as e:
-                logging.error("Failed to reload Player %d: %s", player.index + 1, e)
+                # Verify the position was set correctly
+                current_pos = player.player.get_time()
+                if current_pos != position and current_pos != -1:
+                    logging.warning("Position not set correctly for Player %d, retrying...", player.index + 1)
+                    player.player.set_time(position)
+            root.after(200, set_position)  # Delay to ensure media is ready
+            logging.debug("Reloaded Player %d with file %s at position %d", player.index + 1, file_path, position)
         else:
-            logging.warning("Player %d: Invalid or missing file for reload: %s", player.index + 1, file)
+            logging.warning("File %s does not exist for Player %d", file_path, player.index + 1)
 
     def handle_shuffle(self, event):
         """Handle 's' key to set shuffle mode for the selected player in SMM."""
