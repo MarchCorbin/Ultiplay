@@ -1,1270 +1,417 @@
-2025-05-14 19:58:09,823 - DEBUG - Starting Ultiplay application
-2025-05-14 19:58:09,823 - DEBUG - Launching main application
-2025-05-14 19:58:09,985 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
-2025-05-14 19:58:09,985 - DEBUG - Initializing VideoPlayerApp
-2025-05-14 19:58:09,986 - DEBUG - Canvas initialized: bg=black, size=1x1
-2025-05-14 19:58:09,987 - WARNING - DPI scaling check unavailable due to pywin32 issues; assuming 1.0
-2025-05-14 19:58:09,997 - DEBUG - Context menu set up for canvas
-2025-05-14 19:58:10,001 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
-2025-05-14 19:58:10,001 - DEBUG - Bound app-level focus events to handle VLC redraws
-2025-05-14 19:58:10,002 - DEBUG - Bound Ctrl+Q to quit
-2025-05-14 19:58:10,002 - DEBUG - Bound WM_DELETE_WINDOW protocol
-2025-05-14 19:58:10,017 - DEBUG - STREAM b'IHDR' 16 13
-2025-05-14 19:58:10,018 - DEBUG - STREAM b'IDAT' 41 54495
-2025-05-14 19:58:10,050 - DEBUG - Resized background to 1200x800
-2025-05-14 19:58:10,069 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 19:58:10,070 - DEBUG - Window regained focus, forced VLC redraw for all players and bindings refreshed
-2025-05-14 19:58:10,070 - DEBUG - STREAM b'IHDR' 16 13
-2025-05-14 19:58:10,071 - DEBUG - STREAM b'IDAT' 41 54495
-2025-05-14 19:58:10,143 - DEBUG - Canvas size after rendering: 1200x800
-2025-05-14 19:58:10,143 - DEBUG - Initial background set and canvas updated
-2025-05-14 19:58:10,144 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 19:58:12,286 - DEBUG - Context menu shown at screen x=601, y=446, canvas x=493, y=315
-2025-05-14 19:58:12,288 - DEBUG - Window lost focus
-2025-05-14 19:58:12,400 - DEBUG - STREAM b'IHDR' 16 13
-2025-05-14 19:58:12,401 - DEBUG - STREAM b'IDAT' 41 54495
-2025-05-14 19:58:15,209 - DEBUG - Forced focus back to app
-2025-05-14 19:58:15,209 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 19:58:15,213 - DEBUG - Window regained focus, forced VLC redraw for all players and bindings refreshed
-2025-05-14 19:58:15,213 - DEBUG - STREAM b'IHDR' 16 13
-2025-05-14 19:58:15,214 - DEBUG - STREAM b'IDAT' 41 54495
-2025-05-14 19:58:17,591 - DEBUG - Initializing player widget at x=509, y=283, player count=0
-2025-05-14 19:58:17,591 - DEBUG - Initialized Player 1 with layer 0
-2025-05-14 19:58:17,724 - DEBUG - VLC initialized successfully for frame_id: 3227146180048
-2025-05-14 19:58:17,725 - DEBUG - Attached player to canvas with frame_id: 6
-2025-05-14 19:58:17,770 - DEBUG - Video frame HWND for Player 1: 413096
-2025-05-14 19:58:17,793 - DEBUG - Initialized Player 1 volume to 100
-2025-05-14 19:58:17,793 - DEBUG - Player 1 mode button updated to playlist
-2025-05-14 19:58:17,794 - DEBUG - Player 1 mode button updated to playlist
-2025-05-14 19:58:17,794 - DEBUG - Loading video: C:/Users/march/Downloads/ap13588-1080p.mp4
-2025-05-14 19:58:17,795 - DEBUG - Initializing player widget at x=44, y=17, player count=1
-2025-05-14 19:58:17,795 - DEBUG - Initialized Player 2 with layer 1
-2025-05-14 19:58:17,798 - DEBUG - VLC initialized successfully for frame_id: 3227146188160
-2025-05-14 19:58:17,799 - DEBUG - Attached player to canvas with frame_id: 8
-2025-05-14 19:58:17,807 - DEBUG - Video frame HWND for Player 2: 1985974
-2025-05-14 19:58:17,809 - DEBUG - Initialized Player 2 volume to 100
-2025-05-14 19:58:17,809 - DEBUG - Player 2 mode button updated to playlist
-2025-05-14 19:58:17,811 - DEBUG - Player 2 mode button updated to random_repo
-2025-05-14 19:58:17,811 - DEBUG - Loading video: C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4
-2025-05-14 19:58:17,813 - DEBUG - Initializing player widget at x=594, y=12, player count=2
-2025-05-14 19:58:17,813 - DEBUG - Initialized Player 3 with layer 2
-2025-05-14 19:58:17,816 - DEBUG - VLC initialized successfully for frame_id: 3227213238368
-2025-05-14 19:58:17,816 - DEBUG - Attached player to canvas with frame_id: 9
-2025-05-14 19:58:17,822 - DEBUG - Video frame HWND for Player 3: 150998
-2025-05-14 19:58:17,823 - DEBUG - Initialized Player 3 volume to 100
-2025-05-14 19:58:17,824 - DEBUG - Player 3 mode button updated to random_repo
-2025-05-14 19:58:17,824 - DEBUG - Player 3 mode button updated to random_repo
-2025-05-14 19:58:17,825 - DEBUG - Loading video: C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4
-2025-05-14 19:58:17,826 - DEBUG - Initializing player widget at x=800, y=500, player count=3
-2025-05-14 19:58:17,826 - DEBUG - Initialized Player 4 with layer 3
-2025-05-14 19:58:17,829 - DEBUG - VLC initialized successfully for frame_id: 3227213244848
-2025-05-14 19:58:17,829 - DEBUG - Attached player to canvas with frame_id: 10
-2025-05-14 19:58:17,885 - DEBUG - Video frame HWND for Player 4: 151008
-2025-05-14 19:58:17,886 - DEBUG - Initialized Player 4 volume to 100
-2025-05-14 19:58:17,886 - DEBUG - Player 4 mode button updated to random_repo
-2025-05-14 19:58:17,887 - DEBUG - Player 4 mode button updated to random_repo
-2025-05-14 19:58:17,887 - DEBUG - Loading video: C:/Users/march/Downloads/dainty wilder - bad bunny.mp4
-2025-05-14 19:58:17,888 - DEBUG - Initializing player widget at x=112, y=500, player count=4
-2025-05-14 19:58:17,888 - DEBUG - Initialized Player 5 with layer 4
-2025-05-14 19:58:17,891 - DEBUG - VLC initialized successfully for frame_id: 3227213317024
-2025-05-14 19:58:17,891 - DEBUG - Attached player to canvas with frame_id: 12
-2025-05-14 19:58:17,898 - DEBUG - Video frame HWND for Player 5: 151004
-2025-05-14 19:58:17,900 - DEBUG - Initialized Player 5 volume to 100
-2025-05-14 19:58:17,901 - DEBUG - Player 5 mode button updated to random_repo
-2025-05-14 19:58:17,901 - DEBUG - Player 5 mode button updated to random_repo
-2025-05-14 19:58:17,901 - DEBUG - Loading video: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4
-2025-05-14 19:58:17,907 - DEBUG - Bound number keys for player selection
-2025-05-14 19:58:17,907 - DEBUG - Loaded layout with 5 players from C:/Users/march/Downloads/layoutest.ultilayout, smm_mode=False
-2025-05-14 19:58:17,908 - DEBUG - Drop target registered for Player 1
-2025-05-14 19:58:17,908 - WARNING - Volume mismatch for Player 1: expected 100, got -1. Correcting.
-2025-05-14 19:58:17,909 - ERROR - Failed to verify volume for Player 1: expected 100, got -1
-2025-05-14 19:58:17,909 - DEBUG - Drop target registered for Player 2
-2025-05-14 19:58:17,910 - WARNING - Volume mismatch for Player 2: expected 100, got -1. Correcting.
-2025-05-14 19:58:17,910 - ERROR - Failed to verify volume for Player 2: expected 100, got -1
-2025-05-14 19:58:17,991 - DEBUG - Showed controls for Player 1
-2025-05-14 19:58:17,992 - DEBUG - Mouse entered Player 1
-2025-05-14 19:58:17,993 - DEBUG - Drop target registered for Player 3
-2025-05-14 19:58:17,993 - WARNING - Volume mismatch for Player 3: expected 100, got -1. Correcting.
-2025-05-14 19:58:17,993 - ERROR - Failed to verify volume for Player 3: expected 100, got -1
-2025-05-14 19:58:17,994 - DEBUG - Drop target registered for Player 4
-2025-05-14 19:58:17,994 - WARNING - Volume mismatch for Player 4: expected 100, got -1. Correcting.
-2025-05-14 19:58:17,994 - ERROR - Failed to verify volume for Player 4: expected 100, got -1
-2025-05-14 19:58:17,995 - DEBUG - No media loaded for Player 1, skipping VLC refresh
-2025-05-14 19:58:18,000 - DEBUG - Drop target registered for Player 5
-2025-05-14 19:58:18,002 - WARNING - Volume mismatch for Player 5: expected 100, got -1. Correcting.
-2025-05-14 19:58:18,002 - ERROR - Failed to verify volume for Player 5: expected 100, got -1
-2025-05-14 19:58:18,009 - DEBUG - Attempting to set volume to 100 for Player 1
-2025-05-14 19:58:18,010 - DEBUG - No media loaded for Player 2, skipping VLC refresh
-2025-05-14 19:58:18,024 - DEBUG - No media loaded for Player 3, skipping VLC refresh
-2025-05-14 19:58:18,087 - DEBUG - No media loaded for Player 4, skipping VLC refresh
-2025-05-14 19:58:18,102 - DEBUG - No media loaded for Player 5, skipping VLC refresh
-2025-05-14 19:58:18,109 - WARNING - Volume mismatch for Player 1: expected 100, got -1. Correcting.
-2025-05-14 19:58:18,109 - ERROR - Failed to verify volume for Player 1: expected 100, got -1
-2025-05-14 19:58:18,402 - DEBUG - Loaded and playing: C:/Users/march/Downloads/ap13588-1080p.mp4 with duration 3137069 ms
-2025-05-14 19:58:18,403 - DEBUG - Player 1 transition completed, is_transitioning set to False
-2025-05-14 19:58:18,487 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 with duration 1768149 ms
-2025-05-14 19:58:18,487 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 with duration 4436374 ms
-2025-05-14 19:58:18,489 - DEBUG - Player 3 transition completed, is_transitioning set to False
-2025-05-14 19:58:18,489 - DEBUG - Player 5 transition completed, is_transitioning set to False
-2025-05-14 19:58:18,497 - DEBUG - Loaded and playing: C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 with duration 1395352 ms
-2025-05-14 19:58:18,498 - DEBUG - Player 4 transition completed, is_transitioning set to False
-2025-05-14 19:58:18,515 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4 with duration 4032430 ms
-2025-05-14 19:58:18,516 - DEBUG - Player 2 transition completed, is_transitioning set to False
-2025-05-14 19:58:18,703 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:18,805 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:18,906 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:19,007 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:19,107 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:20,306 - DEBUG - Hid controls for Player 1
-2025-05-14 19:58:20,402 - DEBUG - Video C:/Users/march/Downloads/ap13588-1080p.mp4 started successfully
-2025-05-14 19:58:20,487 - DEBUG - Video C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 started successfully
-2025-05-14 19:58:20,487 - DEBUG - Video C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 started successfully
-2025-05-14 19:58:20,497 - DEBUG - Video C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 started successfully
-2025-05-14 19:58:20,516 - DEBUG - Video C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4 started successfully
-2025-05-14 19:58:21,804 - DEBUG - Toggling SMM: is_maximized=False
-2025-05-14 19:58:21,805 - DEBUG - Player 1 play state before SMM: True
-2025-05-14 19:58:21,805 - DEBUG - Player 2 play state before SMM: True
-2025-05-14 19:58:21,805 - DEBUG - Player 3 play state before SMM: True
-2025-05-14 19:58:21,805 - DEBUG - Player 4 play state before SMM: True
-2025-05-14 19:58:21,807 - DEBUG - Player 5 play state before SMM: True
-2025-05-14 19:58:21,807 - DEBUG - Stored pre-SMM state: geometry=1200x800+100+100, positions=[(509.0, 283.0, 400, 300), (44.0, 17.0, 508, 400), (594.0, 12.0, 492, 374), (800.0, 500.0, 400, 300), (112.0, 500.0, 400, 300)]
-2025-05-14 19:58:21,807 - DEBUG - Window center at (700, 500), size 1200x800
-2025-05-14 19:58:21,808 - DEBUG - Monitor 0: 1920x1200+0+0
-2025-05-14 19:58:21,809 - DEBUG - Monitor 1: 1920x1080+1920+121
-2025-05-14 19:58:21,809 - DEBUG - Selected monitor 1920x1200+0+0
-2025-05-14 19:58:21,809 - DEBUG - SMM on monitor: 1920x1200+0+0
-2025-05-14 19:58:21,809 - WARNING - pywin32 GetClientRect unavailable or failed: Non-client area calculation returned unrealistic values
-2025-05-14 19:58:21,810 - DEBUG - Using hardcoded offsets: border_width=8, title_height=31, new pos=-8,-31, adjusted_height=1218
-2025-05-14 19:58:21,878 - DEBUG - Set window to 1920x1218+-8+-31, actual: 1920x1182+0+0
-2025-05-14 19:58:21,878 - WARNING - Position/size mismatch: requested 1920x1218+-8+-31, got 1920x1182+0+0
-2025-05-14 19:58:21,943 - DEBUG - After retry, actual: 1920x1182+8+31
-2025-05-14 19:58:22,053 - DEBUG - Stored window styles: style=56000000, ex_style=4, overrideredirect=False
-2025-05-14 19:58:22,417 - DEBUG - Window center at (960, 609), size 1920x1218
-2025-05-14 19:58:22,418 - DEBUG - Monitor 0: 1920x1200+0+0
-2025-05-14 19:58:22,418 - DEBUG - Monitor 1: 1920x1080+1920+121
-2025-05-14 19:58:22,418 - DEBUG - Selected monitor 1920x1200+0+0
-2025-05-14 19:58:22,418 - DEBUG - Setting fullscreen to monitor: 1920x1200+0+0
-2025-05-14 19:58:22,450 - DEBUG - Fullscreen properties set: position 1920x1200+0+0, style=-6f000000, ex_style=0
-2025-05-14 19:58:22,450 - DEBUG - Client area: 1920x1200
-2025-05-14 19:58:22,450 - DEBUG - Window screen position: x=0, y=0
-2025-05-14 19:58:22,558 - DEBUG - Canvas size: 1920x1200
-2025-05-14 19:58:22,558 - DEBUG - Canvas position relative to window: x=0, y=0
-2025-05-14 19:58:22,559 - DEBUG - Arranging 5 players in SMM with screen size 1920x1200
-2025-05-14 19:58:22,559 - DEBUG - 5-player SMM layout: Players 1-4: 960x600 (scaled to 960x600), Player 5: 320x200 at (800, 500) (scaled to 320x200 at (800, 500))
-2025-05-14 19:58:22,559 - DEBUG - Setting Player 1 size to 960x600 at (0, 0)
-2025-05-14 19:58:22,559 - DEBUG - Setting Player 1 size to 960x600 at (0, 0)
-2025-05-14 19:58:22,674 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:22,774 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:22,774 - DEBUG - Positioned Player 1: 960x600 at (0, 0)
-2025-05-14 19:58:22,774 - DEBUG - Setting Player 2 size to 960x600 at (960, 0)
-2025-05-14 19:58:22,774 - DEBUG - Setting Player 2 size to 960x600 at (960, 0)
-2025-05-14 19:58:22,887 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:22,988 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:22,988 - DEBUG - Positioned Player 2: 960x600 at (960, 0)
-2025-05-14 19:58:22,988 - DEBUG - Setting Player 3 size to 960x600 at (0, 600)
-2025-05-14 19:58:22,988 - DEBUG - Setting Player 3 size to 960x600 at (0, 600)
-2025-05-14 19:58:23,102 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:23,202 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:23,202 - DEBUG - Positioned Player 3: 960x600 at (0, 600)
-2025-05-14 19:58:23,202 - DEBUG - Setting Player 4 size to 960x600 at (960, 600)
-2025-05-14 19:58:23,203 - DEBUG - Setting Player 4 size to 960x600 at (960, 600)
-2025-05-14 19:58:23,314 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:23,415 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:23,415 - DEBUG - Positioned Player 4: 960x600 at (960, 600)
-2025-05-14 19:58:23,415 - DEBUG - Setting Player 5 size to 320x200 at (800, 500)
-2025-05-14 19:58:23,416 - DEBUG - Setting Player 5 size to 320x200 at (800, 500)
-2025-05-14 19:58:23,522 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:23,622 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:23,622 - DEBUG - Positioned Player 5: 320x200 at (800, 500)
-2025-05-14 19:58:23,622 - DEBUG - Window lost focus
-2025-05-14 19:58:23,723 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:23,824 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:23,924 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:24,025 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:24,126 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:24,126 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 19:58:24,141 - DEBUG - Window regained focus, forced VLC redraw for all players and bindings refreshed
-2025-05-14 19:58:24,300 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:24,401 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:24,502 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:24,602 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:24,703 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:24,703 - DEBUG - Initial VLC redraw for all players after entering SMM
-2025-05-14 19:58:24,703 - DEBUG - Entered SMM on monitor 1920x1200+0+0 with 5 players
-2025-05-14 19:58:24,703 - DEBUG - Bound number keys for player selection
-2025-05-14 19:58:24,703 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 19:58:24,903 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:25,004 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:25,104 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:25,205 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:25,306 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:25,306 - DEBUG - Delayed VLC redraw 1 for all players after entering SMM
-2025-05-14 19:58:25,407 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:25,507 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:25,607 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:25,707 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:25,807 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:25,807 - DEBUG - Delayed VLC redraw 2 for all players after entering SMM
-2025-05-14 19:58:25,908 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:26,008 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:26,108 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:26,209 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:26,310 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:26,310 - DEBUG - Delayed VLC redraw 3 for all players after entering SMM
-2025-05-14 19:58:26,339 - DEBUG - Showed controls for Player 1
-2025-05-14 19:58:26,339 - DEBUG - Mouse entered Player 1
-2025-05-14 19:58:26,394 - DEBUG - Showed controls for Player 2
-2025-05-14 19:58:26,395 - DEBUG - Mouse entered Player 2
-2025-05-14 19:58:26,434 - DEBUG - Showed controls for Player 3
-2025-05-14 19:58:26,435 - DEBUG - Mouse entered Player 3
-2025-05-14 19:58:26,478 - DEBUG - Showed controls for Player 4
-2025-05-14 19:58:26,479 - DEBUG - Mouse entered Player 4
-2025-05-14 19:58:26,527 - DEBUG - Showed controls for Player 5
-2025-05-14 19:58:26,527 - DEBUG - Mouse entered Player 5
-2025-05-14 19:58:26,527 - DEBUG - Simulated mouse-over for all players after entering SMM
-2025-05-14 19:58:26,549 - DEBUG - Attempting to set volume to 100 for Player 5
-2025-05-14 19:58:26,559 - DEBUG - Attempting to set volume to 100 for Player 4
-2025-05-14 19:58:26,573 - DEBUG - Attempting to set volume to 100 for Player 3
-2025-05-14 19:58:26,587 - DEBUG - Attempting to set volume to 100 for Player 2
-2025-05-14 19:58:26,649 - DEBUG - Volume verified for Player 5: 100
-2025-05-14 19:58:26,659 - DEBUG - Volume verified for Player 4: 100
-2025-05-14 19:58:26,674 - DEBUG - Volume verified for Player 3: 100
-2025-05-14 19:58:26,687 - DEBUG - Volume verified for Player 2: 100
-2025-05-14 19:58:28,344 - DEBUG - Hid controls for Player 1
-2025-05-14 19:58:28,577 - DEBUG - Hid controls for Player 4
-2025-05-14 19:58:28,580 - DEBUG - Hid controls for Player 3
-2025-05-14 19:58:28,595 - DEBUG - Hid controls for Player 2
-2025-05-14 19:58:30,317 - DEBUG - Hid controls for Player 5
-2025-05-14 19:58:35,092 - INFO - Selected Player 1 in SMM. Press 's' to shuffle, '.' to skip 25%, 'n' for next, or another number to swap
-2025-05-14 19:58:35,092 - INFO - Cannot swap Player 1 with itself, please select a different player
-2025-05-14 19:58:35,884 - INFO - Swapping Player 1 with Player 4 in SMM
-2025-05-14 19:58:35,884 - DEBUG - Swapping Player 1 with Player 4
-2025-05-14 19:58:35,884 - DEBUG - Player 1 prepared for swap, was_playing=True, position=16651
-2025-05-14 19:58:35,885 - DEBUG - Player 4 prepared for swap, was_playing=True, position=22914
-2025-05-14 19:58:35,885 - DEBUG - Player 1 mode button updated to random_repo
-2025-05-14 19:58:35,885 - DEBUG - Player 4 mode button updated to playlist
-2025-05-14 19:58:35,951 - DEBUG - Reloaded Player 1 with file C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 at position 22914
-2025-05-14 19:58:36,963 - DEBUG - Reloaded Player 4 with file C:/Users/march/Downloads/ap13588-1080p.mp4 at position 16651
-2025-05-14 19:58:36,963 - DEBUG - Player 1 HWND re-attached after swap: 413096
-2025-05-14 19:58:37,166 - DEBUG - Player 4 HWND re-attached after swap: 151008
-2025-05-14 19:58:37,367 - DEBUG - Raised Player 2 to layer 1 (frame_id: 8)
-2025-05-14 19:58:37,367 - DEBUG - Raised Player 3 to layer 2 (frame_id: 9)
-2025-05-14 19:58:37,367 - DEBUG - Raised Player 1 to layer 3 (frame_id: 6)
-2025-05-14 19:58:37,368 - DEBUG - Raised Player 4 to layer 3 (frame_id: 10)
-2025-05-14 19:58:37,368 - DEBUG - Raised Player 5 to layer 4 (frame_id: 12)
-2025-05-14 19:58:37,368 - DEBUG - Arranging 5 players in SMM with screen size 1920x1200
-2025-05-14 19:58:37,369 - DEBUG - 5-player SMM layout: Players 1-4: 960x600 (scaled to 960x600), Player 5: 320x200 at (800, 500) (scaled to 320x200 at (800, 500))
-2025-05-14 19:58:37,369 - DEBUG - Setting Player 1 size to 960x600 at (0, 0)
-2025-05-14 19:58:37,369 - DEBUG - Setting Player 1 size to 960x600 at (0, 0)
-2025-05-14 19:58:37,479 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:37,579 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:37,579 - DEBUG - Positioned Player 1: 960x600 at (0, 0)
-2025-05-14 19:58:37,579 - DEBUG - Setting Player 2 size to 960x600 at (960, 0)
-2025-05-14 19:58:37,580 - DEBUG - Setting Player 2 size to 960x600 at (960, 0)
-2025-05-14 19:58:37,685 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:37,786 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:37,786 - DEBUG - Positioned Player 2: 960x600 at (960, 0)
-2025-05-14 19:58:37,786 - DEBUG - Setting Player 3 size to 960x600 at (0, 600)
-2025-05-14 19:58:37,787 - DEBUG - Setting Player 3 size to 960x600 at (0, 600)
-2025-05-14 19:58:37,889 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:37,989 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:37,989 - DEBUG - Positioned Player 3: 960x600 at (0, 600)
-2025-05-14 19:58:37,989 - DEBUG - Setting Player 4 size to 960x600 at (960, 600)
-2025-05-14 19:58:37,990 - DEBUG - Setting Player 4 size to 960x600 at (960, 600)
-2025-05-14 19:58:38,092 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:38,193 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:38,193 - DEBUG - Positioned Player 4: 960x600 at (960, 600)
-2025-05-14 19:58:38,193 - DEBUG - Setting Player 5 size to 320x200 at (800, 500)
-2025-05-14 19:58:38,193 - DEBUG - Setting Player 5 size to 320x200 at (800, 500)
-2025-05-14 19:58:38,296 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:38,397 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:38,397 - DEBUG - Positioned Player 5: 320x200 at (800, 500)
-2025-05-14 19:58:38,397 - DEBUG - Reapplied SMM layout after swapping Player 1 with Player 4
-2025-05-14 19:58:38,398 - DEBUG - Restored Player 1 to playing state after swap at position 16651
-2025-05-14 19:58:38,399 - DEBUG - Restored Player 4 to playing state after swap at position 22914
-2025-05-14 19:58:38,402 - DEBUG - Restored Player 2 to playing state
-2025-05-14 19:58:38,403 - DEBUG - Restored Player 3 to playing state
-2025-05-14 19:58:38,403 - DEBUG - Restored Player 5 to playing state
-2025-05-14 19:58:38,403 - DEBUG - Swap completed: Player 1 <-> Player 4
-2025-05-14 19:58:43,228 - INFO - Selected Player 2 in SMM. Press 's' to shuffle, '.' to skip 25%, 'n' for next, or another number to swap
-2025-05-14 19:58:43,228 - INFO - Cannot swap Player 2 with itself, please select a different player
-2025-05-14 19:58:44,094 - INFO - Swapping Player 2 with Player 5 in SMM
-2025-05-14 19:58:44,095 - DEBUG - Swapping Player 2 with Player 5
-2025-05-14 19:58:44,095 - DEBUG - Player 2 prepared for swap, was_playing=True, position=22535
-2025-05-14 19:58:44,095 - DEBUG - Player 5 prepared for swap, was_playing=True, position=30221
-2025-05-14 19:58:44,095 - DEBUG - Player 2 mode button updated to random_repo
-2025-05-14 19:58:44,096 - DEBUG - Player 5 mode button updated to random_repo
-2025-05-14 19:58:44,135 - DEBUG - Reloaded Player 2 with file C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 at position 30221
-2025-05-14 19:58:45,178 - DEBUG - Reloaded Player 5 with file C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4 at position 22535
-2025-05-14 19:58:45,178 - DEBUG - Player 2 HWND re-attached after swap: 1985974
-2025-05-14 19:58:45,380 - DEBUG - Player 5 HWND re-attached after swap: 151004
-2025-05-14 19:58:45,581 - DEBUG - Raised Player 3 to layer 2 (frame_id: 9)
-2025-05-14 19:58:45,581 - DEBUG - Raised Player 1 to layer 3 (frame_id: 6)
-2025-05-14 19:58:45,582 - DEBUG - Raised Player 4 to layer 3 (frame_id: 10)
-2025-05-14 19:58:45,582 - DEBUG - Raised Player 2 to layer 4 (frame_id: 8)
-2025-05-14 19:58:45,582 - DEBUG - Raised Player 5 to layer 4 (frame_id: 12)
-2025-05-14 19:58:45,583 - DEBUG - Arranging 5 players in SMM with screen size 1920x1200
-2025-05-14 19:58:45,583 - DEBUG - 5-player SMM layout: Players 1-4: 960x600 (scaled to 960x600), Player 5: 320x200 at (800, 500) (scaled to 320x200 at (800, 500))
-2025-05-14 19:58:45,583 - DEBUG - Setting Player 1 size to 960x600 at (0, 0)
-2025-05-14 19:58:45,583 - DEBUG - Setting Player 1 size to 960x600 at (0, 0)
-2025-05-14 19:58:45,695 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:45,797 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:45,798 - DEBUG - Positioned Player 1: 960x600 at (0, 0)
-2025-05-14 19:58:45,798 - DEBUG - Setting Player 2 size to 960x600 at (960, 0)
-2025-05-14 19:58:45,798 - DEBUG - Setting Player 2 size to 960x600 at (960, 0)
-2025-05-14 19:58:45,902 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:46,002 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:46,002 - DEBUG - Positioned Player 2: 960x600 at (960, 0)
-2025-05-14 19:58:46,002 - DEBUG - Setting Player 3 size to 960x600 at (0, 600)
-2025-05-14 19:58:46,003 - DEBUG - Setting Player 3 size to 960x600 at (0, 600)
-2025-05-14 19:58:46,106 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:46,207 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:46,207 - DEBUG - Positioned Player 3: 960x600 at (0, 600)
-2025-05-14 19:58:46,207 - DEBUG - Setting Player 4 size to 960x600 at (960, 600)
-2025-05-14 19:58:46,208 - DEBUG - Setting Player 4 size to 960x600 at (960, 600)
-2025-05-14 19:58:46,310 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:46,411 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:46,411 - DEBUG - Positioned Player 4: 960x600 at (960, 600)
-2025-05-14 19:58:46,411 - DEBUG - Setting Player 5 size to 320x200 at (800, 500)
-2025-05-14 19:58:46,411 - DEBUG - Setting Player 5 size to 320x200 at (800, 500)
-2025-05-14 19:58:46,515 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:46,615 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:46,615 - DEBUG - Positioned Player 5: 320x200 at (800, 500)
-2025-05-14 19:58:46,615 - DEBUG - Reapplied SMM layout after swapping Player 2 with Player 5
-2025-05-14 19:58:46,616 - DEBUG - Restored Player 2 to playing state after swap at position 22535
-2025-05-14 19:58:46,617 - DEBUG - Restored Player 5 to playing state after swap at position 30221
-2025-05-14 19:58:46,641 - DEBUG - Restored Player 1 to playing state
-2025-05-14 19:58:46,642 - DEBUG - Restored Player 3 to playing state
-2025-05-14 19:58:46,642 - DEBUG - Restored Player 4 to playing state
-2025-05-14 19:58:46,642 - DEBUG - Swap completed: Player 2 <-> Player 5
-2025-05-14 19:58:54,324 - DEBUG - Handling Escape: is_fullscreen=False, is_maximized=True, pre_fullscreen_state=None, pre_smm_state={'geometry': '1200x800+100+100', 'is_fullscreen': False, 'all_paused': False}
-2025-05-14 19:58:54,325 - DEBUG - Restored window styles: style=56000000, ex_style=4
-2025-05-14 19:58:54,515 - DEBUG - Restored window manipulability for HWND 85404
-2025-05-14 19:58:54,515 - DEBUG - Rebound WM_DELETE_WINDOW protocol
-2025-05-14 19:58:54,515 - DEBUG - Setting Player 1 size to 400x300 at (509, 283)
-2025-05-14 19:58:54,624 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:54,724 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:54,724 - DEBUG - Restored Player 1: 400x300 at (509, 283)
-2025-05-14 19:58:54,724 - DEBUG - Setting Player 2 size to 508x400 at (44, 17)
-2025-05-14 19:58:54,839 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:54,940 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:54,940 - DEBUG - Restored Player 2: 508x400 at (44, 17)
-2025-05-14 19:58:54,940 - DEBUG - Setting Player 3 size to 492x374 at (594, 12)
-2025-05-14 19:58:55,058 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:55,158 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:55,158 - DEBUG - Restored Player 3: 492x374 at (594, 12)
-2025-05-14 19:58:55,158 - DEBUG - Setting Player 4 size to 400x300 at (800, 500)
-2025-05-14 19:58:55,275 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:55,376 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:55,376 - DEBUG - Restored Player 4: 400x300 at (800, 500)
-2025-05-14 19:58:55,376 - DEBUG - Setting Player 5 size to 400x300 at (112, 500)
-2025-05-14 19:58:55,487 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:55,588 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:55,588 - DEBUG - Restored Player 5: 400x300 at (112, 500)
-2025-05-14 19:58:55,588 - DEBUG - Refreshed VLC for Player 1, frame_id: 151178
-2025-05-14 19:58:55,589 - DEBUG - Refreshed VLC for Player 2, frame_id: 151108
-2025-05-14 19:58:55,589 - DEBUG - Refreshed VLC for Player 3, frame_id: 150996
-2025-05-14 19:58:55,589 - DEBUG - Refreshed VLC for Player 4, frame_id: 151034
-2025-05-14 19:58:55,590 - DEBUG - Refreshed VLC for Player 5, frame_id: 151006
-2025-05-14 19:58:55,625 - DEBUG - Exited fullscreen
-2025-05-14 19:58:55,625 - DEBUG - Final window state: style=56000000, ex_style=4, overrideredirect=False
-2025-05-14 19:58:55,625 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 19:58:58,964 - DEBUG - Toggling fullscreen: is_fullscreen=False, is_maximized=False
-2025-05-14 19:58:58,964 - DEBUG - Player 1 play state before fullscreen: True
-2025-05-14 19:58:58,964 - DEBUG - Player 2 play state before fullscreen: True
-2025-05-14 19:58:58,964 - DEBUG - Player 3 play state before fullscreen: True
-2025-05-14 19:58:58,965 - DEBUG - Player 4 play state before fullscreen: True
-2025-05-14 19:58:58,965 - DEBUG - Player 5 play state before fullscreen: True
-2025-05-14 19:58:58,965 - DEBUG - Stored pre-fullscreen state: geometry=1200x800+100+100
-2025-05-14 19:58:58,965 - DEBUG - Window center at (700, 500), size 1200x800
-2025-05-14 19:58:58,966 - DEBUG - Monitor 0: 1920x1200+0+0
-2025-05-14 19:58:58,966 - DEBUG - Monitor 1: 1920x1080+1920+121
-2025-05-14 19:58:58,966 - DEBUG - Selected monitor 1920x1200+0+0
-2025-05-14 19:58:58,966 - DEBUG - Fullscreen on monitor: 1920x1200+0+0
-2025-05-14 19:58:58,967 - WARNING - pywin32 GetClientRect unavailable or failed: Non-client area calculation returned unrealistic values
-2025-05-14 19:58:58,967 - DEBUG - Using hardcoded offsets: border_width=8, title_height=31, new pos=-8,-31, adjusted_height=1218
-2025-05-14 19:58:59,038 - DEBUG - Set window to 1920x1218+-8+-31, actual: 1920x1182+0+0
-2025-05-14 19:58:59,038 - WARNING - Position/size mismatch: requested 1920x1218+-8+-31, got 1920x1182+0+0
-2025-05-14 19:58:59,076 - DEBUG - After retry, actual: 1920x1182+8+31
-2025-05-14 19:58:59,084 - DEBUG - Stored window styles: style=56000000, ex_style=4, overrideredirect=False
-2025-05-14 19:58:59,313 - DEBUG - Window center at (960, 609), size 1920x1218
-2025-05-14 19:58:59,313 - DEBUG - Monitor 0: 1920x1200+0+0
-2025-05-14 19:58:59,314 - DEBUG - Monitor 1: 1920x1080+1920+121
-2025-05-14 19:58:59,314 - DEBUG - Selected monitor 1920x1200+0+0
-2025-05-14 19:58:59,314 - DEBUG - Setting fullscreen to monitor: 1920x1200+0+0
-2025-05-14 19:58:59,338 - DEBUG - Fullscreen properties set: position 1920x1200+0+0, style=-6f000000, ex_style=0
-2025-05-14 19:58:59,338 - DEBUG - Client area: 1920x1200
-2025-05-14 19:58:59,338 - DEBUG - Window screen position: x=0, y=0
-2025-05-14 19:58:59,344 - DEBUG - Canvas size: 1920x1200
-2025-05-14 19:58:59,344 - DEBUG - Canvas position relative to window: x=0, y=0
-2025-05-14 19:58:59,463 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:59,565 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:59,666 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:59,766 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:59,866 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:58:59,867 - DEBUG - Initial VLC redraw for all players after entering fullscreen
-2025-05-14 19:58:59,867 - DEBUG - Entered fullscreen on monitor 1920x1200+0+0
-2025-05-14 19:58:59,867 - DEBUG - Bound number keys for player selection
-2025-05-14 19:58:59,867 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 19:59:00,067 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:00,168 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:00,268 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:00,368 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:00,469 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:00,469 - DEBUG - Delayed VLC redraw 1 for all players after entering fullscreen
-2025-05-14 19:59:00,570 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:00,671 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:00,772 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:00,873 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:00,974 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:00,974 - DEBUG - Delayed VLC redraw 2 for all players after entering fullscreen
-2025-05-14 19:59:01,074 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:01,175 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:01,276 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:01,377 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:01,477 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:01,477 - DEBUG - Delayed VLC redraw 3 for all players after entering fullscreen
-2025-05-14 19:59:01,508 - DEBUG - Showed controls for Player 1
-2025-05-14 19:59:01,508 - DEBUG - Mouse entered Player 1
-2025-05-14 19:59:01,543 - DEBUG - Showed controls for Player 2
-2025-05-14 19:59:01,544 - DEBUG - Mouse entered Player 2
-2025-05-14 19:59:01,573 - DEBUG - Showed controls for Player 3
-2025-05-14 19:59:01,574 - DEBUG - Mouse entered Player 3
-2025-05-14 19:59:01,610 - DEBUG - Showed controls for Player 4
-2025-05-14 19:59:01,610 - DEBUG - Mouse entered Player 4
-2025-05-14 19:59:01,647 - DEBUG - Showed controls for Player 5
-2025-05-14 19:59:01,648 - DEBUG - Mouse entered Player 5
-2025-05-14 19:59:01,648 - DEBUG - Simulated mouse-over for all players after entering fullscreen
-2025-05-14 19:59:03,666 - DEBUG - Hid controls for Player 5
-2025-05-14 19:59:03,685 - DEBUG - Hid controls for Player 4
-2025-05-14 19:59:03,689 - DEBUG - Hid controls for Player 3
-2025-05-14 19:59:03,702 - DEBUG - Hid controls for Player 2
-2025-05-14 19:59:03,722 - DEBUG - Hid controls for Player 1
-2025-05-14 19:59:04,184 - DEBUG - Showed controls for Player 4
-2025-05-14 19:59:04,184 - DEBUG - Mouse entered Player 4
-2025-05-14 19:59:04,630 - DEBUG - Mouse entered Player 4
-2025-05-14 19:59:04,944 - DEBUG - Started dragging Player 4 from Label
-2025-05-14 19:59:05,094 - DEBUG - Dragging Player 4 to x=801, y=500
-2025-05-14 19:59:05,105 - DEBUG - Dragging Player 4 to x=802, y=500
-2025-05-14 19:59:05,111 - DEBUG - Dragging Player 4 to x=802, y=501
-2025-05-14 19:59:05,115 - DEBUG - Dragging Player 4 to x=802, y=502
-2025-05-14 19:59:05,119 - DEBUG - Dragging Player 4 to x=802, y=503
-2025-05-14 19:59:05,123 - DEBUG - Dragging Player 4 to x=804, y=504
-2025-05-14 19:59:05,130 - DEBUG - Dragging Player 4 to x=804, y=505
-2025-05-14 19:59:05,137 - DEBUG - Dragging Player 4 to x=806, y=509
-2025-05-14 19:59:05,142 - DEBUG - Dragging Player 4 to x=809, y=512
-2025-05-14 19:59:05,146 - DEBUG - Dragging Player 4 to x=810, y=514
-2025-05-14 19:59:05,149 - DEBUG - Dragging Player 4 to x=812, y=516
-2025-05-14 19:59:05,156 - DEBUG - Dragging Player 4 to x=813, y=518
-2025-05-14 19:59:05,164 - DEBUG - Dragging Player 4 to x=817, y=522
-2025-05-14 19:59:05,178 - DEBUG - Dragging Player 4 to x=821, y=529
-2025-05-14 19:59:05,182 - DEBUG - Dragging Player 4 to x=828, y=539
-2025-05-14 19:59:05,188 - DEBUG - Dragging Player 4 to x=831, y=542
-2025-05-14 19:59:05,194 - DEBUG - Dragging Player 4 to x=834, y=546
-2025-05-14 19:59:05,199 - DEBUG - Dragging Player 4 to x=837, y=550
-2025-05-14 19:59:05,205 - DEBUG - Dragging Player 4 to x=840, y=553
-2025-05-14 19:59:05,210 - DEBUG - Dragging Player 4 to x=844, y=558
-2025-05-14 19:59:05,213 - DEBUG - Dragging Player 4 to x=847, y=560
-2025-05-14 19:59:05,217 - DEBUG - Dragging Player 4 to x=849, y=562
-2025-05-14 19:59:05,221 - DEBUG - Dragging Player 4 to x=851, y=565
-2025-05-14 19:59:05,226 - DEBUG - Dragging Player 4 to x=854, y=568
-2025-05-14 19:59:05,230 - DEBUG - Dragging Player 4 to x=856, y=571
-2025-05-14 19:59:05,240 - DEBUG - Dragging Player 4 to x=860, y=574
-2025-05-14 19:59:05,244 - DEBUG - Dragging Player 4 to x=866, y=580
-2025-05-14 19:59:05,246 - DEBUG - Dragging Player 4 to x=868, y=582
-2025-05-14 19:59:05,251 - DEBUG - Dragging Player 4 to x=869, y=584
-2025-05-14 19:59:05,254 - DEBUG - Dragging Player 4 to x=872, y=585
-2025-05-14 19:59:05,256 - DEBUG - Dragging Player 4 to x=874, y=588
-2025-05-14 19:59:05,262 - DEBUG - Dragging Player 4 to x=876, y=589
-2025-05-14 19:59:05,265 - DEBUG - Dragging Player 4 to x=878, y=591
-2025-05-14 19:59:05,266 - DEBUG - Dragging Player 4 to x=878, y=593
-2025-05-14 19:59:05,268 - DEBUG - Dragging Player 4 to x=879, y=593
-2025-05-14 19:59:05,272 - DEBUG - Dragging Player 4 to x=880, y=593
-2025-05-14 19:59:05,274 - DEBUG - Dragging Player 4 to x=882, y=595
-2025-05-14 19:59:05,277 - DEBUG - Dragging Player 4 to x=883, y=596
-2025-05-14 19:59:05,278 - DEBUG - Dragging Player 4 to x=885, y=597
-2025-05-14 19:59:05,281 - DEBUG - Dragging Player 4 to x=887, y=599
-2025-05-14 19:59:05,282 - DEBUG - Dragging Player 4 to x=888, y=600
-2025-05-14 19:59:05,284 - DEBUG - Dragging Player 4 to x=889, y=601
-2025-05-14 19:59:05,287 - DEBUG - Dragging Player 4 to x=890, y=601
-2025-05-14 19:59:05,290 - DEBUG - Dragging Player 4 to x=893, y=604
-2025-05-14 19:59:05,297 - DEBUG - Dragging Player 4 to x=895, y=606
-2025-05-14 19:59:05,302 - DEBUG - Dragging Player 4 to x=901, y=610
-2025-05-14 19:59:05,304 - DEBUG - Dragging Player 4 to x=904, y=612
-2025-05-14 19:59:05,307 - DEBUG - Dragging Player 4 to x=907, y=614
-2025-05-14 19:59:05,310 - DEBUG - Dragging Player 4 to x=910, y=616
-2025-05-14 19:59:05,312 - DEBUG - Dragging Player 4 to x=913, y=618
-2025-05-14 19:59:05,316 - DEBUG - Dragging Player 4 to x=914, y=618
-2025-05-14 19:59:05,318 - DEBUG - Dragging Player 4 to x=918, y=620
-2025-05-14 19:59:05,321 - DEBUG - Dragging Player 4 to x=919, y=622
-2025-05-14 19:59:05,323 - DEBUG - Dragging Player 4 to x=922, y=624
-2025-05-14 19:59:05,332 - DEBUG - Dragging Player 4 to x=925, y=624
-2025-05-14 19:59:05,335 - DEBUG - Dragging Player 4 to x=933, y=629
-2025-05-14 19:59:05,338 - DEBUG - Dragging Player 4 to x=936, y=631
-2025-05-14 19:59:05,345 - DEBUG - Dragging Player 4 to x=940, y=633
-2025-05-14 19:59:05,347 - DEBUG - Dragging Player 4 to x=947, y=637
-2025-05-14 19:59:05,350 - DEBUG - Dragging Player 4 to x=949, y=638
-2025-05-14 19:59:05,352 - DEBUG - Dragging Player 4 to x=952, y=640
-2025-05-14 19:59:05,354 - DEBUG - Dragging Player 4 to x=954, y=641
-2025-05-14 19:59:05,362 - DEBUG - Dragging Player 4 to x=956, y=643
-2025-05-14 19:59:05,367 - DEBUG - Dragging Player 4 to x=968, y=649
-2025-05-14 19:59:05,370 - DEBUG - Dragging Player 4 to x=972, y=650
-2025-05-14 19:59:05,373 - DEBUG - Dragging Player 4 to x=975, y=652
-2025-05-14 19:59:05,375 - DEBUG - Dragging Player 4 to x=977, y=653
-2025-05-14 19:59:05,376 - DEBUG - Dragging Player 4 to x=980, y=654
-2025-05-14 19:59:05,378 - DEBUG - Dragging Player 4 to x=982, y=655
-2025-05-14 19:59:05,380 - DEBUG - Dragging Player 4 to x=983, y=656
-2025-05-14 19:59:05,382 - DEBUG - Dragging Player 4 to x=984, y=656
-2025-05-14 19:59:05,385 - DEBUG - Dragging Player 4 to x=987, y=657
-2025-05-14 19:59:05,393 - DEBUG - Dragging Player 4 to x=989, y=658
-2025-05-14 19:59:05,397 - DEBUG - Dragging Player 4 to x=996, y=661
-2025-05-14 19:59:05,399 - DEBUG - Dragging Player 4 to x=999, y=662
-2025-05-14 19:59:05,401 - DEBUG - Dragging Player 4 to x=1000, y=663
-2025-05-14 19:59:05,405 - DEBUG - Dragging Player 4 to x=1002, y=663
-2025-05-14 19:59:05,409 - DEBUG - Dragging Player 4 to x=1006, y=665
-2025-05-14 19:59:05,411 - DEBUG - Dragging Player 4 to x=1007, y=665
-2025-05-14 19:59:05,413 - DEBUG - Dragging Player 4 to x=1010, y=666
-2025-05-14 19:59:05,416 - DEBUG - Dragging Player 4 to x=1011, y=666
-2025-05-14 19:59:05,419 - DEBUG - Dragging Player 4 to x=1013, y=667
-2025-05-14 19:59:05,421 - DEBUG - Dragging Player 4 to x=1015, y=668
-2025-05-14 19:59:05,427 - DEBUG - Dragging Player 4 to x=1016, y=668
-2025-05-14 19:59:05,428 - DEBUG - Dragging Player 4 to x=1018, y=668
-2025-05-14 19:59:05,430 - DEBUG - Dragging Player 4 to x=1019, y=669
-2025-05-14 19:59:05,432 - DEBUG - Dragging Player 4 to x=1020, y=669
-2025-05-14 19:59:05,439 - DEBUG - Dragging Player 4 to x=1024, y=671
-2025-05-14 19:59:05,442 - DEBUG - Dragging Player 4 to x=1025, y=671
-2025-05-14 19:59:05,444 - DEBUG - Dragging Player 4 to x=1026, y=671
-2025-05-14 19:59:05,447 - DEBUG - Dragging Player 4 to x=1027, y=671
-2025-05-14 19:59:05,450 - DEBUG - Dragging Player 4 to x=1028, y=671
-2025-05-14 19:59:05,451 - DEBUG - Dragging Player 4 to x=1029, y=673
-2025-05-14 19:59:05,455 - DEBUG - Dragging Player 4 to x=1030, y=673
-2025-05-14 19:59:05,458 - DEBUG - Dragging Player 4 to x=1031, y=673
-2025-05-14 19:59:05,462 - DEBUG - Dragging Player 4 to x=1033, y=673
-2025-05-14 19:59:05,472 - DEBUG - Dragging Player 4 to x=1036, y=675
-2025-05-14 19:59:05,477 - DEBUG - Dragging Player 4 to x=1038, y=675
-2025-05-14 19:59:05,484 - DEBUG - Dragging Player 4 to x=1041, y=676
-2025-05-14 19:59:05,488 - DEBUG - Dragging Player 4 to x=1046, y=679
-2025-05-14 19:59:05,491 - DEBUG - Dragging Player 4 to x=1050, y=679
-2025-05-14 19:59:05,499 - DEBUG - Dragging Player 4 to x=1052, y=680
-2025-05-14 19:59:05,501 - DEBUG - Dragging Player 4 to x=1059, y=682
-2025-05-14 19:59:05,505 - DEBUG - Dragging Player 4 to x=1061, y=683
-2025-05-14 19:59:05,507 - DEBUG - Dragging Player 4 to x=1065, y=684
-2025-05-14 19:59:05,510 - DEBUG - Dragging Player 4 to x=1066, y=685
-2025-05-14 19:59:05,512 - DEBUG - Dragging Player 4 to x=1068, y=685
-2025-05-14 19:59:05,514 - DEBUG - Dragging Player 4 to x=1070, y=686
-2025-05-14 19:59:05,517 - DEBUG - Dragging Player 4 to x=1072, y=687
-2025-05-14 19:59:05,518 - DEBUG - Dragging Player 4 to x=1073, y=687
-2025-05-14 19:59:05,521 - DEBUG - Dragging Player 4 to x=1074, y=687
-2025-05-14 19:59:05,526 - DEBUG - Dragging Player 4 to x=1076, y=687
-2025-05-14 19:59:05,533 - DEBUG - Dragging Player 4 to x=1079, y=688
-2025-05-14 19:59:05,535 - DEBUG - Dragging Player 4 to x=1081, y=689
-2025-05-14 19:59:05,536 - DEBUG - Dragging Player 4 to x=1082, y=689
-2025-05-14 19:59:05,540 - DEBUG - Dragging Player 4 to x=1083, y=689
-2025-05-14 19:59:05,700 - DEBUG - Stopped dragging Player 4
-2025-05-14 19:59:06,482 - DEBUG - Mouse entered Player 4
-2025-05-14 19:59:06,824 - DEBUG - Started resizing Player 4 from right corner
-2025-05-14 19:59:06,850 - DEBUG - Resized Player 4 to 400x301 at x=1083, y=689
-2025-05-14 19:59:06,980 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:06,999 - DEBUG - Resized Player 4 to 405x304 at x=1083, y=689
-2025-05-14 19:59:07,135 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:07,158 - DEBUG - Resized Player 4 to 456x369 at x=1083, y=689
-2025-05-14 19:59:07,285 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:07,306 - DEBUG - Resized Player 4 to 514x425 at x=1083, y=689
-2025-05-14 19:59:07,434 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:07,460 - DEBUG - Resized Player 4 to 518x430 at x=1083, y=689
-2025-05-14 19:59:07,589 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:07,675 - DEBUG - Resized Player 4 to 518x431 at x=1083, y=689
-2025-05-14 19:59:07,797 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:07,814 - DEBUG - Resized Player 4 to 538x454 at x=1083, y=689
-2025-05-14 19:59:07,947 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:07,962 - DEBUG - Resized Player 4 to 540x456 at x=1083, y=689
-2025-05-14 19:59:08,092 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:08,119 - DEBUG - Resized Player 4 to 556x476 at x=1083, y=689
-2025-05-14 19:59:08,247 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:08,273 - DEBUG - Resized Player 4 to 605x481 at x=1083, y=689
-2025-05-14 19:59:08,400 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:08,419 - DEBUG - Resized Player 4 to 643x485 at x=1083, y=689
-2025-05-14 19:59:08,549 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:08,572 - DEBUG - Resized Player 4 to 686x484 at x=1083, y=689
-2025-05-14 19:59:08,700 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:08,723 - DEBUG - Resized Player 4 to 704x477 at x=1083, y=689
-2025-05-14 19:59:08,864 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:08,884 - DEBUG - Resized Player 4 to 706x476 at x=1083, y=689
-2025-05-14 19:59:09,008 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:11,626 - DEBUG - Hid controls for Player 4
-2025-05-14 19:59:12,405 - DEBUG - Handling Escape: is_fullscreen=True, is_maximized=False, pre_fullscreen_state={'geometry': '1200x800+100+100', 'is_maximized': False, 'is_fullscreen': False}, pre_smm_state={'geometry': '1200x800+100+100', 'is_fullscreen': False, 'all_paused': False}
-2025-05-14 19:59:12,406 - DEBUG - Restored window styles: style=56000000, ex_style=4
-2025-05-14 19:59:12,567 - DEBUG - Restored window manipulability for HWND 85404
-2025-05-14 19:59:12,567 - DEBUG - Rebound WM_DELETE_WINDOW protocol
-2025-05-14 19:59:12,567 - DEBUG - Refreshed VLC for Player 1, frame_id: 151178
-2025-05-14 19:59:12,567 - DEBUG - Refreshed VLC for Player 2, frame_id: 151108
-2025-05-14 19:59:12,568 - DEBUG - Refreshed VLC for Player 3, frame_id: 150996
-2025-05-14 19:59:12,568 - DEBUG - Refreshed VLC for Player 4, frame_id: 151034
-2025-05-14 19:59:12,568 - DEBUG - Refreshed VLC for Player 5, frame_id: 151006
-2025-05-14 19:59:12,601 - DEBUG - Exited fullscreen
-2025-05-14 19:59:12,602 - DEBUG - Final window state: style=56000000, ex_style=4, overrideredirect=False
-2025-05-14 19:59:12,602 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 19:59:15,322 - DEBUG - Showed controls for Player 4
-2025-05-14 19:59:15,323 - DEBUG - Mouse entered Player 4
-2025-05-14 19:59:15,779 - DEBUG - Mouse entered Player 4
-2025-05-14 19:59:16,667 - DEBUG - Window lost focus
-2025-05-14 19:59:16,775 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:16,876 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:16,977 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:17,078 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:17,179 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:17,179 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 19:59:17,179 - DEBUG - Window regained focus, forced VLC redraw for all players and bindings refreshed
-2025-05-14 19:59:19,399 - DEBUG - Context menu shown at screen x=758, y=747, canvas x=650, y=616
-2025-05-14 19:59:19,399 - DEBUG - Setting Player 1 size to 400x300 at (650, 616)
-2025-05-14 19:59:19,585 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:19,585 - DEBUG - Recovered Player 1 to x=650, y=616, size=400x300
-2025-05-14 19:59:19,585 - DEBUG - Setting Player 2 size to 400x300 at (670, 616)
-2025-05-14 19:59:19,788 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:19,788 - DEBUG - Recovered Player 2 to x=670, y=616, size=400x300
-2025-05-14 19:59:19,788 - DEBUG - Setting Player 3 size to 400x300 at (690, 616)
-2025-05-14 19:59:19,983 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:19,983 - DEBUG - Recovered Player 3 to x=690, y=616, size=400x300
-2025-05-14 19:59:19,983 - DEBUG - Setting Player 4 size to 400x300 at (650, 636)
-2025-05-14 19:59:20,228 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:20,228 - DEBUG - Recovered Player 4 to x=650, y=636, size=400x300
-2025-05-14 19:59:20,228 - DEBUG - Setting Player 5 size to 400x300 at (670, 636)
-2025-05-14 19:59:20,425 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:20,425 - DEBUG - Recovered Player 5 to x=670, y=636, size=400x300
-2025-05-14 19:59:20,510 - DEBUG - Hid controls for Player 4
-2025-05-14 19:59:21,468 - DEBUG - Showed controls for Player 5
-2025-05-14 19:59:21,468 - DEBUG - Mouse entered Player 5
-2025-05-14 19:59:21,984 - DEBUG - Showed controls for Player 1
-2025-05-14 19:59:21,984 - DEBUG - Mouse entered Player 1
-2025-05-14 19:59:22,353 - DEBUG - Mouse entered Player 5
-2025-05-14 19:59:22,917 - DEBUG - Showed controls for Player 3
-2025-05-14 19:59:22,918 - DEBUG - Mouse entered Player 3
-2025-05-14 19:59:24,829 - DEBUG - Context menu shown at screen x=568, y=403, canvas x=460, y=272
-2025-05-14 19:59:24,829 - DEBUG - Setting Player 1 size to 400x300 at (460, 272)
-2025-05-14 19:59:25,070 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:25,070 - DEBUG - Recovered Player 1 to x=460, y=272, size=400x300
-2025-05-14 19:59:25,070 - DEBUG - Setting Player 2 size to 400x300 at (480, 272)
-2025-05-14 19:59:25,264 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:25,264 - DEBUG - Recovered Player 2 to x=480, y=272, size=400x300
-2025-05-14 19:59:25,264 - DEBUG - Setting Player 3 size to 400x300 at (500, 272)
-2025-05-14 19:59:25,505 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:25,505 - DEBUG - Recovered Player 3 to x=500, y=272, size=400x300
-2025-05-14 19:59:25,505 - DEBUG - Setting Player 4 size to 400x300 at (460, 292)
-2025-05-14 19:59:25,702 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:25,702 - DEBUG - Recovered Player 4 to x=460, y=292, size=400x300
-2025-05-14 19:59:25,703 - DEBUG - Setting Player 5 size to 400x300 at (480, 292)
-2025-05-14 19:59:25,935 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:25,935 - DEBUG - Recovered Player 5 to x=480, y=292, size=400x300
-2025-05-14 19:59:26,021 - DEBUG - Hid controls for Player 1
-2025-05-14 19:59:26,026 - DEBUG - Hid controls for Player 5
-2025-05-14 19:59:26,654 - DEBUG - Hid controls for Player 3
-2025-05-14 19:59:27,120 - DEBUG - Showed controls for Player 5
-2025-05-14 19:59:27,120 - DEBUG - Mouse entered Player 5
-2025-05-14 19:59:27,780 - DEBUG - Mouse entered Player 5
-2025-05-14 19:59:28,108 - DEBUG - Started dragging Player 5 from Label
-2025-05-14 19:59:28,193 - DEBUG - Dragging Player 5 to x=479, y=292
-2025-05-14 19:59:28,281 - DEBUG - Dragging Player 5 to x=429, y=271
-2025-05-14 19:59:28,288 - DEBUG - Dragging Player 5 to x=422, y=267
-2025-05-14 19:59:28,295 - DEBUG - Dragging Player 5 to x=409, y=261
-2025-05-14 19:59:28,384 - DEBUG - Dragging Player 5 to x=400, y=257
-2025-05-14 19:59:28,397 - DEBUG - Dragging Player 5 to x=266, y=196
-2025-05-14 19:59:28,486 - DEBUG - Dragging Player 5 to x=252, y=188
-2025-05-14 19:59:28,499 - DEBUG - Dragging Player 5 to x=159, y=133
-2025-05-14 19:59:28,508 - DEBUG - Dragging Player 5 to x=143, y=121
-2025-05-14 19:59:28,608 - DEBUG - Dragging Player 5 to x=131, y=115
-2025-05-14 19:59:28,618 - DEBUG - Dragging Player 5 to x=54, y=68
-2025-05-14 19:59:28,894 - DEBUG - Dragging Player 5 to x=54, y=66
-2025-05-14 19:59:28,981 - DEBUG - Dragging Player 5 to x=55, y=49
-2025-05-14 19:59:28,991 - DEBUG - Dragging Player 5 to x=57, y=46
-2025-05-14 19:59:28,993 - DEBUG - Dragging Player 5 to x=57, y=45
-2025-05-14 19:59:28,996 - DEBUG - Dragging Player 5 to x=59, y=44
-2025-05-14 19:59:29,087 - DEBUG - Dragging Player 5 to x=64, y=32
-2025-05-14 19:59:29,290 - DEBUG - Stopped dragging Player 5
-2025-05-14 19:59:30,204 - DEBUG - Showed controls for Player 4
-2025-05-14 19:59:30,204 - DEBUG - Mouse entered Player 4
-2025-05-14 19:59:30,666 - DEBUG - Started dragging Player 4 from Label
-2025-05-14 19:59:30,800 - DEBUG - Dragging Player 4 to x=459, y=292
-2025-05-14 19:59:30,890 - DEBUG - Dragging Player 4 to x=354, y=307
-2025-05-14 19:59:30,905 - DEBUG - Dragging Player 4 to x=351, y=309
-2025-05-14 19:59:30,998 - DEBUG - Dragging Player 4 to x=311, y=316
-2025-05-14 19:59:31,011 - DEBUG - Dragging Player 4 to x=149, y=352
-2025-05-14 19:59:31,109 - DEBUG - Dragging Player 4 to x=144, y=355
-2025-05-14 19:59:31,199 - DEBUG - Dragging Player 4 to x=119, y=369
-2025-05-14 19:59:31,211 - DEBUG - Dragging Player 4 to x=98, y=381
-2025-05-14 19:59:31,323 - DEBUG - Dragging Player 4 to x=96, y=383
-2025-05-14 19:59:31,423 - DEBUG - Dragging Player 4 to x=83, y=396
-2025-05-14 19:59:31,432 - DEBUG - Dragging Player 4 to x=61, y=420
-2025-05-14 19:59:31,521 - DEBUG - Hid controls for Player 5
-2025-05-14 19:59:31,584 - DEBUG - Stopped dragging Player 4
-2025-05-14 19:59:31,992 - DEBUG - Showed controls for Player 3
-2025-05-14 19:59:31,992 - DEBUG - Mouse entered Player 3
-2025-05-14 19:59:32,567 - DEBUG - Mouse entered Player 3
-2025-05-14 19:59:32,839 - DEBUG - Started resizing Player 3 from right corner
-2025-05-14 19:59:32,972 - DEBUG - Resized Player 3 to 400x301 at x=500, y=272
-2025-05-14 19:59:33,205 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:33,227 - DEBUG - Resized Player 3 to 500x416 at x=500, y=272
-2025-05-14 19:59:33,462 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:33,855 - DEBUG - Hid controls for Player 4
-2025-05-14 19:59:34,066 - DEBUG - Started dragging Player 3 from Label
-2025-05-14 19:59:34,175 - DEBUG - Dragging Player 3 to x=501, y=272
-2025-05-14 19:59:34,263 - DEBUG - Dragging Player 3 to x=528, y=229
-2025-05-14 19:59:34,266 - DEBUG - Dragging Player 3 to x=530, y=223
-2025-05-14 19:59:34,275 - DEBUG - Dragging Player 3 to x=533, y=218
-2025-05-14 19:59:34,359 - DEBUG - Dragging Player 3 to x=536, y=210
-2025-05-14 19:59:34,371 - DEBUG - Dragging Player 3 to x=562, y=147
-2025-05-14 19:59:34,379 - DEBUG - Dragging Player 3 to x=564, y=142
-2025-05-14 19:59:34,460 - DEBUG - Dragging Player 3 to x=565, y=136
-2025-05-14 19:59:34,468 - DEBUG - Dragging Player 3 to x=567, y=131
-2025-05-14 19:59:34,478 - DEBUG - Dragging Player 3 to x=587, y=76
-2025-05-14 19:59:34,482 - DEBUG - Dragging Player 3 to x=589, y=70
-2025-05-14 19:59:34,569 - DEBUG - Dragging Player 3 to x=591, y=67
-2025-05-14 19:59:34,582 - DEBUG - Dragging Player 3 to x=615, y=14
-2025-05-14 19:59:34,585 - DEBUG - Dragging Player 3 to x=616, y=12
-2025-05-14 19:59:34,876 - DEBUG - Dragging Player 3 to x=618, y=13
-2025-05-14 19:59:34,959 - DEBUG - Dragging Player 3 to x=623, y=18
-2025-05-14 19:59:34,971 - DEBUG - Dragging Player 3 to x=624, y=20
-2025-05-14 19:59:34,979 - DEBUG - Dragging Player 3 to x=625, y=20
-2025-05-14 19:59:35,065 - DEBUG - Dragging Player 3 to x=628, y=24
-2025-05-14 19:59:35,240 - DEBUG - Stopped dragging Player 3
-2025-05-14 19:59:35,657 - DEBUG - Showed controls for Player 2
-2025-05-14 19:59:35,657 - DEBUG - Mouse entered Player 2
-2025-05-14 19:59:35,759 - DEBUG - Mouse entered Player 2
-2025-05-14 19:59:36,461 - DEBUG - Started dragging Player 2 from Label
-2025-05-14 19:59:36,610 - DEBUG - Dragging Player 2 to x=481, y=272
-2025-05-14 19:59:36,701 - DEBUG - Dragging Player 2 to x=504, y=316
-2025-05-14 19:59:36,712 - DEBUG - Dragging Player 2 to x=505, y=318
-2025-05-14 19:59:36,804 - DEBUG - Dragging Player 2 to x=509, y=325
-2025-05-14 19:59:36,815 - DEBUG - Dragging Player 2 to x=545, y=368
-2025-05-14 19:59:36,822 - DEBUG - Dragging Player 2 to x=549, y=371
-2025-05-14 19:59:36,913 - DEBUG - Dragging Player 2 to x=550, y=372
-2025-05-14 19:59:36,925 - DEBUG - Dragging Player 2 to x=574, y=390
-2025-05-14 19:59:37,008 - DEBUG - Dragging Player 2 to x=575, y=391
-2025-05-14 19:59:37,021 - DEBUG - Dragging Player 2 to x=594, y=407
-2025-05-14 19:59:37,026 - DEBUG - Dragging Player 2 to x=597, y=410
-2025-05-14 19:59:37,118 - DEBUG - Dragging Player 2 to x=599, y=412
-2025-05-14 19:59:37,130 - DEBUG - Dragging Player 2 to x=626, y=446
-2025-05-14 19:59:37,220 - DEBUG - Dragging Player 2 to x=627, y=447
-2025-05-14 19:59:37,233 - DEBUG - Dragging Player 2 to x=655, y=473
-2025-05-14 19:59:37,317 - DEBUG - Dragging Player 2 to x=659, y=474
-2025-05-14 19:59:37,327 - DEBUG - Dragging Player 2 to x=710, y=483
-2025-05-14 19:59:37,332 - DEBUG - Dragging Player 2 to x=717, y=485
-2025-05-14 19:59:37,336 - DEBUG - Dragging Player 2 to x=719, y=485
-2025-05-14 19:59:37,420 - DEBUG - Dragging Player 2 to x=721, y=485
-2025-05-14 19:59:37,435 - DEBUG - Hid controls for Player 3
-2025-05-14 19:59:37,437 - DEBUG - Dragging Player 2 to x=737, y=484
-2025-05-14 19:59:37,440 - DEBUG - Dragging Player 2 to x=739, y=482
-2025-05-14 19:59:37,535 - DEBUG - Dragging Player 2 to x=740, y=482
-2025-05-14 19:59:37,545 - DEBUG - Dragging Player 2 to x=742, y=471
-2025-05-14 19:59:37,551 - DEBUG - Dragging Player 2 to x=742, y=470
-2025-05-14 19:59:37,567 - DEBUG - Dragging Player 2 to x=742, y=469
-2025-05-14 19:59:37,656 - DEBUG - Dragging Player 2 to x=734, y=467
-2025-05-14 19:59:37,659 - DEBUG - Dragging Player 2 to x=733, y=467
-2025-05-14 19:59:37,670 - DEBUG - Dragging Player 2 to x=732, y=467
-2025-05-14 19:59:37,950 - DEBUG - Stopped dragging Player 2
-2025-05-14 19:59:39,972 - DEBUG - Toggling SMM: is_maximized=False
-2025-05-14 19:59:39,972 - DEBUG - Player 1 play state before SMM: True
-2025-05-14 19:59:39,973 - DEBUG - Player 2 play state before SMM: True
-2025-05-14 19:59:39,973 - DEBUG - Player 3 play state before SMM: True
-2025-05-14 19:59:39,973 - DEBUG - Player 4 play state before SMM: True
-2025-05-14 19:59:39,973 - DEBUG - Player 5 play state before SMM: True
-2025-05-14 19:59:39,974 - DEBUG - Stored pre-SMM state: geometry=1200x800+100+100, positions=[(460.0, 272.0, 400, 300), (732.0, 467.0, 400, 300), (628.0, 24.0, 500, 416), (61.0, 420.0, 400, 300), (64.0, 32.0, 400, 300)]
-2025-05-14 19:59:39,974 - DEBUG - Window center at (700, 500), size 1200x800
-2025-05-14 19:59:39,974 - DEBUG - Monitor 0: 1920x1200+0+0
-2025-05-14 19:59:39,974 - DEBUG - Monitor 1: 1920x1080+1920+121
-2025-05-14 19:59:39,975 - DEBUG - Selected monitor 1920x1200+0+0
-2025-05-14 19:59:39,975 - DEBUG - SMM on monitor: 1920x1200+0+0
-2025-05-14 19:59:39,975 - WARNING - pywin32 GetClientRect unavailable or failed: Non-client area calculation returned unrealistic values
-2025-05-14 19:59:39,975 - DEBUG - Using hardcoded offsets: border_width=8, title_height=31, new pos=-8,-31, adjusted_height=1218
-2025-05-14 19:59:40,054 - DEBUG - Set window to 1920x1218+-8+-31, actual: 1920x1182+0+0
-2025-05-14 19:59:40,054 - WARNING - Position/size mismatch: requested 1920x1218+-8+-31, got 1920x1182+0+0
-2025-05-14 19:59:40,139 - DEBUG - After retry, actual: 1920x1182+8+31
-2025-05-14 19:59:40,147 - DEBUG - Stored window styles: style=56000000, ex_style=4, overrideredirect=False
-2025-05-14 19:59:40,555 - DEBUG - Window center at (960, 609), size 1920x1218
-2025-05-14 19:59:40,555 - DEBUG - Monitor 0: 1920x1200+0+0
-2025-05-14 19:59:40,555 - DEBUG - Monitor 1: 1920x1080+1920+121
-2025-05-14 19:59:40,555 - DEBUG - Selected monitor 1920x1200+0+0
-2025-05-14 19:59:40,555 - DEBUG - Setting fullscreen to monitor: 1920x1200+0+0
-2025-05-14 19:59:40,586 - DEBUG - Fullscreen properties set: position 1920x1200+0+0, style=-6f000000, ex_style=0
-2025-05-14 19:59:40,588 - DEBUG - Client area: 1920x1200
-2025-05-14 19:59:40,588 - DEBUG - Window screen position: x=0, y=0
-2025-05-14 19:59:40,595 - DEBUG - Canvas size: 1920x1200
-2025-05-14 19:59:40,595 - DEBUG - Canvas position relative to window: x=0, y=0
-2025-05-14 19:59:40,596 - DEBUG - Arranging 5 players in SMM with screen size 1920x1200
-2025-05-14 19:59:40,596 - DEBUG - 5-player SMM layout: Players 1-4: 960x600 (scaled to 960x600), Player 5: 320x200 at (800, 500) (scaled to 320x200 at (800, 500))
-2025-05-14 19:59:40,596 - DEBUG - Setting Player 1 size to 960x600 at (0, 0)
-2025-05-14 19:59:40,596 - DEBUG - Setting Player 1 size to 960x600 at (0, 0)
-2025-05-14 19:59:40,712 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:40,813 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:40,813 - DEBUG - Positioned Player 1: 960x600 at (0, 0)
-2025-05-14 19:59:40,813 - DEBUG - Setting Player 2 size to 960x600 at (960, 0)
-2025-05-14 19:59:40,814 - DEBUG - Setting Player 2 size to 960x600 at (960, 0)
-2025-05-14 19:59:40,980 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:41,119 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:41,119 - DEBUG - Positioned Player 2: 960x600 at (960, 0)
-2025-05-14 19:59:41,120 - DEBUG - Setting Player 3 size to 960x600 at (0, 600)
-2025-05-14 19:59:41,120 - DEBUG - Setting Player 3 size to 960x600 at (0, 600)
-2025-05-14 19:59:41,239 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:41,340 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:41,340 - DEBUG - Positioned Player 3: 960x600 at (0, 600)
-2025-05-14 19:59:41,340 - DEBUG - Setting Player 4 size to 960x600 at (960, 600)
-2025-05-14 19:59:41,341 - DEBUG - Setting Player 4 size to 960x600 at (960, 600)
-2025-05-14 19:59:41,455 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:41,556 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:41,556 - DEBUG - Positioned Player 4: 960x600 at (960, 600)
-2025-05-14 19:59:41,557 - DEBUG - Setting Player 5 size to 320x200 at (800, 500)
-2025-05-14 19:59:41,557 - DEBUG - Setting Player 5 size to 320x200 at (800, 500)
-2025-05-14 19:59:41,674 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:41,775 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:41,775 - DEBUG - Positioned Player 5: 320x200 at (800, 500)
-2025-05-14 19:59:41,776 - DEBUG - Window lost focus
-2025-05-14 19:59:41,879 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:41,980 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:42,081 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:42,181 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:42,281 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:42,281 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 19:59:42,302 - DEBUG - Window regained focus, forced VLC redraw for all players and bindings refreshed
-2025-05-14 19:59:42,328 - DEBUG - Hid controls for Player 2
-2025-05-14 19:59:42,479 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:42,579 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:42,680 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:42,781 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:42,881 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:42,881 - DEBUG - Initial VLC redraw for all players after entering SMM
-2025-05-14 19:59:42,881 - DEBUG - Entered SMM on monitor 1920x1200+0+0 with 5 players
-2025-05-14 19:59:42,882 - DEBUG - Bound number keys for player selection
-2025-05-14 19:59:42,882 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 19:59:43,083 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:43,184 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:43,285 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:43,386 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:43,487 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:43,487 - DEBUG - Delayed VLC redraw 1 for all players after entering SMM
-2025-05-14 19:59:43,588 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:43,688 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:43,788 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:43,888 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:43,989 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:43,989 - DEBUG - Delayed VLC redraw 2 for all players after entering SMM
-2025-05-14 19:59:44,089 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:44,190 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:44,290 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:44,391 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:44,492 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:44,492 - DEBUG - Delayed VLC redraw 3 for all players after entering SMM
-2025-05-14 19:59:44,523 - DEBUG - Showed controls for Player 1
-2025-05-14 19:59:44,523 - DEBUG - Mouse entered Player 1
-2025-05-14 19:59:44,550 - DEBUG - Showed controls for Player 2
-2025-05-14 19:59:44,550 - DEBUG - Mouse entered Player 2
-2025-05-14 19:59:44,576 - DEBUG - Showed controls for Player 3
-2025-05-14 19:59:44,576 - DEBUG - Mouse entered Player 3
-2025-05-14 19:59:44,607 - DEBUG - Showed controls for Player 4
-2025-05-14 19:59:44,607 - DEBUG - Mouse entered Player 4
-2025-05-14 19:59:44,640 - DEBUG - Showed controls for Player 5
-2025-05-14 19:59:44,640 - DEBUG - Mouse entered Player 5
-2025-05-14 19:59:44,641 - DEBUG - Simulated mouse-over for all players after entering SMM
-2025-05-14 19:59:46,580 - DEBUG - Hid controls for Player 3
-2025-05-14 19:59:46,669 - DEBUG - Hid controls for Player 5
-2025-05-14 19:59:46,678 - DEBUG - Hid controls for Player 4
-2025-05-14 19:59:46,708 - DEBUG - Hid controls for Player 1
-2025-05-14 19:59:46,997 - DEBUG - Hid controls for Player 2
-2025-05-14 19:59:51,364 - DEBUG - Handling Escape: is_fullscreen=False, is_maximized=True, pre_fullscreen_state={'geometry': '1200x800+100+100', 'is_maximized': False, 'is_fullscreen': False}, pre_smm_state={'geometry': '1200x800+100+100', 'is_fullscreen': False, 'all_paused': False}
-2025-05-14 19:59:51,365 - DEBUG - Restored window styles: style=56000000, ex_style=4
-2025-05-14 19:59:51,549 - DEBUG - Restored window manipulability for HWND 85404
-2025-05-14 19:59:51,549 - DEBUG - Rebound WM_DELETE_WINDOW protocol
-2025-05-14 19:59:51,549 - DEBUG - Setting Player 1 size to 400x300 at (460, 272)
-2025-05-14 19:59:51,672 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:51,772 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:51,772 - DEBUG - Restored Player 1: 400x300 at (460, 272)
-2025-05-14 19:59:51,772 - DEBUG - Setting Player 2 size to 400x300 at (732, 467)
-2025-05-14 19:59:51,888 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:51,990 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:51,990 - DEBUG - Restored Player 2: 400x300 at (732, 467)
-2025-05-14 19:59:51,990 - DEBUG - Setting Player 3 size to 500x416 at (628, 24)
-2025-05-14 19:59:52,102 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:52,203 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:52,203 - DEBUG - Restored Player 3: 500x416 at (628, 24)
-2025-05-14 19:59:52,203 - DEBUG - Setting Player 4 size to 400x300 at (61, 420)
-2025-05-14 19:59:52,319 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:52,419 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:52,419 - DEBUG - Restored Player 4: 400x300 at (61, 420)
-2025-05-14 19:59:52,419 - DEBUG - Setting Player 5 size to 400x300 at (64, 32)
-2025-05-14 19:59:52,531 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:52,632 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 19:59:52,632 - DEBUG - Restored Player 5: 400x300 at (64, 32)
-2025-05-14 19:59:52,632 - DEBUG - Refreshed VLC for Player 1, frame_id: 151178
-2025-05-14 19:59:52,633 - DEBUG - Refreshed VLC for Player 2, frame_id: 151108
-2025-05-14 19:59:52,633 - DEBUG - Refreshed VLC for Player 3, frame_id: 150996
-2025-05-14 19:59:52,633 - DEBUG - Refreshed VLC for Player 4, frame_id: 151034
-2025-05-14 19:59:52,633 - DEBUG - Refreshed VLC for Player 5, frame_id: 151006
-2025-05-14 19:59:52,660 - DEBUG - Exited fullscreen
-2025-05-14 19:59:52,661 - DEBUG - Final window state: style=56000000, ex_style=4, overrideredirect=False
-2025-05-14 19:59:52,661 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 19:59:54,684 - DEBUG - Toggling play/pause, is_maximized=False
-2025-05-14 19:59:54,685 - DEBUG - Paused Player 1
-2025-05-14 19:59:54,685 - DEBUG - Paused Player 2
-2025-05-14 19:59:54,685 - DEBUG - Paused Player 3
-2025-05-14 19:59:54,686 - DEBUG - Paused Player 4
-2025-05-14 19:59:54,686 - DEBUG - Paused Player 5
-2025-05-14 19:59:57,132 - DEBUG - Toggling SMM: is_maximized=False
-2025-05-14 19:59:57,132 - DEBUG - Player 1 play state before SMM: False
-2025-05-14 19:59:57,132 - DEBUG - Player 2 play state before SMM: False
-2025-05-14 19:59:57,133 - DEBUG - Player 3 play state before SMM: False
-2025-05-14 19:59:57,133 - DEBUG - Player 4 play state before SMM: False
-2025-05-14 19:59:57,133 - DEBUG - Player 5 play state before SMM: False
-2025-05-14 19:59:57,133 - DEBUG - Stored pre-SMM state: geometry=1200x800+100+100, positions=[(460.0, 272.0, 400, 300), (732.0, 467.0, 400, 300), (628.0, 24.0, 500, 416), (61.0, 420.0, 400, 300), (64.0, 32.0, 400, 300)]
-2025-05-14 19:59:57,134 - DEBUG - Window center at (700, 500), size 1200x800
-2025-05-14 19:59:57,134 - DEBUG - Monitor 0: 1920x1200+0+0
-2025-05-14 19:59:57,134 - DEBUG - Monitor 1: 1920x1080+1920+121
-2025-05-14 19:59:57,134 - DEBUG - Selected monitor 1920x1200+0+0
-2025-05-14 19:59:57,134 - DEBUG - SMM on monitor: 1920x1200+0+0
-2025-05-14 19:59:57,135 - WARNING - pywin32 GetClientRect unavailable or failed: Non-client area calculation returned unrealistic values
-2025-05-14 19:59:57,135 - DEBUG - Using hardcoded offsets: border_width=8, title_height=31, new pos=-8,-31, adjusted_height=1218
-2025-05-14 19:59:57,170 - DEBUG - Set window to 1920x1218+-8+-31, actual: 1920x1182+0+0
-2025-05-14 19:59:57,170 - WARNING - Position/size mismatch: requested 1920x1218+-8+-31, got 1920x1182+0+0
-2025-05-14 19:59:57,206 - DEBUG - After retry, actual: 1920x1182+8+31
-2025-05-14 19:59:57,211 - DEBUG - Stored window styles: style=56000000, ex_style=4, overrideredirect=False
-2025-05-14 19:59:57,440 - DEBUG - Window center at (960, 609), size 1920x1218
-2025-05-14 19:59:57,440 - DEBUG - Monitor 0: 1920x1200+0+0
-2025-05-14 19:59:57,441 - DEBUG - Monitor 1: 1920x1080+1920+121
-2025-05-14 19:59:57,441 - DEBUG - Selected monitor 1920x1200+0+0
-2025-05-14 19:59:57,441 - DEBUG - Setting fullscreen to monitor: 1920x1200+0+0
-2025-05-14 19:59:57,470 - DEBUG - Fullscreen properties set: position 1920x1200+0+0, style=-6f000000, ex_style=0
-2025-05-14 19:59:57,470 - DEBUG - Client area: 1920x1200
-2025-05-14 19:59:57,470 - DEBUG - Window screen position: x=0, y=0
-2025-05-14 19:59:57,489 - DEBUG - Canvas size: 1920x1200
-2025-05-14 19:59:57,489 - DEBUG - Canvas position relative to window: x=0, y=0
-2025-05-14 19:59:57,490 - DEBUG - Arranging 5 players in SMM with screen size 1920x1200
-2025-05-14 19:59:57,490 - DEBUG - 5-player SMM layout: Players 1-4: 960x600 (scaled to 960x600), Player 5: 320x200 at (800, 500) (scaled to 320x200 at (800, 500))
-2025-05-14 19:59:57,490 - DEBUG - Setting Player 1 size to 960x600 at (0, 0)
-2025-05-14 19:59:57,491 - DEBUG - Setting Player 1 size to 960x600 at (0, 0)
-2025-05-14 19:59:57,621 - DEBUG - VLC redraw attempt 1 for Player 1, current state: State.Playing
-2025-05-14 19:59:57,721 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
-2025-05-14 19:59:57,821 - DEBUG - VLC redraw attempt 1 for Player 1, current state: State.Playing
-2025-05-14 19:59:57,922 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
-2025-05-14 19:59:57,922 - DEBUG - Positioned Player 1: 960x600 at (0, 0)
-2025-05-14 19:59:57,922 - DEBUG - Setting Player 2 size to 960x600 at (960, 0)
-2025-05-14 19:59:57,923 - DEBUG - Setting Player 2 size to 960x600 at (960, 0)
-2025-05-14 19:59:58,035 - DEBUG - VLC redraw attempt 1 for Player 2, current state: State.Playing
-2025-05-14 19:59:58,136 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
-2025-05-14 19:59:58,237 - DEBUG - VLC redraw attempt 1 for Player 2, current state: State.Playing
-2025-05-14 19:59:58,337 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
-2025-05-14 19:59:58,337 - DEBUG - Positioned Player 2: 960x600 at (960, 0)
-2025-05-14 19:59:58,337 - DEBUG - Setting Player 3 size to 960x600 at (0, 600)
-2025-05-14 19:59:58,337 - DEBUG - Setting Player 3 size to 960x600 at (0, 600)
-2025-05-14 19:59:58,448 - DEBUG - VLC redraw attempt 1 for Player 3, current state: State.Playing
-2025-05-14 19:59:58,549 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=False, final state: State.Paused
-2025-05-14 19:59:58,650 - DEBUG - VLC redraw attempt 1 for Player 3, current state: State.Playing
-2025-05-14 19:59:58,750 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=False, final state: State.Paused
-2025-05-14 19:59:58,751 - DEBUG - Positioned Player 3: 960x600 at (0, 600)
-2025-05-14 19:59:58,751 - DEBUG - Setting Player 4 size to 960x600 at (960, 600)
-2025-05-14 19:59:58,751 - DEBUG - Setting Player 4 size to 960x600 at (960, 600)
-2025-05-14 19:59:58,863 - DEBUG - VLC redraw attempt 1 for Player 4, current state: State.Playing
-2025-05-14 19:59:58,964 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=False, final state: State.Paused
-2025-05-14 19:59:59,064 - DEBUG - VLC redraw attempt 1 for Player 4, current state: State.Playing
-2025-05-14 19:59:59,165 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=False, final state: State.Paused
-2025-05-14 19:59:59,165 - DEBUG - Positioned Player 4: 960x600 at (960, 600)
-2025-05-14 19:59:59,165 - DEBUG - Setting Player 5 size to 320x200 at (800, 500)
-2025-05-14 19:59:59,166 - DEBUG - Setting Player 5 size to 320x200 at (800, 500)
-2025-05-14 19:59:59,276 - DEBUG - VLC redraw attempt 1 for Player 5, current state: State.Playing
-2025-05-14 19:59:59,377 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
-2025-05-14 19:59:59,477 - DEBUG - VLC redraw attempt 1 for Player 5, current state: State.Playing
-2025-05-14 19:59:59,578 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
-2025-05-14 19:59:59,578 - DEBUG - Positioned Player 5: 320x200 at (800, 500)
-2025-05-14 19:59:59,701 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
-2025-05-14 19:59:59,801 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
-2025-05-14 19:59:59,903 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:00,005 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:00,106 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:00,106 - DEBUG - Initial VLC redraw for all players after entering SMM
-2025-05-14 20:00:00,107 - DEBUG - Entered SMM on monitor 1920x1200+0+0 with 5 players
-2025-05-14 20:00:00,107 - DEBUG - Bound number keys for player selection
-2025-05-14 20:00:00,107 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 20:00:00,307 - DEBUG - VLC redraw attempt 1 for Player 1, current state: State.Playing
-2025-05-14 20:00:00,407 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:00,507 - DEBUG - VLC redraw attempt 1 for Player 2, current state: State.Playing
-2025-05-14 20:00:00,608 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:00,708 - DEBUG - VLC redraw attempt 1 for Player 3, current state: State.Playing
-2025-05-14 20:00:00,809 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:00,909 - DEBUG - VLC redraw attempt 1 for Player 4, current state: State.Playing
-2025-05-14 20:00:01,010 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:01,110 - DEBUG - VLC redraw attempt 1 for Player 5, current state: State.Playing
-2025-05-14 20:00:01,212 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:01,212 - DEBUG - Delayed VLC redraw 1 for all players after entering SMM
-2025-05-14 20:00:01,312 - DEBUG - VLC redraw attempt 1 for Player 1, current state: State.Playing
-2025-05-14 20:00:01,413 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:01,513 - DEBUG - VLC redraw attempt 1 for Player 2, current state: State.Playing
-2025-05-14 20:00:01,614 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:01,715 - DEBUG - VLC redraw attempt 1 for Player 3, current state: State.Playing
-2025-05-14 20:00:01,817 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:01,918 - DEBUG - VLC redraw attempt 1 for Player 4, current state: State.Playing
-2025-05-14 20:00:02,018 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:02,118 - DEBUG - VLC redraw attempt 1 for Player 5, current state: State.Playing
-2025-05-14 20:00:02,218 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:02,218 - DEBUG - Delayed VLC redraw 2 for all players after entering SMM
-2025-05-14 20:00:02,320 - DEBUG - VLC redraw attempt 1 for Player 1, current state: State.Playing
-2025-05-14 20:00:02,422 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:02,523 - DEBUG - VLC redraw attempt 1 for Player 2, current state: State.Playing
-2025-05-14 20:00:02,623 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:02,723 - DEBUG - VLC redraw attempt 1 for Player 3, current state: State.Playing
-2025-05-14 20:00:02,823 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:02,924 - DEBUG - VLC redraw attempt 1 for Player 4, current state: State.Playing
-2025-05-14 20:00:03,024 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:03,125 - DEBUG - VLC redraw attempt 1 for Player 5, current state: State.Playing
-2025-05-14 20:00:03,226 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:03,226 - DEBUG - Delayed VLC redraw 3 for all players after entering SMM
-2025-05-14 20:00:03,248 - DEBUG - Showed controls for Player 1
-2025-05-14 20:00:03,248 - DEBUG - Mouse entered Player 1
-2025-05-14 20:00:03,279 - DEBUG - Showed controls for Player 2
-2025-05-14 20:00:03,279 - DEBUG - Mouse entered Player 2
-2025-05-14 20:00:03,302 - DEBUG - Showed controls for Player 3
-2025-05-14 20:00:03,304 - DEBUG - Mouse entered Player 3
-2025-05-14 20:00:03,321 - DEBUG - Showed controls for Player 4
-2025-05-14 20:00:03,322 - DEBUG - Mouse entered Player 4
-2025-05-14 20:00:03,353 - DEBUG - Showed controls for Player 5
-2025-05-14 20:00:03,354 - DEBUG - Mouse entered Player 5
-2025-05-14 20:00:03,354 - DEBUG - Simulated mouse-over for all players after entering SMM
-2025-05-14 20:00:05,325 - DEBUG - Hid controls for Player 4
-2025-05-14 20:00:05,358 - DEBUG - Hid controls for Player 5
-2025-05-14 20:00:05,414 - DEBUG - Hid controls for Player 3
-2025-05-14 20:00:05,431 - DEBUG - Hid controls for Player 2
-2025-05-14 20:00:05,433 - DEBUG - Hid controls for Player 1
-2025-05-14 20:00:09,609 - DEBUG - Showed controls for Player 3
-2025-05-14 20:00:09,610 - DEBUG - Mouse entered Player 3
-2025-05-14 20:00:10,242 - DEBUG - Showed controls for Player 1
-2025-05-14 20:00:10,242 - DEBUG - Mouse entered Player 1
-2025-05-14 20:00:10,747 - DEBUG - Showed controls for Player 2
-2025-05-14 20:00:10,747 - DEBUG - Mouse entered Player 2
-2025-05-14 20:00:11,074 - DEBUG - Mouse entered Player 2
-2025-05-14 20:00:11,837 - DEBUG - Hid controls for Player 3
-2025-05-14 20:00:12,435 - DEBUG - Showed controls for Player 4
-2025-05-14 20:00:12,435 - DEBUG - Mouse entered Player 4
-2025-05-14 20:00:12,470 - DEBUG - Hid controls for Player 1
-2025-05-14 20:00:12,705 - DEBUG - Showed controls for Player 3
-2025-05-14 20:00:12,706 - DEBUG - Mouse entered Player 3
-2025-05-14 20:00:13,328 - DEBUG - Hid controls for Player 2
-2025-05-14 20:00:14,660 - DEBUG - Hid controls for Player 4
-2025-05-14 20:00:14,933 - DEBUG - Hid controls for Player 3
-2025-05-14 20:00:18,063 - DEBUG - Handling Escape: is_fullscreen=False, is_maximized=True, pre_fullscreen_state={'geometry': '1200x800+100+100', 'is_maximized': False, 'is_fullscreen': False}, pre_smm_state={'geometry': '1200x800+100+100', 'is_fullscreen': False, 'all_paused': False}
-2025-05-14 20:00:18,063 - DEBUG - Restored window styles: style=56000000, ex_style=4
-2025-05-14 20:00:18,260 - DEBUG - Restored window manipulability for HWND 85404
-2025-05-14 20:00:18,260 - DEBUG - Rebound WM_DELETE_WINDOW protocol
-2025-05-14 20:00:18,260 - DEBUG - Setting Player 1 size to 400x300 at (460, 272)
-2025-05-14 20:00:18,371 - DEBUG - VLC redraw attempt 1 for Player 1, current state: State.Playing
-2025-05-14 20:00:18,472 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:18,573 - DEBUG - VLC redraw attempt 1 for Player 1, current state: State.Playing
-2025-05-14 20:00:18,674 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:18,674 - DEBUG - Restored Player 1: 400x300 at (460, 272)
-2025-05-14 20:00:18,674 - DEBUG - Setting Player 2 size to 400x300 at (732, 467)
-2025-05-14 20:00:18,785 - DEBUG - VLC redraw attempt 1 for Player 2, current state: State.Playing
-2025-05-14 20:00:18,886 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:18,987 - DEBUG - VLC redraw attempt 1 for Player 2, current state: State.Playing
-2025-05-14 20:00:19,087 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:19,087 - DEBUG - Restored Player 2: 400x300 at (732, 467)
-2025-05-14 20:00:19,087 - DEBUG - Setting Player 3 size to 500x416 at (628, 24)
-2025-05-14 20:00:19,198 - DEBUG - VLC redraw attempt 1 for Player 3, current state: State.Playing
-2025-05-14 20:00:19,298 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:19,399 - DEBUG - VLC redraw attempt 1 for Player 3, current state: State.Playing
-2025-05-14 20:00:19,500 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:19,500 - DEBUG - Restored Player 3: 500x416 at (628, 24)
-2025-05-14 20:00:19,500 - DEBUG - Setting Player 4 size to 400x300 at (61, 420)
-2025-05-14 20:00:19,613 - DEBUG - VLC redraw attempt 1 for Player 4, current state: State.Playing
-2025-05-14 20:00:19,713 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:19,813 - DEBUG - VLC redraw attempt 1 for Player 4, current state: State.Playing
-2025-05-14 20:00:19,914 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:19,914 - DEBUG - Restored Player 4: 400x300 at (61, 420)
-2025-05-14 20:00:19,914 - DEBUG - Setting Player 5 size to 400x300 at (64, 32)
-2025-05-14 20:00:20,022 - DEBUG - VLC redraw attempt 1 for Player 5, current state: State.Playing
-2025-05-14 20:00:20,122 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:20,223 - DEBUG - VLC redraw attempt 1 for Player 5, current state: State.Playing
-2025-05-14 20:00:20,323 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:20,323 - DEBUG - Restored Player 5: 400x300 at (64, 32)
-2025-05-14 20:00:20,323 - DEBUG - Refreshed VLC for Player 1, frame_id: 151178
-2025-05-14 20:00:20,324 - DEBUG - Refreshed VLC for Player 2, frame_id: 151108
-2025-05-14 20:00:20,324 - DEBUG - Refreshed VLC for Player 3, frame_id: 150996
-2025-05-14 20:00:20,324 - DEBUG - Refreshed VLC for Player 4, frame_id: 151034
-2025-05-14 20:00:20,324 - DEBUG - Refreshed VLC for Player 5, frame_id: 151006
-2025-05-14 20:00:20,349 - DEBUG - Exited fullscreen
-2025-05-14 20:00:20,350 - DEBUG - Final window state: style=56000000, ex_style=4, overrideredirect=False
-2025-05-14 20:00:20,350 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 20:00:22,972 - DEBUG - Toggling play/pause, is_maximized=False
-2025-05-14 20:00:22,972 - DEBUG - Playing Player 1
-2025-05-14 20:00:22,973 - DEBUG - Playing Player 2
-2025-05-14 20:00:22,973 - DEBUG - Playing Player 3
-2025-05-14 20:00:22,973 - DEBUG - Playing Player 4
-2025-05-14 20:00:22,974 - DEBUG - Playing Player 5
-2025-05-14 20:00:24,585 - DEBUG - Showed controls for Player 1
-2025-05-14 20:00:24,585 - DEBUG - Mouse entered Player 1
-2025-05-14 20:00:24,830 - DEBUG - Showed controls for Player 5
-2025-05-14 20:00:24,831 - DEBUG - Mouse entered Player 5
-2025-05-14 20:00:24,931 - DEBUG - Mouse entered Player 5
-2025-05-14 20:00:25,869 - DEBUG - Window lost focus
-2025-05-14 20:00:25,969 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:26,069 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:26,170 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:26,270 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:26,371 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
-2025-05-14 20:00:26,371 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 20:00:26,372 - DEBUG - Window regained focus, forced VLC redraw for all players and bindings refreshed
-2025-05-14 20:00:26,699 - DEBUG - Hid controls for Player 1
-2025-05-14 20:00:26,972 - DEBUG - Hid controls for Player 5
-2025-05-14 20:00:30,048 - DEBUG - Showed controls for Player 5
-2025-05-14 20:00:30,048 - DEBUG - Mouse entered Player 5
-2025-05-14 20:00:31,812 - DEBUG - Toggling play/pause, is_maximized=False
-2025-05-14 20:00:31,813 - DEBUG - Playing Player 1
-2025-05-14 20:00:31,813 - DEBUG - Playing Player 2
-2025-05-14 20:00:31,813 - DEBUG - Playing Player 3
-2025-05-14 20:00:31,814 - DEBUG - Playing Player 4
-2025-05-14 20:00:31,814 - DEBUG - Playing Player 5
-2025-05-14 20:00:32,141 - DEBUG - Hid controls for Player 5
-2025-05-14 20:00:34,940 - DEBUG - Toggling SMM: is_maximized=False
-2025-05-14 20:00:34,940 - DEBUG - Player 1 play state before SMM: True
-2025-05-14 20:00:34,941 - DEBUG - Player 2 play state before SMM: True
-2025-05-14 20:00:34,941 - DEBUG - Player 3 play state before SMM: True
-2025-05-14 20:00:34,941 - DEBUG - Player 4 play state before SMM: True
-2025-05-14 20:00:34,941 - DEBUG - Player 5 play state before SMM: True
-2025-05-14 20:00:34,942 - DEBUG - Stored pre-SMM state: geometry=1200x800+2277+243, positions=[(460.0, 272.0, 400, 300), (732.0, 467.0, 400, 300), (628.0, 24.0, 500, 416), (61.0, 420.0, 400, 300), (64.0, 32.0, 400, 300)]
-2025-05-14 20:00:34,942 - DEBUG - Window center at (2877, 643), size 1200x800
-2025-05-14 20:00:34,942 - DEBUG - Monitor 0: 1920x1200+0+0
-2025-05-14 20:00:34,942 - DEBUG - Monitor 1: 1920x1080+1920+121
-2025-05-14 20:00:34,943 - DEBUG - Selected monitor 1920x1080+1920+121
-2025-05-14 20:00:34,944 - DEBUG - SMM on monitor: 1920x1080+1920+121
-2025-05-14 20:00:34,944 - WARNING - pywin32 GetClientRect unavailable or failed: Non-client area calculation returned unrealistic values
-2025-05-14 20:00:34,944 - DEBUG - Using hardcoded offsets: border_width=8, title_height=31, new pos=1912,90, adjusted_height=1098
-2025-05-14 20:00:34,991 - DEBUG - Set window to 1920x1098+1912+90, actual: 1920x1098+1920+121
-2025-05-14 20:00:34,991 - WARNING - Position/size mismatch: requested 1920x1098+1912+90, got 1920x1098+1920+121
-2025-05-14 20:00:35,070 - DEBUG - After retry, actual: 1920x1098+1928+152
-2025-05-14 20:00:35,193 - DEBUG - Stored window styles: style=56000000, ex_style=4, overrideredirect=False
-2025-05-14 20:00:35,573 - DEBUG - Window center at (2880, 670), size 1920x1098
-2025-05-14 20:00:35,573 - DEBUG - Monitor 0: 1920x1200+0+0
-2025-05-14 20:00:35,574 - DEBUG - Monitor 1: 1920x1080+1920+121
-2025-05-14 20:00:35,574 - DEBUG - Selected monitor 1920x1080+1920+121
-2025-05-14 20:00:35,574 - DEBUG - Setting fullscreen to monitor: 1920x1080+1920+121
-2025-05-14 20:00:35,619 - DEBUG - Fullscreen properties set: position 1920x1080+1920+121, style=-6f000000, ex_style=0
-2025-05-14 20:00:35,619 - DEBUG - Client area: 1920x1080
-2025-05-14 20:00:35,620 - DEBUG - Window screen position: x=1920, y=121
-2025-05-14 20:00:35,625 - DEBUG - Canvas size: 1920x1080
-2025-05-14 20:00:35,625 - DEBUG - Canvas position relative to window: x=0, y=0
-2025-05-14 20:00:35,625 - DEBUG - Arranging 5 players in SMM with screen size 1920x1080
-2025-05-14 20:00:35,625 - DEBUG - 5-player SMM layout: Players 1-4: 960x600 (scaled to 960x540), Player 5: 320x200 at (800, 500) (scaled to 320x180 at (800, 450))
-2025-05-14 20:00:35,626 - DEBUG - Setting Player 1 size to 960x540 at (0, 0)
-2025-05-14 20:00:35,626 - DEBUG - Setting Player 1 size to 960x540 at (0, 0)
-2025-05-14 20:00:35,741 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:35,842 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:35,842 - DEBUG - Positioned Player 1: 960x540 at (0, 0)
-2025-05-14 20:00:35,842 - DEBUG - Setting Player 2 size to 960x540 at (960, 0)
-2025-05-14 20:00:35,842 - DEBUG - Setting Player 2 size to 960x540 at (960, 0)
-2025-05-14 20:00:35,957 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:36,057 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:36,057 - DEBUG - Positioned Player 2: 960x540 at (960, 0)
-2025-05-14 20:00:36,057 - DEBUG - Setting Player 3 size to 960x540 at (0, 540)
-2025-05-14 20:00:36,057 - DEBUG - Setting Player 3 size to 960x540 at (0, 540)
-2025-05-14 20:00:36,174 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:36,276 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:36,276 - DEBUG - Positioned Player 3: 960x540 at (0, 540)
-2025-05-14 20:00:36,276 - DEBUG - Setting Player 4 size to 960x540 at (960, 540)
-2025-05-14 20:00:36,277 - DEBUG - Setting Player 4 size to 960x540 at (960, 540)
-2025-05-14 20:00:36,390 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:36,490 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:36,490 - DEBUG - Positioned Player 4: 960x540 at (960, 540)
-2025-05-14 20:00:36,490 - DEBUG - Setting Player 5 size to 320x180 at (800, 450)
-2025-05-14 20:00:36,491 - DEBUG - Setting Player 5 size to 320x180 at (800, 450)
-2025-05-14 20:00:36,600 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:36,701 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:36,701 - DEBUG - Positioned Player 5: 320x180 at (800, 450)
-2025-05-14 20:00:36,702 - DEBUG - Window lost focus
-2025-05-14 20:00:36,802 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:36,903 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:37,004 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:37,104 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:37,206 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:37,206 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 20:00:37,229 - DEBUG - Window regained focus, forced VLC redraw for all players and bindings refreshed
-2025-05-14 20:00:37,399 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:37,500 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:37,600 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:37,701 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:37,802 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:37,802 - DEBUG - Initial VLC redraw for all players after entering SMM
-2025-05-14 20:00:37,802 - DEBUG - Entered SMM on monitor 1920x1080+1920+121 with 5 players
-2025-05-14 20:00:37,803 - DEBUG - Bound number keys for player selection
-2025-05-14 20:00:37,803 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 20:00:38,005 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:38,106 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:38,206 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:38,306 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:38,406 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:38,406 - DEBUG - Delayed VLC redraw 1 for all players after entering SMM
-2025-05-14 20:00:38,507 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:38,608 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:38,709 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:38,809 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:38,911 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:38,911 - DEBUG - Delayed VLC redraw 2 for all players after entering SMM
-2025-05-14 20:00:39,012 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:39,112 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:39,212 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:39,312 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:39,414 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:39,414 - DEBUG - Delayed VLC redraw 3 for all players after entering SMM
-2025-05-14 20:00:39,446 - DEBUG - Showed controls for Player 1
-2025-05-14 20:00:39,446 - DEBUG - Mouse entered Player 1
-2025-05-14 20:00:39,471 - DEBUG - Showed controls for Player 2
-2025-05-14 20:00:39,471 - DEBUG - Mouse entered Player 2
-2025-05-14 20:00:39,502 - DEBUG - Showed controls for Player 3
-2025-05-14 20:00:39,502 - DEBUG - Mouse entered Player 3
-2025-05-14 20:00:39,526 - DEBUG - Showed controls for Player 4
-2025-05-14 20:00:39,527 - DEBUG - Mouse entered Player 4
-2025-05-14 20:00:39,571 - DEBUG - Showed controls for Player 5
-2025-05-14 20:00:39,572 - DEBUG - Mouse entered Player 5
-2025-05-14 20:00:39,572 - DEBUG - Simulated mouse-over for all players after entering SMM
-2025-05-14 20:00:41,506 - DEBUG - Hid controls for Player 3
-2025-05-14 20:00:41,598 - DEBUG - Hid controls for Player 5
-2025-05-14 20:00:41,616 - DEBUG - Hid controls for Player 4
-2025-05-14 20:00:41,630 - DEBUG - Hid controls for Player 2
-2025-05-14 20:00:41,644 - DEBUG - Hid controls for Player 1
-2025-05-14 20:00:43,548 - DEBUG - Handling Escape: is_fullscreen=False, is_maximized=True, pre_fullscreen_state={'geometry': '1200x800+100+100', 'is_maximized': False, 'is_fullscreen': False}, pre_smm_state={'geometry': '1200x800+2277+243', 'is_fullscreen': False, 'all_paused': True}
-2025-05-14 20:00:43,548 - DEBUG - Restored window styles: style=56000000, ex_style=4
-2025-05-14 20:00:43,719 - DEBUG - Restored window manipulability for HWND 85404
-2025-05-14 20:00:43,719 - DEBUG - Rebound WM_DELETE_WINDOW protocol
-2025-05-14 20:00:43,720 - DEBUG - Setting Player 1 size to 400x300 at (460, 272)
-2025-05-14 20:00:43,829 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:43,931 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:43,931 - DEBUG - Restored Player 1: 400x300 at (460, 272)
-2025-05-14 20:00:43,931 - DEBUG - Setting Player 2 size to 400x300 at (732, 467)
-2025-05-14 20:00:44,041 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:44,142 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:44,142 - DEBUG - Restored Player 2: 400x300 at (732, 467)
-2025-05-14 20:00:44,142 - DEBUG - Setting Player 3 size to 500x416 at (628, 24)
-2025-05-14 20:00:44,256 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:44,356 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:44,356 - DEBUG - Restored Player 3: 500x416 at (628, 24)
-2025-05-14 20:00:44,356 - DEBUG - Setting Player 4 size to 400x300 at (61, 420)
-2025-05-14 20:00:44,465 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:44,566 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:44,566 - DEBUG - Restored Player 4: 400x300 at (61, 420)
-2025-05-14 20:00:44,566 - DEBUG - Setting Player 5 size to 400x300 at (64, 32)
-2025-05-14 20:00:44,680 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:44,781 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:44,781 - DEBUG - Restored Player 5: 400x300 at (64, 32)
-2025-05-14 20:00:44,781 - DEBUG - Refreshed VLC for Player 1, frame_id: 151178
-2025-05-14 20:00:44,782 - DEBUG - Refreshed VLC for Player 2, frame_id: 151108
-2025-05-14 20:00:44,782 - DEBUG - Refreshed VLC for Player 3, frame_id: 150996
-2025-05-14 20:00:44,782 - DEBUG - Refreshed VLC for Player 4, frame_id: 151034
-2025-05-14 20:00:44,782 - DEBUG - Refreshed VLC for Player 5, frame_id: 151006
-2025-05-14 20:00:44,815 - DEBUG - Exited fullscreen
-2025-05-14 20:00:44,815 - DEBUG - Final window state: style=56000000, ex_style=4, overrideredirect=False
-2025-05-14 20:00:44,816 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 20:00:47,985 - DEBUG - Showed controls for Player 3
-2025-05-14 20:00:47,985 - DEBUG - Mouse entered Player 3
-2025-05-14 20:00:48,454 - DEBUG - Mouse entered Player 3
-2025-05-14 20:00:50,541 - DEBUG - Hid controls for Player 3
-2025-05-14 20:00:51,605 - DEBUG - Window lost focus
-2025-05-14 20:00:51,707 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:51,807 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:51,908 - DEBUG - VLC refreshed for Player 3, frame_id: 9, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:52,008 - DEBUG - VLC refreshed for Player 4, frame_id: 10, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:52,109 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
-2025-05-14 20:00:52,110 - DEBUG - Refreshed all keyboard bindings
-2025-05-14 20:00:52,110 - DEBUG - Window regained focus, forced VLC redraw for all players and bindings refreshed
-2025-05-14 20:00:52,110 - DEBUG - Closing application
+2025-05-15 14:49:00,653 - DEBUG - Starting Ultiplay application
+2025-05-15 14:49:00,653 - DEBUG - Launching main application
+2025-05-15 14:49:00,898 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
+2025-05-15 14:49:00,898 - DEBUG - Initializing VideoPlayerApp
+2025-05-15 14:49:00,899 - DEBUG - Canvas initialized: bg=black, size=1x1
+2025-05-15 14:49:00,899 - WARNING - DPI scaling check unavailable due to pywin32 issues; assuming 1.0
+2025-05-15 14:49:00,921 - DEBUG - Context menu set up for canvas
+2025-05-15 14:49:00,932 - DEBUG - Set window icon to C:\Users\march\OneDrive\Desktop\Ultiplay\appicon.ico
+2025-05-15 14:49:00,933 - DEBUG - Bound app-level focus events to handle VLC redraws
+2025-05-15 14:49:00,933 - DEBUG - Bound Ctrl+Q to quit
+2025-05-15 14:49:00,933 - DEBUG - Bound WM_DELETE_WINDOW protocol
+2025-05-15 14:49:00,954 - DEBUG - STREAM b'IHDR' 16 13
+2025-05-15 14:49:00,955 - DEBUG - STREAM b'IDAT' 41 54495
+2025-05-15 14:49:01,041 - DEBUG - Resized background to 1200x800
+2025-05-15 14:49:01,064 - DEBUG - App regained focus, triggering redraw for all players
+2025-05-15 14:49:01,116 - DEBUG - Canvas size after rendering: 1200x800
+2025-05-15 14:49:01,116 - DEBUG - Initial background set and canvas updated
+2025-05-15 14:49:01,117 - DEBUG - Refreshed all keyboard bindings
+2025-05-15 14:49:04,397 - DEBUG - Context menu shown at screen x=713, y=508, canvas x=605, y=377
+2025-05-15 14:49:04,400 - DEBUG - Window lost focus
+2025-05-15 14:49:04,723 - DEBUG - STREAM b'IHDR' 16 13
+2025-05-15 14:49:04,724 - DEBUG - STREAM b'IDAT' 41 54495
+2025-05-15 14:49:06,592 - DEBUG - Forced focus back to app
+2025-05-15 14:49:06,592 - DEBUG - App regained focus, triggering redraw for all players
+2025-05-15 14:49:06,593 - DEBUG - STREAM b'IHDR' 16 13
+2025-05-15 14:49:06,593 - DEBUG - STREAM b'IDAT' 41 54495
+2025-05-15 14:49:11,576 - DEBUG - STREAM b'IHDR' 16 13
+2025-05-15 14:49:11,576 - DEBUG - STREAM b'IDAT' 41 54495
+2025-05-15 14:49:13,616 - DEBUG - Initializing player widget at x=509, y=283, player count=0
+2025-05-15 14:49:13,616 - DEBUG - Initialized Player 1 with layer 0
+2025-05-15 14:49:13,741 - DEBUG - VLC initialized successfully for frame_id: 2322902270064
+2025-05-15 14:49:13,741 - DEBUG - Attached player to canvas with frame_id: 6
+2025-05-15 14:49:13,794 - DEBUG - Video frame HWND for Player 1: 375656
+2025-05-15 14:49:13,838 - DEBUG - Initialized Player 1 volume to 100
+2025-05-15 14:49:13,839 - DEBUG - Player 1 mode button updated to playlist
+2025-05-15 14:49:13,839 - DEBUG - Player 1 mode button updated to playlist
+2025-05-15 14:49:13,840 - DEBUG - Loading video: C:/Users/march/Downloads/ap13588-1080p.mp4
+2025-05-15 14:49:13,841 - DEBUG - Initializing player widget at x=44, y=17, player count=1
+2025-05-15 14:49:13,841 - DEBUG - Initialized Player 2 with layer 1
+2025-05-15 14:49:13,844 - DEBUG - VLC initialized successfully for frame_id: 2322902278608
+2025-05-15 14:49:13,844 - DEBUG - Attached player to canvas with frame_id: 8
+2025-05-15 14:49:13,896 - DEBUG - Video frame HWND for Player 2: 179288
+2025-05-15 14:49:13,898 - DEBUG - Initialized Player 2 volume to 100
+2025-05-15 14:49:13,898 - DEBUG - Player 2 mode button updated to playlist
+2025-05-15 14:49:13,898 - DEBUG - Player 2 mode button updated to random_repo
+2025-05-15 14:49:13,899 - DEBUG - Loading video: C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4
+2025-05-15 14:49:13,900 - DEBUG - Initializing player widget at x=594, y=12, player count=2
+2025-05-15 14:49:13,900 - DEBUG - Initialized Player 3 with layer 2
+2025-05-15 14:49:13,903 - DEBUG - VLC initialized successfully for frame_id: 2322902285088
+2025-05-15 14:49:13,905 - DEBUG - Attached player to canvas with frame_id: 10
+2025-05-15 14:49:13,914 - DEBUG - Video frame HWND for Player 3: 310152
+2025-05-15 14:49:13,915 - DEBUG - Initialized Player 3 volume to 100
+2025-05-15 14:49:13,916 - DEBUG - Player 3 mode button updated to random_repo
+2025-05-15 14:49:13,916 - DEBUG - Player 3 mode button updated to random_repo
+2025-05-15 14:49:13,917 - DEBUG - Loading video: C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4
+2025-05-15 14:49:13,918 - DEBUG - Initializing player widget at x=800, y=500, player count=3
+2025-05-15 14:49:13,918 - DEBUG - Initialized Player 4 with layer 3
+2025-05-15 14:49:13,921 - DEBUG - VLC initialized successfully for frame_id: 2322964960528
+2025-05-15 14:49:13,921 - DEBUG - Attached player to canvas with frame_id: 11
+2025-05-15 14:49:13,929 - DEBUG - Video frame HWND for Player 4: 310072
+2025-05-15 14:49:13,931 - DEBUG - Initialized Player 4 volume to 100
+2025-05-15 14:49:13,931 - DEBUG - Player 4 mode button updated to random_repo
+2025-05-15 14:49:13,932 - DEBUG - Player 4 mode button updated to random_repo
+2025-05-15 14:49:13,932 - DEBUG - Loading video: C:/Users/march/Downloads/dainty wilder - bad bunny.mp4
+2025-05-15 14:49:13,934 - DEBUG - Initializing player widget at x=112, y=500, player count=4
+2025-05-15 14:49:13,934 - DEBUG - Initialized Player 5 with layer 4
+2025-05-15 14:49:13,937 - DEBUG - VLC initialized successfully for frame_id: 2322964967008
+2025-05-15 14:49:13,938 - DEBUG - Attached player to canvas with frame_id: 12
+2025-05-15 14:49:13,946 - DEBUG - Video frame HWND for Player 5: 310142
+2025-05-15 14:49:13,947 - DEBUG - Initialized Player 5 volume to 100
+2025-05-15 14:49:13,948 - DEBUG - Player 5 mode button updated to random_repo
+2025-05-15 14:49:13,948 - DEBUG - Player 5 mode button updated to random_repo
+2025-05-15 14:49:13,948 - DEBUG - Loading video: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4
+2025-05-15 14:49:13,959 - DEBUG - Bound number keys for player selection
+2025-05-15 14:49:13,959 - DEBUG - Loaded layout with 5 players from C:/Users/march/Downloads/layoutest.ultilayout, smm_mode=False
+2025-05-15 14:49:14,007 - DEBUG - Drop target registered for Player 1
+2025-05-15 14:49:14,008 - WARNING - Volume mismatch for Player 1: expected 100, got -1. Correcting.
+2025-05-15 14:49:14,008 - ERROR - Failed to verify volume for Player 1: expected 100, got -1
+2025-05-15 14:49:14,009 - DEBUG - Drop target registered for Player 2
+2025-05-15 14:49:14,009 - WARNING - Volume mismatch for Player 2: expected 100, got -1. Correcting.
+2025-05-15 14:49:14,010 - ERROR - Failed to verify volume for Player 2: expected 100, got -1
+2025-05-15 14:49:14,128 - DEBUG - Showed controls for Player 1
+2025-05-15 14:49:14,128 - DEBUG - Mouse entered Player 1
+2025-05-15 14:49:14,130 - DEBUG - Drop target registered for Player 3
+2025-05-15 14:49:14,130 - WARNING - Volume mismatch for Player 3: expected 100, got -1. Correcting.
+2025-05-15 14:49:14,131 - ERROR - Failed to verify volume for Player 3: expected 100, got -1
+2025-05-15 14:49:14,132 - DEBUG - Drop target registered for Player 4
+2025-05-15 14:49:14,132 - WARNING - Volume mismatch for Player 4: expected 100, got -1. Correcting.
+2025-05-15 14:49:14,132 - ERROR - Failed to verify volume for Player 4: expected 100, got -1
+2025-05-15 14:49:14,133 - DEBUG - No media loaded for Player 1, skipping VLC refresh
+2025-05-15 14:49:14,134 - DEBUG - Drop target registered for Player 5
+2025-05-15 14:49:14,135 - WARNING - Volume mismatch for Player 5: expected 100, got -1. Correcting.
+2025-05-15 14:49:14,135 - ERROR - Failed to verify volume for Player 5: expected 100, got -1
+2025-05-15 14:49:14,135 - DEBUG - No media loaded for Player 2, skipping VLC refresh
+2025-05-15 14:49:14,136 - DEBUG - No media loaded for Player 3, skipping VLC refresh
+2025-05-15 14:49:14,139 - DEBUG - No media loaded for Player 4, skipping VLC refresh
+2025-05-15 14:49:14,148 - DEBUG - Attempting to set volume to 100 for Player 1
+2025-05-15 14:49:14,149 - DEBUG - No media loaded for Player 5, skipping VLC refresh
+2025-05-15 14:49:14,248 - WARNING - Volume mismatch for Player 1: expected 100, got -1. Correcting.
+2025-05-15 14:49:14,248 - ERROR - Failed to verify volume for Player 1: expected 100, got -1
+2025-05-15 14:49:14,455 - DEBUG - Loaded and playing: C:/Users/march/Downloads/ap13588-1080p.mp4 with duration 3137069 ms
+2025-05-15 14:49:14,457 - DEBUG - Player 1 transition completed, is_transitioning set to False
+2025-05-15 14:49:14,781 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:14,782 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 with duration 4436374 ms
+2025-05-15 14:49:14,782 - DEBUG - Loaded and playing: C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 with duration 1395352 ms
+2025-05-15 14:49:14,786 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4 with duration 4032430 ms
+2025-05-15 14:49:14,786 - DEBUG - Loaded and playing: C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 with duration 1768149 ms
+2025-05-15 14:49:14,788 - DEBUG - Player 4 transition completed, is_transitioning set to False
+2025-05-15 14:49:14,789 - DEBUG - Player 3 transition completed, is_transitioning set to False
+2025-05-15 14:49:14,792 - DEBUG - Player 2 transition completed, is_transitioning set to False
+2025-05-15 14:49:14,792 - DEBUG - Player 5 transition completed, is_transitioning set to False
+2025-05-15 14:49:15,093 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:15,195 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:15,296 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:15,397 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:16,244 - DEBUG - Hid controls for Player 1
+2025-05-15 14:49:16,460 - DEBUG - Video C:/Users/march/Downloads/ap13588-1080p.mp4 started successfully
+2025-05-15 14:49:16,786 - DEBUG - Video C:/Users/march/Downloads/Daisy Stone & Lenna Lux (In And Out Service With Daisy And Lenna ) 1080.mp4 started successfully
+2025-05-15 14:49:16,786 - DEBUG - Video C:/Users/march/Downloads/dainty wilder - bad bunny.mp4 started successfully
+2025-05-15 14:49:16,786 - DEBUG - Video C:/Users/march/Downloads/Luana Honey LTP176 09.02.2023 720p.mp4 started successfully
+2025-05-15 14:49:16,787 - DEBUG - Video C:/Users/march/Downloads/Sweetie Fox - Depraved Stranger Fucks in Anal with Neighbor.mp4 started successfully
+2025-05-15 14:49:18,559 - DEBUG - Toggling SMM: is_maximized=False
+2025-05-15 14:49:18,559 - DEBUG - Player 1 play state before SMM: True
+2025-05-15 14:49:18,559 - DEBUG - Player 2 play state before SMM: True
+2025-05-15 14:49:18,560 - DEBUG - Player 3 play state before SMM: True
+2025-05-15 14:49:18,560 - DEBUG - Player 4 play state before SMM: True
+2025-05-15 14:49:18,560 - DEBUG - Player 5 play state before SMM: True
+2025-05-15 14:49:18,560 - DEBUG - Stored pre-SMM state: geometry=1200x800+100+100, positions=[(509.0, 283.0, 400, 300), (44.0, 17.0, 508, 400), (594.0, 12.0, 492, 374), (800.0, 500.0, 400, 300), (112.0, 500.0, 400, 300)]
+2025-05-15 14:49:18,561 - DEBUG - Window center at (700, 500), size 1200x800
+2025-05-15 14:49:18,562 - DEBUG - Monitor 0: 1920x1200+0+0
+2025-05-15 14:49:18,562 - DEBUG - Monitor 1: 1920x1080+1920+121
+2025-05-15 14:49:18,563 - DEBUG - Selected monitor 1920x1200+0+0
+2025-05-15 14:49:18,563 - DEBUG - SMM on monitor: 1920x1200+0+0
+2025-05-15 14:49:18,563 - WARNING - pywin32 GetClientRect unavailable or failed: Non-client area calculation returned unrealistic values
+2025-05-15 14:49:18,563 - DEBUG - Using hardcoded offsets: border_width=8, title_height=31, new pos=-8,-31, adjusted_height=1218
+2025-05-15 14:49:18,766 - DEBUG - Set window to 1920x1218+-8+-31, actual: 1920x1182+0+0
+2025-05-15 14:49:18,766 - WARNING - Position/size mismatch: requested 1920x1218+-8+-31, got 1920x1182+0+0
+2025-05-15 14:49:18,936 - DEBUG - After retry, actual: 1920x1182+8+31
+2025-05-15 14:49:19,056 - DEBUG - Stored window styles: style=56000000, ex_style=4, overrideredirect=False
+2025-05-15 14:49:19,728 - DEBUG - Window center at (960, 609), size 1920x1218
+2025-05-15 14:49:19,729 - DEBUG - Monitor 0: 1920x1200+0+0
+2025-05-15 14:49:19,730 - DEBUG - Monitor 1: 1920x1080+1920+121
+2025-05-15 14:49:19,730 - DEBUG - Selected monitor 1920x1200+0+0
+2025-05-15 14:49:19,730 - DEBUG - Setting fullscreen to monitor: 1920x1200+0+0
+2025-05-15 14:49:19,799 - DEBUG - Fullscreen properties set: position 1920x1200+0+0, style=-6f000000, ex_style=0
+2025-05-15 14:49:19,799 - DEBUG - Client area: 1920x1200
+2025-05-15 14:49:19,799 - DEBUG - Window screen position: x=0, y=0
+2025-05-15 14:49:19,981 - DEBUG - Canvas size: 1920x1200
+2025-05-15 14:49:19,982 - DEBUG - Canvas position relative to window: x=0, y=0
+2025-05-15 14:49:19,982 - DEBUG - Arranging 5 players in SMM with screen size 1920x1200
+2025-05-15 14:49:19,982 - DEBUG - 5-player SMM layout: Players 1-4: 960x600 (scaled to 960x600), Player 5: 320x200 at (800, 500) (scaled to 320x200 at (800, 500))
+2025-05-15 14:49:19,983 - DEBUG - Setting Player 1 size to 960x600 at (0, 0)
+2025-05-15 14:49:19,983 - DEBUG - Setting Player 1 size to 960x600 at (0, 0)
+2025-05-15 14:49:20,101 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:20,201 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:20,201 - DEBUG - Positioned Player 1: 960x600 at (0, 0)
+2025-05-15 14:49:20,201 - DEBUG - Setting Player 2 size to 960x600 at (960, 0)
+2025-05-15 14:49:20,201 - DEBUG - Setting Player 2 size to 960x600 at (960, 0)
+2025-05-15 14:49:20,328 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:20,428 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:20,428 - DEBUG - Positioned Player 2: 960x600 at (960, 0)
+2025-05-15 14:49:20,428 - DEBUG - Setting Player 3 size to 960x600 at (0, 600)
+2025-05-15 14:49:20,429 - DEBUG - Setting Player 3 size to 960x600 at (0, 600)
+2025-05-15 14:49:20,548 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:20,649 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:20,649 - DEBUG - Positioned Player 3: 960x600 at (0, 600)
+2025-05-15 14:49:20,649 - DEBUG - Setting Player 4 size to 960x600 at (960, 600)
+2025-05-15 14:49:20,650 - DEBUG - Setting Player 4 size to 960x600 at (960, 600)
+2025-05-15 14:49:20,768 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:20,869 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:20,869 - DEBUG - Positioned Player 4: 960x600 at (960, 600)
+2025-05-15 14:49:20,869 - DEBUG - Setting Player 5 size to 320x200 at (800, 500)
+2025-05-15 14:49:20,870 - DEBUG - Setting Player 5 size to 320x200 at (800, 500)
+2025-05-15 14:49:20,985 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:21,085 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:21,085 - DEBUG - Positioned Player 5: 320x200 at (800, 500)
+2025-05-15 14:49:21,086 - DEBUG - Window lost focus
+2025-05-15 14:49:21,086 - DEBUG - App regained focus, triggering redraw for all players
+2025-05-15 14:49:21,187 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:21,187 - DEBUG - Player 1 regained focus, forced VLC redraw
+2025-05-15 14:49:21,290 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:21,290 - DEBUG - Player 2 regained focus, forced VLC redraw
+2025-05-15 14:49:21,390 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:21,390 - DEBUG - Player 3 regained focus, forced VLC redraw
+2025-05-15 14:49:21,494 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:21,494 - DEBUG - Player 4 regained focus, forced VLC redraw
+2025-05-15 14:49:21,595 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:21,595 - DEBUG - Player 5 regained focus, forced VLC redraw
+2025-05-15 14:49:21,595 - DEBUG - Window lost focus
+2025-05-15 14:49:21,596 - DEBUG - App regained focus, triggering redraw for all players
+2025-05-15 14:49:21,696 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:21,696 - DEBUG - Player 1 regained focus, forced VLC redraw
+2025-05-15 14:49:21,797 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:21,797 - DEBUG - Player 2 regained focus, forced VLC redraw
+2025-05-15 14:49:21,897 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:21,897 - DEBUG - Player 3 regained focus, forced VLC redraw
+2025-05-15 14:49:21,999 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:21,999 - DEBUG - Player 4 regained focus, forced VLC redraw
+2025-05-15 14:49:22,100 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:22,100 - DEBUG - Player 5 regained focus, forced VLC redraw
+2025-05-15 14:49:22,299 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:22,400 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:22,502 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:22,602 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:22,702 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:22,702 - DEBUG - Initial VLC redraw for all players after entering SMM
+2025-05-15 14:49:22,702 - DEBUG - Entered SMM on monitor 1920x1200+0+0 with 5 players
+2025-05-15 14:49:22,702 - DEBUG - Bound number keys for player selection
+2025-05-15 14:49:22,703 - DEBUG - Refreshed all keyboard bindings
+2025-05-15 14:49:22,907 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:23,008 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:23,110 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:23,210 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:23,311 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:23,311 - DEBUG - Delayed VLC redraw 1 for all players after entering SMM
+2025-05-15 14:49:23,417 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:23,519 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:23,621 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:23,723 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:23,824 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:23,824 - DEBUG - Delayed VLC redraw 2 for all players after entering SMM
+2025-05-15 14:49:23,927 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:24,028 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:24,129 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:24,232 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:24,333 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=True, final state: State.Playing
+2025-05-15 14:49:24,333 - DEBUG - Delayed VLC redraw 3 for all players after entering SMM
+2025-05-15 14:49:24,391 - DEBUG - Showed controls for Player 1
+2025-05-15 14:49:24,392 - DEBUG - Mouse entered Player 1
+2025-05-15 14:49:24,478 - DEBUG - Showed controls for Player 2
+2025-05-15 14:49:24,478 - DEBUG - Mouse entered Player 2
+2025-05-15 14:49:24,548 - DEBUG - Showed controls for Player 3
+2025-05-15 14:49:24,549 - DEBUG - Mouse entered Player 3
+2025-05-15 14:49:24,653 - DEBUG - Showed controls for Player 4
+2025-05-15 14:49:24,653 - DEBUG - Mouse entered Player 4
+2025-05-15 14:49:24,735 - DEBUG - Showed controls for Player 5
+2025-05-15 14:49:24,736 - DEBUG - Mouse entered Player 5
+2025-05-15 14:49:24,736 - DEBUG - Simulated mouse-over for all players after entering SMM
+2025-05-15 14:49:24,765 - DEBUG - Attempting to set volume to 100 for Player 5
+2025-05-15 14:49:24,783 - DEBUG - Attempting to set volume to 100 for Player 4
+2025-05-15 14:49:24,797 - DEBUG - Attempting to set volume to 100 for Player 3
+2025-05-15 14:49:24,815 - DEBUG - Attempting to set volume to 100 for Player 2
+2025-05-15 14:49:24,868 - DEBUG - Volume verified for Player 5: 100
+2025-05-15 14:49:24,883 - DEBUG - Volume verified for Player 4: 100
+2025-05-15 14:49:24,901 - DEBUG - Volume verified for Player 3: 100
+2025-05-15 14:49:24,920 - DEBUG - Volume verified for Player 2: 100
+2025-05-15 14:49:26,398 - DEBUG - Hid controls for Player 1
+2025-05-15 14:49:26,772 - DEBUG - Hid controls for Player 5
+2025-05-15 14:49:26,804 - DEBUG - Hid controls for Player 4
+2025-05-15 14:49:26,833 - DEBUG - Hid controls for Player 3
+2025-05-15 14:49:26,837 - DEBUG - Hid controls for Player 2
+2025-05-15 14:49:29,159 - DEBUG - Toggling play/pause, is_maximized=True
+2025-05-15 14:49:29,159 - DEBUG - Paused Player 1
+2025-05-15 14:49:29,160 - DEBUG - Paused Player 2
+2025-05-15 14:49:29,160 - DEBUG - Paused Player 3
+2025-05-15 14:49:29,160 - DEBUG - Paused Player 4
+2025-05-15 14:49:29,161 - DEBUG - Paused Player 5
+2025-05-15 14:49:30,067 - DEBUG - Showed controls for Player 3
+2025-05-15 14:49:30,067 - DEBUG - Mouse entered Player 3
+2025-05-15 14:49:32,222 - DEBUG - Window lost focus
+2025-05-15 14:49:32,318 - DEBUG - Hid controls for Player 3
+2025-05-15 14:49:37,130 - DEBUG - Forced focus back to app
+2025-05-15 14:49:37,131 - DEBUG - App regained focus, triggering redraw for all players
+2025-05-15 14:49:37,232 - DEBUG - VLC redraw attempt 1 for Player 1, current state: State.Playing
+2025-05-15 14:49:37,332 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
+2025-05-15 14:49:37,332 - DEBUG - Player 1 regained focus, forced VLC redraw
+2025-05-15 14:49:37,432 - DEBUG - VLC redraw attempt 1 for Player 2, current state: State.Playing
+2025-05-15 14:49:37,532 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
+2025-05-15 14:49:37,533 - DEBUG - Player 2 regained focus, forced VLC redraw
+2025-05-15 14:49:37,634 - DEBUG - VLC redraw attempt 1 for Player 3, current state: State.Playing
+2025-05-15 14:49:37,734 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=False, final state: State.Paused
+2025-05-15 14:49:37,734 - DEBUG - Player 3 regained focus, forced VLC redraw
+2025-05-15 14:49:37,835 - DEBUG - VLC redraw attempt 1 for Player 4, current state: State.Playing
+2025-05-15 14:49:37,935 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=False, final state: State.Paused
+2025-05-15 14:49:37,935 - DEBUG - Player 4 regained focus, forced VLC redraw
+2025-05-15 14:49:38,036 - DEBUG - VLC redraw attempt 1 for Player 5, current state: State.Playing
+2025-05-15 14:49:38,136 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
+2025-05-15 14:49:38,136 - DEBUG - Player 5 regained focus, forced VLC redraw
+2025-05-15 14:49:50,352 - DEBUG - Showed controls for Player 4
+2025-05-15 14:49:50,356 - DEBUG - Mouse entered Player 4
+2025-05-15 14:49:51,338 - DEBUG - Mouse entered Player 4
+2025-05-15 14:49:53,612 - DEBUG - Hid controls for Player 4
+2025-05-15 14:49:59,860 - DEBUG - Window lost focus
+2025-05-15 14:50:02,192 - DEBUG - Forced focus back to app
+2025-05-15 14:50:02,193 - DEBUG - App regained focus, triggering redraw for all players
+2025-05-15 14:50:02,294 - DEBUG - VLC redraw attempt 1 for Player 1, current state: State.Playing
+2025-05-15 14:50:02,394 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
+2025-05-15 14:50:02,394 - DEBUG - Player 1 regained focus, forced VLC redraw
+2025-05-15 14:50:02,495 - DEBUG - VLC redraw attempt 1 for Player 2, current state: State.Playing
+2025-05-15 14:50:02,595 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
+2025-05-15 14:50:02,596 - DEBUG - Player 2 regained focus, forced VLC redraw
+2025-05-15 14:50:02,696 - DEBUG - VLC redraw attempt 1 for Player 3, current state: State.Playing
+2025-05-15 14:50:02,797 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=False, final state: State.Paused
+2025-05-15 14:50:02,797 - DEBUG - Player 3 regained focus, forced VLC redraw
+2025-05-15 14:50:02,897 - DEBUG - VLC redraw attempt 1 for Player 4, current state: State.Playing
+2025-05-15 14:50:02,999 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=False, final state: State.Paused
+2025-05-15 14:50:03,000 - DEBUG - Player 4 regained focus, forced VLC redraw
+2025-05-15 14:50:03,101 - DEBUG - VLC redraw attempt 1 for Player 5, current state: State.Playing
+2025-05-15 14:50:03,201 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
+2025-05-15 14:50:03,201 - DEBUG - Player 5 regained focus, forced VLC redraw
+2025-05-15 14:51:00,787 - DEBUG - Showed controls for Player 4
+2025-05-15 14:51:00,788 - DEBUG - Mouse entered Player 4
+2025-05-15 14:51:01,893 - DEBUG - Showed controls for Player 1
+2025-05-15 14:51:01,893 - DEBUG - Mouse entered Player 1
+2025-05-15 14:51:02,994 - DEBUG - Hid controls for Player 4
+2025-05-15 14:51:04,084 - DEBUG - Hid controls for Player 1
+2025-05-15 14:51:12,970 - DEBUG - Showed controls for Player 1
+2025-05-15 14:51:12,970 - DEBUG - Mouse entered Player 1
+2025-05-15 14:51:14,010 - DEBUG - Showed controls for Player 3
+2025-05-15 14:51:14,010 - DEBUG - Mouse entered Player 3
+2025-05-15 14:51:15,002 - DEBUG - Showed controls for Player 4
+2025-05-15 14:51:15,003 - DEBUG - Mouse entered Player 4
+2025-05-15 14:51:15,174 - DEBUG - Hid controls for Player 1
+2025-05-15 14:51:15,769 - DEBUG - Showed controls for Player 2
+2025-05-15 14:51:15,770 - DEBUG - Mouse entered Player 2
+2025-05-15 14:51:16,234 - DEBUG - Hid controls for Player 3
+2025-05-15 14:51:17,196 - DEBUG - Hid controls for Player 4
+2025-05-15 14:51:17,821 - DEBUG - Showed controls for Player 3
+2025-05-15 14:51:17,821 - DEBUG - Mouse entered Player 3
+2025-05-15 14:51:17,975 - DEBUG - Hid controls for Player 2
+2025-05-15 14:51:19,925 - DEBUG - Showed controls for Player 1
+2025-05-15 14:51:19,926 - DEBUG - Mouse entered Player 1
+2025-05-15 14:51:20,032 - DEBUG - Hid controls for Player 3
+2025-05-15 14:51:20,824 - DEBUG - Showed controls for Player 2
+2025-05-15 14:51:20,824 - DEBUG - Mouse entered Player 2
+2025-05-15 14:51:21,101 - DEBUG - Mouse entered Player 1
+2025-05-15 14:51:21,102 - DEBUG - Mouse entered Player 2
+2025-05-15 14:51:21,523 - DEBUG - Mouse entered Player 2
+2025-05-15 14:51:22,853 - DEBUG - Showed controls for Player 3
+2025-05-15 14:51:22,853 - DEBUG - Mouse entered Player 3
+2025-05-15 14:51:23,107 - DEBUG - Hid controls for Player 1
+2025-05-15 14:51:23,664 - DEBUG - Mouse entered Player 3
+2025-05-15 14:51:23,783 - DEBUG - Hid controls for Player 2
+2025-05-15 14:51:24,358 - DEBUG - Showed controls for Player 4
+2025-05-15 14:51:24,358 - DEBUG - Mouse entered Player 4
+2025-05-15 14:51:25,058 - DEBUG - Showed controls for Player 2
+2025-05-15 14:51:25,059 - DEBUG - Mouse entered Player 2
+2025-05-15 14:51:25,936 - DEBUG - Hid controls for Player 3
+2025-05-15 14:51:26,542 - DEBUG - Hid controls for Player 4
+2025-05-15 14:51:27,269 - DEBUG - Showed controls for Player 4
+2025-05-15 14:51:27,270 - DEBUG - Mouse entered Player 4
+2025-05-15 14:51:27,285 - DEBUG - Hid controls for Player 2
+2025-05-15 14:51:28,055 - DEBUG - Showed controls for Player 3
+2025-05-15 14:51:28,055 - DEBUG - Mouse entered Player 3
+2025-05-15 14:51:28,854 - DEBUG - Mouse entered Player 3
+2025-05-15 14:51:29,388 - DEBUG - Showed controls for Player 1
+2025-05-15 14:51:29,391 - DEBUG - Mouse entered Player 1
+2025-05-15 14:51:29,476 - DEBUG - Hid controls for Player 4
+2025-05-15 14:51:31,108 - DEBUG - Hid controls for Player 3
+2025-05-15 14:51:31,585 - DEBUG - Hid controls for Player 1
+2025-05-15 14:51:31,831 - DEBUG - Handling Escape: is_fullscreen=False, is_maximized=True, pre_fullscreen_state=None, pre_smm_state={'geometry': '1200x800+100+100', 'is_fullscreen': False, 'all_paused': False}
+2025-05-15 14:51:31,831 - DEBUG - Restored window styles: style=56000000, ex_style=4
+2025-05-15 14:51:32,132 - DEBUG - Restored window manipulability for HWND 310186
+2025-05-15 14:51:32,132 - DEBUG - Rebound WM_DELETE_WINDOW protocol
+2025-05-15 14:51:32,132 - DEBUG - Setting Player 1 size to 400x300 at (509, 283)
+2025-05-15 14:51:32,257 - DEBUG - VLC redraw attempt 1 for Player 1, current state: State.Playing
+2025-05-15 14:51:32,357 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:32,457 - DEBUG - VLC redraw attempt 1 for Player 1, current state: State.Playing
+2025-05-15 14:51:32,558 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:32,558 - DEBUG - Restored Player 1: 400x300 at (509, 283)
+2025-05-15 14:51:32,558 - DEBUG - Setting Player 2 size to 508x400 at (44, 17)
+2025-05-15 14:51:32,684 - DEBUG - VLC redraw attempt 1 for Player 2, current state: State.Playing
+2025-05-15 14:51:32,785 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:32,885 - DEBUG - VLC redraw attempt 1 for Player 2, current state: State.Playing
+2025-05-15 14:51:32,987 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:32,987 - DEBUG - Restored Player 2: 508x400 at (44, 17)
+2025-05-15 14:51:32,989 - DEBUG - Setting Player 3 size to 492x374 at (594, 12)
+2025-05-15 14:51:33,108 - DEBUG - VLC redraw attempt 1 for Player 3, current state: State.Playing
+2025-05-15 14:51:33,209 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:33,309 - DEBUG - VLC redraw attempt 1 for Player 3, current state: State.Playing
+2025-05-15 14:51:33,414 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:33,414 - DEBUG - Restored Player 3: 492x374 at (594, 12)
+2025-05-15 14:51:33,414 - DEBUG - Setting Player 4 size to 400x300 at (800, 500)
+2025-05-15 14:51:33,529 - DEBUG - VLC redraw attempt 1 for Player 4, current state: State.Playing
+2025-05-15 14:51:33,630 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:33,730 - DEBUG - VLC redraw attempt 1 for Player 4, current state: State.Playing
+2025-05-15 14:51:33,830 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:33,830 - DEBUG - Restored Player 4: 400x300 at (800, 500)
+2025-05-15 14:51:33,830 - DEBUG - Setting Player 5 size to 400x300 at (112, 500)
+2025-05-15 14:51:33,947 - DEBUG - VLC redraw attempt 1 for Player 5, current state: State.Playing
+2025-05-15 14:51:34,048 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:34,149 - DEBUG - VLC redraw attempt 1 for Player 5, current state: State.Playing
+2025-05-15 14:51:34,249 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:34,249 - DEBUG - Restored Player 5: 400x300 at (112, 500)
+2025-05-15 14:51:34,249 - DEBUG - Refreshed VLC for Player 1, frame_id: 179368
+2025-05-15 14:51:34,250 - DEBUG - Refreshed VLC for Player 2, frame_id: 179286
+2025-05-15 14:51:34,250 - DEBUG - Refreshed VLC for Player 3, frame_id: 375622
+2025-05-15 14:51:34,250 - DEBUG - Refreshed VLC for Player 4, frame_id: 310110
+2025-05-15 14:51:34,250 - DEBUG - Refreshed VLC for Player 5, frame_id: 310070
+2025-05-15 14:51:34,356 - DEBUG - Exited fullscreen
+2025-05-15 14:51:34,356 - DEBUG - Final window state: style=56000000, ex_style=4, overrideredirect=False
+2025-05-15 14:51:34,357 - DEBUG - Refreshed all keyboard bindings
+2025-05-15 14:51:34,773 - DEBUG - Showed controls for Player 1
+2025-05-15 14:51:34,776 - DEBUG - Mouse entered Player 1
+2025-05-15 14:51:34,779 - DEBUG - Mouse entered Player 1
+2025-05-15 14:51:37,831 - DEBUG - Hid controls for Player 1
+2025-05-15 14:51:46,152 - DEBUG - Window lost focus
+2025-05-15 14:51:46,152 - DEBUG - App regained focus, triggering redraw for all players
+2025-05-15 14:51:46,254 - DEBUG - VLC redraw attempt 1 for Player 1, current state: State.Playing
+2025-05-15 14:51:46,361 - DEBUG - VLC refreshed for Player 1, frame_id: 6, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:46,361 - DEBUG - Player 1 regained focus, forced VLC redraw
+2025-05-15 14:51:46,461 - DEBUG - VLC redraw attempt 1 for Player 2, current state: State.Playing
+2025-05-15 14:51:46,561 - DEBUG - VLC refreshed for Player 2, frame_id: 8, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:46,561 - DEBUG - Player 2 regained focus, forced VLC redraw
+2025-05-15 14:51:46,662 - DEBUG - VLC redraw attempt 1 for Player 3, current state: State.Playing
+2025-05-15 14:51:46,763 - DEBUG - VLC refreshed for Player 3, frame_id: 10, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:46,763 - DEBUG - Player 3 regained focus, forced VLC redraw
+2025-05-15 14:51:46,863 - DEBUG - VLC redraw attempt 1 for Player 4, current state: State.Playing
+2025-05-15 14:51:46,964 - DEBUG - VLC refreshed for Player 4, frame_id: 11, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:46,964 - DEBUG - Player 4 regained focus, forced VLC redraw
+2025-05-15 14:51:47,065 - DEBUG - VLC redraw attempt 1 for Player 5, current state: State.Playing
+2025-05-15 14:51:47,165 - DEBUG - VLC refreshed for Player 5, frame_id: 12, intended_playing=False, final state: State.Paused
+2025-05-15 14:51:47,165 - DEBUG - Player 5 regained focus, forced VLC redraw
+2025-05-15 14:51:50,356 - DEBUG - Showed controls for Player 4
+2025-05-15 14:51:50,356 - DEBUG - Mouse entered Player 4
+2025-05-15 14:51:52,475 - DEBUG - Hid controls for Player 4
+2025-05-15 14:51:53,610 - DEBUG - Closing application

@@ -721,7 +721,7 @@ class PlayerWidget:
             self.parent.after(50, self.refresh_vlc)
         self.frame.update_idletasks()
 
-    def refresh_vlc(self):
+    def refresh_vlc(self, skip_play_pause=False):
         """Refresh VLC player to ensure proper rendering, respecting intended play state."""
         try:
             # Skip refresh if no media is loaded
@@ -729,24 +729,30 @@ class PlayerWidget:
                 logging.debug("No media loaded for Player %d, skipping VLC refresh", self.index + 1)
                 return
 
-            intended_playing = self.is_playing  # Use intended state
+            # Sync self.is_playing with VLC state before proceeding
+            self.is_playing = (self.player.get_state() == vlc.State.Playing)
+            intended_playing = self.is_playing  # Use the synced state
             self.player.set_hwnd(0)
             self.player.set_hwnd(self.video_frame.winfo_id())
-            # Force VLC to match the intended state
-            for attempt in range(3):
-                if intended_playing:
-                    self.player.play()
+            
+            if not skip_play_pause:
+                # Only adjust play/pause state if not triggered by focus events
+                for attempt in range(3):
+                    if intended_playing:
+                        self.player.play()
+                    else:
+                        self.player.pause()
+                    time.sleep(0.1)
+                    state = self.player.get_state()
+                    if state == (vlc.State.Playing if intended_playing else vlc.State.Paused):
+                        break
+                    logging.debug("VLC redraw attempt %d for Player %d, current state: %s", 
+                                 attempt + 1, self.index + 1, state)
                 else:
-                    self.player.pause()
-                time.sleep(0.1)
-                state = self.player.get_state()
-                if state == (vlc.State.Playing if intended_playing else vlc.State.Paused):
-                    break
-                logging.debug("VLC redraw attempt %d for Player %d, current state: %s", 
-                             attempt + 1, self.index + 1, state)
+                    logging.warning("Failed to set VLC state for Player %d after retries, final state: %s", 
+                                   self.index + 1, self.player.get_state())
             else:
-                logging.warning("Failed to set VLC state for Player %d after retries, final state: %s", 
-                               self.index + 1, self.player.get_state())
+                logging.debug("Skipping play/pause adjustment for Player %d during focus-related redraw", self.index + 1)
 
             self.volume_bar.set(self.player.audio_get_volume())
             self.video_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
@@ -2123,13 +2129,10 @@ class VideoPlayerApp:
         self.root.after(5000, self.check_focus)
 
     def on_focus_in(self, event=None):
-        """Handle window focus in to force VLC redraw for all players."""
+        """Handle focus in event by delegating to each player's on_focus_in method."""
+        logging.debug("App regained focus, triggering redraw for all players")
         for player in self.players:
-            player.refresh_vlc()
-        self.canvas.update_idletasks()
-        self.refresh_bindings()
-        self.root.focus_force()
-        logging.debug("Window regained focus, forced VLC redraw for all players and bindings refreshed")
+            player.on_focus_in(event)
 
     def on_focus_out(self, event=None):
         """Handle window focus out."""
