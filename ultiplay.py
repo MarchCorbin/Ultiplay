@@ -222,11 +222,9 @@ class PlayerWidget:
             logging.debug("Player %d regained focus, forced VLC redraw", self.index + 1)
 
     def on_enter(self, event=None):
-        """Handle mouse enter event to force VLC redraw and show controls."""
-        if self.player:
-            self.refresh_vlc()
-            logging.debug("Mouse entered Player %d, forced VLC redraw", self.index + 1)
+        """Handle mouse enter event to show controls without affecting play state."""
         self.show_controls(event)
+        logging.debug("Mouse entered Player %d", self.index + 1)
 
     def pack_controls(self):
         """Dynamically pack controls based on SMM state and player index."""
@@ -462,7 +460,7 @@ class PlayerWidget:
                 width = player.frame.winfo_width()
                 height = player.frame.winfo_height()
                 current_time = player.player.get_time() if player.current_file else 0
-                was_playing = player.player.is_playing() if player.current_file else False
+                was_playing = player.is_playing  # Use intended state
                 current_file = player.current_file
                 player_states.append({
                     'player': player,
@@ -560,7 +558,6 @@ class PlayerWidget:
                 player.resize_handle_right.bind("<Button-1>", lambda e: player.start_resize(e, "right"))
                 player.resize_handle_right.bind("<B1-Motion>", lambda e: player.resize(e, "right"))
 
-                # Rebind focus and mouse enter events
                 player.frame.bind("<FocusIn>", player.on_focus_in)
                 player.video_frame.bind("<FocusIn>", player.on_focus_in)
                 player.frame.bind("<Enter>", player.on_enter)
@@ -582,6 +579,7 @@ class PlayerWidget:
                                 media = p.instance.media_new(s['current_file'])
                                 p.player.set_media(media)
                                 p.player.play()
+                                p.is_playing = s['was_playing']  # Restore intended state
                                 p.player.set_time(s['current_time'])
                                 if not s['was_playing']:
                                     p.player.pause()
@@ -649,9 +647,9 @@ class PlayerWidget:
                     self.player.set_media(media)
                     self.player.set_hwnd(self.video_frame.winfo_id())
                     self.player.play()
-                    self.player.audio_set_volume(100)
-                    self.intended_volume = 100
-                    self.volume_bar.set(100)
+                    self.is_playing = True  # Explicitly set intended state
+                    self.player.audio_set_volume(self.intended_volume if self.intended_volume is not None else 100)
+                    self.volume_bar.set(self.intended_volume if self.intended_volume is not None else 100)
                     start_time = time.time()
                     max_wait = 5
                     while time.time() - start_time < max_wait:
@@ -675,7 +673,7 @@ class PlayerWidget:
                     self.current_file = None
                     self.parent.after(0, self.update_title_label)
                     self.toggle_button.config(text="▶")
-                    self.reset_vlc()
+                    self.is_playing = False  # Reset intended state on failure
                 finally:
                     self.is_transitioning = False
                     logging.debug("Player %d transition completed, is_transitioning set to False", self.index + 1)
@@ -686,6 +684,7 @@ class PlayerWidget:
             self.update_title_label()
             self.toggle_button.config(text="▶")
             self.is_transitioning = False
+            self.is_playing = False  # Reset intended state
             self.play_next_video()
 
     def check_playback_start(self):
@@ -723,23 +722,39 @@ class PlayerWidget:
         self.frame.update_idletasks()
 
     def refresh_vlc(self):
+        """Refresh VLC player to ensure proper rendering, respecting intended play state."""
         try:
-            was_playing = self.player.is_playing()
-            # Detach and reattach HWND to force redraw
+            # Skip refresh if no media is loaded
+            if self.player.get_media() is None:
+                logging.debug("No media loaded for Player %d, skipping VLC refresh", self.index + 1)
+                return
+
+            intended_playing = self.is_playing  # Use intended state
             self.player.set_hwnd(0)
             self.player.set_hwnd(self.video_frame.winfo_id())
-            # Force VLC to repaint by toggling play state
-            if was_playing:
-                self.player.play()
+            # Force VLC to match the intended state
+            for attempt in range(3):
+                if intended_playing:
+                    self.player.play()
+                else:
+                    self.player.pause()
+                time.sleep(0.1)
+                state = self.player.get_state()
+                if state == (vlc.State.Playing if intended_playing else vlc.State.Paused):
+                    break
+                logging.debug("VLC redraw attempt %d for Player %d, current state: %s", 
+                             attempt + 1, self.index + 1, state)
             else:
-                self.player.pause()
+                logging.warning("Failed to set VLC state for Player %d after retries, final state: %s", 
+                               self.index + 1, self.player.get_state())
+
             self.volume_bar.set(self.player.audio_get_volume())
-            # Ensure video frame fills the space
             self.video_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
             self.frame.update_idletasks()
-            logging.debug("VLC refreshed for frame_id: %d, was_playing=%s", self.frame_id, was_playing)
+            logging.debug("VLC refreshed for Player %d, frame_id: %d, intended_playing=%s, final state: %s", 
+                         self.index + 1, self.frame_id, intended_playing, self.player.get_state())
         except Exception as e:
-            logging.error(f"Failed to refresh VLC: {e}")
+            logging.error("Failed to refresh VLC for Player %d: %s", self.index + 1, e)
 
     def load_first_video(self):
         if self.playlist:
@@ -748,16 +763,17 @@ class PlayerWidget:
 
     def toggle_play_pause(self):
         """Toggle play/pause state of the player."""
-        if self.player.is_playing():
-            self.player.pause()
-            self.is_playing = False
-            self.toggle_button.config(text="▶")
-            logging.debug("Paused Player %d", self.index + 1)
-        else:
-            self.player.play()
-            self.is_playing = True
-            self.toggle_button.config(text="⏸")
-            logging.debug("Playing Player %d", self.index + 1)
+        if self.player.get_media():
+            if self.is_playing:
+                self.player.pause()
+                self.is_playing = False
+                self.toggle_button.config(text="▶")
+                logging.debug("Paused Player %d", self.index + 1)
+            else:
+                self.player.play()
+                self.is_playing = True
+                self.toggle_button.config(text="⏸")
+                logging.debug("Playing Player %d", self.index + 1)
 
     def prepare_for_swap(self):
         """Prepare the player for swapping by capturing its state and pausing it."""
@@ -945,7 +961,7 @@ class PlayerWidget:
 
     def toggle_fullscreen(self):
         if not self.is_fullscreen:
-            was_playing = self.player.is_playing()
+            was_playing = self.is_playing  # Use intended state
             x, y = self.canvas.coords(self.frame_id)
             width = self.frame.winfo_width()
             height = self.frame.winfo_height()
@@ -979,11 +995,13 @@ class PlayerWidget:
                     for _ in range(3):
                         if not was_playing:
                             self.player.pause()
+                            self.is_playing = False
                             self.toggle_button.config(text="▶")
                             logging.debug("Player %d restored to paused state after fullscreen, VLC state: %s", 
                                          self.index + 1, self.player.get_state())
                         else:
                             self.player.play()
+                            self.is_playing = True
                             self.toggle_button.config(text="||")
                             logging.debug("Player %d restored to playing state after fullscreen, VLC state: %s", 
                                          self.index + 1, self.player.get_state())
@@ -2866,7 +2884,7 @@ class VideoPlayerApp:
         logging.debug("Toggling SMM: is_maximized=%s", self.is_maximized)
 
         if not self.is_maximized:
-            # Store pre-SMM state
+            # Store pre-SMM state, including intended play states
             self.pre_smm_state = {
                 'geometry': self.root.winfo_geometry(),
                 'is_fullscreen': self.is_fullscreen,
@@ -2878,6 +2896,10 @@ class VideoPlayerApp:
                 width = player.frame.winfo_width()
                 height = player.frame.winfo_height()
                 self.pre_smm_positions.append((x, y, width, height))
+                # Update intended play state based on current state
+                if player.player.get_media():
+                    player.is_playing = (player.player.get_state() == vlc.State.Playing)
+                    logging.debug("Player %d play state before SMM: %s", player.index + 1, player.is_playing)
             logging.debug("Stored pre-SMM state: geometry=%s, positions=%s",
                         self.pre_smm_state['geometry'], self.pre_smm_positions)
 
@@ -2902,7 +2924,7 @@ class VideoPlayerApp:
             self.canvas.update()
             self.root.update()
 
-            # Force initial redraw of all VLC players
+            # Force initial redraw of all VLC players, respecting intended state
             for player in self.players:
                 player.refresh_vlc()
             logging.debug("Initial VLC redraw for all players after entering SMM")
@@ -2930,10 +2952,10 @@ class VideoPlayerApp:
             self.root.after(300, delayed_redraw_2)
             self.root.after(500, delayed_redraw_3)
 
-            # Fallback: Simulate mouse-over for each player
+            # Fallback: Simulate mouse-over for each player (without affecting play state)
             def simulate_mouse_over():
                 for player in self.players:
-                    player.on_enter(None)  # Simulate mouse-over to trigger refresh_vlc
+                    player.on_enter(None)  # Simulate mouse-over, but it won't affect play state now
                 logging.debug("Simulated mouse-over for all players after entering SMM")
 
             self.root.after(600, simulate_mouse_over)
@@ -3754,12 +3776,16 @@ class VideoPlayerApp:
                     self.is_fullscreen, self.is_maximized)
 
         if not self.is_fullscreen:
-            # Store pre-fullscreen state
+            # Store pre-fullscreen state, including intended play states
             self.pre_fullscreen_state = {
                 'geometry': self.root.winfo_geometry(),
                 'is_maximized': self.is_maximized,
                 'is_fullscreen': self.is_fullscreen
             }
+            for player in self.players:
+                if player.player.get_media():
+                    player.is_playing = (player.player.get_state() == vlc.State.Playing)
+                    logging.debug("Player %d play state before fullscreen: %s", player.index + 1, player.is_playing)
             logging.debug("Stored pre-fullscreen state: geometry=%s",
                         self.pre_fullscreen_state['geometry'])
 
@@ -3780,7 +3806,7 @@ class VideoPlayerApp:
             self.canvas.update()
             self.root.update()
 
-            # Force initial redraw of all VLC players
+            # Force initial redraw of all VLC players, respecting intended state
             for player in self.players:
                 player.refresh_vlc()
             logging.debug("Initial VLC redraw for all players after entering fullscreen")
@@ -3808,10 +3834,10 @@ class VideoPlayerApp:
             self.root.after(300, delayed_redraw_2)
             self.root.after(500, delayed_redraw_3)
 
-            # Fallback: Simulate mouse-over for each player
+            # Fallback: Simulate mouse-over for each player (without affecting play state)
             def simulate_mouse_over():
                 for player in self.players:
-                    player.on_enter(None)  # Simulate mouse-over to trigger refresh_vlc
+                    player.on_enter(None)  # Simulate mouse-over, but it won't affect play state now
                 logging.debug("Simulated mouse-over for all players after entering fullscreen")
 
             self.root.after(600, simulate_mouse_over)
